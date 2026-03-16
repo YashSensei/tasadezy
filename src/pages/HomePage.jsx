@@ -72,8 +72,7 @@ function HomePage() {
                   className="w-full h-full bg-center bg-cover"
                   data-alt="High-end professional recording studio with microphone and soundproofing"
                   style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMCMB5tlYtQNP_GFKs7cXzu8VifKmELI48d721Y_O6F5-tYVsbZc3Do_od0M-AH5umF48QIIs80kQGmIj7CXUsitD7F0owrORcnbKO7yIW8y5llXncPd3n83g3rUYA8Vii_f0L7O7G_eWBY8QIpGnVa2NhOOSP3p4oIXayYxD3ZL4f8B1uIubBrhAlTMYSllX4jHUNvdiMBnX2XUnezLbP_HgyJjc0kBJYXYto1e9U_W0m7PzJLzbXC36qF4qB7PlvNEVbgsXXp1I')",
+                    backgroundImage: "url('/assets/images/hero-image.jpeg')",
                   }}
                 ></div>
               </div>
