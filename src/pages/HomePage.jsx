@@ -48,11 +48,11 @@ function HomePage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div className="mb-12 lg:mb-0">
               <h1 className="text-5xl lg:text-7xl font-black leading-tight text-slate-900 dark:text-white mb-6">
-                Professional <span className="text-primary">Voice-Over</span> Solutions
+                The Professional <span className="text-primary">Voice-Over</span> Service
               </h1>
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-xl leading-relaxed border-l-2 border-accent-gold/30 pl-6">
-                Elevate your brand&apos;s story with premium vocal talent. Trusted by global creators for high-fidelity
-                audio production and localized messaging.
+                Welcome to Tasadezy Voices - your premier destination for voice-overs, dubbing, translation, and audio
+                production. We bring your projects to life with the power of voice.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button className="bg-primary text-teal-deep px-8 py-4 rounded-xl font-bold text-base hover:scale-105 transition-transform shadow-xl shadow-primary/30">
@@ -103,20 +103,20 @@ function HomePage() {
                 The Voice of Your Brand&apos;s Future
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                Tasadezy is a premier voice-over agency dedicated to providing top-tier vocal talent across the globe.
-                We specialize in bringing stories to life through sound, bridging the gap between creators and their
-                audience.
+                Tasadezy Voices is your premier destination for professional voice-over services. With a passion for
+                storytelling and a commitment to excellence, we deliver captivating narrations, engaging commercials,
+                and compelling character performances - on time and on budget.
               </p>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="p-6 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
                   <span className="material-symbols-outlined text-accent-gold text-3xl mb-4">language</span>
-                  <h3 className="font-bold mb-2">Multi-Language</h3>
-                  <p className="text-sm text-slate-500">Native voice-overs in 50+ languages to resonate locally.</p>
+                  <h3 className="font-bold mb-2">12+ Indian Languages</h3>
+                  <p className="text-sm text-slate-500">Hindi, Tamil, Telugu, Malayalam, Bengali, Assamese, Punjabi, Odia & more.</p>
                 </div>
                 <div className="p-6 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
                   <span className="material-symbols-outlined text-accent-gold text-3xl mb-4">verified</span>
-                  <h3 className="font-bold mb-2">Quality First</h3>
-                  <p className="text-sm text-slate-500">Studio-grade acoustics and professional post-production.</p>
+                  <h3 className="font-bold mb-2">Studio Quality</h3>
+                  <p className="text-sm text-slate-500">Broadcast-ready recordings with 100% satisfaction guaranteed.</p>
                 </div>
               </div>
             </div>
@@ -133,10 +133,10 @@ function HomePage() {
                 }}
               ></div>
               <blockquote className="text-xl font-medium italic text-slate-800 dark:text-slate-200">
-                "The human voice is the most powerful tool in communication. We ensure yours is heard with clarity and
-                emotion."
+                "With a passion for storytelling and a commitment to excellence, we bring your projects to life with
+                the power of voice."
               </blockquote>
-              <p className="mt-4 font-bold text-primary">- Founder, Tasadezy</p>
+              <p className="mt-4 font-bold text-primary">- Tasadezy Voices</p>
             </div>
           </div>
         </div>
@@ -155,71 +155,71 @@ function HomePage() {
             <div className="group bg-white dark:bg-teal-deep/20 p-2 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-teal-deep/40 overflow-hidden">
               <div
                 className="aspect-[4/3] bg-cover bg-center rounded-2xl mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-500"
-                data-alt="TV Commercial recording setup"
+                data-alt="Professional microphone in a recording studio"
                 style={{
                   backgroundImage:
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRMZKZtUCE7fKtlSBf281sSHi9JoBXzua8akP5xIIM6kq_XN551Ct1dzGcd_gVBwnITwrBR52VKeFSS7lF9wmtdG0WrnbUx19J47kZ6QNsFPXR8O55o8oANzPYETNKCBfUwowtlEY1YvvfZrb8mGLSceyTtEzTTbLgbB1eSma9RE1Fr8OJNaB_QCtGzq5vpeRM5zi64d4SjStvXGkHsMY6bKvHZDh5JA32WD0McKO8s6IQchQwYXmOdOK2Pd-r36qHaVgT-zDvNFU')",
                 }}
               ></div>
               <div className="px-6 pb-6 text-center">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Commercial</h3>
-                <p className="text-slate-500 text-sm">High-impact ads that drive results and build brand identity.</p>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Voice Over</h3>
+                <p className="text-slate-500 text-sm">Captivating narrations and commercial voice-overs across 12+ Indian languages.</p>
               </div>
             </div>
             <div className="group bg-white dark:bg-teal-deep/20 p-2 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-teal-deep/40 overflow-hidden">
               <div
                 className="aspect-[4/3] bg-cover bg-center rounded-2xl mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-500"
-                data-alt="Youtube content creator mic setup"
+                data-alt="Video dubbing studio setup"
                 style={{
                   backgroundImage:
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBagi6rgYq07Nt-Qt8HtV1l5YjupwnwJZ9R7b7cEeIuelpEHhJMzyQgsyeOlV_3pn0xX7JMzJRtQ5KoeLGyJmhqiepFwi9ewpgVH5PVpJULNjVHtCfWPf9tP-3SZPAalTkEVhufLgrpOKlGAySPqxjcYOW_-UZIpznclfBpxDxM9qmuhx-E2Gb_7FgWZHqxW8y6HdmjXc6inL9KClKg3KUGEC-63NU_vq9VfBlI7a0pWCBwSZHTNgfHP8bmJz_7RVbK9_KC33ncyE')",
                 }}
               ></div>
               <div className="px-6 pb-6 text-center">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">YouTube</h3>
-                <p className="text-slate-500 text-sm">Engaging narration for documentary, tutorials, and storytelling.</p>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Dubbing</h3>
+                <p className="text-slate-500 text-sm">Lip-sync accurate dubbing for films, web series, ads, and e-learning content.</p>
               </div>
             </div>
             <div className="group bg-white dark:bg-teal-deep/20 p-2 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-teal-deep/40 overflow-hidden">
               <div
                 className="aspect-[4/3] bg-cover bg-center rounded-2xl mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-500"
-                data-alt="Close up of a stack of books and headphones"
+                data-alt="Audio production workstation"
                 style={{
                   backgroundImage:
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJYP809UuTCdrVpUGWBXIMLwAjkCts-gScUylTWWybWOw7DNsSFrAIf84PVhEvYJ7Uh7gCVbsvI4J0Mi_A1JGQH2CPcHpFPrNns1HYxy_pxlKXsfiMRLrwdy4R3deWQDmOm1Nr0P77Zz5mxRswz7JWzazJl1RoTsCvj5DFVW-ls22U2oJwejXPhftBbi_fyCwY9VaQsv3gxfe_h8pGCnUt5Gwf9mcxlQ9hHCxwPvOutPLkuhqZ8nihp6Erz-qdbuBnA0Cme2dP15E')",
                 }}
               ></div>
               <div className="px-6 pb-6 text-center">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Audiobooks</h3>
-                <p className="text-slate-500 text-sm">Immersive storytelling that brings characters to life.</p>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Audio Production</h3>
+                <p className="text-slate-500 text-sm">End-to-end audio creation - mixing, mastering, and broadcast-ready delivery.</p>
               </div>
             </div>
             <div className="group bg-white dark:bg-teal-deep/20 p-2 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-teal-deep/40 overflow-hidden">
               <div
                 className="aspect-[4/3] bg-cover bg-center rounded-2xl mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-500"
-                data-alt="Professional boardroom meeting"
+                data-alt="Translation and language services"
                 style={{
                   backgroundImage:
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD87xJreiqWo9KmVaLbj4hpaFS2m9nZ_DvP6Akdf9Jwpwy1EUaVP4P5wUtFYGrE47DhFt-YJgIaQOsGKGo3vDtOvLf9xf_amnDZITjifvFczsEZF3H6UItOnv63mr7QmN36OIU48AMGVIIAuyjD97PWzoxYhU1iE6pqtZ8bpVojCMNW2Gcue9mkmotAu-5L6b3gHKbtfI__qK4TCXhO-1jkNBF-QvoGtiVmQEziTpwpn2UyMnI_kOQStuDZjP97MtIPkW-p7unV0DI')",
                 }}
               ></div>
               <div className="px-6 pb-6 text-center">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Corporate</h3>
-                <p className="text-slate-500 text-sm">Professional narrations for presentations and training videos.</p>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Translation</h3>
+                <p className="text-slate-500 text-sm">Accurate, culturally nuanced translations for scripts, documents, and media.</p>
               </div>
             </div>
             <div className="group bg-white dark:bg-teal-deep/20 p-2 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-teal-deep/40 overflow-hidden">
               <div
                 className="aspect-[4/3] bg-cover bg-center rounded-2xl mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-500"
-                data-alt="Microphone in a podcast studio"
+                data-alt="Transcription and closed captioning"
                 style={{
                   backgroundImage:
                     "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDZUYSlHhpL7RJr9XWQhrmhcy_G7Al0VRYyKTfJkM7paPAduRTHmBakNu9QaPgMOCT1CUs2FOMpExFEoZX8pUKJeCzAM2UBokA0Qzv88LZMSbuKD7P5RtWP9aMhV5iCC5G73CXYd0IoPuf3fLckEredIAChRW-F9clIo9vBIh4xcBF9UXGVVH4gvQraRNlvtfCOCr0zmaZ6OWtw-35AQ9j04iuaDFobVsL8QIAksBNaXxB89EvxP26mGiQpFucqN9HYNjp2DFOBfs')",
                 }}
               ></div>
               <div className="px-6 pb-6 text-center">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Podcast</h3>
-                <p className="text-slate-500 text-sm">Clear and consistent intros, outros, and ad reads.</p>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Transcription</h3>
+                <p className="text-slate-500 text-sm">Fast, accurate transcriptions with subtitles and closed captioning support.</p>
               </div>
             </div>
             <div className="group bg-white dark:bg-teal-deep/20 p-2 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-teal-deep/40 overflow-hidden">
@@ -233,7 +233,7 @@ function HomePage() {
               ></div>
               <div className="px-6 pb-6 text-center">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Multi-Language</h3>
-                <p className="text-slate-500 text-sm">Scale your reach globally with native localization.</p>
+                <p className="text-slate-500 text-sm">Native voice talent across Hindi, Tamil, Telugu, Malayalam, Bengali, Odia & more.</p>
               </div>
             </div>
           </div>
@@ -255,11 +255,38 @@ function HomePage() {
             <div className="lg:w-2/3 grid sm:grid-cols-2 gap-8">
               <div className="flex gap-4 group">
                 <div className="bg-teal-deep p-4 h-fit rounded-xl border border-accent-gold/20 group-hover:border-primary transition-colors">
-                  <span className="material-symbols-outlined text-primary">groups</span>
+                  <span className="material-symbols-outlined text-primary">schedule</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2 text-slate-100">Elite Artists</h4>
-                  <p className="text-slate-400 text-sm">Vetted professionals with years of industry experience.</p>
+                  <h4 className="font-bold text-lg mb-2 text-slate-100">On-Time Delivery</h4>
+                  <p className="text-slate-400 text-sm">We respect your deadlines. Every project delivered on schedule, every time.</p>
+                </div>
+              </div>
+              <div className="flex gap-4 group">
+                <div className="bg-teal-deep p-4 h-fit rounded-xl border border-accent-gold/20 group-hover:border-primary transition-colors">
+                  <span className="material-symbols-outlined text-primary">mic</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg mb-2 text-slate-100">Studio Quality</h4>
+                  <p className="text-slate-400 text-sm">Broadcast-ready recordings with professional post-production, every time.</p>
+                </div>
+              </div>
+              <div className="flex gap-4 group">
+                <div className="bg-teal-deep p-4 h-fit rounded-xl border border-accent-gold/20 group-hover:border-primary transition-colors">
+                  <span className="material-symbols-outlined text-primary">payments</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg mb-2 text-slate-100">In Your Budget</h4>
+                  <p className="text-slate-400 text-sm">Premium quality at competitive prices. Plans starting from $240/project.</p>
+                </div>
+              </div>
+              <div className="flex gap-4 group">
+                <div className="bg-teal-deep p-4 h-fit rounded-xl border border-accent-gold/20 group-hover:border-primary transition-colors">
+                  <span className="material-symbols-outlined text-primary">lock</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg mb-2 text-slate-100">Privacy Maintained</h4>
+                  <p className="text-slate-400 text-sm">Your scripts and project details are kept strictly confidential.</p>
                 </div>
               </div>
               <div className="flex gap-4 group">
@@ -267,26 +294,17 @@ function HomePage() {
                   <span className="material-symbols-outlined text-primary">support_agent</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2 text-slate-100">24/7 Support</h4>
-                  <p className="text-slate-400 text-sm">Dedicated project managers for every client.</p>
+                  <h4 className="font-bold text-lg mb-2 text-slate-100">24–48 Hr Response</h4>
+                  <p className="text-slate-400 text-sm">All queries answered within 24 to 48 hours by a dedicated team.</p>
                 </div>
               </div>
               <div className="flex gap-4 group">
                 <div className="bg-teal-deep p-4 h-fit rounded-xl border border-accent-gold/20 group-hover:border-primary transition-colors">
-                  <span className="material-symbols-outlined text-primary">shutter_speed</span>
+                  <span className="material-symbols-outlined text-primary">verified</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg mb-2 text-slate-100">Fast Delivery</h4>
-                  <p className="text-slate-400 text-sm">Turnaround times that match your tight deadlines.</p>
-                </div>
-              </div>
-              <div className="flex gap-4 group">
-                <div className="bg-teal-deep p-4 h-fit rounded-xl border border-accent-gold/20 group-hover:border-primary transition-colors">
-                  <span className="material-symbols-outlined text-primary">waves</span>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-2 text-slate-100">Pristine Quality</h4>
-                  <p className="text-slate-400 text-sm">Broadcast-ready files with zero noise floor.</p>
+                  <h4 className="font-bold text-lg mb-2 text-slate-100">100% Satisfaction</h4>
+                  <p className="text-slate-400 text-sm">We work until you are completely happy with the final result.</p>
                 </div>
               </div>
             </div>
@@ -297,114 +315,44 @@ function HomePage() {
       <section className="py-24 bg-white dark:bg-background-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16 text-slate-900 dark:text-white">Trusted by Creators</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white dark:bg-teal-deep/10 p-8 rounded-3xl border border-slate-100 dark:border-teal-deep/30 relative">
               <div className="flex gap-1 mb-6 text-accent-gold">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                ))}
               </div>
               <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed italic">
-                "Tasadezy transformed our ad campaign. The vocal delivery was spot on and they delivered ahead of
-                schedule."
+                "Working with Tasadezy Voices has been a pleasure. Their team is not only professional and reliable
+                but also incredibly creative. They took our vision and made it a reality."
               </p>
               <div className="flex items-center gap-4 border-t border-slate-50 dark:border-teal-deep/20 pt-6">
-                <div
-                  className="w-12 h-12 rounded-full bg-cover ring-2 ring-primary/20"
-                  data-alt="Portrait of a male marketing director"
-                  style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzpLCH8G_wChsrCmF6vuzJEnyC4OMRcyvRCZ20A8j98c3A-FsnzHWoSa2N4JmGFW4_XGh6k5nJdChXt7NvZnTipv5YVtWBE6Awsqpc6eES3_Mm2FYR6AZjyfZd7ACHBYk3IeKM7lFcVX6ZSdvWA0t9odGVe8r6Fqw1QnMRkY2S6_wIkOTRz3ljF0TgpU0wL11obsc90wRUYfCJJZkVP0dw5jEwTlQNymp10Cgd2c3QRBL5sL0veC4sDDxXwDkv_D7E_1ozFw2-pqE')",
-                  }}
-                ></div>
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center ring-2 ring-primary/20">
+                  <span className="material-symbols-outlined text-primary">person</span>
+                </div>
                 <div>
-                  <p className="font-bold text-sm text-slate-900 dark:text-white">Sarah Jenkins</p>
-                  <p className="text-xs text-slate-500">Marketing Lead at Pulse</p>
+                  <p className="font-bold text-sm text-slate-900 dark:text-white">Anil Pandey</p>
+                  <p className="text-xs text-slate-500">Symansys Technologies India Pvt. Ltd.</p>
                 </div>
               </div>
             </div>
             <div className="bg-white dark:bg-teal-deep/10 p-8 rounded-3xl border border-slate-100 dark:border-teal-deep/30 relative">
               <div className="flex gap-1 mb-6 text-accent-gold">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                ))}
               </div>
               <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed italic">
-                "Finding native speakers for our global launch was effortless with Tasadezy. Truly a professional
-                agency."
+                "The team at Tasadezy Voices was fantastic to work with. Their ability to understand our requirements
+                and deliver high-quality voice-over work was impressive."
               </p>
               <div className="flex items-center gap-4 border-t border-slate-50 dark:border-teal-deep/20 pt-6">
-                <div
-                  className="w-12 h-12 rounded-full bg-cover ring-2 ring-primary/20"
-                  data-alt="Portrait of a female entrepreneur"
-                  style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXU5RHODOMT0ULx1TwFsTtQKxkA_dmdR-QdVaTV8PGN3z2-EJ5-6mchRg5cfLli3mX6gLuBxARGdq3yjlVp-kDLc5uxKnFa7RGGTc63HZFFb9xbI1mFu0PyP7YflyQ6CxVpyEAnFWV4I5UiP5G_sBFSt8SwU4mzWrr9iuaW2Tef9iRIGVaRy6A54LzuakLxTWqvbd-pVPPl36cZE6z6j2P-249X1na9fptohP1r8LdkecM4HXZV5ab4n3QomOyHZnPQ8S9KYruNh8')",
-                  }}
-                ></div>
-                <div>
-                  <p className="font-bold text-sm text-slate-900 dark:text-white">Marcus Chen</p>
-                  <p className="text-xs text-slate-500">Creative Director at VoxMedia</p>
+                <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center ring-2 ring-primary/20">
+                  <span className="material-symbols-outlined text-primary">person</span>
                 </div>
-              </div>
-            </div>
-            <div className="bg-white dark:bg-teal-deep/10 p-8 rounded-3xl border border-slate-100 dark:border-teal-deep/30 relative">
-              <div className="flex gap-1 mb-6 text-accent-gold">
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                  star
-                </span>
-              </div>
-              <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed italic">
-                "The quality of the recording was studio-grade right from the first take. No revisions needed!"
-              </p>
-              <div className="flex items-center gap-4 border-t border-slate-50 dark:border-teal-deep/20 pt-6">
-                <div
-                  className="w-12 h-12 rounded-full bg-cover ring-2 ring-primary/20"
-                  data-alt="Portrait of a male content producer"
-                  style={{
-                    backgroundImage:
-                      "url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8NTzHcIKq4uru5Fe6j9cmug836ZUlExG2B9hySd4OJUHUJ17kidvAS8vo1IX9qC9tlqHCr3alcd-nIYVwuS4Fwg1AEl8O6p0cMHTf2Q3YcFsPbhrrjQ6JVMdNgKUP-iPiAhsBzK23lDDlLQPiSTQjMr-LSAVkgQ-1sQn5AcK7TtWIwZ_XQJoBc76PcHSFHupcIhba_CLhFLA1SM2C_GsfuHnuAt9I0Jws_YPhYCQQ64Zgg-kIUcnnFX2p1OnnrfLTyHZRYfaTbPM')",
-                  }}
-                ></div>
                 <div>
-                  <p className="font-bold text-sm text-slate-900 dark:text-white">Alex Rivera</p>
-                  <p className="text-xs text-slate-500">Podcast Producer</p>
+                  <p className="font-bold text-sm text-slate-900 dark:text-white">Sameer Shinde</p>
+                  <p className="text-xs text-slate-500">Nucleus Integrated Communication, Mumbai</p>
                 </div>
               </div>
             </div>
@@ -481,15 +429,19 @@ function HomePage() {
               <ul className="space-y-4 text-slate-400 text-sm">
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary text-lg">mail</span>
-                  hello@tasadezy.com
+                  tasadezy@gmail.com
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary text-lg">phone</span>
-                  +1 (555) 123-4567
+                  +91 82874 34966
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                  Royal Court, Sector 16, Noida, Uttar Pradesh, India 201308
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary text-lg">location_on</span>
-                  Audio District, CA 90210
+                  <span className="material-symbols-outlined text-primary text-lg">schedule</span>
+                  9:30 AM – 6:30 PM IST
                 </li>
               </ul>
             </div>
@@ -509,7 +461,7 @@ function HomePage() {
             </div>
           </div>
           <div className="border-t border-accent-gold/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-slate-500 text-xs">© 2024 Tasadezy Voice Agency. All rights reserved.</p>
+            <p className="text-slate-500 text-xs">© 2025 Tasadezy Voices. All rights reserved.</p>
             <div className="flex gap-8">
               <a className="text-slate-500 hover:text-primary text-xs transition-colors" href="#">
                 Privacy Policy
