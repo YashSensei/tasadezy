@@ -1,0 +1,353 @@
+﻿[
+    {
+        "file":  "assamese_audio/Female-sample-1-Kuhi.mp3",
+        "title":  "Female sample 1 Kuhi",
+        "artist":  "Unknown",
+        "language":  "Assamese",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "assamese_audio/Female-Sample-2-Kajol.mp3",
+        "title":  "Female Sample 2 Kajol",
+        "artist":  "Unknown",
+        "language":  "Assamese",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "assamese_audio/Male-Sample-1-kukil.mp3",
+        "title":  "Male Sample 1 kukil",
+        "artist":  "Unknown",
+        "language":  "Assamese",
+        "voiceType":  "Male",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "assamese_audio/Male-Sample-2-Ritu.mp3",
+        "title":  "Male Sample 2 Ritu",
+        "artist":  "Unknown",
+        "language":  "Assamese",
+        "voiceType":  "Male",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "bengali_audio/aditi-female-bengali-1.mp3",
+        "title":  "aditi female bengali 1",
+        "artist":  "Unknown",
+        "language":  "Bengali",
+        "voiceType":  "Female",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "bengali_audio/Bengali-sample-aditya-dhurka-male.mp3",
+        "title":  "Bengali sample aditya dhurka male",
+        "artist":  "Unknown",
+        "language":  "Bengali",
+        "voiceType":  "Male",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "bengali_audio/IVR-Bengali-Sample-male.mp3",
+        "title":  "IVR Bengali Sample male",
+        "artist":  "Unknown",
+        "language":  "Bengali",
+        "voiceType":  "Male",
+        "useCase":  "IVR",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "bengali_audio/IVR-Sample-Beng-AD-female.mp3",
+        "title":  "IVR Sample Beng AD female",
+        "artist":  "Unknown",
+        "language":  "Bengali",
+        "voiceType":  "Female",
+        "useCase":  "IVR",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "english_audio/Pratik_male_advertisement.wav",
+        "title":  "Pratik male advertisement",
+        "artist":  "Unknown",
+        "language":  "English",
+        "voiceType":  "Male",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "english_audio/Shalini-Female.mp3",
+        "title":  "Shalini Female",
+        "artist":  "Unknown",
+        "language":  "English",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "english_audio/shivani_female.mp3",
+        "title":  "shivani female",
+        "artist":  "Unknown",
+        "language":  "English",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "english_audio/sudipto_story.mp3",
+        "title":  "sudipto story",
+        "artist":  "Unknown",
+        "language":  "English",
+        "voiceType":  "Unknown",
+        "useCase":  "Story Narration",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "gujrati_audio/FATHERS-DAY-GUJRATI-male.wav",
+        "title":  "FATHERS DAY GUJRATI male",
+        "artist":  "Unknown",
+        "language":  "Gujarati",
+        "voiceType":  "Male",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "gujrati_audio/gujrati-E-learning-female.mp3",
+        "title":  "gujrati E learning female",
+        "artist":  "Unknown",
+        "language":  "Gujarati",
+        "voiceType":  "Female",
+        "useCase":  "E-Learning/Explainer",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "hindi_audio/Hindi_Story_Murkh_Brahmin_Pratik.mp3",
+        "title":  "Hindi Story Murkh Brahmin Pratik",
+        "artist":  "Unknown",
+        "language":  "Hindi",
+        "voiceType":  "Unknown",
+        "useCase":  "Story Narration",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "hindi_audio/MEGH-HINDI-CHARACTER.mp3",
+        "title":  "MEGH HINDI CHARACTER",
+        "artist":  "Unknown",
+        "language":  "Hindi",
+        "voiceType":  "Unknown",
+        "useCase":  "Character Voice",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "hindi_audio/Sarika-hindi-female-2.mp3",
+        "title":  "Sarika hindi female 2",
+        "artist":  "Unknown",
+        "language":  "Hindi",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "hindi_audio/Vo_Hindi_Corporate_Female_ShivaaniiD.mp3",
+        "title":  "Vo Hindi Corporate Female ShivaaniiD",
+        "artist":  "Unknown",
+        "language":  "Hindi",
+        "voiceType":  "Female",
+        "useCase":  "Corporate",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "kannada_audio/Kannada-female-.wav",
+        "title":  "Kannada female",
+        "artist":  "Unknown",
+        "language":  "Kannada",
+        "voiceType":  "Female",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "kannada_audio/Kannada-female-2.mp3",
+        "title":  "Kannada female 2",
+        "artist":  "Unknown",
+        "language":  "Kannada",
+        "voiceType":  "Female",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "kannada_audio/Kannada-male-2.mp3",
+        "title":  "Kannada male 2",
+        "artist":  "Unknown",
+        "language":  "Kannada",
+        "voiceType":  "Male",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "kannada_audio/Starhealth_Aruna_Kannada_female.wav",
+        "title":  "Starhealth Aruna Kannada female",
+        "artist":  "Unknown",
+        "language":  "Kannada",
+        "voiceType":  "Female",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "malyalam_audio/Athul-malayalam-male.mp3",
+        "title":  "Athul malayalam male",
+        "artist":  "Unknown",
+        "language":  "Malayalam",
+        "voiceType":  "Male",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "malyalam_audio/MALAYALAM_IVR-1-female.wav",
+        "title":  "MALAYALAM IVR 1 female",
+        "artist":  "Unknown",
+        "language":  "Malayalam",
+        "voiceType":  "Female",
+        "useCase":  "IVR",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "marathi_audio/Marathi-2_Female_SHIVANI-D.mp3",
+        "title":  "Marathi 2 Female SHIVANI D",
+        "artist":  "Unknown",
+        "language":  "Marathi",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "marathi_audio/Marathi_Female_SHIVANI-D.mp3",
+        "title":  "Marathi Female SHIVANI D",
+        "artist":  "Unknown",
+        "language":  "Marathi",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "marathi_audio/Marathi_Pratik_Explanatory-male.wav",
+        "title":  "Marathi Pratik Explanatory male",
+        "artist":  "Unknown",
+        "language":  "Marathi",
+        "voiceType":  "Male",
+        "useCase":  "E-Learning/Explainer",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "marathi_audio/MEGH-MARATHI-CHARACTER-male.mp3",
+        "title":  "MEGH MARATHI CHARACTER male",
+        "artist":  "Unknown",
+        "language":  "Marathi",
+        "voiceType":  "Male",
+        "useCase":  "Character Voice",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "odia_audio/female-voice.mp3",
+        "title":  "female voice",
+        "artist":  "Unknown",
+        "language":  "Odia",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "odia_audio/Kirti_Male_odiya-2.mp3",
+        "title":  "Kirti Male odiya 2",
+        "artist":  "Unknown",
+        "language":  "Odia",
+        "voiceType":  "Male",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "odia_audio/Priyambada_Female-1.mp3",
+        "title":  "Priyambada Female 1",
+        "artist":  "Unknown",
+        "language":  "Odia",
+        "voiceType":  "Female",
+        "useCase":  "Advertisement",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "tamil_audio/KodiswaranTamil-male.mp3",
+        "title":  "KodiswaranTamil male",
+        "artist":  "Unknown",
+        "language":  "Tamil",
+        "voiceType":  "Male",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "tamil_audio/Pavithra-VO-Sample-female.mp3",
+        "title":  "Pavithra VO Sample female",
+        "artist":  "Unknown",
+        "language":  "Tamil",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "tamil_audio/ramya-female-tamil-1.mp3.wav",
+        "title":  "ramya female tamil 1.mp3",
+        "artist":  "Unknown",
+        "language":  "Tamil",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "tamil_audio/tamil-krishna-male.mp3",
+        "title":  "tamil krishna male",
+        "artist":  "Unknown",
+        "language":  "Tamil",
+        "voiceType":  "Male",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "telugu_audio/Telugu-2-sample-enhanced.wav",
+        "title":  "Telugu 2 sample enhanced",
+        "artist":  "Unknown",
+        "language":  "Telugu",
+        "voiceType":  "Unknown",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "telugu_audio/telugu-female-1-ramya.mp3",
+        "title":  "telugu female 1 ramya",
+        "artist":  "Unknown",
+        "language":  "Telugu",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "telugu_audio/telugu-female-2-sneha.mp3.m4a",
+        "title":  "telugu female 2 sneha.mp3",
+        "artist":  "Unknown",
+        "language":  "Telugu",
+        "voiceType":  "Female",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    },
+    {
+        "file":  "telugu_audio/Telugu-sample-1-.wav",
+        "title":  "Telugu sample 1",
+        "artist":  "Unknown",
+        "language":  "Telugu",
+        "voiceType":  "Unknown",
+        "useCase":  "General",
+        "status":  "generated-from-folder-structure"
+    }
+]
