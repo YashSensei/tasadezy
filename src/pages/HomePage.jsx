@@ -442,7 +442,7 @@ function HomePage() {
 
       <footer className="bg-teal-dark dark:bg-teal-dark border-t border-accent-gold/20 pt-20 pb-10 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <img src="/logo.png" alt="Tasadezy" className="w-9 h-9" />
@@ -548,23 +548,9 @@ function HomePage() {
                 </li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-accent-gold">Newsletter</h4>
-              <p className="text-slate-400 text-sm mb-4">Get the latest audio insights and tips.</p>
-              <div className="flex gap-2">
-                <input
-                  className="bg-teal-deep border border-accent-gold/20 rounded-lg text-sm focus:ring-primary w-full text-white placeholder:text-slate-500 px-3 py-2"
-                  placeholder="Email"
-                  type="email"
-                />
-                <button className="bg-primary p-2 rounded-lg text-teal-deep hover:bg-primary/90 transition-colors">
-                  <span className="material-symbols-outlined">send</span>
-                </button>
-              </div>
-            </div>
           </div>
           <div className="border-t border-accent-gold/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-slate-500 text-xs">© 2025 Tasadezy Voices. All rights reserved.</p>
+            <p className="text-slate-500 text-xs">&copy; {new Date().getFullYear()} Tasadezy Voices. All rights reserved.</p>
             <div className="flex gap-8">
               <a className="text-slate-500 hover:text-primary text-xs transition-colors" href="#">
                 Privacy Policy
