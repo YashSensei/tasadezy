@@ -292,6 +292,16 @@ body {
   background-color: #d4af37;
 }
 
+.hero-card {
+  min-height: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-card {
+    min-height: clamp(500px, 82vh, 800px);
+  }
+}
+
 /* On small screens, remove the tilt on the hero image to avoid overflow */
 @media (max-width: 640px) {
   .hero-image-card {

@@ -133,8 +133,8 @@ function HomePage() {
       {/* ── Hero - dark card with background image ────────────────────── */}
       <header className="px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
         <div
-          className="relative max-w-7xl mx-auto overflow-hidden"
-          style={{ borderRadius: 'clamp(16px, 3vw, 24px)', minHeight: 'clamp(500px, 82vh, 800px)' }}
+          className="relative max-w-7xl mx-auto overflow-hidden hero-card"
+          style={{ borderRadius: 'clamp(16px, 3vw, 24px)' }}
         >
           {/* Background image */}
           <div
