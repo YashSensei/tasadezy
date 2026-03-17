@@ -27,6 +27,13 @@ function encodeAssetPath(path) {
     .join('/')
 }
 
+function langOrder(lang) {
+  const l = String(lang || '').trim().toLowerCase()
+  if (l === 'hindi') return 0
+  if (l === 'english') return 1
+  return 2
+}
+
 function DemosPage() {
   const [items, setItems] = useState([])
   const [activeFilter, setActiveFilter] = useState('all')
@@ -64,17 +71,24 @@ function DemosPage() {
 
   const languages = useMemo(() => {
     const values = new Set(items.map((item) => String(item.language || 'Unknown').trim()))
-    return ['All', ...Array.from(values).sort((a, b) => a.localeCompare(b))]
+    const sorted = Array.from(values).sort((a, b) => {
+      const diff = langOrder(a) - langOrder(b)
+      if (diff !== 0) return diff
+      return a.localeCompare(b)
+    })
+    return ['All', ...sorted]
   }, [items])
 
   const visibleItems = useMemo(() => {
-    if (activeFilter === 'all') {
-      return items
-    }
+    const filtered = activeFilter === 'all'
+      ? items
+      : items.filter((item) => String(item.language || '').trim().toLowerCase() === activeFilter)
 
-    return items.filter(
-      (item) => String(item.language || '').trim().toLowerCase() === activeFilter,
-    )
+    return [...filtered].sort((a, b) => {
+      const diff = langOrder(a.language) - langOrder(b.language)
+      if (diff !== 0) return diff
+      return String(a.language || '').localeCompare(String(b.language || ''))
+    })
   }, [items, activeFilter])
 
   const togglePlay = (file) => {
