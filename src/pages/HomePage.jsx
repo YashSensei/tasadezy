@@ -135,11 +135,9 @@ function HomePage() {
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
             {/* Left — 45% */}
             <div className="w-full lg:w-[45%] shrink-0 text-center lg:text-left">
-              <h1 className="font-black leading-tight text-slate-900 dark:text-white mb-5" style={{ fontSize: 'clamp(2rem, 6vw, 3.75rem)' }}>
-                Professional{' '}
-                <span className="text-primary">Voice-Over</span>
-                <br />
-                for Global Audiences
+              <h1 className="font-black leading-tight text-slate-900 dark:text-white mb-5" style={{ fontSize: 'clamp(1.75rem, 5vw, 3rem)' }}>
+                Voices That{' '}
+                <span className="text-primary">Go Global</span>
               </h1>
               <p className="text-base lg:text-lg text-slate-600 dark:text-slate-400 mb-7 leading-relaxed border-l-2 border-accent-gold/40 pl-5 max-w-lg mx-auto lg:mx-0 text-left">
                 Bring your stories to life with native voice artists in 12+ languages. Perfect for ads, narration,
