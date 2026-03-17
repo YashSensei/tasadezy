@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { HoverEffect } from '../components/ui/CardHoverEffect'
 import { InfiniteTestimonials } from '../components/ui/InfiniteTestimonials'
@@ -67,36 +67,43 @@ const services = [
 
 function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 100)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const closeMenu = () => setMenuOpen(false)
 
   return (
     <>
-      <nav className="sticky-nav bg-white/80 dark:bg-teal-dark/80 border-b border-primary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
+      <div className={`nav-wrapper ${scrolled ? 'nav-scrolled' : ''}`}>
+        <nav className="nav-bar">
+          <div className="nav-inner">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="Tasadezy" className="w-8 h-8 md:w-10 md:h-10" />
-              <span className="text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Tasadezy</span>
+              <img src="/logo.png" alt="Tasadezy" className="nav-logo" />
+              <span className="nav-brand">Tasadezy</span>
             </div>
 
             {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-10">
-              <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
-              <a className="text-sm font-medium hover:text-primary transition-colors" href="#about">About Us</a>
-              <a className="text-sm font-medium hover:text-primary transition-colors" href="#services">Services</a>
-              <Link className="text-sm font-medium hover:text-primary transition-colors" to="/demos">Audio Samples</Link>
-              <Link className="text-sm font-medium hover:text-primary transition-colors" to="/contact">Contact Us</Link>
+            <div className="hidden md:flex items-center gap-8">
+              <a className="nav-link" href="#">Home</a>
+              <a className="nav-link" href="#about">About Us</a>
+              <a className="nav-link" href="#services">Services</a>
+              <Link className="nav-link" to="/demos">Audio Samples</Link>
+              <Link className="nav-link" to="/contact">Contact Us</Link>
             </div>
 
             {/* Desktop CTA + mobile hamburger */}
             <div className="flex items-center gap-3">
-              <Link to="/contact" className="hidden md:block bg-primary hover:bg-primary/90 text-teal-deep px-6 py-2.5 rounded-lg font-bold text-sm transition-all shadow-lg shadow-primary/20">
+              <Link to="/contact" className="nav-cta hidden md:inline-flex items-center justify-center">
                 Get Started
               </Link>
               <button
-                className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors"
+                className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-slate-700 hover:bg-white/30 transition-colors"
                 onClick={() => setMenuOpen(!menuOpen)}
                 aria-label="Toggle menu"
               >
@@ -106,22 +113,22 @@ function HomePage() {
               </button>
             </div>
           </div>
-        </div>
+        </nav>
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden border-t border-primary/10 bg-white/95 backdrop-blur-sm px-4 py-4 flex flex-col gap-1">
-            <a className="text-sm font-medium py-3 px-3 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors" href="#" onClick={closeMenu}>Home</a>
-            <a className="text-sm font-medium py-3 px-3 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors" href="#about" onClick={closeMenu}>About Us</a>
-            <a className="text-sm font-medium py-3 px-3 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors" href="#services" onClick={closeMenu}>Services</a>
-            <Link className="text-sm font-medium py-3 px-3 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors" to="/demos" onClick={closeMenu}>Audio Samples</Link>
-            <Link className="text-sm font-medium py-3 px-3 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors" to="/contact" onClick={closeMenu}>Contact Us</Link>
-            <Link to="/contact" onClick={closeMenu} className="mt-2 block bg-primary text-teal-deep px-6 py-3 rounded-lg font-bold text-sm w-full text-center">
+          <div className="nav-mobile-menu md:hidden">
+            <a className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" href="#" onClick={closeMenu}>Home</a>
+            <a className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" href="#about" onClick={closeMenu}>About Us</a>
+            <a className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" href="#services" onClick={closeMenu}>Services</a>
+            <Link className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" to="/demos" onClick={closeMenu}>Audio Samples</Link>
+            <Link className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" to="/contact" onClick={closeMenu}>Contact Us</Link>
+            <Link to="/contact" onClick={closeMenu} className="mt-2 block bg-primary text-teal-deep px-6 py-3 rounded-xl font-bold text-sm w-full text-center">
               Get Started
             </Link>
           </div>
         )}
-      </nav>
+      </div>
 
       {/* ── Hero - dark card with background image ────────────────────── */}
       <header className="px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
