@@ -7,7 +7,7 @@ const testimonialRow1 = [
   { quote: "Working with Tasadezy has been a pleasure. Professional, creative, and delivered exactly what we envisioned.", name: "Anil Pandey", location: "Uttar Pradesh" },
   { quote: "Their ability to understand our requirements and deliver high-quality voice-over work was truly impressive.", name: "Sameer Shinde", location: "Maharashtra" },
   { quote: "Exceptional quality and on-time delivery. The Hindi voice-over for our e-learning module was perfect.", name: "Priya Sharma", location: "Delhi" },
-  { quote: "Multi-language dubbing on a tight deadline — delivered without compromising on quality. Truly professional.", name: "Rahul Verma", location: "Karnataka" },
+  { quote: "Multi-language dubbing on a tight deadline - delivered without compromising on quality. Truly professional.", name: "Rahul Verma", location: "Karnataka" },
   { quote: "The Telugu narration was flawless. Native tone, crystal-clear audio, and zero revisions needed.", name: "Kavitha Reddy", location: "Telangana" },
   { quote: "Fast turnaround and broadcast-ready quality. Tasadezy is our go-to for all voice-over needs.", name: "Rohan Mehta", location: "Maharashtra" },
   { quote: "We needed a professional voice for our IVR system in three languages. Tasadezy nailed all three.", name: "Sneha Joshi", location: "Karnataka" },
@@ -16,7 +16,7 @@ const testimonialRow1 = [
 
 const testimonialRow2 = [
   { quote: "The Kannada voice-over for our ad campaign was perfect. Native tone, great clarity, ahead of schedule.", name: "Deepa Nair", location: "Karnataka" },
-  { quote: "Found Tasadezy for a Tamil narration project — they absolutely nailed the brief. Studio quality from take one.", name: "Arjun Singh", location: "Tamil Nadu" },
+  { quote: "Found Tasadezy for a Tamil narration project - they absolutely nailed the brief. Studio quality from take one.", name: "Arjun Singh", location: "Tamil Nadu" },
   { quote: "Their transcription and translation service saved us hours. Fast, accurate, and budget friendly.", name: "Meera Iyer", location: "Tamil Nadu" },
   { quote: "Used Tasadezy across Hindi, Telugu and Bengali projects. Consistent quality every single time.", name: "Vikram Das", location: "West Bengal" },
   { quote: "The Malayalam voice-over brought our documentary to life. Emotional, authentic, and beautifully delivered.", name: "Nisha Pillai", location: "Kerala" },
@@ -41,7 +41,7 @@ const services = [
   {
     icon: 'equalizer',
     title: 'Audio Production',
-    description: 'End-to-end audio creation — mixing, mastering, and broadcast-ready delivery.',
+    description: 'End-to-end audio creation - mixing, mastering, and broadcast-ready delivery.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDJYP809UuTCdrVpUGWBXIMLwAjkCts-gScUylTWWybWOw7DNsSFrAIf84PVhEvYJ7Uh7gCVbsvI4J0Mi_A1JGQH2CPcHpFPrNns1HYxy_pxlKXsfiMRLrwdy4R3deWQDmOm1Nr0P77Zz5mxRswz7JWzazJl1RoTsCvj5DFVW-ls22U2oJwejXPhftBbi_fyCwY9VaQsv3gxfe_h8pGCnUt5Gwf9mcxlQ9hHCxwPvOutPLkuhqZ8nihp6Erz-qdbuBnA0Cme2dP15E',
   },
   {
@@ -123,126 +123,87 @@ function HomePage() {
         )}
       </nav>
 
-      <header
-        className="relative"
-        style={{
-          padding: 'clamp(48px, 8vw, 80px) 0 clamp(48px, 8vw, 80px)',
-          background:
-            'radial-gradient(circle at 20% 30%, #e8fdf5 0%, transparent 40%), radial-gradient(circle at 80% 70%, #eef7ff 0%, transparent 40%), #ffffff',
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
-            {/* Left — 45% */}
-            <div className="w-full lg:w-[45%] shrink-0 text-center lg:text-left">
-              <h1 className="font-black leading-tight text-slate-900 dark:text-white mb-5" style={{ fontSize: 'clamp(1.75rem, 5vw, 3rem)' }}>
+      {/* ── Hero - dark card with background image ────────────────────── */}
+      <header className="px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
+        <div
+          className="relative max-w-7xl mx-auto overflow-hidden"
+          style={{ borderRadius: 'clamp(16px, 3vw, 24px)', minHeight: 'clamp(500px, 82vh, 800px)' }}
+        >
+          {/* Background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/assets/images/hero-image.jpeg')" }}
+          />
+          {/* Dark overlay + grain texture */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(105deg, rgba(6,29,28,0.92) 0%, rgba(6,29,28,0.80) 50%, rgba(6,29,28,0.45) 100%)',
+            }}
+          />
+          {/* Subtle noise grain */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            }}
+          />
+
+          {/* Content */}
+          <div
+            className="relative z-10 flex flex-col lg:flex-row items-end lg:items-center"
+            style={{ padding: 'clamp(56px, 10vw, 120px) clamp(24px, 5vw, 56px)' }}
+          >
+            {/* Left - text */}
+            <div className="w-full lg:w-[55%] shrink-0">
+              <h1
+                className="font-black leading-tight text-white mb-5"
+                style={{ fontSize: 'clamp(1.75rem, 5vw, 3.25rem)' }}
+              >
                 Voices That{' '}
                 <span className="text-primary">Go Global</span>
               </h1>
-              <p className="text-base lg:text-lg text-slate-600 dark:text-slate-400 mb-7 leading-relaxed border-l-2 border-accent-gold/40 pl-5 max-w-lg mx-auto lg:mx-0 text-left">
-                Bring your stories to life with native voice artists in 12+ languages. Perfect for ads, narration,
-                dubbing, and audio production.
+              <p
+                className="text-slate-300 mb-8 leading-relaxed"
+                style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)', maxWidth: '480px' }}
+              >
+                Native voice artists in 12+ languages. Ads, narration, dubbing, and audio production - delivered studio-ready.
               </p>
 
               {/* Buttons */}
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-7">
-                <Link to="/contact" className="bg-primary text-teal-deep px-7 py-3.5 rounded-xl font-bold text-sm lg:text-base hover:scale-105 transition-transform shadow-xl shadow-primary/30">
+              <div className="flex flex-col sm:flex-row gap-3 mb-8">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center bg-primary text-teal-deep px-7 py-3.5 rounded-full font-bold text-sm hover:brightness-110 transition-all shadow-lg shadow-primary/25"
+                >
                   Get Started
                 </Link>
                 <Link
                   to="/demos"
-                  className="flex items-center gap-2 bg-white border border-slate-200 px-7 py-3.5 rounded-xl font-bold text-sm lg:text-base hover:bg-slate-50 transition-colors shadow-sm"
+                  className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-white/20 transition-all"
                 >
                   <span className="material-symbols-outlined text-primary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>play_circle</span>
                   Listen Demo
                 </Link>
               </div>
 
-              {/* Trust badges */}
-              <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-4 gap-y-2 text-sm text-slate-500 font-medium">
-                <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-primary text-base">language</span>
-                  12+ Languages
-                </span>
-                <span className="text-slate-300">•</span>
-                <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-primary text-base">mic</span>
-                  Studio Quality
-                </span>
-                <span className="text-slate-300">•</span>
-                <span className="flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-primary text-base">schedule</span>
-                  Fast Delivery
-                </span>
+              {/* Stats row */}
+              <div className="flex gap-5 sm:gap-10">
+                {[
+                  { value: '12+', label: 'Languages' },
+                  { value: '500+', label: 'Projects' },
+                  { value: '48hr', label: 'Turnaround' },
+                ].map(({ value, label }) => (
+                  <div key={label}>
+                    <p className="text-2xl sm:text-3xl font-black text-white leading-none">{value}</p>
+                    <p className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">{label}</p>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Right — 55% */}
-            <div className="w-full lg:w-[55%] relative">
-              {/* Glass card wrapping the image */}
-              <div className="hero-image-card relative rounded-3xl overflow-visible">
-                <div
-                  className="rounded-3xl overflow-hidden"
-                  style={{
-                    background: '#ffffff',
-                    borderRadius: '20px',
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.08)',
-                    padding: '12px',
-                  }}
-                >
-                  <div
-                    className="w-full rounded-2xl bg-center bg-cover"
-                    style={{
-                      backgroundImage: "url('/assets/images/hero-image.jpeg')",
-                      aspectRatio: '4/3',
-                    }}
-                  />
-                </div>
-
-                {/* Floating waveform card — top right */}
-                <div
-                  className="absolute -top-5 -right-4 bg-white rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3 border border-slate-100 hidden sm:flex"
-                  style={{ transform: 'rotate(2deg)' }}
-                >
-                  <div className="bg-primary/10 p-2 rounded-full">
-                    <span className="material-symbols-outlined text-primary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>mic</span>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-slate-800 mb-1">Recording Live</p>
-                    <div className="flex items-end gap-0.5" style={{ height: '16px' }}>
-                      {[10, 16, 12, 16, 8, 14, 16, 10, 14, 8].map((h, i) => (
-                        <span
-                          key={i}
-                          className="wave-bar"
-                          style={{
-                            height: `${h}px`,
-                            animationDelay: `${i * 0.1}s`,
-                          }}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Floating language chips — bottom left */}
-                <div
-                  className="absolute -bottom-5 -left-4 bg-white rounded-2xl shadow-lg px-4 py-3 hidden sm:block border border-slate-100"
-                  style={{ transform: 'rotate(2deg)' }}
-                >
-                  <p className="text-xs text-slate-400 font-semibold mb-2 uppercase tracking-wide">Languages</p>
-                  <div className="flex gap-1.5 flex-wrap">
-                    {['EN', 'हिंदी', 'தமிழ்', 'తెలుగు', 'বাংলা'].map((lang) => (
-                      <span
-                        key={lang}
-                        className="text-xs font-bold px-2 py-1 rounded-full bg-primary/10 text-primary"
-                      >
-                        {lang}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            {/* Right - image peeking through the gradient (handled by bg) */}
+            <div className="hidden lg:block w-[45%]" />
           </div>
         </div>
       </header>
@@ -255,7 +216,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            {/* Left — text block */}
+            {/* Left - text block */}
             <div className="space-y-8 anim-fade-left">
               <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold text-sm rounded-full tracking-wider uppercase border border-primary/20">
                 About Tasadezy
@@ -274,11 +235,11 @@ function HomePage() {
               >
                 Tasadezy Voices is your premier destination for professional voice-over services. With a passion for
                 storytelling and a commitment to excellence, we deliver captivating narrations, engaging commercials,
-                and compelling character performances — on time and on budget.
+                and compelling character performances - on time and on budget.
               </p>
 
               {/* Three feature cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="about-card p-7 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
                   <span className="material-symbols-outlined text-primary text-3xl mb-4 block">language</span>
                   <h3 className="font-bold mb-1">12+ Languages</h3>
@@ -297,7 +258,7 @@ function HomePage() {
               </div>
             </div>
 
-            {/* Right — image card */}
+            {/* Right - image card */}
             <div
               className="rounded-3xl p-8 border border-primary/10 relative anim-fade-right"
               style={{ background: 'linear-gradient(135deg, #f0fdf8 0%, #f8f9ff 100%)' }}
@@ -329,7 +290,7 @@ function HomePage() {
                 </blockquote>
                 <span className="text-5xl text-primary/20 font-serif leading-none select-none float-right">&rdquo;</span>
               </div>
-              <p className="mt-5 font-bold text-primary text-sm tracking-wide">— The Tasadezy Team</p>
+              <p className="mt-5 font-bold text-primary text-sm tracking-wide">- The Tasadezy Team</p>
             </div>
 
           </div>
@@ -353,7 +314,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
 
-            {/* Left — text + cards */}
+            {/* Left - text + cards */}
             <div className="w-full lg:w-[48%] shrink-0 anim-fade-left">
               <h2 className="font-black text-slate-900 dark:text-white mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em' }}>
                 Why <span className="text-primary">Tasadezy</span>
@@ -363,7 +324,7 @@ function HomePage() {
               </p>
 
               {/* 2-col feature cards */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { icon: 'schedule', title: 'On-Time Delivery',      desc: 'Delivered exactly when you need it.',            accent: false },
                   { icon: 'mic',      title: 'Studio Quality',         desc: 'Broadcast-ready professional recordings.',       accent: true  },
@@ -388,13 +349,13 @@ function HomePage() {
                 ))}
 
                 {/* Trust line spanning full width */}
-                <div className="col-span-2 mt-2 text-center text-sm text-slate-400 font-medium">
-                  Serving projects across 12+ languages — trusted by brands & agencies.
+                <div className="col-span-1 sm:col-span-2 mt-2 text-center text-sm text-slate-400 font-medium">
+                  Serving projects across 12+ languages - trusted by brands & agencies.
                 </div>
               </div>
             </div>
 
-            {/* Right — image with depth */}
+            {/* Right - image with depth */}
             <div className="w-full lg:w-[52%] relative anim-fade-right">
               {/* Background plate for depth */}
               <div

@@ -41,7 +41,7 @@ function ContactPage() {
 
     try {
       // Create a hidden iframe to receive the form POST response.
-      // This is a real browser form submission — Google always accepts these.
+      // This is a real browser form submission - Google always accepts these.
       const iframeName = 'gform-iframe-' + Date.now()
       const iframe = document.createElement('iframe')
       iframe.name = iframeName
@@ -167,7 +167,7 @@ function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ paddingBottom: 'clamp(64px, 10vw, 112px)' }}>
           <div className="grid lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16 items-start">
 
-            {/* ── Left — contact info ────────────────────────────────────── */}
+            {/* ── Left - contact info ────────────────────────────────────── */}
             <div className="anim-fade-left lg:sticky" style={{ top: '100px' }}>
               <h2 className="text-xl font-bold text-slate-900 mb-8">Contact Information</h2>
               <div className="space-y-5 mb-10">
@@ -210,7 +210,7 @@ function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-primary/10 flex items-center justify-center transition-colors group"
+                      className="w-11 h-11 rounded-xl bg-slate-100 hover:bg-primary/10 flex items-center justify-center transition-colors group"
                     >
                       <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-slate-500 group-hover:text-primary transition-colors">
                         <path d={icon} />
@@ -221,7 +221,7 @@ function ContactPage() {
               </div>
             </div>
 
-            {/* ── Right — custom form ──────────────────────────────────── */}
+            {/* ── Right - custom form ──────────────────────────────────── */}
             <div className="anim-fade-right">
               <div
                 className="rounded-3xl p-8 sm:p-10"
@@ -285,7 +285,7 @@ function ContactPage() {
                       </label>
                       <textarea
                         name="message" value={form.message} onChange={handleChange}
-                        placeholder="Tell us about your project — language, format, deadline..."
+                        placeholder="Tell us about your project - language, format, deadline..."
                         required rows={5} className={`${inputBase} resize-none`}
                       />
                     </div>

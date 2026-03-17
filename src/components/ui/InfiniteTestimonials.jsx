@@ -4,13 +4,13 @@ function TestimonialCard({ quote, name, location }) {
     <div
       className="shrink-0 bg-white dark:bg-teal-deep/20 rounded-2xl border border-slate-100 dark:border-teal-deep/40 mx-2 flex flex-col"
       style={{
-        width: '290px',
+        width: 'min(280px, 80vw)',
         height: '196px',
-        padding: '18px 20px',
+        padding: '16px 18px',
         boxShadow: '0 4px 16px rgba(0,0,0,0.05)',
       }}
     >
-      {/* Quote — fixed 4-line clamp */}
+      {/* Quote - fixed 4-line clamp */}
       <p
         className="text-slate-600 dark:text-slate-300 italic flex-1"
         style={{

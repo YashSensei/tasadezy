@@ -135,6 +135,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .demos-wrap .card-head h3 {
@@ -174,7 +175,22 @@
 
   .demos-wrap .nav-row {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     padding: 12px 0;
+    min-height: auto;
+  }
+
+  .demos-wrap .chip {
+    padding: 6px 12px;
+    font-size: 0.88rem;
+  }
+
+  .demos-wrap .demo-card,
+  .demos-wrap .service-card {
+    padding: 16px;
+  }
+
+  .demos-wrap .demos-main {
+    padding: 28px 0 48px;
   }
 }

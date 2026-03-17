@@ -6,7 +6,7 @@ export function HoverEffect({ items, className }) {
   const [hoveredIndex, setHoveredIndex] = useState(null)
 
   return (
-    <div className={cn('grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-4', className)}>
+    <div className={cn('grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 py-4', className)}>
       {items.map((item, idx) => (
         <div
           key={item.title}
@@ -49,7 +49,7 @@ export function HoverCard({ className, children, image, icon }) {
           style={{ backgroundImage: `url('${image}')`, aspectRatio: '4/3' }}
         />
       )}
-      <div className="relative z-50 p-6">
+      <div className="relative z-50 p-4 sm:p-6">
         {icon && (
           <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-3">
             <span className="material-symbols-outlined text-primary text-xl">{icon}</span>
@@ -63,7 +63,7 @@ export function HoverCard({ className, children, image, icon }) {
 
 export function HoverCardTitle({ className, children }) {
   return (
-    <h4 className={cn('text-slate-900 dark:text-zinc-100 font-bold tracking-wide text-lg mt-2', className)}>
+    <h4 className={cn('text-slate-900 dark:text-zinc-100 font-bold tracking-wide text-base sm:text-lg mt-2', className)}>
       {children}
     </h4>
   )

@@ -65,7 +65,7 @@ body {
 .why-card {
   background: #ffffff;
   border-radius: 12px;
-  padding: 18px;
+  padding: clamp(14px, 3vw, 20px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
 }
@@ -160,5 +160,15 @@ body {
   }
   .hero-image-card:hover {
     transform: none;
+  }
+  html {
+    scroll-padding-top: 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track-left,
+  .marquee-track-right {
+    animation: none !important;
   }
 }
