@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useLangColors, getLangClass } from '../lib/useLangColors';
 import { Link } from 'react-router-dom'
 import './DemosPage.css'
 
@@ -79,6 +80,9 @@ function DemosPage() {
     return ['All', ...sorted]
   }, [items])
 
+  useLangColors(languages);
+
+
   const visibleItems = useMemo(() => {
     const filtered = activeFilter === 'all'
       ? items
@@ -123,7 +127,23 @@ function DemosPage() {
             Tasadezy
           </Link>
           <nav className="nav-links">
-            <Link className="btn btn-outline" to="/">Back to Home</Link>
+            <Link className="btn btn-home" to="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#0f8f57"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <path d="M9 22V12h6v10" />
+              </svg>
+              Back to Home
+            </Link>
           </nav>
         </div>
       </header>
@@ -131,25 +151,29 @@ function DemosPage() {
       <main className="container demos-main">
         <section className="demo-hero">
           <p className="eyebrow">Voice Demos</p>
-          <h1>Find the right voice for your project</h1>
+          <h1 style={{ fontWeight: 'bold' }}>Find the perfect voice.</h1>
           <p className="lead">
-            Filter by language and preview real artist samples before booking your recording.
+            Filter. Listen. Book.
           </p>
         </section>
 
         <section className="chip-row" aria-label="Language filters">
           {languages.map((language) => {
-            const value = language.toLowerCase()
+            const value = language.toLowerCase();
             return (
               <button
                 key={language}
                 type="button"
-                className={`chip ${activeFilter === value ? 'active' : ''}`}
+                className={[
+                  'chip',
+                  language.toLowerCase() === 'all' ? 'all-chip' : getLangClass(language),
+                  activeFilter === value ? 'active' : '',
+                ].filter(Boolean).join(' ')}
                 onClick={() => setActiveFilter(value)}
               >
                 {language}
               </button>
-            )
+            );
           })}
         </section>
 
@@ -167,31 +191,36 @@ function DemosPage() {
 
               return (
                 <article key={item.file} className="demo-card">
-                  <div className="card-head">
-                    <h3>{title}</h3>
-                    <span className="tag">{language}</span>
+                
+                  <div className="card-top">
+                    <p className="card-name">{title}</p>
+                    <span className={getLangClass(language)}>{language}</span>
                   </div>
-                  <p>{describeDemo(item)}</p>
-                  <button
-                    type="button"
-                    className="btn btn-solid"
-                    onClick={() => togglePlay(item.file)}
-                  >
-                    {activeFile === item.file ? 'Pause' : 'Play'}
-                  </button>
+
+                  <p className="card-meta">{describeDemo(item)}</p>
+
+                  <div className="card-divider" />
+                  <div className="card-footer">
+                    <button
+                      type="button"
+                      className={`card-play-btn ${activeFile === item.file ? 'is-playing' : ''}`}
+                      onClick={() => togglePlay(item.file)}
+                    >
+                      <span className="play-triangle" />
+                      {activeFile === item.file ? 'Pause' : 'Play'}
+                    </button>
+                    <div className={`card-waveform ${activeFile === item.file ? 'is-playing' : ''}`} aria-hidden="true">
+                      {[10, 6, 14, 8, 12, 5, 10, 9, 13].map((h, i) => (
+                        <span key={i} className="wave-bar" style={{ height: `${h}px`, animationDelay: `${i * 0.15}s` }} />
+                      ))}
+                    </div>
+                  </div>
+
                   <audio
-                    ref={(node) => {
-                      if (node) {
-                        audioRefs.current[item.file] = node
-                      }
-                    }}
+                    ref={(node) => { if (node) audioRefs.current[item.file] = node }}
                     preload="metadata"
                     src={src}
-                    onEnded={() => {
-                      if (activeFile === item.file) {
-                        setActiveFile('')
-                      }
-                    }}
+                    onEnded={() => { if (activeFile === item.file) setActiveFile('') }}
                   />
                 </article>
               )
