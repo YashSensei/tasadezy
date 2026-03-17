@@ -100,12 +100,7 @@ function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             <Link to="/" className="flex items-center gap-2">
-              <span
-                className="material-symbols-outlined text-primary text-3xl md:text-4xl"
-                style={{ fontVariationSettings: "'FILL' 1" }}
-              >
-                spatial_audio_off
-              </span>
+              <img src="/logo.png" alt="Tasadezy" className="w-8 h-8 md:w-10 md:h-10" />
               <span className="text-xl md:text-2xl font-bold tracking-tight text-slate-900">
                 Tasadezy
               </span>

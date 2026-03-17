@@ -118,7 +118,10 @@ function DemosPage() {
     <div className="site-wrap demos-wrap">
       <header className="topbar">
         <div className="container nav-row">
-          <Link className="brand" to="/">Tasadezy</Link>
+          <Link className="brand" to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <img src="/logo.png" alt="Tasadezy" style={{ width: '32px', height: '32px' }} />
+            Tasadezy
+          </Link>
           <nav className="nav-links">
             <Link className="btn btn-outline" to="/">Back to Home</Link>
           </nav>

@@ -77,9 +77,7 @@ function HomePage() {
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-primary text-3xl md:text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
-                spatial_audio_off
-              </span>
+              <img src="/logo.png" alt="Tasadezy" className="w-8 h-8 md:w-10 md:h-10" />
               <span className="text-xl md:text-2xl font-bold tracking-tight text-slate-900 dark:text-white">Tasadezy</span>
             </div>
 
@@ -449,14 +447,7 @@ function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div>
               <div className="flex items-center gap-2 mb-6">
-                <div className="text-primary">
-                  <span
-                    className="material-symbols-outlined text-3xl"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    spatial_audio_off
-                  </span>
-                </div>
+                <img src="/logo.png" alt="Tasadezy" className="w-9 h-9" />
                 <span className="text-xl font-bold tracking-tight">Tasadezy</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
