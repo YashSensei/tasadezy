@@ -403,7 +403,7 @@
     font-size: 11px;
   }
 
-  /* Hide waveform on mobile — keeps footer clean */
+  /* Hide waveform on mobile - keeps footer clean */
   .demos-wrap .card-waveform {
     display: none;
   }

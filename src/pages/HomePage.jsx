@@ -71,7 +71,7 @@ const services = [
   {
     icon: 'campaign',
     title: 'Advertisements',
-    description: 'End-to-end ad production — scriptwriting, voice-over, video, and final delivery.',
+    description: 'End-to-end ad production - scriptwriting, voice-over, video, and final delivery.',
     image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format',
   },
 ]
@@ -186,7 +186,7 @@ function HomePage() {
                 className="text-slate-300 mb-8 leading-relaxed"
                 style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)', maxWidth: '480px' }}
               >
-                Native voice artists in 20+ languages — including rare ones others can't offer. Ads, narration, dubbing, and video production.
+                Native voice artists in 20+ languages - including rare ones others can't offer. Ads, narration, dubbing, and video production.
               </p>
 
               {/* Buttons */}
@@ -369,7 +369,7 @@ function HomePage() {
 
                 {/* Trust line spanning full width */}
                 <div className="col-span-1 sm:col-span-2 mt-2 text-center text-sm text-slate-400 font-medium">
-                  Serving projects across 20+ languages — trusted by brands & agencies.
+                  Serving projects across 20+ languages - trusted by brands & agencies.
                 </div>
               </div>
             </div>
