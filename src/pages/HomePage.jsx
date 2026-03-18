@@ -59,8 +59,20 @@ const services = [
   {
     icon: 'language',
     title: 'Multi-Language',
-    description: 'Native voice talent across Hindi, Tamil, Telugu, Malayalam, Bengali, Odia & more.',
+    description: 'Hindi, Tamil, Telugu, Bengali, Odia + rare languages like Bodo, Khasi, Garo, Santhali, Manipuri, Kashmiri & Nepali, etc.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJlFeRFjHT1faDx-PEZCi_52gO4nLzMdrO9pMOHTfZkr85MDK41BTXBySMNl7wKDwbfdKJjOqhcXK3crKxpRinnAAOXffAkFQoRuVC83mZEZsq109QWRxJylJEK55s_RvbLjS1dO6hSwbEXSCWVQy62tuBAnenBsCeS7PGBz7rBxmnb9G0OG2r7ea7qgSr3C1LzCLRev0ioQ-DBhcNYpWRwQCLz0MSugqKWQ1MQ8KMvMzIYTfsi_W8OeiqvhJ0_gqkooLpaRhaF_c',
+  },
+  {
+    icon: 'videocam',
+    title: 'Video Production',
+    description: 'Animations, ad shoots, short-form video content, and complete voice-over packaging.',
+    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80&auto=format',
+  },
+  {
+    icon: 'campaign',
+    title: 'Advertisements',
+    description: 'End-to-end ad production — scriptwriting, voice-over, video, and final delivery.',
+    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format',
   },
 ]
 
@@ -174,7 +186,7 @@ function HomePage() {
                 className="text-slate-300 mb-8 leading-relaxed"
                 style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)', maxWidth: '480px' }}
               >
-                Native voice artists in 12+ languages. Ads, narration, dubbing, and audio production - delivered studio-ready.
+                Native voice artists in 20+ languages — including rare ones others can't offer. Ads, narration, dubbing, and video production.
               </p>
 
               {/* Buttons */}
@@ -197,7 +209,7 @@ function HomePage() {
               {/* Stats row */}
               <div className="flex gap-5 sm:gap-10">
                 {[
-                  { value: '12+', label: 'Languages' },
+                  { value: '20+', label: 'Languages' },
                   { value: '500+', label: 'Projects' },
                   { value: '48hr', label: 'Turnaround' },
                 ].map(({ value, label }) => (
@@ -249,8 +261,8 @@ function HomePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="about-card p-7 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
                   <span className="material-symbols-outlined text-primary text-3xl mb-4 block">language</span>
-                  <h3 className="font-bold mb-1">12+ Languages</h3>
-                  <p className="text-sm text-slate-500">Hindi, Tamil, Telugu, Malayalam, Bengali & more.</p>
+                  <h3 className="font-bold mb-1">20+ Languages</h3>
+                  <p className="text-sm text-slate-500">Including rare languages like Bodo, Khasi, Garo, Santhali & Manipuri.</p>
                 </div>
                 <div className="about-card p-7 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
                   <span className="material-symbols-outlined text-primary text-3xl mb-4 block">mic</span>
@@ -357,7 +369,7 @@ function HomePage() {
 
                 {/* Trust line spanning full width */}
                 <div className="col-span-1 sm:col-span-2 mt-2 text-center text-sm text-slate-400 font-medium">
-                  Serving projects across 12+ languages - trusted by brands & agencies.
+                  Serving projects across 20+ languages — trusted by brands & agencies.
                 </div>
               </div>
             </div>
