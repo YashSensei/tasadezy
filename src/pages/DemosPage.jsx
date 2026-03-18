@@ -124,7 +124,7 @@ function DemosPage() {
         <div className="container nav-row">
           <Link className="brand" to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <img src="/logo.png" alt="Tasadezy" style={{ width: '32px', height: '32px' }} />
-            Tasadezy
+            Tasadezy Voices
           </Link>
           <nav className="nav-links">
             <Link className="btn btn-home" to="/">

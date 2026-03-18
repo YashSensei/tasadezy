@@ -102,7 +102,7 @@ function ContactPage() {
             <Link to="/" className="flex items-center gap-2">
               <img src="/logo.png" alt="Tasadezy" className="w-8 h-8 md:w-10 md:h-10" />
               <span className="text-xl md:text-2xl font-bold tracking-tight text-slate-900">
-                Tasadezy
+                Tasadezy Voices
               </span>
             </Link>
 

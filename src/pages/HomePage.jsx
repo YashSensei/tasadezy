@@ -85,7 +85,7 @@ function HomePage() {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img src="/logo.png" alt="Tasadezy" className="nav-logo" />
-              <span className="nav-brand">Tasadezy</span>
+              <span className="nav-brand">Tasadezy Voices</span>
             </div>
 
             {/* Desktop nav */}
@@ -226,7 +226,7 @@ function HomePage() {
             {/* Left - text block */}
             <div className="space-y-8 anim-fade-left">
               <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold text-sm rounded-full tracking-wider uppercase border border-primary/20">
-                About Tasadezy
+                About Tasadezy Voices
               </div>
 
               <h2
@@ -297,7 +297,7 @@ function HomePage() {
                 </blockquote>
                 <span className="text-5xl text-primary/20 font-serif leading-none select-none float-right">&rdquo;</span>
               </div>
-              <p className="mt-5 font-bold text-primary text-sm tracking-wide">- The Tasadezy Team</p>
+              <p className="mt-5 font-bold text-primary text-sm tracking-wide">- The Tasadezy Voices Team</p>
             </div>
 
           </div>
@@ -324,7 +324,7 @@ function HomePage() {
             {/* Left - text + cards */}
             <div className="w-full lg:w-[48%] shrink-0 anim-fade-left">
               <h2 className="font-black text-slate-900 dark:text-white mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em' }}>
-                Why <span className="text-primary">Tasadezy</span>
+                Why <span className="text-primary">Tasadezy Voices</span>
               </h2>
               <p className="text-slate-500 dark:text-slate-400 mb-10 text-lg" style={{ maxWidth: '400px', lineHeight: 1.6 }}>
                 Focus on your vision.<br />We&apos;ll handle the voice.
@@ -414,7 +414,7 @@ function HomePage() {
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <img src="/logo.png" alt="Tasadezy" className="w-9 h-9" />
-                <span className="text-xl font-bold tracking-tight">Tasadezy</span>
+                <span className="text-xl font-bold tracking-tight">Tasadezy Voices</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Bringing voices to the world. We are your partner for high-quality audio narration and production.
