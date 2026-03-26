@@ -1,549 +1,723 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { HoverEffect } from '../components/ui/CardHoverEffect'
-import { InfiniteTestimonials } from '../components/ui/InfiniteTestimonials'
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const testimonialRow1 = [
-  { quote: "Working with Tasadezy has been a pleasure. Professional, creative, and delivered exactly what we envisioned.", name: "Anil Pandey", location: "Uttar Pradesh" },
-  { quote: "Their ability to understand our requirements and deliver high-quality voice-over work was truly impressive.", name: "Sameer Shinde", location: "Maharashtra" },
-  { quote: "Exceptional quality and on-time delivery. The Hindi voice-over for our e-learning module was perfect.", name: "Priya Sharma", location: "Delhi" },
-  { quote: "Multi-language dubbing on a tight deadline - delivered without compromising on quality. Truly professional.", name: "Rahul Verma", location: "Karnataka" },
-  { quote: "The Telugu narration was flawless. Native tone, crystal-clear audio, and zero revisions needed.", name: "Kavitha Reddy", location: "Telangana" },
-  { quote: "Fast turnaround and broadcast-ready quality. Tasadezy is our go-to for all voice-over needs.", name: "Rohan Mehta", location: "Maharashtra" },
-  { quote: "We needed a professional voice for our IVR system in three languages. Tasadezy nailed all three.", name: "Sneha Joshi", location: "Karnataka" },
-  { quote: "Reliable, responsive, and remarkably talented. Every project has been delivered on time.", name: "Karan Malhotra", location: "Delhi" },
-]
-
-const testimonialRow2 = [
-  { quote: "The Kannada voice-over for our ad campaign was perfect. Native tone, great clarity, ahead of schedule.", name: "Deepa Nair", location: "Karnataka" },
-  { quote: "Found Tasadezy for a Tamil narration project - they absolutely nailed the brief. Studio quality from take one.", name: "Arjun Singh", location: "Tamil Nadu" },
-  { quote: "Their transcription and translation service saved us hours. Fast, accurate, and budget friendly.", name: "Meera Iyer", location: "Tamil Nadu" },
-  { quote: "Used Tasadezy across Hindi, Telugu and Bengali projects. Consistent quality every single time.", name: "Vikram Das", location: "West Bengal" },
-  { quote: "The Malayalam voice-over brought our documentary to life. Emotional, authentic, and beautifully delivered.", name: "Nisha Pillai", location: "Kerala" },
-  { quote: "Quick response, professional team, and the final audio was beyond our expectations.", name: "Aditya Rao", location: "Telangana" },
-  { quote: "Tasadezy handled our Bengali dubbing project with incredible precision and care.", name: "Pooja Banerjee", location: "West Bengal" },
-  { quote: "Best investment for our training videos. Clear, engaging voice that keeps learners focused.", name: "Suresh Kumar", location: "Assam" },
-]
-
-const services = [
   {
-    icon: 'mic',
-    title: 'Voice Over',
-    description: 'Captivating narrations and commercial voice-overs across 12+ Indian languages.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDRMZKZtUCE7fKtlSBf281sSHi9JoBXzua8akP5xIIM6kq_XN551Ct1dzGcd_gVBwnITwrBR52VKeFSS7lF9wmtdG0WrnbUx19J47kZ6QNsFPXR8O55o8oANzPYETNKCBfUwowtlEY1YvvfZrb8mGLSceyTtEzTTbLgbB1eSma9RE1Fr8OJNaB_QCtGzq5vpeRM5zi64d4SjStvXGkHsMY6bKvHZDh5JA32WD0McKO8s6IQchQwYXmOdOK2Pd-r36qHaVgT-zDvNFU',
+    quote:
+      "Working with Tasadezy Voices has been a pleasure. Professional, creative, and delivered exactly what we envisioned.",
+    name: "Anil Pandey",
+    role: "Director, EduStream Global",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDr8FzHUvG0DtpoxYMiTgch0BnSDR1kfVyebvqPVoVEFcC0hYb8YtZqniYgAkZwc5hBtDIn3jFePnq1C7AFFGQ88RemH7i3EwkVhtwXTVSEa69CFxTlol7XG7vdumzjv0CwOm76ZxX5iKKazJZcbbwKYdlfbkuhj7OsNWvIbodc8dssCSpndHTqh69im1KgyTvfXEfY3ErNkYjcRileHu3QlUH37WcDzPnkYCpFCVF5foZecD_LQ_5znhNNBWGaYYXnXjPjOWqpyO94",
   },
   {
-    icon: 'theaters',
-    title: 'Dubbing',
-    description: 'Lip-sync accurate dubbing for films, web series, ads, and e-learning content.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDBagi6rgYq07Nt-Qt8HtV1l5YjupwnwJZ9R7b7cEeIuelpEHhJMzyQgsyeOlV_3pn0xX7JMzJRtQ5KoeLGyJmhqiepFwi9ewpgVH5PVpJULNjVHtCfWPf9tP-3SZPAalTkEVhufLgrpOKlGAySPqxjcYOW_-UZIpznclfBpxDxM9qmuhx-E2Gb_7FgWZHqxW8y6HdmjXc6inL9KClKg3KUGEC-63NU_vq9VfBlI7a0pWCBwSZHTNgfHP8bmJz_7RVbK9_KC33ncyE',
+    quote:
+      "Their ability to understand our requirements and deliver high-quality voice-over work was truly impressive.",
+    name: "Sameer Shinde",
+    role: "Creative Director, NeoMedia",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAN3R8LZ6S8y9EgRSfsCHH_H9xXBD8x4FUH2bZhs8lBh7OD9JyizfiX5dxYqartCsIv2olhjzzRWaR8YeZ7B2KZDmzquiKFCEVKJ-YR4B_sJqUrynlaphS0cbP70hZv0pbv1eFfjiMLwUneExWkxQ2Zgbv9IwCmqarOlgoWUd4UVsLS03q6jNr0IzwVs3DAx3D8sm8UQuwVDk4VmN1ZpGYg64JXYIk08c291y8a3RctpJSRKM0fldXLU6YLcpv1L6Pmq07TJYgA-Dd3",
   },
   {
-    icon: 'equalizer',
-    title: 'Audio Production',
-    description: 'End-to-end audio creation - mixing, mastering, and broadcast-ready delivery.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDJYP809UuTCdrVpUGWBXIMLwAjkCts-gScUylTWWybWOw7DNsSFrAIf84PVhEvYJ7Uh7gCVbsvI4J0Mi_A1JGQH2CPcHpFPrNns1HYxy_pxlKXsfiMRLrwdy4R3deWQDmOm1Nr0P77Zz5mxRswz7JWzazJl1RoTsCvj5DFVW-ls22U2oJwejXPhftBbi_fyCwY9VaQsv3gxfe_h8pGCnUt5Gwf9mcxlQ9hHCxwPvOutPLkuhqZ8nihp6Erz-qdbuBnA0Cme2dP15E',
+    quote:
+      "Exceptional quality and on-time delivery. The Hindi voice-over for our e-learning module was perfect.",
+    name: "Priya Sharma",
+    role: "Marketing Lead, Safari Labs",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBO-62giiqP_d5JA80PYp5Jv5u2NcPbwRSRG707wPI11bPVAdRQJjLylebfEL-n0e1IxZRJGey7HQZshXpvBCbcQD39qjwCRa1n-lpIVMjFF4WYJBbvUpA8twqY4ZvJqklpjlmbav6cH5rOKAH36PLAyRUyRnMK7o2UJyozeA4apLLUG0Qo9T3E1vFDARNTNzfvgG-ghOP_Khbqtwlau0OdQfVwiXVJZmWavxv7LH21XJNKcElPYTSu_WBNlzrDR2vywkmQoWqFPJ87",
   },
-  {
-    icon: 'translate',
-    title: 'Translation',
-    description: 'Accurate, culturally nuanced translations for scripts, documents, and media.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD87xJreiqWo9KmVaLbj4hpaFS2m9nZ_DvP6Akdf9Jwpwy1EUaVP4P5wUtFYGrE47DhFt-YJgIaQOsGKGo3vDtOvLf9xf_amnDZITjifvFczsEZF3H6UItOnv63mr7QmN36OIU48AMGVIIAuyjD97PWzoxYhU1iE6pqtZ8bpVojCMNW2Gcue9mkmotAu-5L6b3gHKbtfI__qK4TCXhO-1jkNBF-QvoGtiVmQEziTpwpn2UyMnI_kOQStuDZjP97MtIPkW-p7unV0DI',
-  },
-  {
-    icon: 'transcribe',
-    title: 'Transcription',
-    description: 'Fast, accurate transcriptions with subtitles and closed captioning support.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDZUYSlHhpL7RJr9XWQhrmhcy_G7Al0VRYyKTfJkM7paPAduRTHmBakNu9QaPgMOCT1CUs2FOMpExFEoZX8pUKJeCzAM2UBokA0Qzv88LZMSbuKD7P5RtWP9aMhV5iCC5G73CXYd0IoPuf3fLckEredIAChRW-F9clIo9vBIh4xcBF9UXGVVH4gvQraRNlvtfCOCr0zmaZ6OWtw-35AQ9j04iuaDFobVsL8QIAksBNaXxB89EvxP26mGiQpFucqN9HYNjp2DFOBfs',
-  },
-  {
-    icon: 'language',
-    title: 'Multi-Language',
-    description: 'Hindi, Tamil, Telugu, Bengali, Odia + rare languages like Bodo, Khasi, Garo, Santhali, Manipuri, Kashmiri & Nepali, etc.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAJlFeRFjHT1faDx-PEZCi_52gO4nLzMdrO9pMOHTfZkr85MDK41BTXBySMNl7wKDwbfdKJjOqhcXK3crKxpRinnAAOXffAkFQoRuVC83mZEZsq109QWRxJylJEK55s_RvbLjS1dO6hSwbEXSCWVQy62tuBAnenBsCeS7PGBz7rBxmnb9G0OG2r7ea7qgSr3C1LzCLRev0ioQ-DBhcNYpWRwQCLz0MSugqKWQ1MQ8KMvMzIYTfsi_W8OeiqvhJ0_gqkooLpaRhaF_c',
-  },
-  {
-    icon: 'videocam',
-    title: 'Video Production',
-    description: 'Animations, ad shoots, short-form video content, and complete voice-over packaging.',
-    image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&q=80&auto=format',
-  },
-  {
-    icon: 'campaign',
-    title: 'Advertisements',
-    description: 'End-to-end ad production - scriptwriting, voice-over, video, and final delivery.',
-    image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=600&q=80&auto=format',
-  },
-]
-
+];
 
 function HomePage() {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 100)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  const closeMenu = () => setMenuOpen(false)
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <div className={`nav-wrapper ${scrolled ? 'nav-scrolled' : ''}`}>
-        <nav className="nav-bar">
-          <div className="nav-inner">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="Tasadezy" className="nav-logo" />
-              <span className="nav-brand">Tasadezy Voices</span>
+      {/* Top Navigation Bar */}
+      <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-[0_12px_40px_rgba(26,28,28,0.06)]">
+        <div className="flex justify-between items-center w-full px-4 md:px-12 py-5 max-w-[1600px] mx-auto">
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/logo.png" alt="Tasadezy" className="w-8 h-8" />
+            <div className="text-xl md:text-2xl font-light tracking-tighter text-black font-['PP_Radio_Grotesk_Light']">
+              TASADEZY VOICES
             </div>
+          </Link>
 
-            {/* Desktop nav */}
-            <div className="hidden md:flex items-center gap-8">
-              <a className="nav-link" href="#">Home</a>
-              <a className="nav-link" href="#about">About Us</a>
-              <a className="nav-link" href="#services">Services</a>
-              <Link className="nav-link" to="/demos">Audio Samples</Link>
-              <Link className="nav-link" to="/contact">Contact Us</Link>
-            </div>
-
-            {/* Desktop CTA + mobile hamburger */}
-            <div className="flex items-center gap-3">
-              <Link to="/contact" className="nav-cta hidden md:inline-flex items-center justify-center">
-                Get Started
-              </Link>
-              <button
-                className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-slate-700 hover:bg-white/30 transition-colors"
-                onClick={() => setMenuOpen(!menuOpen)}
-                aria-label="Toggle menu"
-              >
-                <span className="material-symbols-outlined text-2xl">
-                  {menuOpen ? 'close' : 'menu'}
-                </span>
-              </button>
-            </div>
+          <div className="hidden md:flex items-center gap-10 font-['Inter'] font-normal tracking-tight text-[13px] uppercase">
+            <Link
+              className="text-primary border-b border-primary/20 pb-0.5 hover:text-accent transition-colors duration-300"
+              to="/"
+            >
+              Home
+            </Link>
+            <a
+              className="text-black/60 hover:text-accent transition-colors duration-300"
+              href="#about"
+            >
+              About
+            </a>
+            <a
+              className="text-black/60 hover:text-accent transition-colors duration-300"
+              href="#services"
+            >
+              Services
+            </a>
+            <Link
+              className="text-black/60 hover:text-accent transition-colors duration-300"
+              to="/demos"
+            >
+              Audio Samples
+            </Link>
           </div>
-        </nav>
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="nav-mobile-menu md:hidden">
-            <a className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" href="#" onClick={closeMenu}>Home</a>
-            <a className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" href="#about" onClick={closeMenu}>About Us</a>
-            <a className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" href="#services" onClick={closeMenu}>Services</a>
-            <Link className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" to="/demos" onClick={closeMenu}>Audio Samples</Link>
-            <Link className="text-sm font-semibold py-3 px-3 rounded-lg hover:bg-white/40 hover:text-primary transition-colors" to="/contact" onClick={closeMenu}>Contact Us</Link>
-            <Link to="/contact" onClick={closeMenu} className="mt-2 block bg-primary text-teal-deep px-6 py-3 rounded-xl font-bold text-sm w-full text-center">
+          <div className="flex items-center gap-4 md:gap-6">
+            <button className="hidden md:block material-symbols-outlined text-black/60 hover:text-primary transition-colors">
+              search
+            </button>
+            <Link
+              to="/contact"
+              className="bg-primary text-white px-6 md:px-8 py-2 md:py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase hover:bg-accent transition-all active:scale-95"
+            >
               Get Started
+            </Link>
+            <button
+              className="md:hidden material-symbols-outlined text-black/60 hover:text-primary transition-colors text-2xl"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? "close" : "menu"}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu dropdown */}
+        {menuOpen && (
+          <div className="md:hidden absolute top-full left-4 right-4 mt-2 p-4 bg-white/95 backdrop-blur-xl border border-black/5 rounded-2xl shadow-xl flex flex-col gap-2 z-50 pointer-events-auto">
+            <Link
+              className="p-3 text-sm font-medium hover:bg-black/5 rounded-xl"
+              to="/"
+              onClick={closeMenu}
+            >
+              Home
+            </Link>
+            <a
+              className="p-3 text-sm font-medium hover:bg-black/5 rounded-xl"
+              href="#about"
+              onClick={closeMenu}
+            >
+              About Us
+            </a>
+            <a
+              className="p-3 text-sm font-medium hover:bg-black/5 rounded-xl"
+              href="#services"
+              onClick={closeMenu}
+            >
+              Services
+            </a>
+            <Link
+              className="p-3 text-sm font-medium hover:bg-black/5 rounded-xl"
+              to="/demos"
+              onClick={closeMenu}
+            >
+              Audio Samples
+            </Link>
+            <Link
+              className="p-3 text-sm font-medium hover:bg-black/5 rounded-xl"
+              to="/contact"
+              onClick={closeMenu}
+            >
+              Contact Us
             </Link>
           </div>
         )}
-      </div>
+      </nav>
 
-      {/* ── Hero - dark card with background image ────────────────────── */}
-      <header className="px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6">
-        <div
-          className="relative max-w-7xl mx-auto overflow-hidden hero-card"
-          style={{ borderRadius: 'clamp(16px, 3vw, 24px)' }}
-        >
-          {/* Background image */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/assets/images/hero-image.jpeg')" }}
-          />
-          {/* Dark overlay + grain texture */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(105deg, rgba(6,29,28,0.92) 0%, rgba(6,29,28,0.80) 50%, rgba(6,29,28,0.45) 100%)',
-            }}
-          />
-          {/* Subtle noise grain */}
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            }}
-          />
-
-          {/* Content */}
-          <div
-            className="relative z-10 flex flex-col lg:flex-row items-end lg:items-center"
-            style={{ padding: 'clamp(56px, 10vw, 120px) clamp(24px, 5vw, 56px)' }}
-          >
-            {/* Left - text */}
-            <div className="w-full lg:w-[55%] shrink-0">
-              <h1
-                className="font-black leading-tight text-white mb-5"
-                style={{ fontSize: 'clamp(1.75rem, 5vw, 3.25rem)' }}
-              >
-                Voices That{' '}
-                <span className="text-primary">Go Global</span>
-              </h1>
-              <p
-                className="text-slate-300 mb-8 leading-relaxed"
-                style={{ fontSize: 'clamp(0.9rem, 1.5vw, 1.1rem)', maxWidth: '480px' }}
-              >
-                Native voice artists in 20+ languages - including rare ones others can't offer. Ads, narration, dubbing, and video production.
-              </p>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center bg-primary text-teal-deep px-7 py-3.5 rounded-full font-bold text-sm hover:brightness-110 transition-all shadow-lg shadow-primary/25"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  to="/demos"
-                  className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-7 py-3.5 rounded-full font-bold text-sm hover:bg-white/20 transition-all"
-                >
-                  <span className="material-symbols-outlined text-primary text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>play_circle</span>
-                  Listen Demo
-                </Link>
-              </div>
-
-              {/* Stats row */}
-              <div className="flex gap-5 sm:gap-10">
-                {[
-                  { value: '20+', label: 'Languages' },
-                  { value: '500+', label: 'Projects' },
-                  { value: '48hr', label: 'Turnaround' },
-                ].map(({ value, label }) => (
-                  <div key={label}>
-                    <p className="text-2xl sm:text-3xl font-black text-white leading-none">{value}</p>
-                    <p className="text-xs sm:text-sm text-slate-400 mt-1 font-medium">{label}</p>
-                  </div>
-                ))}
-              </div>
+      <main className="mesh-bg pt-20">
+        {/* Hero Section */}
+        <section className="max-w-[1600px] mx-auto px-4 md:px-12 pt-20 md:pt-32 pb-20 md:pb-32 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+          <div className="space-y-8 md:space-y-10 text-center md:text-left">
+            <div className="inline-block px-4 py-1.5 border border-black/10 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 font-accent">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent mr-2 align-middle"></span>
+              Studio Quality Voice Overs
             </div>
 
-            {/* Right - image peeking through the gradient (handled by bg) */}
-            <div className="hidden lg:block w-[45%]" />
-          </div>
-        </div>
-      </header>
+            <h1 className="text-5xl sm:text-7xl md:text-[5.5rem] tracking-tighter leading-[0.9] text-primary title-anim">
+              Voices That <br className="hidden sm:block" />
+              <span className="text-accent italic font-accent">Go Global.</span>
+            </h1>
 
-      <section
-        className="dark:bg-teal-dark/50"
-        id="about"
-        style={{ padding: 'clamp(64px, 10vw, 128px) 0', background: 'linear-gradient(to bottom, #ffffff 0%, #f8fbfa 100%)' }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
-            {/* Left - text block */}
-            <div className="space-y-8 anim-fade-left">
-              <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-bold text-sm rounded-full tracking-wider uppercase border border-primary/20">
-                About Tasadezy Voices
-              </div>
-
-              <h2
-                className="font-bold text-slate-900 dark:text-white premium-border pb-4"
-                style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', lineHeight: 1.2, letterSpacing: '-0.02em' }}
-              >
-                The Voice Behind<br />Your Brand&apos;s Story
-              </h2>
-
-              <p
-                className="text-slate-600 dark:text-slate-400"
-                style={{ fontSize: '18px', lineHeight: 1.7, maxWidth: '520px' }}
-              >
-                Tasadezy Voices is your premier destination for professional voice-over services. With a passion for
-                storytelling and a commitment to excellence, we deliver captivating narrations, engaging commercials,
-                and compelling character performances - on time and on budget.
-              </p>
-
-              {/* Three feature cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="about-card p-7 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-4 block">language</span>
-                  <h3 className="font-bold mb-1">20+ Languages</h3>
-                  <p className="text-sm text-slate-500">Including rare languages like Bodo, Khasi, Garo, Santhali & Manipuri.</p>
-                </div>
-                <div className="about-card p-7 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-4 block">mic</span>
-                  <h3 className="font-bold mb-1">Studio Quality</h3>
-                  <p className="text-sm text-slate-500">Broadcast-ready recordings. 100% satisfaction guaranteed.</p>
-                </div>
-                <div className="about-card p-7 bg-background-light dark:bg-teal-deep/30 rounded-2xl border border-slate-100 dark:border-teal-deep">
-                  <span className="material-symbols-outlined text-primary text-3xl mb-4 block">bolt</span>
-                  <h3 className="font-bold mb-1">Fast Delivery</h3>
-                  <p className="text-sm text-slate-500">24–48 hour turnaround for most projects.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - image card */}
-            <div
-              className="rounded-3xl p-8 border border-primary/10 relative anim-fade-right"
-              style={{ background: 'linear-gradient(135deg, #f0fdf8 0%, #f8f9ff 100%)' }}
-            >
-              {/* Live Studio badge */}
-              <div className="absolute top-5 left-8 flex items-center gap-2 bg-white rounded-full px-3 py-1.5 shadow-md border border-slate-100 z-10">
-                <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>mic</span>
-                <span className="text-xs font-bold text-slate-700">Live Studio</span>
-              </div>
-
-              <div
-                className="aspect-video bg-cover bg-center rounded-xl mb-8"
-                data-alt="Sound engineer working on a mixing console"
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCsUfJpuEQ9qxuyOuADfbs9mBxFcazPZmVddWXTsNHTq1w19MvQXJzlXIXiSAetUIwE8d0ru_dPFvZ_B8ODZT3ZL6sBzgwibofndC9eQL7HvdYxlVbD8iOkvxMmIaDuheBBLTrd19KqD3ncJTtzwe9zkoFjEkQbBCGjMLUmJhWAPOUfSuol5Aeqvs3X24Qi9HJnAaCamSmM3r9v_i8M82MWhyGRo1GIYiJTCwdGABvL-sk1wIrxys4--BsYu9Tk6cvvjZrF3Ml8vDk')",
-                  boxShadow: '0 10px 30px rgba(0,0,0,0.08), 0 30px 60px rgba(0,0,0,0.06)',
-                }}
-              ></div>
-
-              <div className="relative">
-                <span className="text-5xl text-primary/20 font-serif leading-none select-none">&ldquo;</span>
-                <blockquote
-                  className="text-lg font-medium italic text-slate-700 dark:text-slate-200 -mt-4"
-                  style={{ lineHeight: 1.6 }}
-                >
-                  With a passion for storytelling and a commitment to excellence, we bring your projects to life with
-                  the power of voice.
-                </blockquote>
-                <span className="text-5xl text-primary/20 font-serif leading-none select-none float-right">&rdquo;</span>
-              </div>
-              <p className="mt-5 font-bold text-primary text-sm tracking-wide">- The Tasadezy Voices Team</p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-background-light dark:bg-background-dark" id="services" style={{ padding: 'clamp(48px, 8vw, 96px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 anim-fade-up">
-            <h2 className="font-bold text-slate-900 dark:text-white mb-4" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)' }}>Our Services</h2>
-            <div className="w-24 h-1 bg-accent-gold mx-auto mb-6"></div>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-              Specialized voice solutions tailored for every medium and industry.
+            <p className="text-lg md:text-xl text-black/60 max-w-lg leading-relaxed font-light mx-auto md:mx-0">
+              Native voice artists in 20+ languages. Specialized in ads,
+              narration, dubbing, and high-fidelity audio production.
             </p>
-          </div>
-          <HoverEffect items={services} />
-        </div>
-      </section>
 
-      <section className="bg-white dark:bg-background-dark" style={{ padding: 'clamp(64px, 10vw, 120px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-
-            {/* Left - text + cards */}
-            <div className="w-full lg:w-[48%] shrink-0 anim-fade-left">
-              <h2 className="font-black text-slate-900 dark:text-white mb-4" style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', letterSpacing: '-0.02em' }}>
-                Why <span className="text-primary">Tasadezy Voices</span>
-              </h2>
-              <p className="text-slate-500 dark:text-slate-400 mb-10 text-lg" style={{ maxWidth: '400px', lineHeight: 1.6 }}>
-                Focus on your vision.<br />We&apos;ll handle the voice.
-              </p>
-
-              {/* 2-col feature cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {[
-                  { icon: 'schedule', title: 'On-Time Delivery',      desc: 'Delivered exactly when you need it.',            accent: false },
-                  { icon: 'mic',      title: 'Studio Quality',         desc: 'Broadcast-ready professional recordings.',       accent: true  },
-                  { icon: 'payments', title: 'Budget Friendly',        desc: 'Premium voice-overs at competitive rates.',      accent: false },
-                  { icon: 'lock',     title: 'Private & Secure',       desc: 'Your scripts stay strictly confidential.',       accent: false },
-                  { icon: 'verified', title: 'Satisfaction Guaranteed',desc: 'We revise until you\'re completely happy.',       accent: false },
-                ].map(({ icon, title, desc, accent }) => (
-                  <div
-                    key={title}
-                    className="why-card"
-                    style={accent ? { borderLeft: '3px solid #11d493' } : {}}
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 md:gap-6 pt-6">
+              <Link
+                to="/contact"
+                className="neo-button w-full sm:w-auto px-12 py-4 md:py-5 rounded-full font-semibold text-sm tracking-wide bg-primary text-white hover:bg-accent-hover transition-all text-center"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/demos"
+                className="flex items-center justify-center sm:justify-start gap-3 w-full sm:w-auto text-sm font-bold tracking-tight group"
+              >
+                <span className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full neo-button group-hover:bg-accent group-hover:text-white transition-all text-primary">
+                  <span
+                    className="material-symbols-outlined text-2xl"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
                   >
-                    <div
-                      className="why-icon w-10 h-10 rounded-full flex items-center justify-center mb-3"
-                      style={{ background: '#e9f9f3' }}
-                    >
-                      <span className="material-symbols-outlined text-lg" style={{ color: '#10b981' }}>{icon}</span>
-                    </div>
-                    <h4 className="text-slate-900 dark:text-slate-100 mb-1" style={{ fontWeight: 600, fontSize: '15px' }}>{title}</h4>
-                    <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: 1.5 }}>{desc}</p>
-                  </div>
-                ))}
-
-                {/* Trust line spanning full width */}
-                <div className="col-span-1 sm:col-span-2 mt-2 text-center text-sm text-slate-400 font-medium">
-                  Serving projects across 20+ languages - trusted by brands & agencies.
-                </div>
-              </div>
+                    play_arrow
+                  </span>
+                </span>
+                Listen Demo
+              </Link>
             </div>
-
-            {/* Right - image with depth */}
-            <div className="w-full lg:w-[52%] relative anim-fade-right">
-              {/* Background plate for depth */}
-              <div
-                className="absolute inset-0 rounded-3xl"
-                style={{
-                  background: 'linear-gradient(135deg, #e8fdf5, #eef7ff)',
-                  transform: 'translate(12px, 12px)',
-                  borderRadius: '24px',
-                }}
+          </div>
+          <div className="relative mt-12 md:mt-0 px-4 md:px-0">
+            <div className="aspect-[1/1.2] rounded-2xl overflow-hidden shadow-2xl rotate-1 group hover:rotate-0 transition-transform duration-700">
+              <img
+                className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000"
+                alt="Close-up of a professional condenser microphone"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf7beXIXDffzM3OdxAt6nB_kphzw2i88Ap2WCeRlDug_QzrpiYscq1EG8ec3fjpDs1vU2eHXKeNw-gkDPb1H5PKdPYwnk5oMM-cLVzrCOwYrjd-80TXw6jJhKcazm_nheMy7I6nqWppIvrikceq7Z44XCix3CFQOYnxPeYnOPLZ_gdWZ11ddNQCzidPhvXGLcWvRWvGJBp-tGhVZH51_pis-hwaMrZtGIYXgoxuUb5m2jCqF1c2Mgk4-tsw8NQMr3JfwjPHj8OrC1j"
               />
-              <div
-                className="relative w-full rounded-3xl bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('/assets/images/voice-over-profesional.jpg')",
-                  aspectRatio: '4/3',
-                  maxHeight: '480px',
-                  boxShadow: '0 20px 50px rgba(0,0,0,0.08), 0 40px 80px rgba(0,0,0,0.05)',
-                }}
-              >
-                {/* Floating badge */}
-                <div className="absolute bottom-5 left-5 flex items-center gap-2 bg-white rounded-full px-4 py-2 shadow-lg border border-slate-100">
-                  <span className="material-symbols-outlined text-primary text-base" style={{ fontVariationSettings: "'FILL' 1" }}>mic</span>
-                  <span className="text-xs font-bold text-slate-700">Professional Recording</span>
+            </div>
+            <div className="absolute -bottom-6 -left-2 md:-bottom-10 md:-left-10 glass-card p-6 md:p-8 rounded-2xl w-[90%] md:max-w-[280px]">
+              <p className="text-[10px] font-bold tracking-widest text-accent uppercase mb-2">
+                Live Status
+              </p>
+              <p className="text-xl md:text-2xl font-light tracking-tight mb-4">
+                99% Delivery Accuracy
+              </p>
+              <div className="w-full h-[1px] bg-black/10 mb-4"></div>
+              <div className="flex justify-between items-center text-[10px] font-bold text-black/40">
+                <span>REAL-TIME SESSION</span>
+                <span className="text-accent">● ACTIVE</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section
+          id="about"
+          className="max-w-[1600px] mx-auto px-4 md:px-12 py-20 md:py-32"
+        >
+          <div className="neo-card p-8 sm:p-16 md:p-24 flex flex-col md:flex-row gap-16 md:gap-24 items-center">
+            <div className="flex-1 relative w-full">
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
+                <div className="aspect-[4/5] rounded-xl overflow-hidden neo-button p-0 border-none">
+                  <img
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    alt="Sound engineer"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1mdblHN5KnrrYfTyWUfjKcTvdiRXrko8P5Bntl-wUqaoSJHsXr0-wvjANXzPaHSLLYa1b0JZJBI1MeHhEk3LRRiyA59zMqiGREMRpSGuW1nx9O9W759e89YnfNAF0wAzc6bmjus2TL90GQEnEMz-S6uA2loj6rox1kz-aLOR3UO48gdlCeSKhgCvH6XVIO1JlPPPMvtPhHnwitoGcAW0M--72Vnep8K-E-C33Qh9_bSGSfNkygX0mSrCUKtSf6ChpL82DF2BLoV8w"
+                  />
+                </div>
+                <div className="aspect-[4/5] rounded-xl overflow-hidden mt-8 md:mt-12 neo-button p-0 border-none">
+                  <img
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    alt="Voice artist"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIIQPtVsXldZPFLXcwC4QjuHaIonFDL3OKp3GBAV5udx-MaD2LIKrwV7JDv3ZmEQw3W_RuHBdqEs9LohTBWUL8CVz4dyFDqvWrejy36sj5w9t4Gzc0VSzdVLfVq1jQhC6pZrPluitVo7brK7BRYGod78qaj5Hwsh8kfkNooNR5Uffm3xOqMZ5VGCEYlwMzKofk5cfzee4TaoGxgJb0hdPPdTJjxKhSoUz3zB_Ig9b6kb59EEvLlPMnAP-X4hfPWXUiBjthsQCW4Ztk"
+                  />
+                </div>
+              </div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+            </div>
+
+            <div className="flex-1 space-y-8 md:space-y-10">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight">
+                Everything you need for <br />
+                <span className="italic font-accent text-accent">
+                  professional audio.
+                </span>
+              </h2>
+              <p className="text-base md:text-lg text-black/60 leading-relaxed font-light">
+                At Tasadezy Voices, we provide authentic native voice actors
+                across major regional languages. We handle end-to-end production
+                ensuring the final deliverable drops straight into your
+                timeline.
+              </p>
+
+              <div className="space-y-6 pt-4">
+                <div className="flex items-center gap-6 group">
+                  <span className="w-12 h-12 neo-button rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all text-primary">
+                    <span className="material-symbols-outlined text-xl">
+                      done_all
+                    </span>
+                  </span>
+                  <div>
+                    <p className="font-bold text-sm tracking-tight text-primary">
+                      Curated Native Speakers
+                    </p>
+                    <p className="text-xs text-black/40">
+                      Verified linguistic excellence
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-6 group">
+                  <span className="w-12 h-12 neo-button rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all text-primary">
+                    <span className="material-symbols-outlined text-xl">
+                      bolt
+                    </span>
+                  </span>
+                  <div>
+                    <p className="font-bold text-sm tracking-tight text-primary">
+                      Fast Delivery
+                    </p>
+                    <p className="text-xs text-black/40">
+                      Efficiency without compromise
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-6 group">
+                  <span className="w-12 h-12 neo-button rounded-full flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all text-primary">
+                    <span className="material-symbols-outlined text-xl">
+                      settings_input_antenna
+                    </span>
+                  </span>
+                  <div>
+                    <p className="font-bold text-sm tracking-tight text-primary">
+                      Broadcast Ready Files
+                    </p>
+                    <p className="text-xs text-black/40">
+                      Studio quality recordings
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-background-light dark:bg-background-dark overflow-hidden" style={{ padding: 'clamp(48px, 8vw, 96px) 0' }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center anim-fade-up">
-            <h2 className="font-bold text-slate-900 dark:text-white mb-3" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.5rem)' }}>
-              What Our <span className="text-primary">Clients</span> Say
+        {/* Services Bento Grid */}
+        <section
+          id="services"
+          className="max-w-[1600px] mx-auto px-4 md:px-12 py-20 md:py-32"
+        >
+          <div className="text-center mb-16 md:mb-24 space-y-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tighter text-primary">
+              Tasadezy Services
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 text-lg">
-              Real feedback from brands and creators we&apos;ve worked with.
+            <div className="h-[1px] w-24 bg-accent mx-auto mt-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 md:gap-8 h-auto md:h-[750px]">
+            {/* Main Featured Card */}
+            <div className="md:col-span-2 md:row-span-2 neo-card p-8 md:p-12 flex flex-col justify-between group overflow-hidden bg-white">
+              <div className="relative z-10">
+                <div className="w-16 h-16 neo-button rounded-2xl flex items-center justify-center mb-10 text-accent bg-white">
+                  <span className="material-symbols-outlined text-3xl">
+                    mic
+                  </span>
+                </div>
+                <h3 className="text-3xl md:text-4xl tracking-tight mb-6 text-primary">
+                  Voice Over & Dubbing
+                </h3>
+                <p className="text-black/60 leading-relaxed font-light max-w-md">
+                  Captivating narrations and commercial voice-overs across 12+
+                  Indian languages. Lip-sync accurate dubbing for films, web
+                  series, ads, and e-learning content.
+                </p>
+              </div>
+              <div className="mt-12 rounded-2xl overflow-hidden aspect-video neo-button p-0 border-none bg-white">
+                <img
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  alt="Luxury vocal booth"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkL1aZPAgo3M8QxpGy9eBzuTgMtXyGqJv67lDmDVZjYgKDPjAht7Q8vd7vOAB8vvLzkaX-dmCC82Dwo-OOPYMcSFnFGd01RJH64CFNYWqc41qajxeOZEe95ZYxYo2rYUhQiFbji93vIMhiRAyi2T8G6SsiAW0n7wUdpw_vpG39AE2bY3jP_aSrYAnf7nVUx7CKBHQ6YF0R7RzJbHABSdj04ZQnzo2d9U3d4N910C-4IiGuqHW3zcHRdH_f9abCYumJcRswa4uZD9rQ"
+                />
+              </div>
+            </div>
+
+            {/* Small Cards using Original Site Services Array equivalent logic */}
+            <div className="neo-card p-8 md:p-10 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 bg-white">
+              <span className="material-symbols-outlined text-accent text-3xl mb-8">
+                graphic_eq
+              </span>
+              <div>
+                <h4 className="font-bold text-xl mb-3 tracking-tight text-primary">
+                  Audio Production
+                </h4>
+                <p className="text-sm text-black/50 leading-relaxed">
+                  End-to-end audio creation - mixing, mastering, and
+                  broadcast-ready delivery.
+                </p>
+              </div>
+            </div>
+
+            <div className="neo-card p-8 md:p-10 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 bg-white">
+              <span className="material-symbols-outlined text-link text-3xl mb-8">
+                translate
+              </span>
+              <div>
+                <h4 className="font-bold text-xl mb-3 tracking-tight text-primary">
+                  Translation
+                </h4>
+                <p className="text-sm text-black/50 leading-relaxed">
+                  Accurate, culturally nuanced translations for scripts,
+                  documents, and media.
+                </p>
+              </div>
+            </div>
+
+            <div className="neo-card p-8 md:p-10 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 bg-white">
+              <span className="material-symbols-outlined text-accent text-3xl mb-8">
+                subtitles
+              </span>
+              <div>
+                <h4 className="font-bold text-xl mb-3 tracking-tight text-primary">
+                  Transcription
+                </h4>
+                <p className="text-sm text-black/50 leading-relaxed">
+                  High-precision speech-to-text services for global digital
+                  content.
+                </p>
+              </div>
+            </div>
+
+            <div className="neo-card p-8 md:p-10 flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 bg-white">
+              <span className="material-symbols-outlined text-link text-3xl mb-8">
+                videocam
+              </span>
+              <div>
+                <h4 className="font-bold text-xl mb-3 tracking-tight text-primary">
+                  Video Services
+                </h4>
+                <p className="text-sm text-black/50 leading-relaxed">
+                  Professional end-to-end visuals perfectly synced with vocal
+                  tracks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Tasadezy Section */}
+        <section className="bg-primary text-white py-24 md:py-40 px-4 md:px-12 relative overflow-hidden">
+          <div className="max-w-[1600px] mx-auto relative z-10">
+            <div className="flex flex-col lg:flex-row gap-16 md:gap-32">
+              <div className="flex-1 space-y-10 md:space-y-12">
+                <h2 className="text-5xl sm:text-7xl md:text-8xl tracking-tighter leading-[0.9] font-light">
+                  Why Tasadezy <br />
+                  <span className="text-accent/40 italic font-accent">
+                    Voices
+                  </span>
+                </h2>
+                <p className="text-white/40 text-xl md:text-2xl font-light max-w-md leading-relaxed">
+                  We combine artisanal voice talent with industrial-grade
+                  efficiency.
+                </p>
+                <div className="pt-6 md:pt-10">
+                  <div className="p-8 md:p-12 glass-card bg-white/5 border-white/10 rounded-3xl space-y-6">
+                    <h3 className="text-3xl md:text-4xl italic font-accent text-accent">
+                      Satisfaction Guaranteed
+                    </h3>
+                    <p className="text-white/60 leading-relaxed font-light text-base md:text-lg">
+                      We don't stop until your vision sounds perfect. Unlimited
+                      minor revisions included in every project to ensure sonic
+                      perfection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-16 self-center">
+                <div className="space-y-6">
+                  <span className="material-symbols-outlined text-accent text-5xl">
+                    schedule
+                  </span>
+                  <h4 className="text-2xl font-light tracking-tight text-white">
+                    Fast Delivery
+                  </h4>
+                  <p className="text-white/40 text-sm leading-relaxed">
+                    We value your deadlines as much as our quality. 24–48 hour
+                    turnaround for most standard projects.
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <span className="material-symbols-outlined text-accent text-5xl">
+                    high_quality
+                  </span>
+                  <h4 className="text-2xl font-light tracking-tight text-white">
+                    Studio Quality
+                  </h4>
+                  <p className="text-white/40 text-sm leading-relaxed">
+                    Broadcast-ready recordings processed by expert sound
+                    engineers. 100% satisfaction guaranteed.
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <span className="material-symbols-outlined text-accent text-5xl">
+                    language
+                  </span>
+                  <h4 className="text-2xl font-light tracking-tight text-white">
+                    20+ Languages
+                  </h4>
+                  <p className="text-white/40 text-sm leading-relaxed">
+                    Major regional languages including rare dialects like Bodo,
+                    Khasi, Garo, Santhali, and Manipuri.
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <span className="material-symbols-outlined text-accent text-5xl">
+                    lock
+                  </span>
+                  <h4 className="text-2xl font-light tracking-tight text-white">
+                    Private & Secure
+                  </h4>
+                  <p className="text-white/40 text-sm leading-relaxed">
+                    Your intellectual property is protected by strict NDAs and
+                    enterprise-grade workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-accent/5 blur-[100px] md:blur-[160px] rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-[300px] md:w-[400px] h-[300px] md:h-[400px] bg-link/5 blur-[80px] md:blur-[120px] rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="max-w-[1600px] mx-auto px-4 md:px-12 py-20 md:py-40">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8 md:gap-12">
+            <div className="space-y-4">
+              <h2 className="text-4xl md:text-6xl tracking-tighter text-primary">
+                Loved by creators
+              </h2>
+              <p className="text-black/40 text-md uppercase tracking-widest text-[12px] font-bold">
+                Trusted by leading brands and directors
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <button className="w-12 h-12 md:w-14 md:h-14 neo-button bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary">
+                <span className="material-symbols-outlined">west</span>
+              </button>
+              <button className="w-12 h-12 md:w-14 md:h-14 neo-button bg-white rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all text-primary">
+                <span className="material-symbols-outlined">east</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+            {testimonialRow1.map((testi, i) => (
+              <div
+                key={i}
+                className={`neo-card p-8 md:p-12 flex flex-col hover:-translate-y-2 transition-transform duration-500 bg-white ${i === 1 ? "border-t-2 border-accent" : ""}`}
+              >
+                <div className="flex gap-1 text-accent mb-8">
+                  <span
+                    className="material-symbols-outlined text-sm"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                  <span
+                    className="material-symbols-outlined text-sm"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                  <span
+                    className="material-symbols-outlined text-sm"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                  <span
+                    className="material-symbols-outlined text-sm"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                  <span
+                    className="material-symbols-outlined text-sm"
+                    style={{ fontVariationSettings: "'FILL' 1" }}
+                  >
+                    star
+                  </span>
+                </div>
+                <p className="text-lg md:text-xl italic font-light text-primary leading-relaxed mb-12">
+                  "{testi.quote}"
+                </p>
+                <div className="mt-auto flex items-center gap-5 pt-8 border-t border-black/5">
+                  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden neo-button p-0 border-none bg-white">
+                    <img
+                      className="w-full h-full object-cover"
+                      alt={`Portrait of ${testi.name}`}
+                      src={testi.image}
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm tracking-tight text-primary">
+                      {testi.name}
+                    </p>
+                    <p className="text-[10px] text-black/40 uppercase tracking-widest font-bold">
+                      {testi.role}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="w-full pt-20 md:pt-32 pb-10 md:pb-16 bg-[#f3f3f3] border-t border-black/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 px-4 md:px-12 max-w-[1600px] mx-auto">
+          <div className="space-y-8 md:space-y-10">
+            <Link to="/" className="flex items-center gap-3">
+              <img src="/logo.png" alt="Tasadezy" className="w-8 h-8" />
+              <div className="font-['PP_Radio_Grotesk_Light'] font-light text-2xl md:text-3xl tracking-tighter text-black">
+                TASADEZY VOICES
+              </div>
+            </Link>
+            <p className="text-black/50 font-light leading-relaxed max-w-xs text-sm">
+              Bringing voices to the world. We are your partner for high-quality
+              audio narration, translation, and production.
             </p>
+            <div className="flex gap-4">
+              <a
+                className="w-10 h-10 neo-button rounded-full flex items-center justify-center bg-white text-primary hover:bg-accent hover:text-white transition-all"
+                href="#"
+              >
+                <span className="font-serif italic font-bold text-sm">in</span>
+              </a>
+              <a
+                className="w-10 h-10 neo-button rounded-full flex items-center justify-center bg-white text-primary hover:bg-accent hover:text-white transition-all"
+                href="#"
+              >
+                <span className="font-bold text-sm">X</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="space-y-6 md:space-y-8">
+            <h4 className="font-['Inter'] text-xs font-bold uppercase tracking-widest text-black/40">
+              Quick Links
+            </h4>
+            <ul className="space-y-4 text-sm font-medium">
+              <li>
+                <Link
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  to="/"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <a
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  href="#about"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  href="#services"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <Link
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  to="/demos"
+                >
+                  Audio Samples
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-6 md:space-y-8">
+            <h4 className="font-['Inter'] text-xs font-bold uppercase tracking-widest text-black/40">
+              Legal & Careers
+            </h4>
+            <ul className="space-y-4 text-sm font-medium">
+              <li>
+                <a
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  href="#"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  href="#"
+                >
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-primary hover:text-accent transition-all inline-block"
+                  href="#"
+                >
+                  Cookie Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  className="text-accent font-bold inline-block"
+                  href="/contact"
+                >
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-6 md:space-y-8">
+            <h4 className="font-['Inter'] text-xs font-bold uppercase tracking-widest text-black/40">
+              Contact Us
+            </h4>
+            <ul className="space-y-4 text-sm font-light text-primary">
+              <li className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-accent text-sm">
+                  mail
+                </span>
+                hello@tasadezy.com
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="material-symbols-outlined text-accent text-sm">
+                  call
+                </span>
+                +91 (800) 123-4567
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="material-symbols-outlined text-accent text-sm mt-1">
+                  location_on
+                </span>
+                <span>Mumbai, India</span>
+              </li>
+            </ul>
           </div>
         </div>
-        <InfiniteTestimonials row1={testimonialRow1} row2={testimonialRow2} />
-      </section>
 
-      <footer className="bg-teal-dark dark:bg-teal-dark border-t border-accent-gold/20 pt-20 pb-10 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
-            <div>
-              <div className="flex items-center gap-2 mb-6">
-                <img src="/logo.png" alt="Tasadezy" className="w-9 h-9" />
-                <span className="text-xl font-bold tracking-tight">Tasadezy Voices</span>
-              </div>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                Bringing voices to the world. We are your partner for high-quality audio narration and production.
-              </p>
-              <div className="flex gap-3">
-                {/* Facebook */}
-                <a
-                  className="w-10 h-10 rounded-full bg-teal-deep flex items-center justify-center hover:bg-primary/20 transition-colors border border-accent-gold/20"
-                  href="https://www.facebook.com/tasatheprernnaofficial/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <svg className="w-4 h-4 fill-slate-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.791-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-                  </svg>
-                </a>
-                {/* Instagram */}
-                <a
-                  className="w-10 h-10 rounded-full bg-teal-deep flex items-center justify-center hover:bg-primary/20 transition-colors border border-accent-gold/20"
-                  href="https://instagram.com/tasatheprernna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <svg className="w-4 h-4 fill-slate-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                  </svg>
-                </a>
-                {/* YouTube */}
-                <a
-                  className="w-10 h-10 rounded-full bg-teal-deep flex items-center justify-center hover:bg-primary/20 transition-colors border border-accent-gold/20"
-                  href="https://youtube.com/c/TASAThePrernna"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                >
-                  <svg className="w-4 h-4 fill-slate-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-                {/* LinkedIn */}
-                <a
-                  className="w-10 h-10 rounded-full bg-teal-deep flex items-center justify-center hover:bg-primary/20 transition-colors border border-accent-gold/20"
-                  href="https://www.linkedin.com/in/sarika-t-428a45110"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <svg className="w-4 h-4 fill-slate-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-accent-gold">Quick Links</h4>
-              <ul className="space-y-4">
-                <li>
-                  <a className="text-slate-400 hover:text-primary text-sm transition-colors" href="#">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a className="text-slate-400 hover:text-primary text-sm transition-colors" href="#about">
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a className="text-slate-400 hover:text-primary text-sm transition-colors" href="#services">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <Link className="text-slate-400 hover:text-primary text-sm transition-colors" to="/demos">
-                    Audio Samples
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-accent-gold">Contact</h4>
-              <ul className="space-y-4 text-slate-400 text-sm">
-                <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary text-lg">mail</span>
-                  tasadezy@gmail.com
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary text-lg">phone</span>
-                  +91 82874 34966
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
-                  Royal Court, Sector 16b, Noida, Uttar Pradesh, India 201308
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary text-lg">schedule</span>
-                  9:30 AM – 6:30 PM IST
-                </li>
-              </ul>
-            </div>
+        <div className="mt-20 md:mt-32 pt-8 px-4 md:px-12 border-t border-black/5 max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-center text-[10px] font-bold tracking-[0.2em] text-black/40 uppercase text-center md:text-left">
+          <div>
+            © {new Date().getFullYear()} TASADEZY VOICES. ALL RIGHTS RESERVED.
           </div>
-          <div className="border-t border-accent-gold/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-slate-500 text-xs">&copy; {new Date().getFullYear()} Tasadezy Voices. All rights reserved.</p>
-            <div className="flex gap-8">
-              <a className="text-slate-500 hover:text-primary text-xs transition-colors" href="#">
-                Privacy Policy
-              </a>
-              <a className="text-slate-500 hover:text-primary text-xs transition-colors" href="#">
-                Terms of Service
-              </a>
-            </div>
+          <div className="flex gap-6 md:gap-8 mt-6 md:mt-0">
+            <a className="hover:text-accent" href="#">
+              Instagram
+            </a>
+            <a className="hover:text-accent" href="#">
+              LinkedIn
+            </a>
+            <a className="hover:text-accent" href="#">
+              X (Twitter)
+            </a>
           </div>
         </div>
       </footer>
     </>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

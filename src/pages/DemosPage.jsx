@@ -1,129 +1,150 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
-import { useLangColors, getLangClass } from '../lib/useLangColors';
-import { Link } from 'react-router-dom'
-import './DemosPage.css'
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useLangColors, getLangClass } from "../lib/useLangColors";
+import { Link } from "react-router-dom";
+import "./DemosPage.css";
 
 function describeDemo(item) {
-  const parts = []
+  const parts = [];
 
-  if (item.voiceType && item.voiceType !== 'Unknown') {
-    parts.push(item.voiceType)
+  if (item.voiceType && item.voiceType !== "Unknown") {
+    parts.push(item.voiceType);
   }
 
-  if (item.useCase && item.useCase !== 'General') {
-    parts.push(item.useCase)
+  if (item.useCase && item.useCase !== "General") {
+    parts.push(item.useCase);
   }
 
-  if (item.artist && item.artist !== 'Unknown') {
-    parts.push(`Artist: ${item.artist}`)
+  if (item.artist && item.artist !== "Unknown") {
+    parts.push(`Artist: ${item.artist}`);
   }
 
-  return parts.length > 0 ? parts.join(' | ') : 'Professional voice-over demo.'
+  return parts.length > 0 ? parts.join(" | ") : "Professional voice-over demo.";
 }
 
 function encodeAssetPath(path) {
   return String(path)
-    .split('/')
+    .split("/")
     .map((segment) => encodeURIComponent(segment))
-    .join('/')
+    .join("/");
 }
 
 function langOrder(lang) {
-  const l = String(lang || '').trim().toLowerCase()
-  if (l === 'hindi') return 0
-  if (l === 'english') return 1
-  return 2
+  const l = String(lang || "")
+    .trim()
+    .toLowerCase();
+  if (l === "hindi") return 0;
+  if (l === "english") return 1;
+  return 2;
 }
 
 function DemosPage() {
-  const [items, setItems] = useState([])
-  const [activeFilter, setActiveFilter] = useState('all')
-  const [activeFile, setActiveFile] = useState('')
-  const [errorMessage, setErrorMessage] = useState('')
-  const audioRefs = useRef({})
+  const [items, setItems] = useState([]);
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFile, setActiveFile] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const audioRefs = useRef({});
 
   useEffect(() => {
-    let ignore = false
+    let ignore = false;
 
     async function loadManifest() {
       try {
-        const response = await fetch('/assets/new_voice_samples/audio-manifest.json')
+        const response = await fetch(
+          "/assets/new_voice_samples/audio-manifest.json",
+        );
         if (!response.ok) {
-          throw new Error('Failed to load manifest.')
+          throw new Error("Failed to load manifest.");
         }
 
-        const data = await response.json()
+        const data = await response.json();
         if (!ignore) {
-          setItems(Array.isArray(data) ? data : [])
+          setItems(Array.isArray(data) ? data : []);
         }
       } catch {
         if (!ignore) {
-          setErrorMessage('Could not load demos. Check that assets are available in the public folder.')
+          setErrorMessage(
+            "Could not load demos. Check that assets are available in the public folder.",
+          );
         }
       }
     }
 
-    loadManifest()
+    loadManifest();
 
     return () => {
-      ignore = true
-    }
-  }, [])
+      ignore = true;
+    };
+  }, []);
 
   const languages = useMemo(() => {
-    const values = new Set(items.map((item) => String(item.language || 'Unknown').trim()))
+    const values = new Set(
+      items.map((item) => String(item.language || "Unknown").trim()),
+    );
     const sorted = Array.from(values).sort((a, b) => {
-      const diff = langOrder(a) - langOrder(b)
-      if (diff !== 0) return diff
-      return a.localeCompare(b)
-    })
-    return ['All', ...sorted]
-  }, [items])
+      const diff = langOrder(a) - langOrder(b);
+      if (diff !== 0) return diff;
+      return a.localeCompare(b);
+    });
+    return ["All", ...sorted];
+  }, [items]);
 
   useLangColors(languages);
 
-
   const visibleItems = useMemo(() => {
-    const filtered = activeFilter === 'all'
-      ? items
-      : items.filter((item) => String(item.language || '').trim().toLowerCase() === activeFilter)
+    const filtered =
+      activeFilter === "all"
+        ? items
+        : items.filter(
+            (item) =>
+              String(item.language || "")
+                .trim()
+                .toLowerCase() === activeFilter,
+          );
 
     return [...filtered].sort((a, b) => {
-      const diff = langOrder(a.language) - langOrder(b.language)
-      if (diff !== 0) return diff
-      return String(a.language || '').localeCompare(String(b.language || ''))
-    })
-  }, [items, activeFilter])
+      const diff = langOrder(a.language) - langOrder(b.language);
+      if (diff !== 0) return diff;
+      return String(a.language || "").localeCompare(String(b.language || ""));
+    });
+  }, [items, activeFilter]);
 
   const togglePlay = (file) => {
-    const current = audioRefs.current[file]
-    if (!current) return
+    const current = audioRefs.current[file];
+    if (!current) return;
 
-    const isPlaying = !current.paused
+    const isPlaying = !current.paused;
 
     if (activeFile && activeFile !== file) {
-      const previous = audioRefs.current[activeFile]
+      const previous = audioRefs.current[activeFile];
       if (previous) {
-        previous.pause()
-        previous.currentTime = 0
+        previous.pause();
+        previous.currentTime = 0;
       }
     }
 
     if (isPlaying) {
-      current.pause()
-      setActiveFile('')
+      current.pause();
+      setActiveFile("");
     } else {
-      current.play()
-      setActiveFile(file)
+      current.play();
+      setActiveFile(file);
     }
-  }
+  };
 
   return (
     <div className="site-wrap demos-wrap">
       <header className="topbar">
         <div className="container nav-row">
-          <Link className="brand" to="/" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <img src="/logo.png" alt="Tasadezy" style={{ width: '32px', height: '32px' }} />
+          <Link
+            className="brand"
+            to="/"
+            style={{ display: "flex", alignItems: "center", gap: "8px" }}
+          >
+            <img
+              src="/logo.png"
+              alt="Tasadezy"
+              style={{ width: "32px", height: "32px" }}
+            />
             Tasadezy Voices
           </Link>
           <nav className="nav-links">
@@ -151,10 +172,8 @@ function DemosPage() {
       <main className="container demos-main">
         <section className="demo-hero">
           <p className="eyebrow">Voice Demos</p>
-          <h1 style={{ fontWeight: 'bold' }}>Find the perfect voice.</h1>
-          <p className="lead">
-            Filter. Listen. Book.
-          </p>
+          <h1 style={{ fontWeight: "bold" }}>Find the perfect voice.</h1>
+          <p className="lead">Filter. Listen. Book.</p>
         </section>
 
         <section className="chip-row" aria-label="Language filters">
@@ -165,10 +184,14 @@ function DemosPage() {
                 key={language}
                 type="button"
                 className={[
-                  'chip',
-                  language.toLowerCase() === 'all' ? 'all-chip' : getLangClass(language),
-                  activeFilter === value ? 'active' : '',
-                ].filter(Boolean).join(' ')}
+                  "chip",
+                  language.toLowerCase() === "all"
+                    ? "all-chip"
+                    : getLangClass(language),
+                  activeFilter === value ? "active" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
                 onClick={() => setActiveFilter(value)}
               >
                 {language}
@@ -185,13 +208,12 @@ function DemosPage() {
         ) : (
           <section className="demo-grid">
             {visibleItems.map((item) => {
-              const title = item.title || item.file
-              const language = item.language || 'Unknown'
-              const src = `/assets/new_voice_samples/${encodeAssetPath(item.file)}`
+              const title = item.title || item.file;
+              const language = item.language || "Unknown";
+              const src = `/assets/new_voice_samples/${encodeAssetPath(item.file)}`;
 
               return (
                 <article key={item.file} className="demo-card">
-                
                   <div className="card-top">
                     <p className="card-name">{title}</p>
                     <span className={getLangClass(language)}>{language}</span>
@@ -203,33 +225,47 @@ function DemosPage() {
                   <div className="card-footer">
                     <button
                       type="button"
-                      className={`card-play-btn ${activeFile === item.file ? 'is-playing' : ''}`}
+                      className={`card-play-btn ${activeFile === item.file ? "is-playing" : ""}`}
                       onClick={() => togglePlay(item.file)}
                     >
                       <span className="play-triangle" />
-                      {activeFile === item.file ? 'Pause' : 'Play'}
+                      {activeFile === item.file ? "Pause" : "Play"}
                     </button>
-                    <div className={`card-waveform ${activeFile === item.file ? 'is-playing' : ''}`} aria-hidden="true">
+                    <div
+                      className={`card-waveform ${activeFile === item.file ? "is-playing" : ""}`}
+                      aria-hidden="true"
+                    >
                       {[10, 6, 14, 8, 12, 5, 10, 9, 13].map((h, i) => (
-                        <span key={i} className="wave-bar" style={{ height: `${h}px`, animationDelay: `${i * 0.15}s` }} />
+                        <span
+                          key={i}
+                          className="wave-bar"
+                          style={{
+                            height: `${h}px`,
+                            animationDelay: `${i * 0.15}s`,
+                          }}
+                        />
                       ))}
                     </div>
                   </div>
 
                   <audio
-                    ref={(node) => { if (node) audioRefs.current[item.file] = node }}
+                    ref={(node) => {
+                      if (node) audioRefs.current[item.file] = node;
+                    }}
                     preload="metadata"
                     src={src}
-                    onEnded={() => { if (activeFile === item.file) setActiveFile('') }}
+                    onEnded={() => {
+                      if (activeFile === item.file) setActiveFile("");
+                    }}
                   />
                 </article>
-              )
+              );
             })}
           </section>
         )}
       </main>
     </div>
-  )
+  );
 }
 
-export default DemosPage
+export default DemosPage;
