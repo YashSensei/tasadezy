@@ -4099,10 +4099,7 @@ export default function HomePage() {
                               data-framer-name="Secondary Large"
                               style={{
                                 backdropFilter: "none",
-                                backgroundColor: `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
+                                backgroundColor: "#FFFFFF",
                                 filter: "blur(0px)",
                                 WebkitBackdropFilter: "none",
                                 WebkitFilter: "blur(0px)",
@@ -4119,10 +4116,7 @@ export default function HomePage() {
                               <div
                                 className="framer-1swh0y3"
                                 style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                  rgb(0, 0, 0)
-                                )`,
+                                  "--extracted-r6o4lv": "#000000",
                                   "--framer-link-text-color":
                                     "rgb(0, 153, 255)",
                                   "--framer-link-text-decoration": "underline",
@@ -4134,13 +4128,9 @@ export default function HomePage() {
                                   className="framer-text framer-styles-preset-1ejdako"
                                   data-styles-preset="Skiln4SgN"
                                   style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                      rgb(0, 0, 0)
-                                    )
-                                  )`,
+                                    "--framer-text-color": "#000000",
+                                    color: "#000000",
+                                    fontWeight: 600,
                                   }}
                                 >
                                   Learn more
@@ -4662,10 +4652,7 @@ export default function HomePage() {
                               data-framer-name="Secondary Large"
                               style={{
                                 backdropFilter: "none",
-                                backgroundColor: `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
+                                backgroundColor: "#FFFFFF",
                                 filter: "blur(0px)",
                                 WebkitBackdropFilter: "none",
                                 WebkitFilter: "blur(0px)",
@@ -4682,10 +4669,7 @@ export default function HomePage() {
                               <div
                                 className="framer-1swh0y3"
                                 style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                  rgb(0, 0, 0)
-                                )`,
+                                  "--extracted-r6o4lv": "#000000",
                                   "--framer-link-text-color":
                                     "rgb(0, 153, 255)",
                                   "--framer-link-text-decoration": "underline",
@@ -4697,13 +4681,9 @@ export default function HomePage() {
                                   className="framer-text framer-styles-preset-1ejdako"
                                   data-styles-preset="Skiln4SgN"
                                   style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                      rgb(0, 0, 0)
-                                    )
-                                  )`,
+                                    "--framer-text-color": "#000000",
+                                    color: "#000000",
+                                    fontWeight: 600,
                                   }}
                                 >
                                   Learn more
@@ -5227,10 +5207,7 @@ export default function HomePage() {
                             data-framer-name="Secondary Large"
                             style={{
                               backdropFilter: "none",
-                              backgroundColor: `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
+                              backgroundColor: "#FFFFFF",
                               filter: "blur(0px)",
                               WebkitBackdropFilter: "none",
                               WebkitFilter: "blur(0px)",
@@ -5247,10 +5224,7 @@ export default function HomePage() {
                             <div
                               className="framer-1swh0y3"
                               style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )`,
+                                "--extracted-r6o4lv": "#000000",
                                 "--framer-link-text-color": "rgb(0, 153, 255)",
                                 "--framer-link-text-decoration": "underline",
                                 transform: "none",
@@ -5261,13 +5235,9 @@ export default function HomePage() {
                                 className="framer-text framer-styles-preset-1ejdako"
                                 data-styles-preset="Skiln4SgN"
                                 style={{
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgba(0, 0, 0, 1)
-                                  )
-                                )`, color: "#000000ff", fontWeight: 600,
+                                  "--framer-text-color": "#000000",
+                                  color: "#000000",
+                                  fontWeight: 600,
                                 }}
                               >
                                 Learn more
