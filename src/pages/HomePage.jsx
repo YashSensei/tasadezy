@@ -117,7 +117,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Pkjhfreiufher
+                                Home
                               </p>
                             </div>
                           </a>
@@ -157,7 +157,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Platform
+                                About us
                               </p>
                             </div>
                           </a>
@@ -198,7 +198,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Customers
+                                Services
                               </p>
                             </div>
                           </a>
@@ -239,7 +239,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                About
+                                Audio samples
                               </p>
                             </div>
                           </a>
@@ -280,7 +280,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Resources
+                                Contact
                               </p>
                             </div>
                           </a>
@@ -580,7 +580,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          The AI shopping agent that boosts your sales
+                          The Voice Behind Your Brand's Story
                         </span>
                       </h1>
                     </div>
@@ -613,7 +613,7 @@ export default function HomePage() {
                         )`,
                         }}
                       >
-                        Guide shoppers in real time, like you would in store.
+                        Premier destination for professional voice-over services
                       </p>
                     </div>
                   </div>
@@ -681,276 +681,12 @@ export default function HomePage() {
                             }}
                             className="framer-text"
                           >
-                            Book a demo
+                            Get started
                           </p>
                         </div>
                       </a>
                       {/* /$ */}
                     </div>
-                  </div>
-                  <div className="framer-y9vq2g">
-                    {/* $ */}
-                    <a
-                      className="framer-u5zojf framer-1szu1bh"
-                      data-framer-appear-id="u5zojf"
-                      style={{
-                        filter: "blur(0px)",
-                        WebkitFilter: "blur(0px)",
-                        willChange: "transform",
-                        opacity: "1",
-                        transform: "none",
-                      }}
-                      href="https://apps.shopify.com/dialog-ai-sales-assistant"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="framer-9fixkp"
-                        data-framer-name="Shopify Icon"
-                      >
-                        <div
-                          data-framer-component-type="SVG"
-                          style={{
-                            imageRendering: "pixelated",
-                            flexShrink: "0",
-                          }}
-                          className="framer-y8jyr5"
-                          aria-hidden="true"
-                        >
-                          <div
-                            className="svgContainer"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              aspectRatio: "inherit",
-                            }}
-                          >
-                            <svg style={{ width: "100%", height: "100%" }}>
-                              <use href="#svg-2077672158_1771"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="framer-57d6pc" data-framer-name="Stack">
-                        <div
-                          className="framer-l1vi3b"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1t10c2y"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-b2osw7"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1e9kmwq"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-i2p4ls"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1mel4l1"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-1iok2sl"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1irij8b"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-pwbq4h"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-18xj3b4"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                      </div>
-                    </a>
-                    {/* /$ */}
-                    {/* $ */}
-                    <a
-                      className="framer-1q5dl1q framer-1szu1bh"
-                      data-framer-appear-id="1q5dl1q"
-                      style={{
-                        filter: "blur(0px)",
-                        WebkitFilter: "blur(0px)",
-                        willChange: "transform",
-                        opacity: "1",
-                        transform: "none",
-                      }}
-                      href="https://www.g2.com/products/dialog-dialog/reviews"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="framer-5ceisl"
-                        data-framer-name="Shopify Icon"
-                      >
-                        <div
-                          data-framer-component-type="SVG"
-                          style={{
-                            imageRendering: "pixelated",
-                            flexShrink: "0",
-                          }}
-                          className="framer-14wpcof"
-                          aria-hidden="true"
-                        >
-                          <div
-                            className="svgContainer"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              aspectRatio: "inherit",
-                            }}
-                          >
-                            <svg style={{ width: "100%", height: "100%" }}>
-                              <use href="#svg-1509413605_1392"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="framer-9xowit" data-framer-name="Stack">
-                        <div
-                          className="framer-18hv0dy"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-psldlq"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-lxt6ra"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-ds4jd6"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-1wp674q"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-ofiylv"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-q81s6m"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-a5nhil"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-1ng2l2n"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-ibc7un"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                      </div>
-                    </a>
-                    {/* /$ */}
                   </div>
                 </div>
               </div>
@@ -2064,7 +1800,7 @@ export default function HomePage() {
                       }}
                       className="framer-text"
                     >
-                      Discover Dialog
+                      Discover Our Work
                     </h1>
                   </div>
                 </div>
@@ -2084,7 +1820,8 @@ export default function HomePage() {
                     )`,
                     }}
                   >
-                    Boost conversions x3 with conversion-first features
+                    High-quality voice, audio, and video solutions built for
+                    impact
                   </h2>
                 </div>
                 <div
@@ -2103,8 +1840,9 @@ export default function HomePage() {
                     )`,
                     }}
                   >
-                    Lead customers through the full journey by predicting needs,
-                    comparing options, and recommending the best products.
+                    From voice-overs and dubbing to full-scale production, we
+                    craft content that connects, engages, and delivers across
+                    languages and formats..
                   </p>
                 </div>
               </div>
@@ -2169,7 +1907,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            Make music and transcriptions with AI
+                            Voice & Dubbing
                           </h3>
                         </div>
                         <div
@@ -2188,170 +1926,10 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            Product quizzes are outdated. AI Product Recommender
-                            drives conversion by guiding shoppers from the home
-                            page to the right product, through personalized
-                            questions or a photo.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="framer-911yfn-container">
-                        {/* $ */}
-                        <a
-                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                          data-framer-name="Primary Large"
-                          style={{
-                            backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            filter: "blur(0px)",
-                            WebkitBackdropFilter: "none",
-                            WebkitFilter: "blur(0px)",
-                            borderBottomLeftRadius: "28px",
-                            borderBottomRightRadius: "28px",
-                            borderTopLeftRadius: "28px",
-                            borderTopRightRadius: "28px",
-                            boxShadow: "none",
-                          }}
-                          href="./solutions/ai-product-recommender"
-                        >
-                          <div
-                            className="framer-1swh0y3"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--font-selector": "SW50ZXItTWVkaXVt",
-                                "--framer-font-family": `\"Inter\",
-                                \"Inter Placeholder\", sans-serif`,
-                                "--framer-font-size": "14px",
-                                "--framer-font-weight": "500",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.4em",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              Learn more
-                            </p>
-                          </div>
-                        </a>
-                        {/* /$ */}
-                      </div>
-                    </div>
-                    <div className="framer-ip2sev">
-                      <div className="framer-ywx080-container">
-                        <div
-                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                          data-framer-name="Lottie (Pause)"
-                          style={{ height: "100%", width: "100%" }}
-                        >
-                          <div className="framer-1rfb461-container">
-                            {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
-                            {/* /$ */}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="ssr-variant hidden-72rtr7">
-                <div
-                  className="framer-d68ubv-container"
-                  id="carousel-1"
-                  style={{ opacity: "1", transform: "none" }}
-                >
-                  <div
-                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
-                    data-framer-name="Tablet Light"
-                    style={{
-                      "--1bn3qnw":
-                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                      backgroundColor: "rgb(255, 255, 255)",
-                      maxWidth: "100%",
-                      width: "100%",
-                      borderBottomLeftRadius: "48px",
-                      borderBottomRightRadius: "48px",
-                      borderTopLeftRadius: "48px",
-                      borderTopRightRadius: "48px",
-                      boxShadow: "var(--1bn3qnw)",
-                    }}
-                  >
-                    <div className="framer-1sfiyki">
-                      <div className="framer-196m01e">
-                        <div
-                          className="framer-ynmfjw"
-                          style={{
-                            "--extracted-a0htzi": `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <h3
-                            className="framer-text framer-styles-preset-1ljffqz"
-                            data-styles-preset="ef412AXUV"
-                            style={{
-                              "--framer-text-alignment": "left",
-                              "--framer-text-color": `var(
-                              --extracted-a0htzi,
-                              var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )
-                            )`,
-                            }}
-                          >
-                            AI product recommender
-                          </h3>
-                        </div>
-                        <div
-                          className="framer-i32fxw"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                            rgba(0, 0, 0, 0.6)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p className="framer-text framer-styles-preset-1wcqtva">
-                            Product quizzes are outdated. AI Product Recommender
-                            drives conversion by guiding shoppers from the home
-                            page to the right product, through personalized
-                            questions or a photo.
+                            Professional voice-overs and lip-sync accurate
+                            dubbing for films, ads, web series, and e-learning,
+                            delivered across 12+ Indian languages with
+                            consistent quality.
                           </p>
                         </div>
                       </div>
@@ -2437,164 +2015,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-              <div
-                className="framer-d68ubv-container"
-                id="carousel-1"
-                style={{ opacity: "1", transform: "none" }}
-              >
-                <div
-                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
-                  data-framer-name="Mobile Light"
-                  style={{
-                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                    backgroundColor: "rgb(255, 255, 255)",
-                    maxWidth: "100%",
-                    width: "100%",
-                    borderBottomLeftRadius: "32px",
-                    borderBottomRightRadius: "32px",
-                    borderTopLeftRadius: "32px",
-                    borderTopRightRadius: "32px",
-                    boxShadow: "var(--1bn3qnw)",
-                  }}
-                >
-                  <div className="framer-1sfiyki">
-                    <div className="framer-196m01e">
-                      <div
-                        className="framer-ynmfjw"
-                        style={{
-                          "--extracted-a0htzi": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <h3
-                          className="framer-text framer-styles-preset-1ljffqz"
-                          data-styles-preset="ef412AXUV"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-a0htzi,
-                            var(
-                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                              rgb(0, 0, 0)
-                            )
-                          )`,
-                          }}
-                        >
-                          AI product recommender
-                        </h3>
-                      </div>
-                      <div
-                        className="framer-i32fxw"
-                        style={{
-                          "--extracted-r6o4lv": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p className="framer-text framer-styles-preset-1wcqtva">
-                          Product quizzes are outdated. AI Product Recommender
-                          drives conversion by guiding shoppers from the home
-                          page to the right product, through personalized
-                          questions or a photo.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="framer-911yfn-container">
-                      {/* $ */}
-                      <a
-                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                        data-framer-name="Primary Large"
-                        style={{
-                          backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          filter: "blur(0px)",
-                          WebkitBackdropFilter: "none",
-                          WebkitFilter: "blur(0px)",
-                          borderBottomLeftRadius: "28px",
-                          borderBottomRightRadius: "28px",
-                          borderTopLeftRadius: "28px",
-                          borderTopRightRadius: "28px",
-                          boxShadow: "none",
-                        }}
-                        href="./solutions/ai-product-recommender"
-                      >
-                        <div
-                          className="framer-1swh0y3"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                            rgb(255, 255, 255)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            style={{
-                              "--font-selector": "SW50ZXItTWVkaXVt",
-                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                              sans-serif`,
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "500",
-                              "--framer-letter-spacing": "-0.02em",
-                              "--framer-line-height": "1.4em",
-                              "--framer-text-color": `var(
-                              --extracted-r6o4lv,
-                              var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )
-                            )`,
-                            }}
-                            className="framer-text"
-                          >
-                            Learn more
-                          </p>
-                        </div>
-                      </a>
-                      {/* /$ */}
-                    </div>
-                  </div>
-                  <div className="framer-ip2sev">
-                    <div className="framer-ywx080-container">
-                      <div
-                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                        data-framer-name="Lottie (Pause)"
-                        style={{ height: "100%", width: "100%" }}
-                      >
-                        <div className="framer-1rfb461-container">
-                          {/* $ */}
-                          <div style={{ height: "100%", width: "100%" }}></div>
-                          {/* /$ */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* /$ */}
+
             {/* $ */}
             <div className="ssr-variant hidden-12tyhur">
               <div className="ssr-variant hidden-ck7hjr">
@@ -2655,7 +2076,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            AI PDP assistant
+                            Multi-Language Reach
                           </h3>
                         </div>
                         <div
@@ -2674,172 +2095,11 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            On product pages, it answers visitor questions
-                            instantly, explains product differences, recommends
-                            the right products, and helps shoppers find the
-                            perfect fit increasing confidence and driving
-                            conversion.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="framer-911yfn-container">
-                        {/* $ */}
-                        <a
-                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                          data-framer-name="Primary Large"
-                          style={{
-                            backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            filter: "blur(0px)",
-                            WebkitBackdropFilter: "none",
-                            WebkitFilter: "blur(0px)",
-                            borderBottomLeftRadius: "28px",
-                            borderBottomRightRadius: "28px",
-                            borderTopLeftRadius: "28px",
-                            borderTopRightRadius: "28px",
-                            boxShadow: "none",
-                          }}
-                          href="./solutions/ai-pdp-assistant"
-                        >
-                          <div
-                            className="framer-1swh0y3"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--font-selector": "SW50ZXItTWVkaXVt",
-                                "--framer-font-family": `\"Inter\",
-                                \"Inter Placeholder\", sans-serif`,
-                                "--framer-font-size": "14px",
-                                "--framer-font-weight": "500",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.4em",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              Learn more
-                            </p>
-                          </div>
-                        </a>
-                        {/* /$ */}
-                      </div>
-                    </div>
-                    <div className="framer-ip2sev">
-                      <div className="framer-ywx080-container">
-                        <div
-                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                          data-framer-name="Lottie (Pause)"
-                          style={{ height: "100%", width: "100%" }}
-                        >
-                          <div className="framer-1rfb461-container">
-                            {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
-                            {/* /$ */}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="ssr-variant hidden-72rtr7">
-                <div
-                  className="framer-os9t5t-container"
-                  id="carousel-2"
-                  style={{ opacity: "1", transform: "none" }}
-                >
-                  <div
-                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
-                    data-framer-name="Tablet Light"
-                    style={{
-                      "--1bn3qnw":
-                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                      backgroundColor: "rgb(255, 255, 255)",
-                      maxWidth: "100%",
-                      width: "100%",
-                      borderBottomLeftRadius: "48px",
-                      borderBottomRightRadius: "48px",
-                      borderTopLeftRadius: "48px",
-                      borderTopRightRadius: "48px",
-                      boxShadow: "var(--1bn3qnw)",
-                    }}
-                  >
-                    <div className="framer-1sfiyki">
-                      <div className="framer-196m01e">
-                        <div
-                          className="framer-ynmfjw"
-                          style={{
-                            "--extracted-a0htzi": `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <h3
-                            className="framer-text framer-styles-preset-1ljffqz"
-                            data-styles-preset="ef412AXUV"
-                            style={{
-                              "--framer-text-alignment": "left",
-                              "--framer-text-color": `var(
-                              --extracted-a0htzi,
-                              var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )
-                            )`,
-                            }}
-                          >
-                            AI PDP assistant
-                          </h3>
-                        </div>
-                        <div
-                          className="framer-i32fxw"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                            rgba(0, 0, 0, 0.6)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p className="framer-text framer-styles-preset-1wcqtva">
-                            On product pages, it answers visitor questions
-                            instantly, explains product differences, recommends
-                            the right products, and helps shoppers find the
-                            perfect fit increasing confidence and driving
-                            conversion.
+                            Extensive coverage across major Indian languages and
+                            rare regional dialects like Bodo, Khasi, Garo,
+                            Santhali, Manipuri, Kashmiri & Nepali, etc. Helping
+                            your content connect with diverse and hard-to-reach
+                            audiences.
                           </p>
                         </div>
                       </div>
@@ -2925,165 +2185,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-              <div
-                className="framer-os9t5t-container"
-                id="carousel-2"
-                style={{ opacity: "1", transform: "none" }}
-              >
-                <div
-                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
-                  data-framer-name="Mobile Light"
-                  style={{
-                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                    backgroundColor: "rgb(255, 255, 255)",
-                    maxWidth: "100%",
-                    width: "100%",
-                    borderBottomLeftRadius: "32px",
-                    borderBottomRightRadius: "32px",
-                    borderTopLeftRadius: "32px",
-                    borderTopRightRadius: "32px",
-                    boxShadow: "var(--1bn3qnw)",
-                  }}
-                >
-                  <div className="framer-1sfiyki">
-                    <div className="framer-196m01e">
-                      <div
-                        className="framer-ynmfjw"
-                        style={{
-                          "--extracted-a0htzi": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <h3
-                          className="framer-text framer-styles-preset-1ljffqz"
-                          data-styles-preset="ef412AXUV"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-a0htzi,
-                            var(
-                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                              rgb(0, 0, 0)
-                            )
-                          )`,
-                          }}
-                        >
-                          AI PDP assistant
-                        </h3>
-                      </div>
-                      <div
-                        className="framer-i32fxw"
-                        style={{
-                          "--extracted-r6o4lv": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p className="framer-text framer-styles-preset-1wcqtva">
-                          On product pages, it answers visitor questions
-                          instantly, explains product differences, recommends
-                          the right products, and helps shoppers find the
-                          perfect fit increasing confidence and driving
-                          conversion.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="framer-911yfn-container">
-                      {/* $ */}
-                      <a
-                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                        data-framer-name="Primary Large"
-                        style={{
-                          backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          filter: "blur(0px)",
-                          WebkitBackdropFilter: "none",
-                          WebkitFilter: "blur(0px)",
-                          borderBottomLeftRadius: "28px",
-                          borderBottomRightRadius: "28px",
-                          borderTopLeftRadius: "28px",
-                          borderTopRightRadius: "28px",
-                          boxShadow: "none",
-                        }}
-                        href="./solutions/ai-pdp-assistant"
-                      >
-                        <div
-                          className="framer-1swh0y3"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                            rgb(255, 255, 255)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            style={{
-                              "--font-selector": "SW50ZXItTWVkaXVt",
-                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                              sans-serif`,
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "500",
-                              "--framer-letter-spacing": "-0.02em",
-                              "--framer-line-height": "1.4em",
-                              "--framer-text-color": `var(
-                              --extracted-r6o4lv,
-                              var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )
-                            )`,
-                            }}
-                            className="framer-text"
-                          >
-                            Learn more
-                          </p>
-                        </div>
-                      </a>
-                      {/* /$ */}
-                    </div>
-                  </div>
-                  <div className="framer-ip2sev">
-                    <div className="framer-ywx080-container">
-                      <div
-                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                        data-framer-name="Lottie (Pause)"
-                        style={{ height: "100%", width: "100%" }}
-                      >
-                        <div className="framer-1rfb461-container">
-                          {/* $ */}
-                          <div style={{ height: "100%", width: "100%" }}></div>
-                          {/* /$ */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* /$ */}
+
             {/* $ */}
             <div className="ssr-variant hidden-12tyhur">
               <div className="framer-dloj9t-container" id="carousel-3">
@@ -3136,7 +2238,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            Smart reengagement
+                            Audio Production
                           </h3>
                         </div>
                         <div
@@ -3155,168 +2257,9 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            During the conversation, your Dialog assistant
-                            captures what each shopper wants, what’s holding
-                            them back, their level of intent, and their contact
-                            details. With our integrations with marketing
-                            platforms like Klaviyo you can trigger AI-driven
-                            email and SMS follow-ups that drive conversion.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="framer-911yfn-container">
-                        {/* $ */}
-                        <a
-                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                          data-framer-name="Primary Large"
-                          style={{
-                            backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            filter: "blur(0px)",
-                            WebkitBackdropFilter: "none",
-                            WebkitFilter: "blur(0px)",
-                            borderBottomLeftRadius: "28px",
-                            borderBottomRightRadius: "28px",
-                            borderTopLeftRadius: "28px",
-                            borderTopRightRadius: "28px",
-                            boxShadow: "none",
-                          }}
-                          href="./solutions/smart-reengagement"
-                        >
-                          <div
-                            className="framer-1swh0y3"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--font-selector": "SW50ZXItTWVkaXVt",
-                                "--framer-font-family": `\"Inter\",
-                                \"Inter Placeholder\", sans-serif`,
-                                "--framer-font-size": "14px",
-                                "--framer-font-weight": "500",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.4em",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              Learn more
-                            </p>
-                          </div>
-                        </a>
-                        {/* /$ */}
-                      </div>
-                    </div>
-                    <div className="framer-ip2sev">
-                      <div className="framer-ywx080-container">
-                        <div
-                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                          data-framer-name="Lottie (Pause)"
-                          style={{ height: "100%", width: "100%" }}
-                        >
-                          <div className="framer-1rfb461-container">
-                            {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
-                            {/* /$ */}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="ssr-variant hidden-72rtr7">
-                  <div
-                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
-                    data-framer-name="Tablet Light"
-                    style={{
-                      "--1bn3qnw":
-                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                      backgroundColor: "rgb(255, 255, 255)",
-                      maxWidth: "100%",
-                      width: "100%",
-                      borderBottomLeftRadius: "48px",
-                      borderBottomRightRadius: "48px",
-                      borderTopLeftRadius: "48px",
-                      borderTopRightRadius: "48px",
-                      boxShadow: "var(--1bn3qnw)",
-                    }}
-                  >
-                    <div className="framer-1sfiyki">
-                      <div className="framer-196m01e">
-                        <div
-                          className="framer-ynmfjw"
-                          style={{
-                            "--extracted-a0htzi": `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <h3
-                            className="framer-text framer-styles-preset-1ljffqz"
-                            data-styles-preset="ef412AXUV"
-                            style={{
-                              "--framer-text-alignment": "left",
-                              "--framer-text-color": `var(
-                              --extracted-a0htzi,
-                              var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )
-                            )`,
-                            }}
-                          >
-                            Smart reengagement
-                          </h3>
-                        </div>
-                        <div
-                          className="framer-i32fxw"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                            rgba(0, 0, 0, 0.6)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p className="framer-text framer-styles-preset-1wcqtva">
-                            During the conversation, your Dialog assistant
-                            captures what each shopper wants, what’s holding
-                            them back, their level of intent, and their contact
-                            details. With our integrations with marketing
-                            platforms like Klaviyo you can trigger AI-driven
-                            email and SMS follow-ups that drive conversion.
+                            End-to-end audio production, including recording,
+                            mixing, mastering, and broadcast-ready delivery for
+                            content that sounds as good as it looks
                           </p>
                         </div>
                       </div>
@@ -3402,161 +2345,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-              <div className="framer-dloj9t-container" id="carousel-3">
-                <div
-                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
-                  data-framer-name="Mobile Light"
-                  style={{
-                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                    backgroundColor: "rgb(255, 255, 255)",
-                    maxWidth: "100%",
-                    width: "100%",
-                    borderBottomLeftRadius: "32px",
-                    borderBottomRightRadius: "32px",
-                    borderTopLeftRadius: "32px",
-                    borderTopRightRadius: "32px",
-                    boxShadow: "var(--1bn3qnw)",
-                  }}
-                >
-                  <div className="framer-1sfiyki">
-                    <div className="framer-196m01e">
-                      <div
-                        className="framer-ynmfjw"
-                        style={{
-                          "--extracted-a0htzi": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <h3
-                          className="framer-text framer-styles-preset-1ljffqz"
-                          data-styles-preset="ef412AXUV"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-a0htzi,
-                            var(
-                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                              rgb(0, 0, 0)
-                            )
-                          )`,
-                          }}
-                        >
-                          Smart reengagement
-                        </h3>
-                      </div>
-                      <div
-                        className="framer-i32fxw"
-                        style={{
-                          "--extracted-r6o4lv": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p className="framer-text framer-styles-preset-1wcqtva">
-                          During the conversation, your Dialog assistant
-                          captures what each shopper wants, what’s holding them
-                          back, their level of intent, and their contact
-                          details. With our integrations with marketing
-                          platforms like Klaviyo you can trigger AI-driven email
-                          and SMS follow-ups that drive conversion.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="framer-911yfn-container">
-                      {/* $ */}
-                      <a
-                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                        data-framer-name="Primary Large"
-                        style={{
-                          backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          filter: "blur(0px)",
-                          WebkitBackdropFilter: "none",
-                          WebkitFilter: "blur(0px)",
-                          borderBottomLeftRadius: "28px",
-                          borderBottomRightRadius: "28px",
-                          borderTopLeftRadius: "28px",
-                          borderTopRightRadius: "28px",
-                          boxShadow: "none",
-                        }}
-                        href="./solutions/smart-reengagement"
-                      >
-                        <div
-                          className="framer-1swh0y3"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                            rgb(255, 255, 255)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            style={{
-                              "--font-selector": "SW50ZXItTWVkaXVt",
-                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                              sans-serif`,
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "500",
-                              "--framer-letter-spacing": "-0.02em",
-                              "--framer-line-height": "1.4em",
-                              "--framer-text-color": `var(
-                              --extracted-r6o4lv,
-                              var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )
-                            )`,
-                            }}
-                            className="framer-text"
-                          >
-                            Learn more
-                          </p>
-                        </div>
-                      </a>
-                      {/* /$ */}
-                    </div>
-                  </div>
-                  <div className="framer-ip2sev">
-                    <div className="framer-ywx080-container">
-                      <div
-                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                        data-framer-name="Lottie (Pause)"
-                        style={{ height: "100%", width: "100%" }}
-                      >
-                        <div className="framer-1rfb461-container">
-                          {/* $ */}
-                          <div style={{ height: "100%", width: "100%" }}></div>
-                          {/* /$ */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             {/* /$ */}
           </div>
           <div className="framer-1h6k8st" data-framer-name="Section">
@@ -3633,7 +2422,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            Shopify App Setup in 30 Minutes
+                            Translation & Transcription
                           </h3>
                         </div>
                         <div
@@ -3655,10 +2444,11 @@ export default function HomePage() {
                             dir="auto"
                             className="framer-text framer-styles-preset-1wcqtva"
                           >
-                            If you are on Shopify, connect Dialog to your app in
-                            30 minutes and offer shoppers instant, on-brand
-                            answers and recommendations directly where purchase
-                            decisions happen
+                            Accurate, culturally nuanced translations combined
+                            with high-precision transcriptions for scripts,
+                            documents, and media. Includes subtitle and closed
+                            caption support, making your content accessible,
+                            polished, and ready for wider distribution.
                           </p>
                         </div>
                       </div>
@@ -3740,326 +2530,13 @@ export default function HomePage() {
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="ssr-variant hidden-72rtr7">
-                  <div
-                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
-                    data-framer-name="Tablet Light"
-                    style={{
-                      "--1bn3qnw":
-                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                      backgroundColor: "rgb(255, 255, 255)",
-                      maxWidth: "100%",
-                      width: "100%",
-                      borderBottomLeftRadius: "48px",
-                      borderBottomRightRadius: "48px",
-                      borderTopLeftRadius: "48px",
-                      borderTopRightRadius: "48px",
-                      boxShadow: "var(--1bn3qnw)",
-                    }}
-                  >
-                    <div className="framer-1sfiyki">
-                      <div className="framer-196m01e">
-                        <div
-                          className="framer-ynmfjw"
-                          style={{
-                            "--extracted-a0htzi": `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <h3
-                            className="framer-text framer-styles-preset-1ljffqz"
-                            data-styles-preset="ef412AXUV"
-                            style={{
-                              "--framer-text-alignment": "left",
-                              "--framer-text-color": `var(
-                              --extracted-a0htzi,
-                              var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )
-                            )`,
-                            }}
-                          >
-                            Shopify App Setup in 30 Minutes
-                          </h3>
-                        </div>
-                        <div
-                          className="framer-i32fxw"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                            rgba(0, 0, 0, 0.6)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            filter: "blur(0px)",
-                            WebkitFilter: "blur(0px)",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            dir="auto"
-                            className="framer-text framer-styles-preset-1wcqtva"
-                          >
-                            If you are on Shopify, connect Dialog to your app in
-                            30 minutes and offer shoppers instant, on-brand
-                            answers and recommendations directly where purchase
-                            decisions happen
-                          </p>
-                        </div>
-                      </div>
-                      <div className="framer-911yfn-container">
-                        {/* $ */}
-                        <a
-                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                          data-framer-name="Primary Large"
-                          style={{
-                            backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            filter: "blur(0px)",
-                            WebkitBackdropFilter: "none",
-                            WebkitFilter: "blur(0px)",
-                            borderBottomLeftRadius: "28px",
-                            borderBottomRightRadius: "28px",
-                            borderTopLeftRadius: "28px",
-                            borderTopRightRadius: "28px",
-                            boxShadow: "none",
-                          }}
-                          href="https://apps.shopify.com/dialog-ai-sales-assistant"
-                          rel="noopener"
-                        >
-                          <div
-                            className="framer-1swh0y3"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--font-selector": "SW50ZXItTWVkaXVt",
-                                "--framer-font-family": `\"Inter\",
-                                \"Inter Placeholder\", sans-serif`,
-                                "--framer-font-size": "14px",
-                                "--framer-font-weight": "500",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.4em",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              Install our Shopify App
-                            </p>
-                          </div>
-                        </a>
-                        {/* /$ */}
-                      </div>
-                    </div>
-                    <div className="framer-ip2sev">
-                      <div className="framer-ywx080-container">
-                        <div
-                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                          data-framer-name="Lottie (Pause)"
-                          style={{ height: "100%", width: "100%" }}
-                        >
-                          <div className="framer-1rfb461-container">
-                            {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
-                            {/* /$ */}
-                          </div>
-                        </div>
-                      </div>
+                      x
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-              <div className="framer-1jm3p5u-container" id="carousel-2-1">
-                <div
-                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
-                  data-framer-name="Mobile Light"
-                  style={{
-                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
-                    backgroundColor: "rgb(255, 255, 255)",
-                    maxWidth: "100%",
-                    width: "100%",
-                    borderBottomLeftRadius: "32px",
-                    borderBottomRightRadius: "32px",
-                    borderTopLeftRadius: "32px",
-                    borderTopRightRadius: "32px",
-                    boxShadow: "var(--1bn3qnw)",
-                  }}
-                >
-                  <div className="framer-1sfiyki">
-                    <div className="framer-196m01e">
-                      <div
-                        className="framer-ynmfjw"
-                        style={{
-                          "--extracted-a0htzi": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <h3
-                          className="framer-text framer-styles-preset-1ljffqz"
-                          data-styles-preset="ef412AXUV"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-a0htzi,
-                            var(
-                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                              rgb(0, 0, 0)
-                            )
-                          )`,
-                          }}
-                        >
-                          Shopify App Setup in 30 Minutes
-                        </h3>
-                      </div>
-                      <div
-                        className="framer-i32fxw"
-                        style={{
-                          "--extracted-r6o4lv": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          dir="auto"
-                          className="framer-text framer-styles-preset-1wcqtva"
-                        >
-                          If you are on Shopify, connect Dialog to your app in
-                          30 minutes and offer shoppers instant, on-brand
-                          answers and recommendations directly where purchase
-                          decisions happen
-                        </p>
-                      </div>
-                    </div>
-                    <div className="framer-911yfn-container">
-                      {/* $ */}
-                      <a
-                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                        data-framer-name="Primary Large"
-                        style={{
-                          backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          filter: "blur(0px)",
-                          WebkitBackdropFilter: "none",
-                          WebkitFilter: "blur(0px)",
-                          borderBottomLeftRadius: "28px",
-                          borderBottomRightRadius: "28px",
-                          borderTopLeftRadius: "28px",
-                          borderTopRightRadius: "28px",
-                          boxShadow: "none",
-                        }}
-                        href="https://apps.shopify.com/dialog-ai-sales-assistant"
-                        rel="noopener"
-                      >
-                        <div
-                          className="framer-1swh0y3"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                            rgb(255, 255, 255)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            style={{
-                              "--font-selector": "SW50ZXItTWVkaXVt",
-                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                              sans-serif`,
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "500",
-                              "--framer-letter-spacing": "-0.02em",
-                              "--framer-line-height": "1.4em",
-                              "--framer-text-color": `var(
-                              --extracted-r6o4lv,
-                              var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )
-                            )`,
-                            }}
-                            className="framer-text"
-                          >
-                            Install our Shopify App
-                          </p>
-                        </div>
-                      </a>
-                      {/* /$ */}
-                    </div>
-                  </div>
-                  <div className="framer-ip2sev">
-                    <div className="framer-ywx080-container">
-                      <div
-                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                        data-framer-name="Lottie (Pause)"
-                        style={{ height: "100%", width: "100%" }}
-                      >
-                        <div className="framer-1rfb461-container">
-                          {/* $ */}
-                          <div style={{ height: "100%", width: "100%" }}></div>
-                          {/* /$ */}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             <div
               className="framer-1lmko6w"
               data-framer-name="Image animation"
@@ -4083,7 +2560,7 @@ export default function HomePage() {
                   }}
                   data-framer-background-image-wrapper="true"
                 >
-                  <img
+                  <imgx
                     decoding="async"
                     loading="lazy"
                     width="2560"
@@ -4130,7 +2607,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Chatbot lives in a corner.
+                        Video & Ad Production
                       </span>
                       <br className="framer-text" />
                       <span
@@ -4147,43 +2624,7 @@ export default function HomePage() {
                     </h2>
                   </div>
                 </div>
-                <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-                  <div
-                    className="framer-1pwu3ny"
-                    style={{ transform: "none" }}
-                    data-framer-component-type="RichTextContainer"
-                  >
-                    <h3
-                      className="framer-text framer-styles-preset-1ljffqz"
-                      data-styles-preset="ef412AXUV"
-                      style={{ "--framer-text-alignment": "left" }}
-                    >
-                      <span
-                        style={{
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                        }}
-                        className="framer-text"
-                      >
-                        Chatbot lives in a corner.
-                      </span>
-                      <br className="framer-text" />
-                      <span
-                        style={{
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                        }}
-                        className="framer-text"
-                      >
-                        Dialog lives in the experience.
-                      </span>
-                    </h3>
-                  </div>
-                </div>
+
                 <div className="ssr-variant hidden-12tyhur">
                   <div
                     className="framer-rc9vrt"
@@ -4201,32 +2642,10 @@ export default function HomePage() {
                       )`,
                       }}
                     >
-                      Replace clunky chatbots with an AI copilot that
-                      understands every page, every step, and every customer
-                      need in the moment.
-                    </p>
-                  </div>
-                </div>
-                <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-                  <div
-                    className="framer-rc9vrt"
-                    style={{ transform: "none" }}
-                    data-framer-component-type="RichTextContainer"
-                  >
-                    <p
-                      className="framer-text framer-styles-preset-1wcqtva"
-                      data-styles-preset="gzOwYrXMQ"
-                      style={{
-                        "--framer-text-alignment": "left",
-                        "--framer-text-color": `var(
-                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                        rgba(0, 0, 0, 0.6)
-                      )`,
-                      }}
-                    >
-                      Replace clunky chatbots with an AI copilot that
-                      understands every page, every step, and every customer
-                      need in the moment.
+                      End-to-end video and advertisement production, from
+                      concept development and scripting to visuals, voice-over,
+                      and final delivery. Designed to create engaging,
+                      high-impact content that drives attention and conversions.
                     </p>
                   </div>
                 </div>
@@ -4291,7 +2710,7 @@ export default function HomePage() {
                         data-styles-preset="gQz3iUqtQ"
                         style={{ "--framer-text-color": "rgba(0, 0, 0, 0.36)" }}
                       >
-                        Search products…
+                        Search footage…
                       </p>
                     </div>
                   </div>
@@ -4308,8 +2727,9 @@ export default function HomePage() {
                             imageRendering: "pixelated",
                             flexShrink: "0",
                             backgroundSize: "100% 100%",
-                            backgroundImage:
-                              'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 16 16%22><path d=%22M 6 3 C 6.223 3 6.419 3.148 6.481 3.363 L 7.023 5.26 C 7.26 6.091 7.909 6.74 8.74 6.977 L 10.637 7.519 C 10.852 7.581 11 7.777 11 8 C 11 8.223 10.852 8.419 10.637 8.481 L 8.74 9.023 C 7.909 9.26 7.26 9.909 7.023 10.74 L 6.481 12.637 C 6.419 12.852 6.223 13 6 13 C 5.777 13 5.581 12.852 5.519 12.637 L 4.977 10.74 C 4.74 9.909 4.091 9.26 3.26 9.023 L 1.363 8.481 C 1.148 8.419 1 8.223 1 8 C 1 7.777 1.148 7.581 1.363 7.519 L 3.26 6.977 C 4.091 6.74 4.74 6.091 4.977 5.26 L 5.519 3.363 C 5.581 3.148 5.777 3 6 3 Z%22 fill=%22rgb(0, 0, 0)%22></path><path d=%22M 12 1 C 12.229 1 12.429 1.156 12.485 1.379 L 12.658 2.069 C 12.814 2.696 13.304 3.186 13.931 3.342 L 14.621 3.515 C 14.844 3.571 15 3.771 15 4 C 15 4.229 14.844 4.429 14.621 4.485 L 13.931 4.658 C 13.304 4.814 12.814 5.304 12.658 5.931 L 12.485 6.621 C 12.429 6.844 12.229 7 12 7 C 11.771 7 11.571 6.844 11.515 6.621 L 11.342 5.931 C 11.186 5.304 10.696 4.814 10.069 4.658 L 9.379 4.485 C 9.156 4.429 9 4.229 9 4 C 9 3.771 9.156 3.571 9.379 3.515 L 10.069 3.342 C 10.696 3.186 11.186 2.696 11.342 2.069 L 11.515 1.379 C 11.571 1.156 11.771 1 12 1 Z%22 fill=%22rgb(0, 0, 0)%22></path><path d=%22M 11 10 C 11.215 10 11.406 10.138 11.474 10.342 L 11.737 11.13 C 11.837 11.429 12.071 11.663 12.37 11.763 L 13.158 12.026 C 13.362 12.094 13.5 12.285 13.5 12.5 C 13.5 12.715 13.362 12.906 13.158 12.974 L 12.37 13.237 C 12.071 13.337 11.837 13.571 11.737 13.87 L 11.474 14.658 C 11.406 14.862 11.215 15 11 15 C 10.785 15 10.594 14.862 10.526 14.658 L 10.263 13.87 C 10.163 13.571 9.929 13.337 9.63 13.237 L 8.842 12.974 C 8.638 12.906 8.5 12.715 8.5 12.5 C 8.5 12.285 8.638 12.094 8.842 12.026 L 9.63 11.763 C 9.929 11.663 10.163 11.429 10.263 11.13 L 10.526 10.342 C 10.594 10.138 10.785 10 11 10 Z%22 fill=%22rgb(0, 0, 0)%22></path></svg>")',
+                            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
+                              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M 2.25 4.25 C 2.25 3.56 2.81 3 3.5 3 L 12.5 3 C 13.19 3 13.75 3.56 13.75 4.25 L 13.75 5 L 2.25 5 Z M 2.25 6 L 13.75 6 L 13.75 10.75 C 13.75 11.44 13.19 12 12.5 12 L 3.5 12 C 2.81 12 2.25 11.44 2.25 10.75 Z M 6.65 7.3 C 6.65 7.021 6.963 6.854 7.197 7.009 L 9.297 8.409 C 9.506 8.549 9.506 8.851 9.297 8.991 L 7.197 10.391 C 6.963 10.546 6.65 10.379 6.65 10.1 Z" fill="rgb(0, 0, 0)"/></svg>',
+                            )}")`,
                           }}
                           className="framer-14l3v6x"
                           aria-hidden="true"
@@ -4368,7 +2788,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Have a question about this product?
+                        Need a concept for this campaign?
                       </p>
                     </div>
                   </div>
@@ -4418,7 +2838,7 @@ export default function HomePage() {
                       </div>
                       <div
                         className="framer-v254jt"
-                        data-framer-name="I’m looking for a new face cream"
+                        data-framer-name="I need a 15-second product ad"
                         style={{ transform: "none" }}
                         data-framer-component-type="RichTextContainer"
                       >
@@ -4433,7 +2853,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          I’m looking for a new face cream
+                          I need a 15-second product ad
                         </p>
                       </div>
                     </div>
@@ -4474,7 +2894,7 @@ export default function HomePage() {
                       </div>
                       <div
                         className="framer-l67ju"
-                        data-framer-name="Create my daily routine"
+                        data-framer-name="Build a storyboard + shot list"
                         style={{ transform: "none" }}
                         data-framer-component-type="RichTextContainer"
                       >
@@ -4489,7 +2909,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          Create my daily routine
+                          Build a storyboard + shot list
                         </p>
                       </div>
                     </div>
@@ -4501,7 +2921,7 @@ export default function HomePage() {
                   >
                     <div
                       className="framer-16u7x4m"
-                      data-framer-name="Ask me anything..."
+                      data-framer-name="Ask about script, shots, edits..."
                       style={{ transform: "none" }}
                       data-framer-component-type="RichTextContainer"
                     >
@@ -4516,7 +2936,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Ask me anything...
+                        Ask about script, shots, edits...
                       </p>
                     </div>
                     <div
@@ -4549,8 +2969,9 @@ export default function HomePage() {
                         imageRendering: "pixelated",
                         flexShrink: "0",
                         backgroundSize: "100% 100%",
-                        backgroundImage:
-                          'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 40 40%22 overflow=%22visible%22><g><g><defs><linearGradient id=%22idsnoRMNOLjn_2g-244243038%22 x1=%220.49699032689364236%22 x2=%220.5030096731063577%22 y1=%221%22 y2=%220%22><stop offset=%220%22 stop-color=%22rgb(112,239,255)%22 stop-opacity=%221%22></stop><stop offset=%221%22 stop-color=%22rgb(87,112,255)%22 stop-opacity=%221%22></stop></linearGradient></defs><path d=%22M 9.179 0 L 30.821 0 C 33.257 -0.005 35.595 0.96 37.318 2.683 C 39.04 4.405 40.005 6.743 40 9.179 L 40 30.821 C 40.005 33.257 39.04 35.595 37.317 37.318 C 35.595 39.04 33.257 40.005 30.821 40 L 9.179 40 C 6.743 40.005 4.405 39.04 2.683 37.318 C 0.96 35.595 -0.005 33.257 0 30.821 L 0 9.179 C -0.005 6.743 0.96 4.405 2.683 2.683 C 4.405 0.96 6.743 -0.005 9.179 0 Z%22 fill=%22url(%23idsnoRMNOLjn_2g-244243038)%22></path></g><path d=%22M 8.772 11.367 C 8.562 11.367 8.363 11.403 8.175 11.478 L 11.939 15.352 L 15.744 19.297 L 15.814 19.38 L 15.925 19.492 L 16.036 19.603 L 16.259 19.839 L 19.522 23.186 C 19.577 23.22 19.734 23.366 19.857 23.427 C 20.016 23.506 20.188 23.58 20.364 23.586 C 20.556 23.592 20.751 23.538 20.923 23.454 C 21.052 23.392 21.109 23.302 21.258 23.186 L 25.036 19.284 L 28.856 15.352 L 32.536 11.561 C 32.297 11.432 32.03 11.365 31.758 11.367 Z M 7.62 11.839 C 7.218 12.219 6.967 12.791 6.967 13.436 L 6.967 26.158 C 6.967 26.68 7.135 27.155 7.411 27.52 L 7.939 27.02 L 11.869 23.2 L 15.356 19.825 L 15.286 19.741 L 11.467 15.811 L 7.648 11.867 Z M 33.036 11.964 L 29.314 15.811 L 25.508 19.741 L 25.439 19.811 L 29.064 23.325 L 32.995 27.144 L 33.231 27.367 C 33.442 27.027 33.564 26.609 33.564 26.158 L 33.564 13.436 C 33.564 12.861 33.364 12.339 33.036 11.964 Z M 15.8 20.283 L 12.328 23.658 L 8.383 27.477 L 7.883 27.963 C 8.147 28.133 8.447 28.241 8.772 28.241 L 31.758 28.241 C 32.149 28.241 32.504 28.091 32.8 27.852 L 32.55 27.602 L 28.605 23.783 L 24.98 20.283 L 21.716 23.644 C 21.54 23.761 21.422 23.891 21.249 23.971 C 20.972 24.099 20.667 24.208 20.361 24.203 C 20.055 24.198 19.754 24.078 19.479 23.943 C 19.341 23.875 19.267 23.808 19.105 23.672 Z%22 fill=%22rgb(255,255,255)%22></path></g></svg>")',
+                        backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
+                          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="rgb(112,239,255)"/><stop offset="1" stop-color="rgb(87,112,255)"/></linearGradient></defs><rect width="40" height="40" rx="9" fill="url(#g)"/><rect x="8.5" y="11" width="23" height="18" rx="3.5" fill="rgb(255,255,255)" fill-opacity="0.92"/><rect x="8.5" y="8" width="23" height="5" rx="1.8" fill="rgb(255,255,255)" fill-opacity="0.92"/><path d="M 16 17 L 23.5 20.5 L 16 24 Z" fill="rgb(87,112,255)"/></svg>',
+                        )}")`,
                       }}
                       className="framer-rrthuv"
                       aria-hidden="true"
@@ -4563,8 +2984,9 @@ export default function HomePage() {
                         imageRendering: "pixelated",
                         flexShrink: "0",
                         backgroundSize: "100% 100%",
-                        backgroundImage:
-                          'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 40 40%22 overflow=%22visible%22><g><g><defs><linearGradient id=%22idsYP470WVbonoRMNOLjn_2g-244243038%22 x1=%220.49699032689364236%22 x2=%220.5030096731063577%22 y1=%221%22 y2=%220%22><stop offset=%220%22 stop-color=%22rgb(112,239,255)%22 stop-opacity=%221%22></stop><stop offset=%221%22 stop-color=%22rgb(87,112,255)%22 stop-opacity=%221%22></stop></linearGradient></defs><path d=%22M 9.179 0 L 30.821 0 C 33.257 -0.005 35.595 0.96 37.318 2.683 C 39.04 4.405 40.005 6.743 40 9.179 L 40 30.821 C 40.005 33.257 39.04 35.595 37.317 37.318 C 35.595 39.04 33.257 40.005 30.821 40 L 9.179 40 C 6.743 40.005 4.405 39.04 2.683 37.318 C 0.96 35.595 -0.005 33.257 0 30.821 L 0 9.179 C -0.005 6.743 0.96 4.405 2.683 2.683 C 4.405 0.96 6.743 -0.005 9.179 0 Z%22 fill=%22url(%23idsYP470WVbonoRMNOLjn_2g-244243038)%22></path></g><path d=%22M 8.772 11.367 C 8.562 11.367 8.363 11.403 8.175 11.478 L 11.939 15.352 L 15.744 19.297 L 15.814 19.38 L 15.925 19.492 L 16.036 19.603 L 16.259 19.839 L 19.522 23.186 C 19.577 23.22 19.734 23.366 19.857 23.427 C 20.016 23.506 20.188 23.58 20.364 23.586 C 20.556 23.592 20.751 23.538 20.923 23.454 C 21.052 23.392 21.109 23.302 21.258 23.186 L 25.036 19.284 L 28.856 15.352 L 32.536 11.561 C 32.297 11.432 32.03 11.365 31.758 11.367 Z M 7.62 11.839 C 7.218 12.219 6.967 12.791 6.967 13.436 L 6.967 26.158 C 6.967 26.68 7.135 27.155 7.411 27.52 L 7.939 27.02 L 11.869 23.2 L 15.356 19.825 L 15.286 19.741 L 11.467 15.811 L 7.648 11.867 Z M 33.036 11.964 L 29.314 15.811 L 25.508 19.741 L 25.439 19.811 L 29.064 23.325 L 32.995 27.144 L 33.231 27.367 C 33.442 27.027 33.564 26.609 33.564 26.158 L 33.564 13.436 C 33.564 12.861 33.364 12.339 33.036 11.964 Z M 15.8 20.283 L 12.328 23.658 L 8.383 27.477 L 7.883 27.963 C 8.147 28.133 8.447 28.241 8.772 28.241 L 31.758 28.241 C 32.149 28.241 32.504 28.091 32.8 27.852 L 32.55 27.602 L 28.605 23.783 L 24.98 20.283 L 21.716 23.644 C 21.54 23.761 21.422 23.891 21.249 23.971 C 20.972 24.099 20.667 24.208 20.361 24.203 C 20.055 24.198 19.754 24.078 19.479 23.943 C 19.341 23.875 19.267 23.808 19.105 23.672 Z%22 fill=%22rgb(255,255,255)%22></path></g></svg>")',
+                        backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
+                          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="rgb(112,239,255)"/><stop offset="1" stop-color="rgb(87,112,255)"/></linearGradient></defs><rect width="40" height="40" rx="9" fill="url(#g)"/><rect x="8.5" y="11" width="23" height="18" rx="3.5" fill="rgb(255,255,255)" fill-opacity="0.92"/><rect x="8.5" y="8" width="23" height="5" rx="1.8" fill="rgb(255,255,255)" fill-opacity="0.92"/><path d="M 16 17 L 23.5 20.5 L 16 24 Z" fill="rgb(87,112,255)"/></svg>',
+                        )}")`,
                       }}
                       className="framer-rrthuv"
                       aria-hidden="true"
@@ -4592,7 +3014,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Magic Cosmetic
+                        FrameForge Studio
                       </p>
                     </div>
                     <div
@@ -4616,7 +3038,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Hey Julia, how is your skin?
+                        Hey team, how's the ad cut?
                       </p>
                     </div>
                     <div
@@ -4636,7 +3058,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Still worried about redness after cleansing?
+                        Want tighter pacing in scene two?
                       </p>
                     </div>
                   </div>
@@ -4697,7 +3119,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          Magic Cosmetic
+                          FrameForge Studio
                         </p>
                       </div>
                     </div>
@@ -4714,9 +3136,8 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        The Cleansing Oil is highly effective at removing
-                        waterproof makeup, with 91% of users confirming its
-                        effectiveness in clinical tests.comfortable.
+                        The opening hook is strong. Try trimming the pause after
+                        the headline and cut to the product close-up faster.
                       </p>
                     </div>
                   </div>
@@ -4788,7 +3209,7 @@ export default function HomePage() {
                             }}
                             className="framer-text"
                           >
-                            Analyzing your answers…
+                            Analyzing your brief…
                           </span>
                         </p>
                       </div>
@@ -4822,11 +3243,10 @@ export default function HomePage() {
                         width="640"
                         height="800"
                         sizes="(min-width: 1024px) 112px, (min-width: 810px) and (max-width: 1023.98px) 112px, (max-width: 809.98px) 112px"
-                        srcSet="
-                        https://framerusercontent.com/images/NubR3Z46lAmtKnTf0aHBE7x4zS4.jpg?lossless=1&width=640&height=800 640w
-                      "
-                        src="https://framerusercontent.com/images/NubR3Z46lAmtKnTf0aHBE7x4zS4.jpg?lossless=1&width=640&height=800"
-                        alt
+                        src={`data:image/svg+xml,${encodeURIComponent(
+                          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgb(32,34,38)"/><stop offset="1" stop-color="rgb(63,70,82)"/></linearGradient></defs><rect width="640" height="800" fill="url(#bg)"/><rect x="110" y="250" width="420" height="300" rx="30" fill="rgba(255,255,255,0.17)"/><rect x="110" y="215" width="420" height="70" rx="16" fill="rgba(255,255,255,0.24)"/><path d="M 160 230 L 220 280 M 240 230 L 300 280 M 320 230 L 380 280 M 400 230 L 460 280" stroke="rgba(255,255,255,0.58)" stroke-width="14" stroke-linecap="round"/><circle cx="320" cy="400" r="90" fill="rgba(255,255,255,0.22)"/><path d="M 292 350 L 390 400 L 292 450 Z" fill="rgb(255,255,255)"/><text x="320" y="615" fill="rgba(255,255,255,0.86)" font-size="36" font-family="Inter,Arial,sans-serif" text-anchor="middle">Shot 04 / Hero</text></svg>',
+                        )}`}
+                        alt="Ad storyboard preview"
                         style={{
                           display: "block",
                           width: "100%",
@@ -4861,7 +3281,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Sansevieria Laurentie
+                        Summer Campaign V2
                       </p>
                       <p
                         style={{
@@ -4875,7 +3295,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Snake plant
+                        15s Vertical Ad
                       </p>
                     </div>
                     <div
@@ -4895,7 +3315,7 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        $13.99
+                        02:31
                       </p>
                     </div>
                   </div>
@@ -8972,137 +7392,6 @@ export default function HomePage() {
                   data-framer-name="Desktop Light"
                   style={{ width: "100%" }}
                 >
-                  <div className="framer-dysdbf">
-                    <div className="framer-1281x1k">
-                      <div
-                        className="framer-1vn6gx7"
-                        style={{
-                          "--extracted-1eung3n": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <h4
-                          className="framer-text framer-styles-preset-10qm3y"
-                          data-styles-preset="YrF8MRMHq"
-                          dir="auto"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-1eung3n,
-                            var(
-                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                              rgb(0, 0, 0)
-                            )
-                          )`,
-                          }}
-                        >
-                          Ready to start?
-                        </h4>
-                      </div>
-                      <div
-                        className="framer-7afv0y"
-                        style={{
-                          "--extracted-r6o4lv": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          className="framer-text framer-styles-preset-1wcqtva"
-                          data-styles-preset="gzOwYrXMQ"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-r6o4lv,
-                            var(
-                              --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                              rgba(0, 0, 0, 0.6)
-                            )
-                          )`,
-                          }}
-                        >
-                          Try Dialog today or book a demo.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="framer-1qj8p8r">
-                      {/* $ */}
-                      <div className="framer-pjqtak-container">
-                        {/* $ */}
-                        <a
-                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                          data-framer-name="Primary Large"
-                          style={{
-                            backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            filter: "blur(0px)",
-                            WebkitBackdropFilter: "none",
-                            WebkitFilter: "blur(0px)",
-                            borderBottomLeftRadius: "28px",
-                            borderBottomRightRadius: "28px",
-                            borderTopLeftRadius: "28px",
-                            borderTopRightRadius: "28px",
-                            boxShadow: "none",
-                          }}
-                          href="./calendar"
-                        >
-                          <div
-                            className="framer-1swh0y3"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--font-selector": "SW50ZXItTWVkaXVt",
-                                "--framer-font-family": `\"Inter\",
-                                \"Inter Placeholder\", sans-serif`,
-                                "--framer-font-size": "14px",
-                                "--framer-font-weight": "500",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.4em",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              Book a demo
-                            </p>
-                          </div>
-                        </a>
-                        {/* /$ */}
-                      </div>
-                      {/* /$ */}
-                    </div>
-                  </div>
                   <div
                     className="framer-1fagb03"
                     style={{ backgroundColor: "rgba(0, 0, 0, 0.06)" }}
@@ -9155,7 +7444,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          Product
+                          Quick links
                         </p>
                       </div>
                       <div className="framer-nqw9dh">
@@ -10997,7 +9286,11 @@ export default function HomePage() {
           id="svg663402036_1422"
         >
           <path
-            d="M17.9419 17.0578L14.0302 13.1469C15.1639 11.7857 15.7293 10.0398 15.6086 8.27244C15.488 6.50506 14.6906 4.85223 13.3823 3.65779C12.074 2.46334 10.3557 1.81926 8.58462 1.85951C6.81357 1.89976 5.12622 2.62125 3.87358 3.87389C2.62094 5.12653 1.89945 6.81388 1.8592 8.58492C1.81895 10.356 2.46304 12.0744 3.65748 13.3826C4.85192 14.6909 6.50475 15.4883 8.27214 15.6089C10.0395 15.7296 11.7854 15.1642 13.1466 14.0305L17.0575 17.9422C17.1156 18.0003 17.1845 18.0463 17.2604 18.0777C17.3363 18.1092 17.4176 18.1253 17.4997 18.1253C17.5818 18.1253 17.6631 18.1092 17.739 18.0777C17.8149 18.0463 17.8838 18.0003 17.9419 17.9422C17.9999 17.8841 18.046 17.8152 18.0774 17.7393C18.1089 17.6634 18.125 17.5821 18.125 17.5C18.125 17.4179 18.1089 17.3366 18.0774 17.2607C18.046 17.1848 17.9999 17.1159 17.9419 17.0578ZM3.12469 8.75C3.12469 7.63748 3.45459 6.54994 4.07267 5.62491C4.69076 4.69989 5.56926 3.97892 6.5971 3.55317C7.62493 3.12743 8.75593 3.01604 9.84707 3.23308C10.9382 3.45012 11.9405 3.98585 12.7272 4.77252C13.5138 5.55919 14.0496 6.56147 14.2666 7.65261C14.4837 8.74376 14.3723 9.87476 13.9465 10.9026C13.5208 11.9304 12.7998 12.8089 11.8748 13.427C10.9497 14.0451 9.86221 14.375 8.74969 14.375C7.25836 14.3733 5.82858 13.7802 4.77404 12.7256C3.71951 11.6711 3.12634 10.2413 3.12469 8.75Z"
+            d="M 3 4.5 C 3 3.948 3.448 3.5 4 3.5 L 11.5 3.5 C 12.052 3.5 12.5 3.948 12.5 4.5 L 12.5 5.5 L 15.5 3.75 C 16.167 3.361 17 3.842 17 4.614 L 17 12.386 C 17 13.158 16.167 13.639 15.5 13.25 L 12.5 11.5 L 12.5 12.5 C 12.5 13.052 12.052 13.5 11.5 13.5 L 4 13.5 C 3.448 13.5 3 13.052 3 12.5 Z"
+            fill="#717171"
+          ></path>
+          <path
+            d="M 7.25 6.625 C 7.25 6.327 7.583 6.15 7.831 6.315 L 10.456 8.065 C 10.678 8.213 10.678 8.537 10.456 8.685 L 7.831 10.435 C 7.583 10.6 7.25 10.423 7.25 10.125 Z"
             fill="#717171"
           ></path>
         </svg>
@@ -11009,21 +9302,15 @@ export default function HomePage() {
           id="svg-630423330_2165"
         >
           <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M5 2C5.22324 2 5.41943 2.14799 5.48076 2.36264L6.02289 4.2601C6.26018 5.09062 6.90938 5.73982 7.7399 5.97711L9.63736 6.51924C9.85201 6.58057 10 6.77676 10 7C10 7.22324 9.85201 7.41943 9.63736 7.48076L7.7399 8.02289C6.90938 8.26019 6.26018 8.90938 6.02289 9.7399L5.48076 11.6374C5.41943 11.852 5.22324 12 5 12C4.77676 12 4.58057 11.852 4.51924 11.6374L3.97711 9.7399C3.73982 8.90938 3.09062 8.26018 2.2601 8.02289L0.362639 7.48076C0.147989 7.41943 0 7.22324 0 7C0 6.77676 0.147989 6.58057 0.362639 6.51924L2.2601 5.97711C3.09062 5.73982 3.73982 5.09062 3.97711 4.2601L4.51924 2.36264C4.58057 2.14799 4.77676 2 5 2Z"
+            d="M 1.25 3.25 C 1.25 2.56 1.81 2 2.5 2 L 11.5 2 C 12.19 2 12.75 2.56 12.75 3.25 L 12.75 4.5 L 1.25 4.5 Z"
             fill="black"
           ></path>
           <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M11 0C11.2294 0 11.4294 0.156149 11.4851 0.378732L11.6576 1.06904C11.8144 1.69604 12.304 2.1856 12.931 2.34235L13.6213 2.51493C13.8439 2.57057 14 2.77057 14 3C14 3.22943 13.8439 3.42943 13.6213 3.48507L12.931 3.65765C12.304 3.8144 11.8144 4.30396 11.6576 4.93096L11.4851 5.62127C11.4294 5.84385 11.2294 6 11 6C10.7706 6 10.5706 5.84385 10.5149 5.62127L10.3424 4.93096C10.1856 4.30396 9.69604 3.8144 9.06904 3.65765L8.37873 3.48507C8.15615 3.42943 8 3.22943 8 3C8 2.77057 8.15615 2.57057 8.37873 2.51493L9.06904 2.34235C9.69604 2.1856 10.1856 1.69604 10.3424 1.06904L10.5149 0.378732C10.5706 0.156149 10.7706 0 11 0Z"
+            d="M 1.25 5.5 L 12.75 5.5 L 12.75 10.75 C 12.75 11.44 12.19 12 11.5 12 L 2.5 12 C 1.81 12 1.25 11.44 1.25 10.75 Z"
             fill="black"
           ></path>
           <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M10 9C10.2152 9 10.4063 9.13772 10.4743 9.34189L10.7372 10.1304C10.8367 10.429 11.071 10.6633 11.3696 10.7628L12.1581 11.0257C12.3623 11.0937 12.5 11.2848 12.5 11.5C12.5 11.7152 12.3623 11.9063 12.1581 11.9743L11.3696 12.2372C11.071 12.3367 10.8367 12.571 10.7372 12.8696L10.4743 13.6581C10.4063 13.8623 10.2152 14 10 14C9.78478 14 9.59372 13.8623 9.52566 13.6581L9.26283 12.8696C9.16329 12.571 8.92898 12.3367 8.63037 12.2372L7.84189 11.9743C7.63771 11.9063 7.5 11.7152 7.5 11.5C7.5 11.2848 7.63771 11.0937 7.84189 11.0257L8.63037 10.7628C8.92898 10.6633 9.16329 10.429 9.26283 10.1304L9.52566 9.34189C9.59372 9.13772 9.78478 9 10 9Z"
+            d="M 5.9 7.05 C 5.9 6.736 6.253 6.548 6.515 6.722 L 8.915 8.322 C 9.149 8.478 9.149 8.822 8.915 8.978 L 6.515 10.578 C 6.253 10.752 5.9 10.564 5.9 10.25 Z"
             fill="black"
           ></path>
         </svg>
@@ -11035,25 +9322,29 @@ export default function HomePage() {
           id="svg-1364026159_2701"
         >
           <path
-            d="M14 2.5V4.75C14 4.88261 13.9473 5.00979 13.8536 5.10355C13.7598 5.19732 13.6326 5.25 13.5 5.25C13.3674 5.25 13.2402 5.19732 13.1464 5.10355C13.0527 5.00979 13 4.88261 13 4.75V3H11.25C11.1174 3 10.9902 2.94732 10.8964 2.85355C10.8027 2.75979 10.75 2.63261 10.75 2.5C10.75 2.36739 10.8027 2.24021 10.8964 2.14645C10.9902 2.05268 11.1174 2 11.25 2H13.5C13.6326 2 13.7598 2.05268 13.8536 2.14645C13.9473 2.24021 14 2.36739 14 2.5ZM13.5 10.75C13.3674 10.75 13.2402 10.8027 13.1464 10.8964C13.0527 10.9902 13 11.1174 13 11.25V13H11.25C11.1174 13 10.9902 13.0527 10.8964 13.1464C10.8027 13.2402 10.75 13.3674 10.75 13.5C10.75 13.6326 10.8027 13.7598 10.8964 13.8536C10.9902 13.9473 11.1174 14 11.25 14H13.5C13.6326 14 13.7598 13.9473 13.8536 13.8536C13.9473 13.7598 14 13.6326 14 13.5V11.25C14 11.1174 13.9473 10.9902 13.8536 10.8964C13.7598 10.8027 13.6326 10.75 13.5 10.75ZM4.75 13H3V11.25C3 11.1174 2.94732 10.9902 2.85355 10.8964C2.75979 10.8027 2.63261 10.75 2.5 10.75C2.36739 10.75 2.24021 10.8027 2.14645 10.8964C2.05268 10.9902 2 11.1174 2 11.25V13.5C2 13.6326 2.05268 13.7598 2.14645 13.8536C2.24021 13.9473 2.36739 14 2.5 14H4.75C4.88261 14 5.00979 13.9473 5.10355 13.8536C5.19732 13.7598 5.25 13.6326 5.25 13.5C5.25 13.3674 5.19732 13.2402 5.10355 13.1464C5.00979 13.0527 4.88261 13 4.75 13ZM2.5 5.25C2.63261 5.25 2.75979 5.19732 2.85355 5.10355C2.94732 5.00979 3 4.88261 3 4.75V3H4.75C4.88261 3 5.00979 2.94732 5.10355 2.85355C5.19732 2.75979 5.25 2.63261 5.25 2.5C5.25 2.36739 5.19732 2.24021 5.10355 2.14645C5.00979 2.05268 4.88261 2 4.75 2H2.5C2.36739 2 2.24021 2.05268 2.14645 2.14645C2.05268 2.24021 2 2.36739 2 2.5V4.75C2 4.88261 2.05268 5.00979 2.14645 5.10355C2.24021 5.19732 2.36739 5.25 2.5 5.25ZM6.3125 8.84437C5.6333 9.13903 5.04295 9.60614 4.6 10.1994C4.54411 10.2737 4.51003 10.3621 4.50159 10.4546C4.49316 10.5472 4.5107 10.6403 4.55225 10.7235C4.5938 10.8066 4.6577 10.8766 4.7368 10.9254C4.81589 10.9743 4.90704 11.0001 5 11H11C11.093 11.0001 11.1841 10.9743 11.2632 10.9254C11.3423 10.8766 11.4062 10.8066 11.4478 10.7235C11.4893 10.6403 11.5068 10.5472 11.4984 10.4546C11.49 10.3621 11.4559 10.2737 11.4 10.1994C10.9571 9.60614 10.3667 9.13903 9.6875 8.84437C10.0598 8.50446 10.3206 8.05993 10.4358 7.56912C10.5509 7.07832 10.515 6.56416 10.3327 6.09414C10.1504 5.62412 9.83029 5.22019 9.41433 4.93536C8.99837 4.65053 8.50601 4.49812 8.00187 4.49812C7.49774 4.49812 7.00538 4.65053 6.58942 4.93536C6.17346 5.22019 5.85332 5.62412 5.67103 6.09414C5.48874 6.56416 5.45281 7.07832 5.56796 7.56912C5.6831 8.05993 5.94394 8.50446 6.31625 8.84437H6.3125Z"
+            d="M 3 2 C 2.448 2 2 2.448 2 3 L 2 4.75 C 2 5.026 2.224 5.25 2.5 5.25 C 2.776 5.25 3 5.026 3 4.75 L 3 3 L 4.75 3 C 5.026 3 5.25 2.776 5.25 2.5 C 5.25 2.224 5.026 2 4.75 2 Z M 11.25 2 C 10.974 2 10.75 2.224 10.75 2.5 C 10.75 2.776 10.974 3 11.25 3 L 13 3 L 13 4.75 C 13 5.026 13.224 5.25 13.5 5.25 C 13.776 5.25 14 5.026 14 4.75 L 14 3 C 14 2.448 13.552 2 13 2 Z M 2.5 10.75 C 2.224 10.75 2 10.974 2 11.25 L 2 13 C 2 13.552 2.448 14 3 14 L 4.75 14 C 5.026 14 5.25 13.776 5.25 13.5 C 5.25 13.224 5.026 13 4.75 13 L 3 13 L 3 11.25 C 3 10.974 2.776 10.75 2.5 10.75 Z M 13.5 10.75 C 13.224 10.75 13 10.974 13 11.25 L 13 13 L 11.25 13 C 10.974 13 10.75 13.224 10.75 13.5 C 10.75 13.776 10.974 14 11.25 14 L 13 14 C 13.552 14 14 13.552 14 13 L 14 11.25 C 14 10.974 13.776 10.75 13.5 10.75 Z"
+            fill="black"
+          ></path>
+          <path
+            d="M 5.25 5.75 C 4.836 5.75 4.5 6.086 4.5 6.5 L 4.5 9.5 C 4.5 9.914 4.836 10.25 5.25 10.25 L 10.75 10.25 C 11.164 10.25 11.5 9.914 11.5 9.5 L 11.5 6.5 C 11.5 6.086 11.164 5.75 10.75 5.75 Z M 7.15 6.95 C 7.15 6.689 7.443 6.532 7.661 6.678 L 9.511 7.911 C 9.706 8.041 9.706 8.327 9.511 8.456 L 7.661 9.69 C 7.443 9.835 7.15 9.679 7.15 9.417 Z"
             fill="black"
           ></path>
         </svg>
         <svg viewbox="0 0 16 16" id="svg10435201218">
           <path
-            d="M 6 3 C 6.223 3 6.419 3.148 6.481 3.363 L 7.023 5.26 C 7.26 6.091 7.909 6.74 8.74 6.977 L 10.637 7.519 C 10.852 7.581 11 7.777 11 8 C 11 8.223 10.852 8.419 10.637 8.481 L 8.74 9.023 C 7.909 9.26 7.26 9.909 7.023 10.74 L 6.481 12.637 C 6.419 12.852 6.223 13 6 13 C 5.777 13 5.581 12.852 5.519 12.637 L 4.977 10.74 C 4.74 9.909 4.091 9.26 3.26 9.023 L 1.363 8.481 C 1.148 8.419 1 8.223 1 8 C 1 7.777 1.148 7.581 1.363 7.519 L 3.26 6.977 C 4.091 6.74 4.74 6.091 4.977 5.26 L 5.519 3.363 C 5.581 3.148 5.777 3 6 3 Z"
+            d="M 2.25 4.25 C 2.25 3.56 2.81 3 3.5 3 L 12.5 3 C 13.19 3 13.75 3.56 13.75 4.25 L 13.75 5 L 2.25 5 Z"
             fill={
               'var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4)) /* {"name":"a-40"} */'
             }
           ></path>
           <path
-            d="M 12 1 C 12.229 1 12.429 1.156 12.485 1.379 L 12.658 2.069 C 12.814 2.696 13.304 3.186 13.931 3.342 L 14.621 3.515 C 14.844 3.571 15 3.771 15 4 C 15 4.229 14.844 4.429 14.621 4.485 L 13.931 4.658 C 13.304 4.814 12.814 5.304 12.658 5.931 L 12.485 6.621 C 12.429 6.844 12.229 7 12 7 C 11.771 7 11.571 6.844 11.515 6.621 L 11.342 5.931 C 11.186 5.304 10.696 4.814 10.069 4.658 L 9.379 4.485 C 9.156 4.429 9 4.229 9 4 C 9 3.771 9.156 3.571 9.379 3.515 L 10.069 3.342 C 10.696 3.186 11.186 2.696 11.342 2.069 L 11.515 1.379 C 11.571 1.156 11.771 1 12 1 Z"
+            d="M 2.25 6 L 13.75 6 L 13.75 10.75 C 13.75 11.44 13.19 12 12.5 12 L 3.5 12 C 2.81 12 2.25 11.44 2.25 10.75 Z M 6.65 7.3 C 6.65 7.021 6.963 6.854 7.197 7.009 L 9.297 8.409 C 9.506 8.549 9.506 8.851 9.297 8.991 L 7.197 10.391 C 6.963 10.546 6.65 10.379 6.65 10.1 Z"
             fill={
               'var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4)) /* {"name":"a-40"} */'
             }
           ></path>
           <path
-            d="M 11 10 C 11.215 10 11.406 10.138 11.474 10.342 L 11.737 11.13 C 11.837 11.429 12.071 11.663 12.37 11.763 L 13.158 12.026 C 13.362 12.094 13.5 12.285 13.5 12.5 C 13.5 12.715 13.362 12.906 13.158 12.974 L 12.37 13.237 C 12.071 13.337 11.837 13.571 11.737 13.87 L 11.474 14.658 C 11.406 14.862 11.215 15 11 15 C 10.785 15 10.594 14.862 10.526 14.658 L 10.263 13.87 C 10.163 13.571 9.929 13.337 9.63 13.237 L 8.842 12.974 C 8.638 12.906 8.5 12.715 8.5 12.5 C 8.5 12.285 8.638 12.094 8.842 12.026 L 9.63 11.763 C 9.929 11.663 10.163 11.429 10.263 11.13 L 10.526 10.342 C 10.594 10.138 10.785 10 11 10 Z"
+            d="M 12.9 1.25 C 13.083 1.25 13.244 1.371 13.295 1.548 L 13.436 2.041 C 13.536 2.39 13.81 2.664 14.159 2.764 L 14.652 2.905 C 14.829 2.956 14.95 3.117 14.95 3.3 C 14.95 3.483 14.829 3.644 14.652 3.695 L 14.159 3.836 C 13.81 3.936 13.536 4.21 13.436 4.559 L 13.295 5.052 C 13.244 5.229 13.083 5.35 12.9 5.35 C 12.717 5.35 12.556 5.229 12.505 5.052 L 12.364 4.559 C 12.264 4.21 11.99 3.936 11.641 3.836 L 11.148 3.695 C 10.971 3.644 10.85 3.483 10.85 3.3 C 10.85 3.117 10.971 2.956 11.148 2.905 L 11.641 2.764 C 11.99 2.664 12.264 2.39 12.364 2.041 L 12.505 1.548 C 12.556 1.371 12.717 1.25 12.9 1.25 Z"
             fill={
               'var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4)) /* {"name":"a-40"} */'
             }
