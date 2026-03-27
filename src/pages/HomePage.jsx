@@ -106,7 +106,7 @@ export default function HomePage() {
           className="framer-5OHkW framer-hel80 framer-s23tp framer-0jnnh framer-B5XLX framer-72rtr7"
           style={{ minHeight: "100vh", width: "auto" }}
         >
-          {/* $ */}
+          {/* Header navbar */}
           <div className="framer-13oyn3g-container">
             <div className="ssr-variant hidden-ck7hjr hidden-12tyhur">
               <nav
@@ -235,7 +235,7 @@ export default function HomePage() {
                             className="framer-lubbH framer-QHInc framer-qrhi5h framer-v-qrhi5h framer-tq1v82"
                             data-framer-name="Light mode"
                             data-highlight="true"
-                            href="./platform"
+                            href="/#about"
                           >
                             <div
                               className="framer-10vr7j9"
@@ -276,7 +276,7 @@ export default function HomePage() {
                             className="framer-lubbH framer-QHInc framer-qrhi5h framer-v-qrhi5h framer-tq1v82"
                             data-framer-name="Light mode"
                             data-highlight="true"
-                            href="./Services"
+                            href="/#services"
                           >
                             <div
                               className="framer-10vr7j9"
@@ -317,7 +317,7 @@ export default function HomePage() {
                             className="framer-lubbH framer-QHInc framer-qrhi5h framer-v-qrhi5h framer-tq1v82"
                             data-framer-name="Light mode"
                             data-highlight="true"
-                            href="./about"
+                            href="/demos"
                           >
                             <div
                               className="framer-10vr7j9"
@@ -357,7 +357,7 @@ export default function HomePage() {
                             className="framer-lubbH framer-QHInc framer-qrhi5h framer-v-qrhi5h framer-tq1v82"
                             data-framer-name="Light mode"
                             data-highlight="true"
-                            href="https://app.askdialog.com/login"
+                            href="/contact"
                             rel="noopener"
                           >
                             <div
@@ -416,7 +416,7 @@ export default function HomePage() {
                         borderTopLeftRadius: "24px",
                         borderTopRightRadius: "24px",
                       }}
-                      href="./calendar"
+                      href="/contact"
                     >
                       <div className="framer-35hdsa" data-framer-name="Links">
                         <div className="framer-r62gux" data-framer-name="Links">
@@ -544,6 +544,7 @@ export default function HomePage() {
               </nav>
             </div>
           </div>
+
           {/* /$ */}
           <div className="framer-188devz" data-framer-name="Hero" id="hero">
             <div
@@ -711,7 +712,7 @@ export default function HomePage() {
                           borderTopRightRadius: "28px",
                           boxShadow: "none",
                         }}
-                        href="./calendar"
+                        href="/demos"
                         target="_blank"
                       >
                         <div
@@ -746,7 +747,7 @@ export default function HomePage() {
                             }}
                             className="framer-text"
                           >
-                            Get started
+                            Try samples
                           </p>
                         </div>
                       </a>
@@ -882,7 +883,7 @@ export default function HomePage() {
                           borderTopRightRadius: "28px",
                           boxShadow: "none",
                         }}
-                        href="./calendar"
+                        href="/contact"
                         target="_blank"
                       >
                         <div
@@ -917,7 +918,7 @@ export default function HomePage() {
                             }}
                             className="framer-text"
                           >
-                            Get started
+                            Try samples
                           </p>
                         </div>
                       </a>
@@ -1577,7 +1578,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="framer-1k8skic" data-framer-name="Section">
+          <div className="framer-1k8skic" data-framer-name="Section" id="services">
             <div className="framer-vvv07x" data-framer-name="Image animation">
               <div className="framer-ieyowq">
                 <div className="framer-mo4r5y" data-framer-name="Button">
@@ -1727,10 +1728,12 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            Product quizzes are outdated. AI Product Recommender
-                            drives conversion by guiding shoppers from the home
-                            page to the right product, through personalized
-                            questions or a photo.
+                            Professional voice-over and lip-sync accurate
+                            dubbing services tailored for films, advertisements,
+                            web series, and e-learning content. Delivered across
+                            12+ Indian languages, ensuring natural tone,
+                            clarity, and consistency that resonates with every
+                            audience.
                           </p>
                         </div>
                       </div>
@@ -1866,7 +1869,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            AI product recommender
+                            Voice & Dubbing
                           </h3>
                         </div>
                         <div
@@ -1885,10 +1888,12 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            Product quizzes are outdated. AI Product Recommender
-                            drives conversion by guiding shoppers from the home
-                            page to the right product, through personalized
-                            questions or a photo.
+                            Professional voice-over and lip-sync accurate
+                            dubbing services tailored for films, advertisements,
+                            web series, and e-learning content. Delivered across
+                            12+ Indian languages, ensuring natural tone,
+                            clarity, and consistency that resonates with every
+                            audience.
                           </p>
                         </div>
                       </div>
@@ -2024,7 +2029,7 @@ export default function HomePage() {
                           )`,
                           }}
                         >
-                          AI product recommender
+                          Voice & Dubbing
                         </h3>
                       </div>
                       <div
@@ -2043,10 +2048,11 @@ export default function HomePage() {
                         data-framer-component-type="RichTextContainer"
                       >
                         <p className="framer-text framer-styles-preset-1wcqtva">
-                          Product quizzes are outdated. AI Product Recommender
-                          drives conversion by guiding shoppers from the home
-                          page to the right product, through personalized
-                          questions or a photo.
+                          Professional voice-over and lip-sync accurate dubbing
+                          services tailored for films, advertisements, web
+                          series, and e-learning content. Delivered across 12+
+                          Indian languages, ensuring natural tone, clarity, and
+                          consistency that resonates with every audience.
                         </p>
                       </div>
                     </div>
@@ -4429,7 +4435,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div className="framer-1o1u5z0" data-framer-name="Section" id="dark">
+          <div className="framer-1o1u5z0" data-framer-name="Section" id="about">
             <div className="ssr-variant hidden-12tyhur">
               <div className="framer-8lhyzg-container" id="dark-section">
                 <div className="ssr-variant hidden-ck7hjr">
@@ -5011,196 +5017,6 @@ export default function HomePage() {
                               >
                                 We refine until everything sounds exactly right.
                               </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        className="framer-1090inu"
-                        style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                      >
-                        <div
-                          className="framer-dma2vv"
-                          data-framer-name="Desktop Light — Text Left"
-                        >
-                          <div className="framer-f66vfn">
-                            <div className="framer-1v4qo95">
-                              <div
-                                className="framer-qz5b1d"
-                                style={{
-                                  "--extracted-a0htzi": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <h3
-                                  className="framer-text framer-styles-preset-1ljffqz"
-                                  data-styles-preset="ef412AXUV"
-                                  dir="auto"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-a0htzi,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  AI-to-AI Commerce (ChatGPT, Gemini,
-                                  Perplexity, etc.)
-                                </h3>
-                              </div>
-                              <div
-                                className="framer-xwo12v"
-                                style={{
-                                  "--extracted-2gxw0f": `var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )`,
-                                  "--extracted-r6o4lv": `var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  filter: "blur(0px)",
-                                  WebkitFilter: "blur(0px)",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  When shoppers ask questions in ChatGPT,
-                                  Perplexity, or Gemini, those agents need a
-                                  trusted source for products, recommendations,
-                                  and brand rules.
-                                </p>
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-2gxw0f,
-                                    var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Dialog is that source.
-                                  <br className="framer-text" />
-                                  It talks to other agents by encoding how your
-                                  brand actually sells: recommendation logic,
-                                  tone, sequencing, and in-store expertise.
-                                </p>
-                              </div>
-                            </div>
-                            {/* $ */}
-                            <div className="framer-c4jlwj-container">
-                              {/* $ */}
-                              <a
-                                className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-6yiif5 framer-1u73uxi"
-                                data-framer-name="Secondary Large"
-                                style={{
-                                  backdropFilter: "none",
-                                  backgroundColor: `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  filter: "blur(0px)",
-                                  WebkitBackdropFilter: "none",
-                                  WebkitFilter: "blur(0px)",
-                                  borderBottomLeftRadius: "28px",
-                                  borderBottomRightRadius: "28px",
-                                  borderTopLeftRadius: "28px",
-                                  borderTopRightRadius: "28px",
-                                  boxShadow: `0px 1px 2px 0px rgba(0, 0, 0, 0.04),
-                                  0px 2px 4px 0px rgba(0, 0, 0, 0.02),
-                                  0px 4px 8px 0px rgba(0, 0, 0, 0.02)`,
-                                }}
-                                href="./calendar"
-                              >
-                                <div
-                                  className="framer-1swh0y3"
-                                  style={{
-                                    "--extracted-r6o4lv": `var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <p
-                                    className="framer-text framer-styles-preset-1ejdako"
-                                    data-styles-preset="Skiln4SgN"
-                                    style={{
-                                      "--framer-text-color": `var(
-                                      --extracted-r6o4lv,
-                                      var(
-                                        --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                        rgb(0, 0, 0)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Book a demo
-                                  </p>
-                                </div>
-                              </a>
-                              {/* /$ */}
-                            </div>
-                            {/* /$ */}
-                          </div>
-                          <div
-                            className="framer-slc7z5"
-                            style={{
-                              backgroundColor: "rgba(0, 0, 0, 0)",
-                              borderBottomLeftRadius: "0px",
-                              borderBottomRightRadius: "0px",
-                              borderTopLeftRadius: "0px",
-                              borderTopRightRadius: "0px",
-                            }}
-                          >
-                            <div className="framer-1fw096t-container">
-                              <div
-                                className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                                data-framer-name="Lottie (Pause)"
-                                style={{ height: "100%", width: "100%" }}
-                              >
-                                <div className="framer-1rfb461-container">
-                                  {/* $ */}
-                                  <div
-                                    style={{ height: "100%", width: "100%" }}
-                                  ></div>
-                                  {/* /$ */}
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -5792,196 +5608,6 @@ export default function HomePage() {
                           </div>
                         </div>
                       </div>
-                      <div
-                        className="framer-1090inu"
-                        style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                      >
-                        <div
-                          className="framer-dma2vv"
-                          data-framer-name="Desktop Light — Text Left"
-                        >
-                          <div className="framer-f66vfn">
-                            <div className="framer-1v4qo95">
-                              <div
-                                className="framer-qz5b1d"
-                                style={{
-                                  "--extracted-a0htzi": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <h3
-                                  className="framer-text framer-styles-preset-1ljffqz"
-                                  data-styles-preset="ef412AXUV"
-                                  dir="auto"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-a0htzi,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  AI-to-AI Commerce (ChatGPT, Gemini,
-                                  Perplexity, etc.)
-                                </h3>
-                              </div>
-                              <div
-                                className="framer-xwo12v"
-                                style={{
-                                  "--extracted-2gxw0f": `var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )`,
-                                  "--extracted-r6o4lv": `var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  filter: "blur(0px)",
-                                  WebkitFilter: "blur(0px)",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  When shoppers ask questions in ChatGPT,
-                                  Perplexity, or Gemini, those agents need a
-                                  trusted source for products, recommendations,
-                                  and brand rules.
-                                </p>
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-2gxw0f,
-                                    var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Dialog is that source.
-                                  <br className="framer-text" />
-                                  It talks to other agents by encoding how your
-                                  brand actually sells: recommendation logic,
-                                  tone, sequencing, and in-store expertise.
-                                </p>
-                              </div>
-                            </div>
-                            {/* $ */}
-                            <div className="framer-c4jlwj-container">
-                              {/* $ */}
-                              <a
-                                className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-6yiif5 framer-1u73uxi"
-                                data-framer-name="Secondary Large"
-                                style={{
-                                  backdropFilter: "none",
-                                  backgroundColor: `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  filter: "blur(0px)",
-                                  WebkitBackdropFilter: "none",
-                                  WebkitFilter: "blur(0px)",
-                                  borderBottomLeftRadius: "28px",
-                                  borderBottomRightRadius: "28px",
-                                  borderTopLeftRadius: "28px",
-                                  borderTopRightRadius: "28px",
-                                  boxShadow: `0px 1px 2px 0px rgba(0, 0, 0, 0.04),
-                                  0px 2px 4px 0px rgba(0, 0, 0, 0.02),
-                                  0px 4px 8px 0px rgba(0, 0, 0, 0.02)`,
-                                }}
-                                href="./calendar"
-                              >
-                                <div
-                                  className="framer-1swh0y3"
-                                  style={{
-                                    "--extracted-r6o4lv": `var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <p
-                                    className="framer-text framer-styles-preset-1ejdako"
-                                    data-styles-preset="Skiln4SgN"
-                                    style={{
-                                      "--framer-text-color": `var(
-                                      --extracted-r6o4lv,
-                                      var(
-                                        --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                        rgb(0, 0, 0)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Book a demo
-                                  </p>
-                                </div>
-                              </a>
-                              {/* /$ */}
-                            </div>
-                            {/* /$ */}
-                          </div>
-                          <div
-                            className="framer-slc7z5"
-                            style={{
-                              backgroundColor: "rgba(222, 164, 194, 0.06)",
-                              borderBottomLeftRadius: "24px",
-                              borderBottomRightRadius: "24px",
-                              borderTopLeftRadius: "24px",
-                              borderTopRightRadius: "24px",
-                            }}
-                          >
-                            <div className="framer-1fw096t-container">
-                              <div
-                                className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                                data-framer-name="Lottie (Pause)"
-                                style={{ height: "100%", width: "100%" }}
-                              >
-                                <div className="framer-1rfb461-container">
-                                  {/* $ */}
-                                  <div
-                                    style={{ height: "100%", width: "100%" }}
-                                  ></div>
-                                  {/* /$ */}
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -6566,198 +6192,13 @@ export default function HomePage() {
                         </div>
                       </div>
                     </div>
-                    <div
-                      className="framer-1090inu"
-                      style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-                    >
-                      <div
-                        className="framer-dma2vv"
-                        data-framer-name="Desktop Light — Text Left"
-                      >
-                        <div className="framer-f66vfn">
-                          <div className="framer-1v4qo95">
-                            <div
-                              className="framer-qz5b1d"
-                              style={{
-                                "--extracted-a0htzi": `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <h3
-                                className="framer-text framer-styles-preset-1ljffqz"
-                                data-styles-preset="ef412AXUV"
-                                dir="auto"
-                                style={{
-                                  "--framer-text-color": `var(
-                                  --extracted-a0htzi,
-                                  var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )
-                                )`,
-                                }}
-                              >
-                                AI-to-AI Commerce (ChatGPT, Gemini, Perplexity,
-                                etc.)
-                              </h3>
-                            </div>
-                            <div
-                              className="framer-xwo12v"
-                              style={{
-                                "--extracted-2gxw0f": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--extracted-r6o4lv": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                filter: "blur(0px)",
-                                WebkitFilter: "blur(0px)",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                When shoppers ask questions in ChatGPT,
-                                Perplexity, or Gemini, those agents need a
-                                trusted source for products, recommendations,
-                                and brand rules.
-                              </p>
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-color": `var(
-                                  --extracted-2gxw0f,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Dialog is that source.
-                                <br className="framer-text" />
-                                It talks to other agents by encoding how your
-                                brand actually sells: recommendation logic,
-                                tone, sequencing, and in-store expertise.
-                              </p>
-                            </div>
-                          </div>
-                          {/* $ */}
-                          <div className="framer-c4jlwj-container">
-                            {/* $ */}
-                            <a
-                              className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-6yiif5 framer-1u73uxi"
-                              data-framer-name="Secondary Large"
-                              style={{
-                                backdropFilter: "none",
-                                backgroundColor: `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                filter: "blur(0px)",
-                                WebkitBackdropFilter: "none",
-                                WebkitFilter: "blur(0px)",
-                                borderBottomLeftRadius: "28px",
-                                borderBottomRightRadius: "28px",
-                                borderTopLeftRadius: "28px",
-                                borderTopRightRadius: "28px",
-                                boxShadow: `0px 1px 2px 0px rgba(0, 0, 0, 0.04),
-                                0px 2px 4px 0px rgba(0, 0, 0, 0.02),
-                                0px 4px 8px 0px rgba(0, 0, 0, 0.02)`,
-                              }}
-                              href="./calendar"
-                            >
-                              <div
-                                className="framer-1swh0y3"
-                                style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                  rgb(0, 0, 0)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1ejdako"
-                                  data-styles-preset="Skiln4SgN"
-                                  style={{
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                      rgb(0, 0, 0)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Book a demo
-                                </p>
-                              </div>
-                            </a>
-                            {/* /$ */}
-                          </div>
-                          {/* /$ */}
-                        </div>
-                        <div
-                          className="framer-slc7z5"
-                          style={{
-                            backgroundColor: "rgba(222, 164, 194, 0.06)",
-                            borderBottomLeftRadius: "24px",
-                            borderBottomRightRadius: "24px",
-                            borderTopLeftRadius: "24px",
-                            borderTopRightRadius: "24px",
-                          }}
-                        >
-                          <div className="framer-1fw096t-container">
-                            <div
-                              className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
-                              data-framer-name="Lottie (Pause)"
-                              style={{ height: "100%", width: "100%" }}
-                            >
-                              <div className="framer-1rfb461-container">
-                                {/* $ */}
-                                <div
-                                  style={{ height: "100%", width: "100%" }}
-                                ></div>
-                                {/* /$ */}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* Footer */}
           <div className="ssr-variant hidden-12tyhur">
             <div className="framer-dulaie-container">
               <div className="ssr-variant hidden-ck7hjr">
@@ -6837,7 +6278,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/ai-product-recommender"
                             >
-                              AI product recommender
+                              Voice & Dubbing
                             </a>
                             {/* /$ */}
                           </p>
@@ -6897,128 +6338,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/conversation-insights"
                             >
-                              Conversation insights
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="framer-199i6p7">
-                      <div
-                        className="framer-1e66phn"
-                        style={{
-                          "--extracted-2gg91v": '"opsz" 24, "wght" 500',
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          style={{
-                            "--font-selector":
-                              "SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdOVEF3",
-                            "--framer-font-family": `\"Inter Variable\",
-                            \"Inter Placeholder\", sans-serif`,
-                            "--framer-font-open-type-features": `\"cv01\" on, \"cv09\" on,
-                            \"cv11\" on, \"cv05\" on`,
-                            "--framer-font-size": "15px",
-                            "--framer-font-variation-axes": `var(
-                            --extracted-2gg91v,
-                            \"opsz\" 24,
-                            \"wght\" 500
-                          )`,
-                            "--framer-letter-spacing": "-0.01em",
-                            "--framer-line-height": "1em",
-                            "--framer-text-alignment": "center",
-                          }}
-                          className="framer-text"
-                        >
-                          Dialog
-                        </p>
-                      </div>
-                      <div className="framer-135xreq">
-                        <div
-                          className="framer-9yxxy2"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="https://app.askdialog.com/login"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              Log in
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                        <div
-                          className="framer-1qe7311"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="./platform"
-                            >
-                              Platform
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                        <div
-                          className="framer-1510ohc"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="./Services"
-                            >
-                              Services
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                        <div
-                          className="framer-fsvje1"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="https://askdialog.notion.site/Career-2004a6dde93680248268c361d9d91303"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              Career
+                              Translation & Transcription
                             </a>
                             {/* /$ */}
                           </p>
@@ -7125,6 +6445,40 @@ export default function HomePage() {
                           </p>
                         </div>
                       </div>
+                    </div>
+                    <div className="framer-199i6p7">
+                      <div
+                        className="framer-1e66phn"
+                        style={{
+                          "--extracted-2gg91v": '"opsz" 24, "wght" 500',
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p
+                          style={{
+                            "--font-selector":
+                              "SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdOVEF3",
+                            "--framer-font-family": `\"Inter Variable\",
+                            \"Inter Placeholder\", sans-serif`,
+                            "--framer-font-open-type-features": `\"cv01\" on, \"cv09\" on,
+                            \"cv11\" on, \"cv05\" on`,
+                            "--framer-font-size": "15px",
+                            "--framer-font-variation-axes": `var(
+                            --extracted-2gg91v,
+                            \"opsz\" 24,
+                            \"wght\" 500
+                          )`,
+                            "--framer-letter-spacing": "-0.01em",
+                            "--framer-line-height": "1em",
+                            "--framer-text-alignment": "center",
+                          }}
+                          className="framer-text"
+                        >Contact</p>
+                      </div>
+                      <div className="framer-135xreq"><div className="contact-info" style={{ display: "flex", flexDirection: "column", gap: "12px", color: "#666", fontSize: "14px", lineHeight: "1.5" }}><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>mail</span><span>tasadezy@gmail.com</span></div><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>phone</span><span>+91 82874 34966</span></div><div style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>location_on</span><span>Royal Court, Sector 16b, Noida, UP, India 201308</span></div><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>schedule</span><span>9:30 AM – 6:30 PM IST</span></div></div></div>
                     </div>
                     <div className="framer-19isin8">
                       <div className="framer-m8s2bj-container">
@@ -7280,7 +6634,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/ai-product-recommender"
                             >
-                              AI product recommender
+                              Voice & Dubbing
                             </a>
                             {/* /$ */}
                           </p>
@@ -7340,128 +6694,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/conversation-insights"
                             >
-                              Conversation insights
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="framer-199i6p7">
-                      <div
-                        className="framer-1e66phn"
-                        style={{
-                          "--extracted-2gg91v": '"opsz" 24, "wght" 500',
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          style={{
-                            "--font-selector":
-                              "SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdOVEF3",
-                            "--framer-font-family": `\"Inter Variable\",
-                            \"Inter Placeholder\", sans-serif`,
-                            "--framer-font-open-type-features": `\"cv01\" on, \"cv09\" on,
-                            \"cv11\" on, \"cv05\" on`,
-                            "--framer-font-size": "15px",
-                            "--framer-font-variation-axes": `var(
-                            --extracted-2gg91v,
-                            \"opsz\" 24,
-                            \"wght\" 500
-                          )`,
-                            "--framer-letter-spacing": "-0.01em",
-                            "--framer-line-height": "1em",
-                            "--framer-text-alignment": "center",
-                          }}
-                          className="framer-text"
-                        >
-                          Dialog
-                        </p>
-                      </div>
-                      <div className="framer-135xreq">
-                        <div
-                          className="framer-9yxxy2"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="https://app.askdialog.com/login"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              Log in
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                        <div
-                          className="framer-1qe7311"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="./platform"
-                            >
-                              Platform
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                        <div
-                          className="framer-1510ohc"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="./Services"
-                            >
-                              Services
-                            </a>
-                            {/* /$ */}
-                          </p>
-                        </div>
-                        <div
-                          className="framer-fsvje1"
-                          style={{ transform: "none" }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            className="framer-text framer-styles-preset-1ejdako"
-                            data-styles-preset="Skiln4SgN"
-                          >
-                            {/* $ */}
-                            <a
-                              className="framer-text framer-styles-preset-3eabr4"
-                              data-styles-preset="nS4X1CdzJ"
-                              href="https://askdialog.notion.site/Career-2004a6dde93680248268c361d9d91303"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              Career
+                              Translation & Transcription
                             </a>
                             {/* /$ */}
                           </p>
@@ -7568,6 +6801,40 @@ export default function HomePage() {
                           </p>
                         </div>
                       </div>
+                    </div>
+                    <div className="framer-199i6p7">
+                      <div
+                        className="framer-1e66phn"
+                        style={{
+                          "--extracted-2gg91v": '"opsz" 24, "wght" 500',
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p
+                          style={{
+                            "--font-selector":
+                              "SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdOVEF3",
+                            "--framer-font-family": `\"Inter Variable\",
+                            \"Inter Placeholder\", sans-serif`,
+                            "--framer-font-open-type-features": `\"cv01\" on, \"cv09\" on,
+                            \"cv11\" on, \"cv05\" on`,
+                            "--framer-font-size": "15px",
+                            "--framer-font-variation-axes": `var(
+                            --extracted-2gg91v,
+                            \"opsz\" 24,
+                            \"wght\" 500
+                          )`,
+                            "--framer-letter-spacing": "-0.01em",
+                            "--framer-line-height": "1em",
+                            "--framer-text-alignment": "center",
+                          }}
+                          className="framer-text"
+                        >Contact</p>
+                      </div>
+                      <div className="framer-135xreq"><div className="contact-info" style={{ display: "flex", flexDirection: "column", gap: "12px", color: "#666", fontSize: "14px", lineHeight: "1.5" }}><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>mail</span><span>tasadezy@gmail.com</span></div><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>phone</span><span>+91 82874 34966</span></div><div style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>location_on</span><span>Royal Court, Sector 16b, Noida, UP, India 201308</span></div><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>schedule</span><span>9:30 AM – 6:30 PM IST</span></div></div></div>
                     </div>
                     <div className="framer-19isin8">
                       <div className="framer-m8s2bj-container">
@@ -7722,7 +6989,7 @@ export default function HomePage() {
                             data-styles-preset="nS4X1CdzJ"
                             href="./solutions/ai-product-recommender"
                           >
-                            AI product recommender
+                            Voice & Dubbing
                           </a>
                           {/* /$ */}
                         </p>
@@ -7782,128 +7049,7 @@ export default function HomePage() {
                             data-styles-preset="nS4X1CdzJ"
                             href="./solutions/conversation-insights"
                           >
-                            Conversation insights
-                          </a>
-                          {/* /$ */}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="framer-199i6p7">
-                    <div
-                      className="framer-1e66phn"
-                      style={{
-                        "--extracted-2gg91v": '"opsz" 24, "wght" 500',
-                        "--framer-link-text-color": "rgb(0, 153, 255)",
-                        "--framer-link-text-decoration": "underline",
-                        transform: "none",
-                      }}
-                      data-framer-component-type="RichTextContainer"
-                    >
-                      <p
-                        style={{
-                          "--font-selector":
-                            "SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdOVEF3",
-                          "--framer-font-family": `\"Inter Variable\",
-                          \"Inter Placeholder\", sans-serif`,
-                          "--framer-font-open-type-features": `\"cv01\" on, \"cv09\" on,
-                          \"cv11\" on, \"cv05\" on`,
-                          "--framer-font-size": "15px",
-                          "--framer-font-variation-axes": `var(
-                          --extracted-2gg91v,
-                          \"opsz\" 24,
-                          \"wght\" 500
-                        )`,
-                          "--framer-letter-spacing": "-0.01em",
-                          "--framer-line-height": "1em",
-                          "--framer-text-alignment": "center",
-                        }}
-                        className="framer-text"
-                      >
-                        Dialog
-                      </p>
-                    </div>
-                    <div className="framer-135xreq">
-                      <div
-                        className="framer-9yxxy2"
-                        style={{ transform: "none" }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          className="framer-text framer-styles-preset-1ejdako"
-                          data-styles-preset="Skiln4SgN"
-                        >
-                          {/* $ */}
-                          <a
-                            className="framer-text framer-styles-preset-3eabr4"
-                            data-styles-preset="nS4X1CdzJ"
-                            href="https://app.askdialog.com/login"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            Log in
-                          </a>
-                          {/* /$ */}
-                        </p>
-                      </div>
-                      <div
-                        className="framer-1qe7311"
-                        style={{ transform: "none" }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          className="framer-text framer-styles-preset-1ejdako"
-                          data-styles-preset="Skiln4SgN"
-                        >
-                          {/* $ */}
-                          <a
-                            className="framer-text framer-styles-preset-3eabr4"
-                            data-styles-preset="nS4X1CdzJ"
-                            href="./platform"
-                          >
-                            Platform
-                          </a>
-                          {/* /$ */}
-                        </p>
-                      </div>
-                      <div
-                        className="framer-1510ohc"
-                        style={{ transform: "none" }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          className="framer-text framer-styles-preset-1ejdako"
-                          data-styles-preset="Skiln4SgN"
-                        >
-                          {/* $ */}
-                          <a
-                            className="framer-text framer-styles-preset-3eabr4"
-                            data-styles-preset="nS4X1CdzJ"
-                            href="./Services"
-                          >
-                            Services
-                          </a>
-                          {/* /$ */}
-                        </p>
-                      </div>
-                      <div
-                        className="framer-fsvje1"
-                        style={{ transform: "none" }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          className="framer-text framer-styles-preset-1ejdako"
-                          data-styles-preset="Skiln4SgN"
-                        >
-                          {/* $ */}
-                          <a
-                            className="framer-text framer-styles-preset-3eabr4"
-                            data-styles-preset="nS4X1CdzJ"
-                            href="https://askdialog.notion.site/Career-2004a6dde93680248268c361d9d91303"
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            Career
+                            Translation & Transcription
                           </a>
                           {/* /$ */}
                         </p>
@@ -8010,6 +7156,40 @@ export default function HomePage() {
                         </p>
                       </div>
                     </div>
+                  </div>
+                  <div className="framer-199i6p7">
+                    <div
+                      className="framer-1e66phn"
+                      style={{
+                        "--extracted-2gg91v": '"opsz" 24, "wght" 500',
+                        "--framer-link-text-color": "rgb(0, 153, 255)",
+                        "--framer-link-text-decoration": "underline",
+                        transform: "none",
+                      }}
+                      data-framer-component-type="RichTextContainer"
+                    >
+                      <p
+                        style={{
+                          "--font-selector":
+                            "SW50ZXItVmFyaWFibGVWRj1JbTl3YzNvaUlESTBMQ0FpZDJkb2RDSWdOVEF3",
+                          "--framer-font-family": `\"Inter Variable\",
+                          \"Inter Placeholder\", sans-serif`,
+                          "--framer-font-open-type-features": `\"cv01\" on, \"cv09\" on,
+                          \"cv11\" on, \"cv05\" on`,
+                          "--framer-font-size": "15px",
+                          "--framer-font-variation-axes": `var(
+                          --extracted-2gg91v,
+                          \"opsz\" 24,
+                          \"wght\" 500
+                        )`,
+                          "--framer-letter-spacing": "-0.01em",
+                          "--framer-line-height": "1em",
+                          "--framer-text-alignment": "center",
+                        }}
+                        className="framer-text"
+                      >Contact</p>
+                    </div>
+                    <div className="framer-135xreq"><div className="contact-info" style={{ display: "flex", flexDirection: "column", gap: "12px", color: "#666", fontSize: "14px", lineHeight: "1.5" }}><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>mail</span><span>tasadezy@gmail.com</span></div><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>phone</span><span>+91 82874 34966</span></div><div style={{ display: "flex", alignItems: "flex-start", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>location_on</span><span>Royal Court, Sector 16b, Noida, UP, India 201308</span></div><div style={{ display: "flex", alignItems: "center", gap: "8px" }}><span className="material-symbols-outlined" style={{ fontSize: "18px" }}>schedule</span><span>9:30 AM – 6:30 PM IST</span></div></div></div>
                   </div>
                   <div className="framer-19isin8">
                     <div className="framer-m8s2bj-container">
