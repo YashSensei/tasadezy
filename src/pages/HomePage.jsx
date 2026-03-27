@@ -2,10 +2,102 @@ import React from "react";
 import "./global.css";
 
 export default function HomePage() {
+  const serviceCardGraphics = {
+    // 1. Voice & Dubbing
+    voice: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="rgb(140,140,140)"/>
+          <stop offset="1" stop-color="rgb(20,20,20)"/>
+        </linearGradient>
+      </defs>
+      <rect x="340" y="220" width="120" height="200" rx="60" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8"/>
+      <path d="M 280 370 C 280 470, 520 470, 520 370" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8" stroke-linecap="round"/>
+      <line x1="400" y1="465" x2="400" y2="580" stroke="rgba(0,0,0,0.3)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 180 340 Q 280 300, 360 360 T 520 370 T 640 340" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round"/>
+    </svg>`,
+
+    // 2. Audio Production
+    audio: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="rgb(140,140,140)"/>
+          <stop offset="1" stop-color="rgb(20,20,20)"/>
+        </linearGradient>
+      </defs>
+      <line x1="280" y1="240" x2="280" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
+      <line x1="360" y1="240" x2="360" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
+      <line x1="440" y1="240" x2="440" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
+      <line x1="520" y1="240" x2="520" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
+      
+      <circle cx="280" cy="460" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
+      <circle cx="360" cy="300" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
+      <circle cx="440" cy="500" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
+      <circle cx="520" cy="380" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
+      
+      <path d="M 220 620 Q 250 590, 290 620 T 370 620 T 450 620 T 530 620 T 590 620" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="6" stroke-linecap="round"/>
+    </svg>`,
+
+    // 3. Translation & Transcription
+    language: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="rgb(140,140,140)"/>
+          <stop offset="1" stop-color="rgb(20,20,20)"/>
+        </linearGradient>
+      </defs>
+      <circle cx="280" cy="320" r="70" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="8"/>
+      <text x="280" y="332" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="rgba(0,0,0,0.6)" text-anchor="middle">EN</text>
+      
+      <circle cx="520" cy="480" r="70" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="8"/>
+      <text x="520" y="492" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="rgba(0,0,0,0.6)" text-anchor="middle">HI</text>
+      
+      <path d="M 330 370 C 400 440, 420 400, 470 430" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
+    </svg>`,
+
+    // 4. Video & Ad Production
+    video: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <defs>
+        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="rgb(140,140,140)"/>
+          <stop offset="1" stop-color="rgb(20,20,20)"/>
+        </linearGradient>
+      </defs>
+      <rect x="200" y="240" width="400" height="240" rx="16" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8"/>
+      
+      <path d="M 375 320 L 445 360 L 375 400 Z" fill="url(#accent)"/>
+      
+      <line x1="200" y1="540" x2="600" y2="540" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
+      
+      <line x1="200" y1="540" x2="380" y2="540" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+      
+      <circle cx="380" cy="540" r="12" fill="rgba(0,0,0,0.6)"/>
+    </svg>`,
+  };
+
+  const ServiceCardGraphic = ({ type }) => {
+    const svgMarkup = serviceCardGraphics[type] ?? serviceCardGraphics.voice;
+
+    return (
+      <div
+        style={{
+          height: "100%",
+          width: "100%",
+          borderRadius: "inherit",
+          backgroundSize: "contain",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
+            svgMarkup,
+          )}")`,
+        }}
+      ></div>
+    );
+  };
+
   return (
     <>
       <div id="main">
-        $
         <style data-framer-html-style>{`html body {
           background: rgb(247, 247, 247);
         }`}</style>
@@ -47,22 +139,35 @@ export default function HomePage() {
                       borderTopLeftRadius: "32px",
                       borderTopRightRadius: "32px",
                       boxShadow: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "10px",
                     }}
                     href="./"
                     data-framer-page-link-current="true"
                   >
-                    <div
-                      data-framer-component-type="SVG"
+                    <img
+                      src="/logo.png"
+                      alt="Tasadezy Voices"
                       style={{
-                        imageRendering: "pixelated",
-                        flexShrink: "0",
-                        backgroundSize: "100% 100%",
-                        backgroundImage:
-                          'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 88.255 22.019%22 overflow=%22visible%22><g><path d=%22M 0 17.82 L 0 0 C 9.842 0 17.82 7.978 17.82 17.82 Z%22 fill=%22rgb(0,0,0)%22></path><path d=%22M 17.82 0 L 17.82 5.792 C 14.621 5.792 12.028 3.199 12.028 0 Z M 0 17.82 L 0 12.028 C 3.199 12.028 5.791 14.621 5.791 17.82 Z M 33.808 17.168 L 28.561 17.168 L 28.561 14.966 L 33.437 14.966 C 34.642 14.966 35.656 14.776 36.481 14.396 C 37.323 14 37.966 13.357 38.412 12.466 C 38.857 11.575 39.08 10.379 39.08 8.877 C 39.08 7.376 38.857 6.179 38.412 5.288 C 37.966 4.397 37.323 3.762 36.481 3.383 C 35.656 2.987 34.642 2.789 33.437 2.789 L 28.561 2.789 L 28.561 0.586 L 33.784 0.586 C 35.533 0.586 36.985 0.916 38.14 1.576 C 39.311 2.236 40.186 3.185 40.763 4.422 C 41.357 5.66 41.654 7.145 41.654 8.877 C 41.654 10.61 41.357 12.095 40.763 13.332 C 40.186 14.57 39.311 15.518 38.14 16.178 C 36.985 16.838 35.541 17.168 33.808 17.168 Z M 30.195 17.168 L 27.72 17.168 L 27.72 0.586 L 30.195 0.586 Z M 46.076 3.308 L 43.601 3.308 L 43.601 0.586 L 46.076 0.586 Z M 46.076 17.168 L 43.601 17.168 L 43.601 5.165 L 46.076 5.165 Z M 58.789 17.168 L 57.229 17.168 C 56.817 17.168 56.446 17.094 56.116 16.945 C 55.786 16.797 55.522 16.558 55.324 16.228 C 55.126 15.881 55.027 15.419 55.027 14.842 L 55.027 10.04 L 54.977 9.718 C 54.977 8.976 54.804 8.357 54.457 7.862 C 54.127 7.351 53.467 7.095 52.477 7.095 C 51.652 7.095 50.943 7.309 50.349 7.738 C 49.771 8.167 49.326 8.712 49.012 9.372 L 47.428 7.615 C 47.709 7.202 48.097 6.79 48.592 6.377 C 49.087 5.965 49.681 5.618 50.374 5.338 C 51.083 5.057 51.875 4.917 52.75 4.917 C 54.235 4.917 55.373 5.329 56.165 6.154 C 56.974 6.963 57.378 8.101 57.378 9.57 L 57.378 14.272 C 57.378 14.536 57.427 14.726 57.526 14.842 C 57.642 14.941 57.807 14.99 58.021 14.99 L 58.789 14.99 Z M 50.918 17.416 C 49.928 17.416 49.153 17.16 48.592 16.648 C 48.031 16.12 47.75 15.444 47.75 14.619 C 47.75 13.794 48.022 13.109 48.567 12.565 C 49.128 12.02 49.862 11.55 50.77 11.154 L 55.348 9.174 L 55.67 10.758 L 51.735 12.589 C 51.19 12.853 50.794 13.109 50.547 13.357 C 50.299 13.604 50.176 13.901 50.176 14.248 C 50.176 14.611 50.308 14.899 50.572 15.114 C 50.836 15.328 51.232 15.436 51.76 15.436 C 52.238 15.436 52.675 15.37 53.071 15.238 C 53.484 15.089 53.83 14.883 54.111 14.619 C 54.408 14.355 54.631 14.05 54.779 13.703 C 54.944 13.357 55.027 12.969 55.027 12.54 L 55.101 13.728 C 55.002 14.272 54.787 14.833 54.457 15.411 C 54.144 15.972 53.698 16.45 53.121 16.846 C 52.543 17.226 51.809 17.416 50.918 17.416 Z M 62.839 17.168 L 60.364 17.168 L 60.364 0.586 L 62.839 0.586 Z M 70.107 17.416 C 68.985 17.416 67.987 17.16 67.112 16.648 C 66.238 16.12 65.561 15.386 65.083 14.446 C 64.604 13.505 64.365 12.408 64.365 11.154 C 64.365 9.9 64.604 8.803 65.083 7.862 C 65.561 6.922 66.238 6.196 67.112 5.684 C 67.987 5.173 68.985 4.917 70.107 4.917 C 71.245 4.917 72.244 5.173 73.102 5.684 C 73.96 6.196 74.636 6.922 75.131 7.862 C 75.626 8.803 75.874 9.9 75.874 11.154 C 75.874 12.408 75.626 13.505 75.131 14.446 C 74.636 15.386 73.96 16.12 73.102 16.648 C 72.244 17.16 71.245 17.416 70.107 17.416 Z M 70.107 15.362 C 70.75 15.362 71.311 15.213 71.79 14.916 C 72.285 14.619 72.673 14.165 72.953 13.555 C 73.234 12.928 73.374 12.128 73.374 11.154 C 73.374 10.181 73.234 9.389 72.953 8.778 C 72.673 8.151 72.285 7.689 71.79 7.392 C 71.311 7.095 70.75 6.947 70.107 6.947 C 69.48 6.947 68.919 7.095 68.424 7.392 C 67.945 7.689 67.566 8.151 67.285 8.778 C 67.021 9.389 66.889 10.181 66.889 11.154 C 66.889 12.128 67.021 12.928 67.285 13.555 C 67.566 14.165 67.945 14.619 68.424 14.916 C 68.919 15.213 69.48 15.362 70.107 15.362 Z M 81.82 22.019 C 80.236 22.019 78.982 21.78 78.058 21.301 C 77.151 20.839 76.697 20.212 76.697 19.42 C 76.697 19.057 76.796 18.736 76.994 18.455 C 77.192 18.191 77.448 17.968 77.761 17.787 C 78.066 17.61 78.39 17.468 78.727 17.366 C 78.347 17.234 78.042 17.028 77.811 16.747 C 77.58 16.467 77.464 16.112 77.464 15.683 C 77.464 15.353 77.547 15.023 77.712 14.693 C 77.877 14.347 78.116 14.008 78.43 13.678 C 78.743 13.332 79.106 13.01 79.519 12.713 L 80.014 12.911 C 79.898 13.109 79.766 13.34 79.618 13.604 C 79.469 13.868 79.395 14.132 79.395 14.396 C 79.395 14.71 79.494 14.949 79.692 15.114 C 79.906 15.279 80.311 15.361 80.905 15.361 L 84.617 15.361 C 85.756 15.361 86.647 15.584 87.29 16.03 C 87.934 16.475 88.255 17.16 88.255 18.084 C 88.255 18.843 88.008 19.519 87.513 20.113 C 87.034 20.707 86.317 21.169 85.36 21.499 C 84.403 21.846 83.223 22.019 81.82 22.019 Z M 81.895 20.138 C 83.215 20.138 84.229 19.982 84.939 19.668 C 85.648 19.371 86.003 18.95 86.003 18.406 C 86.003 18.043 85.863 17.779 85.582 17.614 C 85.302 17.465 84.873 17.391 84.295 17.391 L 79.345 17.391 C 79.197 17.556 79.048 17.738 78.9 17.936 C 78.753 18.146 78.675 18.397 78.677 18.653 C 78.677 19.099 78.941 19.454 79.469 19.718 C 79.997 19.998 80.806 20.138 81.895 20.138 Z M 82.365 13.53 C 81.408 13.53 80.566 13.348 79.84 12.985 C 79.114 12.622 78.545 12.111 78.133 11.451 C 77.72 10.791 77.514 10.048 77.514 9.223 C 77.514 8.382 77.72 7.639 78.133 6.996 C 78.545 6.336 79.114 5.824 79.84 5.461 C 80.566 5.098 81.408 4.917 82.365 4.917 C 83.322 4.917 84.163 5.098 84.889 5.461 C 85.632 5.824 86.201 6.336 86.597 6.996 C 87.01 7.639 87.216 8.382 87.216 9.223 C 87.216 10.048 87.01 10.791 86.597 11.451 C 86.201 12.111 85.632 12.622 84.889 12.985 C 84.163 13.348 83.322 13.53 82.365 13.53 Z M 82.365 11.698 C 83.058 11.698 83.644 11.484 84.122 11.055 C 84.617 10.626 84.865 10.015 84.865 9.223 C 84.865 8.431 84.617 7.821 84.122 7.392 C 83.644 6.963 83.058 6.748 82.365 6.748 C 81.672 6.748 81.078 6.963 80.583 7.392 C 80.104 7.821 79.865 8.431 79.865 9.223 C 79.865 10.015 80.104 10.626 80.583 11.055 C 81.078 11.484 81.672 11.698 82.365 11.698 Z M 87.587 3.259 L 85.087 5.981 L 84.419 5.437 L 85.112 2.393 Z%22 fill=%22rgb(0,0,0)%22></path></g></svg>")',
+                        width: "34px",
+                        height: "34px",
+                        objectFit: "contain",
+                        flexShrink: 0,
                       }}
-                      className="framer-1dr6q1o"
-                      aria-hidden="true"
-                    ></div>
+                    />
+                    <span
+                      style={{
+                        fontWeight: 700,
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: "16px",
+                        lineHeight: "1",
+                        color: "#000",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      Tasadezy
+                    </span>
                   </a>
                   {/* /$ */}
                   <div
@@ -171,7 +276,7 @@ export default function HomePage() {
                             className="framer-lubbH framer-QHInc framer-qrhi5h framer-v-qrhi5h framer-tq1v82"
                             data-framer-name="Light mode"
                             data-highlight="true"
-                            href="./customers"
+                            href="./Services"
                           >
                             <div
                               className="framer-10vr7j9"
@@ -243,49 +348,8 @@ export default function HomePage() {
                               </p>
                             </div>
                           </a>
-                          {/* /$ */}
                         </div>
-                        {/* /$ */}
-                        {/* $ */}
-                        <div className="framer-o24i55-container">
-                          {/* $ */}
-                          <a
-                            className="framer-lubbH framer-QHInc framer-qrhi5h framer-v-qrhi5h framer-tq1v82"
-                            data-framer-name="Light mode"
-                            data-highlight="true"
-                            href="./resources"
-                          >
-                            <div
-                              className="framer-10vr7j9"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )`,
-                                "--framer-paragraph-spacing": "0px",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1ejdako"
-                                data-styles-preset="Skiln4SgN"
-                                style={{
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Contact
-                              </p>
-                            </div>
-                          </a>
-                          {/* /$ */}
-                        </div>
+
                         {/* /$ */}
                         <div className="framer-gv63sz-container">
                           {/* $ */}
@@ -426,22 +490,23 @@ export default function HomePage() {
                       borderTopLeftRadius: "32px",
                       borderTopRightRadius: "32px",
                       boxShadow: "none",
+                      font: "",
                     }}
                     href="./"
                     data-framer-page-link-current="true"
                   >
-                    <div
-                      data-framer-component-type="SVG"
+                    <span
                       style={{
-                        imageRendering: "pixelated",
-                        flexShrink: "0",
-                        backgroundSize: "100% 100%",
-                        backgroundImage:
-                          'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 88.255 22.019%22 overflow=%22visible%22><g><path d=%22M 0 17.82 L 0 0 C 9.842 0 17.82 7.978 17.82 17.82 Z%22 fill=%22rgb(0,0,0)%22></path><path d=%22M 17.82 0 L 17.82 5.792 C 14.621 5.792 12.028 3.199 12.028 0 Z M 0 17.82 L 0 12.028 C 3.199 12.028 5.791 14.621 5.791 17.82 Z M 33.808 17.168 L 28.561 17.168 L 28.561 14.966 L 33.437 14.966 C 34.642 14.966 35.656 14.776 36.481 14.396 C 37.323 14 37.966 13.357 38.412 12.466 C 38.857 11.575 39.08 10.379 39.08 8.877 C 39.08 7.376 38.857 6.179 38.412 5.288 C 37.966 4.397 37.323 3.762 36.481 3.383 C 35.656 2.987 34.642 2.789 33.437 2.789 L 28.561 2.789 L 28.561 0.586 L 33.784 0.586 C 35.533 0.586 36.985 0.916 38.14 1.576 C 39.311 2.236 40.186 3.185 40.763 4.422 C 41.357 5.66 41.654 7.145 41.654 8.877 C 41.654 10.61 41.357 12.095 40.763 13.332 C 40.186 14.57 39.311 15.518 38.14 16.178 C 36.985 16.838 35.541 17.168 33.808 17.168 Z M 30.195 17.168 L 27.72 17.168 L 27.72 0.586 L 30.195 0.586 Z M 46.076 3.308 L 43.601 3.308 L 43.601 0.586 L 46.076 0.586 Z M 46.076 17.168 L 43.601 17.168 L 43.601 5.165 L 46.076 5.165 Z M 58.789 17.168 L 57.229 17.168 C 56.817 17.168 56.446 17.094 56.116 16.945 C 55.786 16.797 55.522 16.558 55.324 16.228 C 55.126 15.881 55.027 15.419 55.027 14.842 L 55.027 10.04 L 54.977 9.718 C 54.977 8.976 54.804 8.357 54.457 7.862 C 54.127 7.351 53.467 7.095 52.477 7.095 C 51.652 7.095 50.943 7.309 50.349 7.738 C 49.771 8.167 49.326 8.712 49.012 9.372 L 47.428 7.615 C 47.709 7.202 48.097 6.79 48.592 6.377 C 49.087 5.965 49.681 5.618 50.374 5.338 C 51.083 5.057 51.875 4.917 52.75 4.917 C 54.235 4.917 55.373 5.329 56.165 6.154 C 56.974 6.963 57.378 8.101 57.378 9.57 L 57.378 14.272 C 57.378 14.536 57.427 14.726 57.526 14.842 C 57.642 14.941 57.807 14.99 58.021 14.99 L 58.789 14.99 Z M 50.918 17.416 C 49.928 17.416 49.153 17.16 48.592 16.648 C 48.031 16.12 47.75 15.444 47.75 14.619 C 47.75 13.794 48.022 13.109 48.567 12.565 C 49.128 12.02 49.862 11.55 50.77 11.154 L 55.348 9.174 L 55.67 10.758 L 51.735 12.589 C 51.19 12.853 50.794 13.109 50.547 13.357 C 50.299 13.604 50.176 13.901 50.176 14.248 C 50.176 14.611 50.308 14.899 50.572 15.114 C 50.836 15.328 51.232 15.436 51.76 15.436 C 52.238 15.436 52.675 15.37 53.071 15.238 C 53.484 15.089 53.83 14.883 54.111 14.619 C 54.408 14.355 54.631 14.05 54.779 13.703 C 54.944 13.357 55.027 12.969 55.027 12.54 L 55.101 13.728 C 55.002 14.272 54.787 14.833 54.457 15.411 C 54.144 15.972 53.698 16.45 53.121 16.846 C 52.543 17.226 51.809 17.416 50.918 17.416 Z M 62.839 17.168 L 60.364 17.168 L 60.364 0.586 L 62.839 0.586 Z M 70.107 17.416 C 68.985 17.416 67.987 17.16 67.112 16.648 C 66.238 16.12 65.561 15.386 65.083 14.446 C 64.604 13.505 64.365 12.408 64.365 11.154 C 64.365 9.9 64.604 8.803 65.083 7.862 C 65.561 6.922 66.238 6.196 67.112 5.684 C 67.987 5.173 68.985 4.917 70.107 4.917 C 71.245 4.917 72.244 5.173 73.102 5.684 C 73.96 6.196 74.636 6.922 75.131 7.862 C 75.626 8.803 75.874 9.9 75.874 11.154 C 75.874 12.408 75.626 13.505 75.131 14.446 C 74.636 15.386 73.96 16.12 73.102 16.648 C 72.244 17.16 71.245 17.416 70.107 17.416 Z M 70.107 15.362 C 70.75 15.362 71.311 15.213 71.79 14.916 C 72.285 14.619 72.673 14.165 72.953 13.555 C 73.234 12.928 73.374 12.128 73.374 11.154 C 73.374 10.181 73.234 9.389 72.953 8.778 C 72.673 8.151 72.285 7.689 71.79 7.392 C 71.311 7.095 70.75 6.947 70.107 6.947 C 69.48 6.947 68.919 7.095 68.424 7.392 C 67.945 7.689 67.566 8.151 67.285 8.778 C 67.021 9.389 66.889 10.181 66.889 11.154 C 66.889 12.128 67.021 12.928 67.285 13.555 C 67.566 14.165 67.945 14.619 68.424 14.916 C 68.919 15.213 69.48 15.362 70.107 15.362 Z M 81.82 22.019 C 80.236 22.019 78.982 21.78 78.058 21.301 C 77.151 20.839 76.697 20.212 76.697 19.42 C 76.697 19.057 76.796 18.736 76.994 18.455 C 77.192 18.191 77.448 17.968 77.761 17.787 C 78.066 17.61 78.39 17.468 78.727 17.366 C 78.347 17.234 78.042 17.028 77.811 16.747 C 77.58 16.467 77.464 16.112 77.464 15.683 C 77.464 15.353 77.547 15.023 77.712 14.693 C 77.877 14.347 78.116 14.008 78.43 13.678 C 78.743 13.332 79.106 13.01 79.519 12.713 L 80.014 12.911 C 79.898 13.109 79.766 13.34 79.618 13.604 C 79.469 13.868 79.395 14.132 79.395 14.396 C 79.395 14.71 79.494 14.949 79.692 15.114 C 79.906 15.279 80.311 15.361 80.905 15.361 L 84.617 15.361 C 85.756 15.361 86.647 15.584 87.29 16.03 C 87.934 16.475 88.255 17.16 88.255 18.084 C 88.255 18.843 88.008 19.519 87.513 20.113 C 87.034 20.707 86.317 21.169 85.36 21.499 C 84.403 21.846 83.223 22.019 81.82 22.019 Z M 81.895 20.138 C 83.215 20.138 84.229 19.982 84.939 19.668 C 85.648 19.371 86.003 18.95 86.003 18.406 C 86.003 18.043 85.863 17.779 85.582 17.614 C 85.302 17.465 84.873 17.391 84.295 17.391 L 79.345 17.391 C 79.197 17.556 79.048 17.738 78.9 17.936 C 78.753 18.146 78.675 18.397 78.677 18.653 C 78.677 19.099 78.941 19.454 79.469 19.718 C 79.997 19.998 80.806 20.138 81.895 20.138 Z M 82.365 13.53 C 81.408 13.53 80.566 13.348 79.84 12.985 C 79.114 12.622 78.545 12.111 78.133 11.451 C 77.72 10.791 77.514 10.048 77.514 9.223 C 77.514 8.382 77.72 7.639 78.133 6.996 C 78.545 6.336 79.114 5.824 79.84 5.461 C 80.566 5.098 81.408 4.917 82.365 4.917 C 83.322 4.917 84.163 5.098 84.889 5.461 C 85.632 5.824 86.201 6.336 86.597 6.996 C 87.01 7.639 87.216 8.382 87.216 9.223 C 87.216 10.048 87.01 10.791 86.597 11.451 C 86.201 12.111 85.632 12.622 84.889 12.985 C 84.163 13.348 83.322 13.53 82.365 13.53 Z M 82.365 11.698 C 83.058 11.698 83.644 11.484 84.122 11.055 C 84.617 10.626 84.865 10.015 84.865 9.223 C 84.865 8.431 84.617 7.821 84.122 7.392 C 83.644 6.963 83.058 6.748 82.365 6.748 C 81.672 6.748 81.078 6.963 80.583 7.392 C 80.104 7.821 79.865 8.431 79.865 9.223 C 79.865 10.015 80.104 10.626 80.583 11.055 C 81.078 11.484 81.672 11.698 82.365 11.698 Z M 87.587 3.259 L 85.087 5.981 L 84.419 5.437 L 85.112 2.393 Z%22 fill=%22rgb(0,0,0)%22></path></g></svg>")',
+                        fontWeight: 700,
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: "16px",
+                        lineHeight: "1",
+                        color: "#000",
+                        whiteSpace: "nowrap",
                       }}
-                      className="framer-1dr6q1o"
-                      aria-hidden="true"
-                    ></div>
+                    >
+                      Tasadezy
+                    </span>
                   </a>
                   {/* /$ */}
                   <div
@@ -750,7 +815,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          The AI shopping agent that boosts your sales
+                          The Voice Behind Your Brand's Story
                         </span>
                       </h1>
                     </div>
@@ -783,7 +848,7 @@ export default function HomePage() {
                         )`,
                         }}
                       >
-                        Guide shoppers in real time, like you would in store.
+                        Your destination for professional voice-over services
                       </p>
                     </div>
                   </div>
@@ -810,7 +875,7 @@ export default function HomePage() {
                           filter: "blur(0px)",
                           WebkitBackdropFilter: "none",
                           WebkitFilter: "blur(0px)",
-                          width: "100%",
+                          width: "auto",
                           borderBottomLeftRadius: "28px",
                           borderBottomRightRadius: "28px",
                           borderTopLeftRadius: "28px",
@@ -852,276 +917,12 @@ export default function HomePage() {
                             }}
                             className="framer-text"
                           >
-                            Book a demo
+                            Get started
                           </p>
                         </div>
                       </a>
                       {/* /$ */}
                     </div>
-                  </div>
-                  <div className="framer-y9vq2g">
-                    {/* $ */}
-                    <a
-                      className="framer-u5zojf framer-1szu1bh"
-                      data-framer-appear-id="u5zojf"
-                      style={{
-                        filter: "blur(0px)",
-                        WebkitFilter: "blur(0px)",
-                        willChange: "transform",
-                        opacity: "1",
-                        transform: "none",
-                      }}
-                      href="https://apps.shopify.com/dialog-ai-sales-assistant"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="framer-9fixkp"
-                        data-framer-name="Shopify Icon"
-                      >
-                        <div
-                          data-framer-component-type="SVG"
-                          style={{
-                            imageRendering: "pixelated",
-                            flexShrink: "0",
-                          }}
-                          className="framer-y8jyr5"
-                          aria-hidden="true"
-                        >
-                          <div
-                            className="svgContainer"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              aspectRatio: "inherit",
-                            }}
-                          >
-                            <svg style={{ width: "100%", height: "100%" }}>
-                              <use href="#svg-2077672158_1771"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="framer-57d6pc" data-framer-name="Stack">
-                        <div
-                          className="framer-l1vi3b"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1t10c2y"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-b2osw7"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1e9kmwq"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-i2p4ls"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1mel4l1"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-1iok2sl"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-1irij8b"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-pwbq4h"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-18xj3b4"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                      </div>
-                    </a>
-                    {/* /$ */}
-                    {/* $ */}
-                    <a
-                      className="framer-1q5dl1q framer-1szu1bh"
-                      data-framer-appear-id="1q5dl1q"
-                      style={{
-                        filter: "blur(0px)",
-                        WebkitFilter: "blur(0px)",
-                        willChange: "transform",
-                        opacity: "1",
-                        transform: "none",
-                      }}
-                      href="https://www.g2.com/products/dialog-dialog/reviews"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <div
-                        className="framer-5ceisl"
-                        data-framer-name="Shopify Icon"
-                      >
-                        <div
-                          data-framer-component-type="SVG"
-                          style={{
-                            imageRendering: "pixelated",
-                            flexShrink: "0",
-                          }}
-                          className="framer-14wpcof"
-                          aria-hidden="true"
-                        >
-                          <div
-                            className="svgContainer"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              aspectRatio: "inherit",
-                            }}
-                          >
-                            <svg style={{ width: "100%", height: "100%" }}>
-                              <use href="#svg-1509413605_1392"></use>
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="framer-9xowit" data-framer-name="Stack">
-                        <div
-                          className="framer-18hv0dy"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-psldlq"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-lxt6ra"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-ds4jd6"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-1wp674q"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-ofiylv"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-q81s6m"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-a5nhil"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                        <div
-                          className="framer-1ng2l2n"
-                          data-framer-name="Star Icon"
-                        >
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 12 11.576%22 overflow=%22visible%22><path d=%22M 11.697 5.298 L 9.285 7.379 L 10.02 10.492 C 10.103 10.838 9.97 11.199 9.683 11.408 C 9.395 11.617 9.01 11.633 8.707 11.447 L 6 9.781 L 3.292 11.447 C 2.988 11.631 2.604 11.615 2.318 11.407 C 2.031 11.198 1.898 10.837 1.98 10.492 L 2.718 7.379 L 0.305 5.298 C 0.037 5.066 -0.066 4.696 0.043 4.359 C 0.152 4.022 0.452 3.783 0.805 3.752 L 3.968 3.496 L 5.187 0.544 C 5.323 0.215 5.643 0 5.999 0 C 6.354 0 6.675 0.215 6.81 0.544 L 8.029 3.496 L 11.192 3.752 C 11.546 3.781 11.847 4.021 11.957 4.358 C 12.066 4.696 11.963 5.066 11.694 5.299 Z%22 fill=%22rgb(255, 172, 71)%22></path></svg>")',
-                            }}
-                            className="framer-ibc7un"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                      </div>
-                    </a>
-                    {/* /$ */}
                   </div>
                 </div>
               </div>
@@ -1681,7 +1482,7 @@ export default function HomePage() {
                               “We are at the very beginning of our journey with
                               Dialog, yet we can already see its transformative
                               potential in reshaping how we interact with our
-                              customers. In a highly competitive market
+                              Services. In a highly competitive market
                               (automotive industry), Dialog is proving to be a
                               game-changer for MG Motor.”
                             </p>
@@ -1820,8 +1621,8 @@ export default function HomePage() {
                     )`,
                     }}
                   >
-                    High-quality voice, audio, and video solutions built for
-                    impact
+                    Powerful voice and media solutions designed for every
+                    platform
                   </h2>
                 </div>
                 <div
@@ -1842,7 +1643,7 @@ export default function HomePage() {
                   >
                     From voice-overs and dubbing to full-scale production, we
                     craft content that connects, engages, and delivers across
-                    languages and formats..
+                    languages and formats.
                   </p>
                 </div>
               </div>
@@ -1926,10 +1727,10 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            Professional voice-overs and lip-sync accurate
-                            dubbing for films, ads, web series, and e-learning,
-                            delivered across 12+ Indian languages with
-                            consistent quality.
+                            Product quizzes are outdated. AI Product Recommender
+                            drives conversion by guiding shoppers from the home
+                            page to the right product, through personalized
+                            questions or a photo.
                           </p>
                         </div>
                       </div>
@@ -2003,9 +1804,165 @@ export default function HomePage() {
                         >
                           <div className="framer-1rfb461-container">
                             {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
+                            <ServiceCardGraphic type="voice" />
+                            {/* /$ */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="ssr-variant hidden-72rtr7">
+                <div
+                  className="framer-d68ubv-container"
+                  id="carousel-1"
+                  style={{ opacity: "1", transform: "none" }}
+                >
+                  <div
+                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
+                    data-framer-name="Tablet Light"
+                    style={{
+                      "--1bn3qnw":
+                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                      backgroundColor: "rgb(255, 255, 255)",
+                      maxWidth: "100%",
+                      width: "100%",
+                      borderBottomLeftRadius: "48px",
+                      borderBottomRightRadius: "48px",
+                      borderTopLeftRadius: "48px",
+                      borderTopRightRadius: "48px",
+                      boxShadow: "var(--1bn3qnw)",
+                    }}
+                  >
+                    <div className="framer-1sfiyki">
+                      <div className="framer-196m01e">
+                        <div
+                          className="framer-ynmfjw"
+                          style={{
+                            "--extracted-a0htzi": `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <h3
+                            className="framer-text framer-styles-preset-1ljffqz"
+                            data-styles-preset="ef412AXUV"
+                            style={{
+                              "--framer-text-alignment": "left",
+                              "--framer-text-color": `var(
+                              --extracted-a0htzi,
+                              var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )
+                            )`,
+                            }}
+                          >
+                            AI product recommender
+                          </h3>
+                        </div>
+                        <div
+                          className="framer-i32fxw"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                            rgba(0, 0, 0, 0.6)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p className="framer-text framer-styles-preset-1wcqtva">
+                            Product quizzes are outdated. AI Product Recommender
+                            drives conversion by guiding shoppers from the home
+                            page to the right product, through personalized
+                            questions or a photo.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="framer-911yfn-container">
+                        {/* $ */}
+                        <a
+                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                          data-framer-name="Primary Large"
+                          style={{
+                            backdropFilter: "none",
+                            backgroundColor: `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            filter: "blur(0px)",
+                            WebkitBackdropFilter: "none",
+                            WebkitFilter: "blur(0px)",
+                            borderBottomLeftRadius: "28px",
+                            borderBottomRightRadius: "28px",
+                            borderTopLeftRadius: "28px",
+                            borderTopRightRadius: "28px",
+                            boxShadow: "none",
+                          }}
+                          href="./solutions/ai-product-recommender"
+                        >
+                          <div
+                            className="framer-1swh0y3"
+                            style={{
+                              "--extracted-r6o4lv": `var(
+                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                              rgb(255, 255, 255)
+                            )`,
+                              "--framer-link-text-color": "rgb(0, 153, 255)",
+                              "--framer-link-text-decoration": "underline",
+                              transform: "none",
+                            }}
+                            data-framer-component-type="RichTextContainer"
+                          >
+                            <p
+                              style={{
+                                "--font-selector": "SW50ZXItTWVkaXVt",
+                                "--framer-font-family": `\"Inter\",
+                                \"Inter Placeholder\", sans-serif`,
+                                "--framer-font-size": "14px",
+                                "--framer-font-weight": "500",
+                                "--framer-letter-spacing": "-0.02em",
+                                "--framer-line-height": "1.4em",
+                                "--framer-text-color": `var(
+                                --extracted-r6o4lv,
+                                var(
+                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                  rgb(255, 255, 255)
+                                )
+                              )`,
+                              }}
+                              className="framer-text"
+                            >
+                              Learn more
+                            </p>
+                          </div>
+                        </a>
+                        {/* /$ */}
+                      </div>
+                    </div>
+                    <div className="framer-ip2sev">
+                      <div className="framer-ywx080-container">
+                        <div
+                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                          data-framer-name="Lottie (Pause)"
+                          style={{ height: "100%", width: "100%" }}
+                        >
+                          <div className="framer-1rfb461-container">
+                            {/* $ */}
+                            <ServiceCardGraphic type="voice" />
                             {/* /$ */}
                           </div>
                         </div>
@@ -2015,7 +1972,164 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
+            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
+              <div
+                className="framer-d68ubv-container"
+                id="carousel-1"
+                style={{ opacity: "1", transform: "none" }}
+              >
+                <div
+                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
+                  data-framer-name="Mobile Light"
+                  style={{
+                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    maxWidth: "100%",
+                    width: "100%",
+                    borderBottomLeftRadius: "32px",
+                    borderBottomRightRadius: "32px",
+                    borderTopLeftRadius: "32px",
+                    borderTopRightRadius: "32px",
+                    boxShadow: "var(--1bn3qnw)",
+                  }}
+                >
+                  <div className="framer-1sfiyki">
+                    <div className="framer-196m01e">
+                      <div
+                        className="framer-ynmfjw"
+                        style={{
+                          "--extracted-a0htzi": `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <h3
+                          className="framer-text framer-styles-preset-1ljffqz"
+                          data-styles-preset="ef412AXUV"
+                          style={{
+                            "--framer-text-alignment": "left",
+                            "--framer-text-color": `var(
+                            --extracted-a0htzi,
+                            var(
+                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                              rgb(0, 0, 0)
+                            )
+                          )`,
+                          }}
+                        >
+                          AI product recommender
+                        </h3>
+                      </div>
+                      <div
+                        className="framer-i32fxw"
+                        style={{
+                          "--extracted-r6o4lv": `var(
+                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                          rgba(0, 0, 0, 0.6)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p className="framer-text framer-styles-preset-1wcqtva">
+                          Product quizzes are outdated. AI Product Recommender
+                          drives conversion by guiding shoppers from the home
+                          page to the right product, through personalized
+                          questions or a photo.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="framer-911yfn-container">
+                      {/* $ */}
+                      <a
+                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                        data-framer-name="Primary Large"
+                        style={{
+                          backdropFilter: "none",
+                          backgroundColor: `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          filter: "blur(0px)",
+                          WebkitBackdropFilter: "none",
+                          WebkitFilter: "blur(0px)",
+                          borderBottomLeftRadius: "28px",
+                          borderBottomRightRadius: "28px",
+                          borderTopLeftRadius: "28px",
+                          borderTopRightRadius: "28px",
+                          boxShadow: "none",
+                        }}
+                        href="./solutions/ai-product-recommender"
+                      >
+                        <div
+                          className="framer-1swh0y3"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                            rgb(255, 255, 255)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p
+                            style={{
+                              "--font-selector": "SW50ZXItTWVkaXVt",
+                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
+                              sans-serif`,
+                              "--framer-font-size": "14px",
+                              "--framer-font-weight": "500",
+                              "--framer-letter-spacing": "-0.02em",
+                              "--framer-line-height": "1.4em",
+                              "--framer-text-color": `var(
+                              --extracted-r6o4lv,
+                              var(
+                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                rgb(255, 255, 255)
+                              )
+                            )`,
+                            }}
+                            className="framer-text"
+                          >
+                            Learn more
+                          </p>
+                        </div>
+                      </a>
+                      {/* /$ */}
+                    </div>
+                  </div>
+                  <div className="framer-ip2sev">
+                    <div className="framer-ywx080-container">
+                      <div
+                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                        data-framer-name="Lottie (Pause)"
+                        style={{ height: "100%", width: "100%" }}
+                      >
+                        <div className="framer-1rfb461-container">
+                          {/* $ */}
+                          <ServiceCardGraphic type="voice" />
+                          {/* /$ */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* /$ */}
             {/* $ */}
             <div className="ssr-variant hidden-12tyhur">
               <div className="ssr-variant hidden-ck7hjr">
@@ -2076,7 +2190,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            Multi-Language Reach
+                            Audio Production
                           </h3>
                         </div>
                         <div
@@ -2095,11 +2209,11 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            Extensive coverage across major Indian languages and
-                            rare regional dialects like Bodo, Khasi, Garo,
-                            Santhali, Manipuri, Kashmiri & Nepali, etc. Helping
-                            your content connect with diverse and hard-to-reach
-                            audiences.
+                            Complete audio production solutions, from recording
+                            and sound design to mixing and mastering. Every
+                            output is refined to meet broadcast standards,
+                            delivering clear, immersive, and high-quality audio
+                            across platforms.
                           </p>
                         </div>
                       </div>
@@ -2173,9 +2287,7 @@ export default function HomePage() {
                         >
                           <div className="framer-1rfb461-container">
                             {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
+                            <ServiceCardGraphic type="audio" />
                             {/* /$ */}
                           </div>
                         </div>
@@ -2184,20 +2296,19 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* $ */}
-            <div className="ssr-variant hidden-12tyhur">
-              <div className="framer-dloj9t-container" id="carousel-3">
-                <div className="ssr-variant hidden-ck7hjr">
+              <div className="ssr-variant hidden-72rtr7">
+                <div
+                  className="framer-os9t5t-container"
+                  id="carousel-2"
+                  style={{ opacity: "1", transform: "none" }}
+                >
                   <div
-                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1d1tegb"
-                    data-framer-name="Desktop Light — Text Right"
+                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
+                    data-framer-name="Tablet Light"
                     style={{
                       "--1bn3qnw":
                         "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
                       backgroundColor: "rgb(255, 255, 255)",
-                      height: "100%",
                       maxWidth: "100%",
                       width: "100%",
                       borderBottomLeftRadius: "48px",
@@ -2257,9 +2368,329 @@ export default function HomePage() {
                           data-framer-component-type="RichTextContainer"
                         >
                           <p className="framer-text framer-styles-preset-1wcqtva">
-                            End-to-end audio production, including recording,
-                            mixing, mastering, and broadcast-ready delivery for
-                            content that sounds as good as it looks
+                            Complete audio production solutions, from recording
+                            and sound design to mixing and mastering. Every
+                            output is refined to meet broadcast standards,
+                            delivering clear, immersive, and high-quality audio
+                            across platforms.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="framer-911yfn-container">
+                        {/* $ */}
+                        <a
+                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                          data-framer-name="Primary Large"
+                          style={{
+                            backdropFilter: "none",
+                            backgroundColor: `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            filter: "blur(0px)",
+                            WebkitBackdropFilter: "none",
+                            WebkitFilter: "blur(0px)",
+                            borderBottomLeftRadius: "28px",
+                            borderBottomRightRadius: "28px",
+                            borderTopLeftRadius: "28px",
+                            borderTopRightRadius: "28px",
+                            boxShadow: "none",
+                          }}
+                          href="./solutions/ai-pdp-assistant"
+                        >
+                          <div
+                            className="framer-1swh0y3"
+                            style={{
+                              "--extracted-r6o4lv": `var(
+                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                              rgb(255, 255, 255)
+                            )`,
+                              "--framer-link-text-color": "rgb(0, 153, 255)",
+                              "--framer-link-text-decoration": "underline",
+                              transform: "none",
+                            }}
+                            data-framer-component-type="RichTextContainer"
+                          >
+                            <p
+                              style={{
+                                "--font-selector": "SW50ZXItTWVkaXVt",
+                                "--framer-font-family": `\"Inter\",
+                                \"Inter Placeholder\", sans-serif`,
+                                "--framer-font-size": "14px",
+                                "--framer-font-weight": "500",
+                                "--framer-letter-spacing": "-0.02em",
+                                "--framer-line-height": "1.4em",
+                                "--framer-text-color": `var(
+                                --extracted-r6o4lv,
+                                var(
+                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                  rgb(255, 255, 255)
+                                )
+                              )`,
+                              }}
+                              className="framer-text"
+                            >
+                              Learn more
+                            </p>
+                          </div>
+                        </a>
+                        {/* /$ */}
+                      </div>
+                    </div>
+                    <div className="framer-ip2sev">
+                      <div className="framer-ywx080-container">
+                        <div
+                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                          data-framer-name="Lottie (Pause)"
+                          style={{ height: "100%", width: "100%" }}
+                        >
+                          <div className="framer-1rfb461-container">
+                            {/* $ */}
+                            <ServiceCardGraphic type="audio" />
+                            {/* /$ */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
+              <div
+                className="framer-os9t5t-container"
+                id="carousel-2"
+                style={{ opacity: "1", transform: "none" }}
+              >
+                <div
+                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
+                  data-framer-name="Mobile Light"
+                  style={{
+                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    maxWidth: "100%",
+                    width: "100%",
+                    borderBottomLeftRadius: "32px",
+                    borderBottomRightRadius: "32px",
+                    borderTopLeftRadius: "32px",
+                    borderTopRightRadius: "32px",
+                    boxShadow: "var(--1bn3qnw)",
+                  }}
+                >
+                  <div className="framer-1sfiyki">
+                    <div className="framer-196m01e">
+                      <div
+                        className="framer-ynmfjw"
+                        style={{
+                          "--extracted-a0htzi": `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <h3
+                          className="framer-text framer-styles-preset-1ljffqz"
+                          data-styles-preset="ef412AXUV"
+                          style={{
+                            "--framer-text-alignment": "left",
+                            "--framer-text-color": `var(
+                            --extracted-a0htzi,
+                            var(
+                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                              rgb(0, 0, 0)
+                            )
+                          )`,
+                          }}
+                        >
+                          Audio Production
+                        </h3>
+                      </div>
+                      <div
+                        className="framer-i32fxw"
+                        style={{
+                          "--extracted-r6o4lv": `var(
+                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                          rgba(0, 0, 0, 0.6)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p className="framer-text framer-styles-preset-1wcqtva">
+                          Complete audio production solutions, from recording
+                          and sound design to mixing and mastering. Every output
+                          is refined to meet broadcast standards, delivering
+                          clear, immersive, and high-quality audio across
+                          platforms.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="framer-911yfn-container">
+                      {/* $ */}
+                      <a
+                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                        data-framer-name="Primary Large"
+                        style={{
+                          backdropFilter: "none",
+                          backgroundColor: `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          filter: "blur(0px)",
+                          WebkitBackdropFilter: "none",
+                          WebkitFilter: "blur(0px)",
+                          borderBottomLeftRadius: "28px",
+                          borderBottomRightRadius: "28px",
+                          borderTopLeftRadius: "28px",
+                          borderTopRightRadius: "28px",
+                          boxShadow: "none",
+                        }}
+                        href="./solutions/ai-pdp-assistant"
+                      >
+                        <div
+                          className="framer-1swh0y3"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                            rgb(255, 255, 255)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p
+                            style={{
+                              "--font-selector": "SW50ZXItTWVkaXVt",
+                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
+                              sans-serif`,
+                              "--framer-font-size": "14px",
+                              "--framer-font-weight": "500",
+                              "--framer-letter-spacing": "-0.02em",
+                              "--framer-line-height": "1.4em",
+                              "--framer-text-color": `var(
+                              --extracted-r6o4lv,
+                              var(
+                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                rgb(255, 255, 255)
+                              )
+                            )`,
+                            }}
+                            className="framer-text"
+                          >
+                            Learn more
+                          </p>
+                        </div>
+                      </a>
+                      {/* /$ */}
+                    </div>
+                  </div>
+                  <div className="framer-ip2sev">
+                    <div className="framer-ywx080-container">
+                      <div
+                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                        data-framer-name="Lottie (Pause)"
+                        style={{ height: "100%", width: "100%" }}
+                      >
+                        <div className="framer-1rfb461-container">
+                          {/* $ */}
+                          <ServiceCardGraphic type="audio" />
+                          {/* /$ */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* /$ */}
+            {/* $ */}
+            <div className="ssr-variant hidden-12tyhur">
+              <div className="framer-dloj9t-container" id="carousel-3">
+                <div className="ssr-variant hidden-ck7hjr">
+                  <div
+                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1d1tegb"
+                    data-framer-name="Desktop Light — Text Right"
+                    style={{
+                      "--1bn3qnw":
+                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                      backgroundColor: "rgb(255, 255, 255)",
+                      height: "100%",
+                      maxWidth: "100%",
+                      width: "100%",
+                      borderBottomLeftRadius: "48px",
+                      borderBottomRightRadius: "48px",
+                      borderTopLeftRadius: "48px",
+                      borderTopRightRadius: "48px",
+                      boxShadow: "var(--1bn3qnw)",
+                    }}
+                  >
+                    <div className="framer-1sfiyki">
+                      <div className="framer-196m01e">
+                        <div
+                          className="framer-ynmfjw"
+                          style={{
+                            "--extracted-a0htzi": `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <h3
+                            className="framer-text framer-styles-preset-1ljffqz"
+                            data-styles-preset="ef412AXUV"
+                            style={{
+                              "--framer-text-alignment": "left",
+                              "--framer-text-color": `var(
+                              --extracted-a0htzi,
+                              var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )
+                            )`,
+                            }}
+                          >
+                            Multi-Language Reach
+                          </h3>
+                        </div>
+                        <div
+                          className="framer-i32fxw"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                            rgba(0, 0, 0, 0.6)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p className="framer-text framer-styles-preset-1wcqtva">
+                            Extensive language coverage across major Indian
+                            languages and rare regional dialectsl ike Bodo,
+                            Khasi, Garo, Santhali, Manipuri, Kashmiri & Nepali,
+                            etc. Enabling your content to connect with diverse
+                            audiences.
                           </p>
                         </div>
                       </div>
@@ -2333,9 +2764,160 @@ export default function HomePage() {
                         >
                           <div className="framer-1rfb461-container">
                             {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
+                            <ServiceCardGraphic type="language" />
+                            {/* /$ */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="ssr-variant hidden-72rtr7">
+                  <div
+                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
+                    data-framer-name="Tablet Light"
+                    style={{
+                      "--1bn3qnw":
+                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                      backgroundColor: "rgb(255, 255, 255)",
+                      maxWidth: "100%",
+                      width: "100%",
+                      borderBottomLeftRadius: "48px",
+                      borderBottomRightRadius: "48px",
+                      borderTopLeftRadius: "48px",
+                      borderTopRightRadius: "48px",
+                      boxShadow: "var(--1bn3qnw)",
+                    }}
+                  >
+                    <div className="framer-1sfiyki">
+                      <div className="framer-196m01e">
+                        <div
+                          className="framer-ynmfjw"
+                          style={{
+                            "--extracted-a0htzi": `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <h3
+                            className="framer-text framer-styles-preset-1ljffqz"
+                            data-styles-preset="ef412AXUV"
+                            style={{
+                              "--framer-text-alignment": "left",
+                              "--framer-text-color": `var(
+                              --extracted-a0htzi,
+                              var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )
+                            )`,
+                            }}
+                          >
+                            Multi-Language Reach
+                          </h3>
+                        </div>
+                        <div
+                          className="framer-i32fxw"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                            rgba(0, 0, 0, 0.6)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p className="framer-text framer-styles-preset-1wcqtva">
+                            Extensive language coverage across major Indian
+                            languages and rare regional dialectsl ike Bodo,
+                            Khasi, Garo, Santhali, Manipuri, Kashmiri & Nepali,
+                            etc. Enabling your content to connect with diverse
+                            audiences.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="framer-911yfn-container">
+                        {/* $ */}
+                        <a
+                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                          data-framer-name="Primary Large"
+                          style={{
+                            backdropFilter: "none",
+                            backgroundColor: `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            filter: "blur(0px)",
+                            WebkitBackdropFilter: "none",
+                            WebkitFilter: "blur(0px)",
+                            borderBottomLeftRadius: "28px",
+                            borderBottomRightRadius: "28px",
+                            borderTopLeftRadius: "28px",
+                            borderTopRightRadius: "28px",
+                            boxShadow: "none",
+                          }}
+                          href="./solutions/smart-reengagement"
+                        >
+                          <div
+                            className="framer-1swh0y3"
+                            style={{
+                              "--extracted-r6o4lv": `var(
+                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                              rgb(255, 255, 255)
+                            )`,
+                              "--framer-link-text-color": "rgb(0, 153, 255)",
+                              "--framer-link-text-decoration": "underline",
+                              transform: "none",
+                            }}
+                            data-framer-component-type="RichTextContainer"
+                          >
+                            <p
+                              style={{
+                                "--font-selector": "SW50ZXItTWVkaXVt",
+                                "--framer-font-family": `\"Inter\",
+                                \"Inter Placeholder\", sans-serif`,
+                                "--framer-font-size": "14px",
+                                "--framer-font-weight": "500",
+                                "--framer-letter-spacing": "-0.02em",
+                                "--framer-line-height": "1.4em",
+                                "--framer-text-color": `var(
+                                --extracted-r6o4lv,
+                                var(
+                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                  rgb(255, 255, 255)
+                                )
+                              )`,
+                              }}
+                              className="framer-text"
+                            >
+                              Learn more
+                            </p>
+                          </div>
+                        </a>
+                        {/* /$ */}
+                      </div>
+                    </div>
+                    <div className="framer-ip2sev">
+                      <div className="framer-ywx080-container">
+                        <div
+                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                          data-framer-name="Lottie (Pause)"
+                          style={{ height: "100%", width: "100%" }}
+                        >
+                          <div className="framer-1rfb461-container">
+                            {/* $ */}
+                            <ServiceCardGraphic type="language" />
                             {/* /$ */}
                           </div>
                         </div>
@@ -2345,7 +2927,160 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-
+            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
+              <div className="framer-dloj9t-container" id="carousel-3">
+                <div
+                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
+                  data-framer-name="Mobile Light"
+                  style={{
+                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    maxWidth: "100%",
+                    width: "100%",
+                    borderBottomLeftRadius: "32px",
+                    borderBottomRightRadius: "32px",
+                    borderTopLeftRadius: "32px",
+                    borderTopRightRadius: "32px",
+                    boxShadow: "var(--1bn3qnw)",
+                  }}
+                >
+                  <div className="framer-1sfiyki">
+                    <div className="framer-196m01e">
+                      <div
+                        className="framer-ynmfjw"
+                        style={{
+                          "--extracted-a0htzi": `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <h3
+                          className="framer-text framer-styles-preset-1ljffqz"
+                          data-styles-preset="ef412AXUV"
+                          style={{
+                            "--framer-text-alignment": "left",
+                            "--framer-text-color": `var(
+                            --extracted-a0htzi,
+                            var(
+                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                              rgb(0, 0, 0)
+                            )
+                          )`,
+                          }}
+                        >
+                          Multi-Language Reach
+                        </h3>
+                      </div>
+                      <div
+                        className="framer-i32fxw"
+                        style={{
+                          "--extracted-r6o4lv": `var(
+                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                          rgba(0, 0, 0, 0.6)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p className="framer-text framer-styles-preset-1wcqtva">
+                          Extensive language coverage across major Indian
+                          languages and rare regional dialectsl ike Bodo, Khasi,
+                          Garo, Santhali, Manipuri, Kashmiri & Nepali, etc.
+                          Enabling your content to connect with diverse
+                          audiences.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="framer-911yfn-container">
+                      {/* $ */}
+                      <a
+                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                        data-framer-name="Primary Large"
+                        style={{
+                          backdropFilter: "none",
+                          backgroundColor: `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          filter: "blur(0px)",
+                          WebkitBackdropFilter: "none",
+                          WebkitFilter: "blur(0px)",
+                          borderBottomLeftRadius: "28px",
+                          borderBottomRightRadius: "28px",
+                          borderTopLeftRadius: "28px",
+                          borderTopRightRadius: "28px",
+                          boxShadow: "none",
+                        }}
+                        href="./solutions/smart-reengagement"
+                      >
+                        <div
+                          className="framer-1swh0y3"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                            rgb(255, 255, 255)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p
+                            style={{
+                              "--font-selector": "SW50ZXItTWVkaXVt",
+                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
+                              sans-serif`,
+                              "--framer-font-size": "14px",
+                              "--framer-font-weight": "500",
+                              "--framer-letter-spacing": "-0.02em",
+                              "--framer-line-height": "1.4em",
+                              "--framer-text-color": `var(
+                              --extracted-r6o4lv,
+                              var(
+                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                rgb(255, 255, 255)
+                              )
+                            )`,
+                            }}
+                            className="framer-text"
+                          >
+                            Learn more
+                          </p>
+                        </div>
+                      </a>
+                      {/* /$ */}
+                    </div>
+                  </div>
+                  <div className="framer-ip2sev">
+                    <div className="framer-ywx080-container">
+                      <div
+                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                        data-framer-name="Lottie (Pause)"
+                        style={{ height: "100%", width: "100%" }}
+                      >
+                        <div className="framer-1rfb461-container">
+                          {/* $ */}
+                          <ServiceCardGraphic type="language" />
+                          {/* /$ */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             {/* /$ */}
           </div>
           <div className="framer-1h6k8st" data-framer-name="Section">
@@ -2422,7 +3157,7 @@ export default function HomePage() {
                             )`,
                             }}
                           >
-                            Translation & Transcription
+                            Video & Ad Production
                           </h3>
                         </div>
                         <div
@@ -2444,11 +3179,11 @@ export default function HomePage() {
                             dir="auto"
                             className="framer-text framer-styles-preset-1wcqtva"
                           >
-                            Accurate, culturally nuanced translations combined
-                            with high-precision transcriptions for scripts,
-                            documents, and media. Includes subtitle and closed
-                            caption support, making your content accessible,
-                            polished, and ready for wider distribution.
+                            End-to-end video and advertisement production, from
+                            concept development and scripting to visuals,
+                            voice-over, and final delivery. Designed to create
+                            engaging, high-impact content that drives attention
+                            and conversions.
                           </p>
                         </div>
                       </div>
@@ -2523,20 +3258,331 @@ export default function HomePage() {
                         >
                           <div className="framer-1rfb461-container">
                             {/* $ */}
-                            <div
-                              style={{ height: "100%", width: "100%" }}
-                            ></div>
+                            <ServiceCardGraphic type="video" />
                             {/* /$ */}
                           </div>
                         </div>
                       </div>
-                      x
+                    </div>
+                  </div>
+                </div>
+                <div className="ssr-variant hidden-72rtr7">
+                  <div
+                    className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1jrp6if"
+                    data-framer-name="Tablet Light"
+                    style={{
+                      "--1bn3qnw":
+                        "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                      backgroundColor: "rgb(255, 255, 255)",
+                      maxWidth: "100%",
+                      width: "100%",
+                      borderBottomLeftRadius: "48px",
+                      borderBottomRightRadius: "48px",
+                      borderTopLeftRadius: "48px",
+                      borderTopRightRadius: "48px",
+                      boxShadow: "var(--1bn3qnw)",
+                    }}
+                  >
+                    <div className="framer-1sfiyki">
+                      <div className="framer-196m01e">
+                        <div
+                          className="framer-ynmfjw"
+                          style={{
+                            "--extracted-a0htzi": `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <h3
+                            className="framer-text framer-styles-preset-1ljffqz"
+                            data-styles-preset="ef412AXUV"
+                            style={{
+                              "--framer-text-alignment": "left",
+                              "--framer-text-color": `var(
+                              --extracted-a0htzi,
+                              var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )
+                            )`,
+                            }}
+                          >
+                            Video & Ad Production
+                          </h3>
+                        </div>
+                        <div
+                          className="framer-i32fxw"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                            rgba(0, 0, 0, 0.6)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            filter: "blur(0px)",
+                            WebkitFilter: "blur(0px)",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p
+                            dir="auto"
+                            className="framer-text framer-styles-preset-1wcqtva"
+                          >
+                            End-to-end video and advertisement production, from
+                            concept development and scripting to visuals,
+                            voice-over, and final delivery. Designed to create
+                            engaging, high-impact content that drives attention
+                            and conversions.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="framer-911yfn-container">
+                        {/* $ */}
+                        <a
+                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                          data-framer-name="Primary Large"
+                          style={{
+                            backdropFilter: "none",
+                            backgroundColor: `var(
+                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                            rgb(0, 0, 0)
+                          )`,
+                            filter: "blur(0px)",
+                            WebkitBackdropFilter: "none",
+                            WebkitFilter: "blur(0px)",
+                            borderBottomLeftRadius: "28px",
+                            borderBottomRightRadius: "28px",
+                            borderTopLeftRadius: "28px",
+                            borderTopRightRadius: "28px",
+                            boxShadow: "none",
+                          }}
+                          href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                          rel="noopener"
+                        >
+                          <div
+                            className="framer-1swh0y3"
+                            style={{
+                              "--extracted-r6o4lv": `var(
+                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                              rgb(255, 255, 255)
+                            )`,
+                              "--framer-link-text-color": "rgb(0, 153, 255)",
+                              "--framer-link-text-decoration": "underline",
+                              transform: "none",
+                            }}
+                            data-framer-component-type="RichTextContainer"
+                          >
+                            <p
+                              style={{
+                                "--font-selector": "SW50ZXItTWVkaXVt",
+                                "--framer-font-family": `\"Inter\",
+                                \"Inter Placeholder\", sans-serif`,
+                                "--framer-font-size": "14px",
+                                "--framer-font-weight": "500",
+                                "--framer-letter-spacing": "-0.02em",
+                                "--framer-line-height": "1.4em",
+                                "--framer-text-color": `var(
+                                --extracted-r6o4lv,
+                                var(
+                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                  rgb(255, 255, 255)
+                                )
+                              )`,
+                              }}
+                              className="framer-text"
+                            >
+                              Install our Shopify App
+                            </p>
+                          </div>
+                        </a>
+                        {/* /$ */}
+                      </div>
+                    </div>
+                    <div className="framer-ip2sev">
+                      <div className="framer-ywx080-container">
+                        <div
+                          className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                          data-framer-name="Lottie (Pause)"
+                          style={{ height: "100%", width: "100%" }}
+                        >
+                          <div className="framer-1rfb461-container">
+                            {/* $ */}
+                            <ServiceCardGraphic type="video" />
+                            {/* /$ */}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
+            <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
+              <div className="framer-1jm3p5u-container" id="carousel-2-1">
+                <div
+                  className="framer-HwSQJ framer-0jnnh framer-MpRQ6 framer-hel80 framer-xKJts framer-no1KN framer-ojeMW framer-s23tp framer-C9T9T framer-gvpo8 framer-tMhxX framer-7sujR framer-DC5JS framer-13r6zx5 framer-v-1o9jbtb"
+                  data-framer-name="Mobile Light"
+                  style={{
+                    "--1bn3qnw": "0px -40px 40px 0px rgba(247, 247, 247, 0.5)",
+                    backgroundColor: "rgb(255, 255, 255)",
+                    maxWidth: "100%",
+                    width: "100%",
+                    borderBottomLeftRadius: "32px",
+                    borderBottomRightRadius: "32px",
+                    borderTopLeftRadius: "32px",
+                    borderTopRightRadius: "32px",
+                    boxShadow: "var(--1bn3qnw)",
+                  }}
+                >
+                  <div className="framer-1sfiyki">
+                    <div className="framer-196m01e">
+                      <div
+                        className="framer-ynmfjw"
+                        style={{
+                          "--extracted-a0htzi": `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <h3
+                          className="framer-text framer-styles-preset-1ljffqz"
+                          data-styles-preset="ef412AXUV"
+                          style={{
+                            "--framer-text-alignment": "left",
+                            "--framer-text-color": `var(
+                            --extracted-a0htzi,
+                            var(
+                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                              rgb(0, 0, 0)
+                            )
+                          )`,
+                          }}
+                        >
+                          Video & Ad Production
+                        </h3>
+                      </div>
+                      <div
+                        className="framer-i32fxw"
+                        style={{
+                          "--extracted-r6o4lv": `var(
+                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                          rgba(0, 0, 0, 0.6)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          filter: "blur(0px)",
+                          WebkitFilter: "blur(0px)",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p
+                          dir="auto"
+                          className="framer-text framer-styles-preset-1wcqtva"
+                        >
+                          End-to-end video and advertisement production, from
+                          concept development and scripting to visuals,
+                          voice-over, and final delivery. Designed to create
+                          engaging, high-impact content that drives attention
+                          and conversions.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="framer-911yfn-container">
+                      {/* $ */}
+                      <a
+                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                        data-framer-name="Primary Large"
+                        style={{
+                          backdropFilter: "none",
+                          backgroundColor: `var(
+                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          rgb(0, 0, 0)
+                        )`,
+                          filter: "blur(0px)",
+                          WebkitBackdropFilter: "none",
+                          WebkitFilter: "blur(0px)",
+                          borderBottomLeftRadius: "28px",
+                          borderBottomRightRadius: "28px",
+                          borderTopLeftRadius: "28px",
+                          borderTopRightRadius: "28px",
+                          boxShadow: "none",
+                        }}
+                        href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                        rel="noopener"
+                      >
+                        <div
+                          className="framer-1swh0y3"
+                          style={{
+                            "--extracted-r6o4lv": `var(
+                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                            rgb(255, 255, 255)
+                          )`,
+                            "--framer-link-text-color": "rgb(0, 153, 255)",
+                            "--framer-link-text-decoration": "underline",
+                            transform: "none",
+                          }}
+                          data-framer-component-type="RichTextContainer"
+                        >
+                          <p
+                            style={{
+                              "--font-selector": "SW50ZXItTWVkaXVt",
+                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
+                              sans-serif`,
+                              "--framer-font-size": "14px",
+                              "--framer-font-weight": "500",
+                              "--framer-letter-spacing": "-0.02em",
+                              "--framer-line-height": "1.4em",
+                              "--framer-text-color": `var(
+                              --extracted-r6o4lv,
+                              var(
+                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                                rgb(255, 255, 255)
+                              )
+                            )`,
+                            }}
+                            className="framer-text"
+                          >
+                            Install our Shopify App
+                          </p>
+                        </div>
+                      </a>
+                      {/* /$ */}
+                    </div>
+                  </div>
+                  <div className="framer-ip2sev">
+                    <div className="framer-ywx080-container">
+                      <div
+                        className="framer-9Hx2i framer-1xcisaa framer-v-1xcisaa"
+                        data-framer-name="Lottie (Pause)"
+                        style={{ height: "100%", width: "100%" }}
+                      >
+                        <div className="framer-1rfb461-container">
+                          {/* $ */}
+                          <ServiceCardGraphic type="video" />
+                          {/* /$ */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
               className="framer-1lmko6w"
               data-framer-name="Image animation"
@@ -2560,7 +3606,7 @@ export default function HomePage() {
                   }}
                   data-framer-background-image-wrapper="true"
                 >
-                  <imgx
+                  <img
                     decoding="async"
                     loading="lazy"
                     width="2560"
@@ -2607,9 +3653,22 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Video & Ad Production
+                        Translation & Transcription.
                       </span>
-                      <br className="framer-text" />
+                    </h2>
+                  </div>
+                </div>
+                <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
+                  <div
+                    className="framer-1pwu3ny"
+                    style={{ transform: "none" }}
+                    data-framer-component-type="RichTextContainer"
+                  >
+                    <h3
+                      className="framer-text framer-styles-preset-1ljffqz"
+                      data-styles-preset="ef412AXUV"
+                      style={{ "--framer-text-alignment": "left" }}
+                    >
                       <span
                         style={{
                           "--framer-text-color": `var(
@@ -2619,12 +3678,11 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        Dialog lives in the experience.
+                        Translation & Transcription.
                       </span>
-                    </h2>
+                    </h3>
                   </div>
                 </div>
-
                 <div className="ssr-variant hidden-12tyhur">
                   <div
                     className="framer-rc9vrt"
@@ -2642,10 +3700,32 @@ export default function HomePage() {
                       )`,
                       }}
                     >
-                      End-to-end video and advertisement production, from
-                      concept development and scripting to visuals, voice-over,
-                      and final delivery. Designed to create engaging,
-                      high-impact content that drives attention and conversions.
+                      Accurate, culturally nuanced translations combined with
+                      high-precision transcriptions for scripts, documents, and
+                      media. Includes subtitle and closed caption support.
+                    </p>
+                  </div>
+                </div>
+                <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
+                  <div
+                    className="framer-rc9vrt"
+                    style={{ transform: "none" }}
+                    data-framer-component-type="RichTextContainer"
+                  >
+                    <p
+                      className="framer-text framer-styles-preset-1wcqtva"
+                      data-styles-preset="gzOwYrXMQ"
+                      style={{
+                        "--framer-text-alignment": "left",
+                        "--framer-text-color": `var(
+                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
+                        rgba(0, 0, 0, 0.6)
+                      )`,
+                      }}
+                    >
+                      Accurate, culturally nuanced translations combined with
+                      high-precision transcriptions for scripts, documents, and
+                      media. Includes subtitle and closed caption support.
                     </p>
                   </div>
                 </div>
@@ -2655,6 +3735,7 @@ export default function HomePage() {
                 data-framer-name="UI Elements"
                 id="ui-elements"
               >
+                {/* 1. Search / Action Bar */}
                 <div
                   className="framer-1qvc89e hidden-12tyhur"
                   data-framer-name="Section"
@@ -2667,18 +3748,11 @@ export default function HomePage() {
                   <div className="framer-1ydpbxs" data-framer-name="Search">
                     <div
                       data-framer-component-type="SVG"
-                      data-framer-name="magnifying-glass"
+                      data-framer-name="globe-icon"
                       style={{
                         imageRendering: "pixelated",
                         flexShrink: "0",
-                        fill: `var(
-                        --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                        rgb(0, 0, 0)
-                      )`,
-                        color: `var(
-                        --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                        rgb(0, 0, 0)
-                      )`,
+                        color: `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                       }}
                       className="framer-1il9xen"
                       aria-hidden="true"
@@ -2691,11 +3765,19 @@ export default function HomePage() {
                           aspectRatio: "inherit",
                         }}
                       >
+                        {/* Globe / Translation Icon */}
                         <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           style={{ width: "100%", height: "100%" }}
-                          viewbox="0 0 20 20"
                         >
-                          <use href="#svg663402036_1422"></use>
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <line x1="2" y1="12" x2="22" y2="12"></line>
+                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                         </svg>
                       </div>
                     </div>
@@ -2710,7 +3792,7 @@ export default function HomePage() {
                         data-styles-preset="gQz3iUqtQ"
                         style={{ "--framer-text-color": "rgba(0, 0, 0, 0.36)" }}
                       >
-                        Search footage…
+                        Translate script to Hindi...
                       </p>
                     </div>
                   </div>
@@ -2718,7 +3800,7 @@ export default function HomePage() {
                     <div className="framer-1hz7x24" data-framer-name="Search">
                       <div
                         className="framer-djbi1m"
-                        data-framer-name="heroicons-solid/sparkles"
+                        data-framer-name="microphone-icon"
                       >
                         <div
                           data-framer-component-type="SVG"
@@ -2726,14 +3808,29 @@ export default function HomePage() {
                           style={{
                             imageRendering: "pixelated",
                             flexShrink: "0",
-                            backgroundSize: "100% 100%",
-                            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-                              '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M 2.25 4.25 C 2.25 3.56 2.81 3 3.5 3 L 12.5 3 C 13.19 3 13.75 3.56 13.75 4.25 L 13.75 5 L 2.25 5 Z M 2.25 6 L 13.75 6 L 13.75 10.75 C 13.75 11.44 13.19 12 12.5 12 L 3.5 12 C 2.81 12 2.25 11.44 2.25 10.75 Z M 6.65 7.3 C 6.65 7.021 6.963 6.854 7.197 7.009 L 9.297 8.409 C 9.506 8.549 9.506 8.851 9.297 8.991 L 7.197 10.391 C 6.963 10.546 6.65 10.379 6.65 10.1 Z" fill="rgb(0, 0, 0)"/></svg>',
-                            )}")`,
                           }}
                           className="framer-14l3v6x"
                           aria-hidden="true"
-                        ></div>
+                        >
+                          {/* Microphone Icon */}
+                          <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              color: "black",
+                            }}
+                          >
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="22"></line>
+                          </svg>
+                        </div>
                       </div>
                       <div
                         className="framer-a52yoj"
@@ -2744,20 +3841,21 @@ export default function HomePage() {
                         <p
                           style={{
                             "--font-selector": "SW50ZXItTWVkaXVt",
-                            "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                            sans-serif`,
+                            "--framer-font-family": `\"Inter\", \"Inter Placeholder\", sans-serif`,
                             "--framer-font-size": "12px",
                             "--framer-font-weight": "500",
                             "--framer-line-height": "16px",
                           }}
                           className="framer-text"
                         >
-                          Ask AI
+                          Voiceover
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                {/* 2. Project Chat Interface */}
                 <div
                   className="framer-1diutwh hidden-12tyhur"
                   data-framer-name="Dialog"
@@ -2781,14 +3879,11 @@ export default function HomePage() {
                         style={{
                           "--framer-font-size": "13px",
                           "--framer-line-height": "16px",
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                         }}
                         className="framer-text"
                       >
-                        Need a concept for this campaign?
+                        How can we assist with your audio project?
                       </p>
                     </div>
                   </div>
@@ -2799,7 +3894,7 @@ export default function HomePage() {
                     <div className="framer-zkhkay" data-framer-name="Section">
                       <div
                         className="framer-1x6lwfe"
-                        data-framer-name="heroicons-solid/sparkles"
+                        data-framer-name="waveform-icon"
                       >
                         <div
                           data-framer-component-type="SVG"
@@ -2807,14 +3902,7 @@ export default function HomePage() {
                           style={{
                             imageRendering: "pixelated",
                             flexShrink: "0",
-                            fill: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            color: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            color: `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                           }}
                           className="framer-17ezxc4"
                           aria-hidden="true"
@@ -2827,18 +3915,28 @@ export default function HomePage() {
                               aspectRatio: "inherit",
                             }}
                           >
+                            {/* Waveform Icon */}
                             <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               style={{ width: "100%", height: "100%" }}
-                              viewbox="0 0 16 16"
                             >
-                              <use href="#svg-630423330_2165"></use>
+                              <path d="M12 4v16"></path>
+                              <path d="M8 8v8"></path>
+                              <path d="M16 8v8"></path>
+                              <path d="M4 11v2"></path>
+                              <path d="M20 11v2"></path>
                             </svg>
                           </div>
                         </div>
                       </div>
                       <div
                         className="framer-v254jt"
-                        data-framer-name="I need a 15-second product ad"
+                        data-framer-name="Audiobook narrator"
                         style={{ transform: "none" }}
                         data-framer-component-type="RichTextContainer"
                       >
@@ -2846,32 +3944,22 @@ export default function HomePage() {
                           style={{
                             "--framer-font-size": "13px",
                             "--framer-line-height": "16px",
-                            "--framer-text-color": `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                           }}
                           className="framer-text"
                         >
-                          I need a 15-second product ad
+                          I need a Hindi audiobook narrator
                         </p>
                       </div>
                     </div>
                     <div className="framer-uposip" data-framer-name="Section">
                       <div
                         data-framer-component-type="SVG"
-                        data-framer-name="user-focus-fill"
+                        data-framer-name="document-icon"
                         style={{
                           imageRendering: "pixelated",
                           flexShrink: "0",
-                          fill: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          color: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          color: `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                         }}
                         className="framer-3971eq"
                         aria-hidden="true"
@@ -2884,17 +3972,27 @@ export default function HomePage() {
                             aspectRatio: "inherit",
                           }}
                         >
+                          {/* Transcript / Document Icon */}
                           <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             style={{ width: "100%", height: "100%" }}
-                            viewbox="0 0 16 16"
                           >
-                            <use href="#svg-1364026159_2701"></use>
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
                           </svg>
                         </div>
                       </div>
                       <div
                         className="framer-l67ju"
-                        data-framer-name="Build a storyboard + shot list"
+                        data-framer-name="Transcribe podcast"
                         style={{ transform: "none" }}
                         data-framer-component-type="RichTextContainer"
                       >
@@ -2902,14 +4000,11 @@ export default function HomePage() {
                           style={{
                             "--framer-font-size": "13px",
                             "--framer-line-height": "16px",
-                            "--framer-text-color": `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                           }}
                           className="framer-text"
                         >
-                          Build a storyboard + shot list
+                          Transcribe my podcast episode
                         </p>
                       </div>
                     </div>
@@ -2921,7 +4016,7 @@ export default function HomePage() {
                   >
                     <div
                       className="framer-16u7x4m"
-                      data-framer-name="Ask about script, shots, edits..."
+                      data-framer-name="Ask me anything..."
                       style={{ transform: "none" }}
                       data-framer-component-type="RichTextContainer"
                     >
@@ -2929,14 +4024,11 @@ export default function HomePage() {
                         style={{
                           "--framer-font-size": "13px",
                           "--framer-line-height": "16px",
-                          "--framer-text-color": `var(
-                          --token-b9f4e443-4be5-4356-a0ac-25ead1110ff2,
-                          rgba(0, 0, 0, 0.4)
-                        )`,
+                          "--framer-text-color": `var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4))`,
                         }}
                         className="framer-text"
                       >
-                        Ask about script, shots, edits...
+                        Type your project details...
                       </p>
                     </div>
                     <div
@@ -2954,6 +4046,8 @@ export default function HomePage() {
                     ></div>
                   </div>
                 </div>
+
+                {/* 3. Audio Preview Card */}
                 <div
                   className="framer-f77pnm hidden-12tyhur"
                   style={{
@@ -2965,32 +4059,34 @@ export default function HomePage() {
                   <div className="ssr-variant hidden-ck7hjr">
                     <div
                       data-framer-component-type="SVG"
-                      style={{
-                        imageRendering: "pixelated",
-                        flexShrink: "0",
-                        backgroundSize: "100% 100%",
-                        backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-                          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="rgb(112,239,255)"/><stop offset="1" stop-color="rgb(87,112,255)"/></linearGradient></defs><rect width="40" height="40" rx="9" fill="url(#g)"/><rect x="8.5" y="11" width="23" height="18" rx="3.5" fill="rgb(255,255,255)" fill-opacity="0.92"/><rect x="8.5" y="8" width="23" height="5" rx="1.8" fill="rgb(255,255,255)" fill-opacity="0.92"/><path d="M 16 17 L 23.5 20.5 L 16 24 Z" fill="rgb(87,112,255)"/></svg>',
-                        )}")`,
-                      }}
+                      style={{ imageRendering: "pixelated", flexShrink: "0" }}
                       className="framer-rrthuv"
                       aria-hidden="true"
-                    ></div>
-                  </div>
-                  <div className="ssr-variant hidden-72rtr7 hidden-12tyhur">
-                    <div
-                      data-framer-component-type="SVG"
-                      style={{
-                        imageRendering: "pixelated",
-                        flexShrink: "0",
-                        backgroundSize: "100% 100%",
-                        backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-                          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="rgb(112,239,255)"/><stop offset="1" stop-color="rgb(87,112,255)"/></linearGradient></defs><rect width="40" height="40" rx="9" fill="url(#g)"/><rect x="8.5" y="11" width="23" height="18" rx="3.5" fill="rgb(255,255,255)" fill-opacity="0.92"/><rect x="8.5" y="8" width="23" height="5" rx="1.8" fill="rgb(255,255,255)" fill-opacity="0.92"/><path d="M 16 17 L 23.5 20.5 L 16 24 Z" fill="rgb(87,112,255)"/></svg>',
-                        )}")`,
-                      }}
-                      className="framer-rrthuv"
-                      aria-hidden="true"
-                    ></div>
+                    >
+                      {/* Play Gradient Circle Icon replacing the old square */}
+                      <svg
+                        viewBox="0 0 40 40"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{ width: "100%", height: "100%" }}
+                      >
+                        <circle cx="20" cy="20" r="20" fill="url(#playGrad)" />
+                        <path d="M16 12L28 20L16 28V12Z" fill="white" />
+                        <defs>
+                          <linearGradient
+                            id="playGrad"
+                            x1="0"
+                            y1="0"
+                            x2="40"
+                            y2="40"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="#70EFFF" />
+                            <stop offset="1" stopColor="#5770FF" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
                   </div>
                   <div className="framer-wkfisg">
                     <div
@@ -3001,20 +4097,16 @@ export default function HomePage() {
                       <p
                         style={{
                           "--font-selector": "SW50ZXItTWVkaXVt",
-                          "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                          sans-serif`,
+                          "--framer-font-family": `\"Inter\", \"Inter Placeholder\", sans-serif`,
                           "--framer-font-size": "13px",
                           "--framer-font-weight": "500",
                           "--framer-letter-spacing": "-0.02em",
                           "--framer-line-height": "1.4em",
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                         }}
                         className="framer-text"
                       >
-                        FrameForge Studio
+                        Tasadezy Studios
                       </p>
                     </div>
                     <div
@@ -3025,20 +4117,16 @@ export default function HomePage() {
                       <p
                         style={{
                           "--font-selector": "SW50ZXItTWVkaXVt",
-                          "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                          sans-serif`,
+                          "--framer-font-family": `\"Inter\", \"Inter Placeholder\", sans-serif`,
                           "--framer-font-size": "13px",
                           "--framer-font-weight": "500",
                           "--framer-letter-spacing": "-0.02em",
                           "--framer-line-height": "1.4em",
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                         }}
                         className="framer-text"
                       >
-                        Hey team, how's the ad cut?
+                        Hey, is the Hindi narration ready?
                       </p>
                     </div>
                     <div
@@ -3051,18 +4139,17 @@ export default function HomePage() {
                           "--framer-font-size": "13px",
                           "--framer-letter-spacing": "-0.02em",
                           "--framer-line-height": "1.4em",
-                          "--framer-text-color": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
+                          "--framer-text-color": `var(--token-59ee3882-0ca2-4e7b-853b-72745443032c, rgba(0, 0, 0, 0.6))`,
                         }}
                         className="framer-text"
                       >
-                        Want tighter pacing in scene two?
+                        Need the final audio files for the film release.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 4. Client Review Card */}
                 <div
                   className="framer-zxpb0o hidden-12tyhur"
                   data-framer-name="Dialog"
@@ -3079,7 +4166,7 @@ export default function HomePage() {
                     <div className="framer-c2dcpu">
                       <div
                         className="framer-1iprfom"
-                        data-framer-name="heroicons-solid/sparkles"
+                        data-framer-name="star-icon"
                       >
                         <div
                           data-framer-component-type="SVG"
@@ -3099,8 +4186,21 @@ export default function HomePage() {
                               aspectRatio: "inherit",
                             }}
                           >
-                            <svg style={{ width: "100%", height: "100%" }}>
-                              <use href="#svg10435201218"></use>
+                            {/* Star Rating Icon */}
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                color: "#F4BD50",
+                              }}
+                            >
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                             </svg>
                           </div>
                         </div>
@@ -3119,13 +4219,13 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          FrameForge Studio
+                          Client Feedback
                         </p>
                       </div>
                     </div>
                     <div
                       className="framer-cs3di8"
-                      data-framer-name="The UrbanRide 300 isn’t designed to support rear trailers safely. I recommend the UrbanRide Family+, built specifically for carrying kids. It features a reinforced frame, and trailer-compatible rear axle."
+                      data-framer-name="Review Content"
                       style={{ transform: "none" }}
                       data-framer-component-type="RichTextContainer"
                     >
@@ -3136,12 +4236,15 @@ export default function HomePage() {
                         }}
                         className="framer-text"
                       >
-                        The opening hook is strong. Try trimming the pause after
-                        the headline and cut to the product close-up faster.
+                        Tasadezy's transcription and voiceover were incredibly
+                        accurate, capturing the perfect cultural nuances with
+                        100% lip-sync precision.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* 5. Processing Status Card */}
                 <div
                   className="framer-1son3xs hidden-12tyhur"
                   data-framer-name="Dialog"
@@ -3158,7 +4261,7 @@ export default function HomePage() {
                     <div className="framer-1v3oip1">
                       <div
                         className="framer-mwccub"
-                        data-framer-name="heroicons-solid/sparkles"
+                        data-framer-name="audio-waveform"
                       >
                         <div
                           data-framer-component-type="SVG"
@@ -3178,8 +4281,24 @@ export default function HomePage() {
                               aspectRatio: "inherit",
                             }}
                           >
-                            <svg style={{ width: "100%", height: "100%" }}>
-                              <use href="#svg10435201218"></use>
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                color: "rgba(0,0,0,0.6)",
+                              }}
+                            >
+                              <path d="M12 4v16"></path>
+                              <path d="M8 8v8"></path>
+                              <path d="M16 8v8"></path>
+                              <path d="M4 11v2"></path>
+                              <path d="M20 11v2"></path>
                             </svg>
                           </div>
                         </div>
@@ -3201,21 +4320,19 @@ export default function HomePage() {
                           <span
                             data-text-fill="true"
                             style={{
-                              backgroundImage: `linear-gradient(
-                              90deg,
-                              rgba(0, 0, 0, 0.6) 0%,
-                              rgba(0, 0, 0, 0.4) 100%
-                            )`,
+                              backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%)`,
                             }}
                             className="framer-text"
                           >
-                            Analyzing your brief…
+                            Processing audio files…
                           </span>
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                {/* 6. Product (Audiobook) Card */}
                 <div
                   className="framer-lhylt9 hidden-12tyhur"
                   style={{
@@ -3237,23 +4354,22 @@ export default function HomePage() {
                       }}
                       data-framer-background-image-wrapper="true"
                     >
+                      {/* Replaced plant with a clean studio microphone image */}
                       <img
                         decoding="async"
                         loading="lazy"
                         width="640"
                         height="800"
                         sizes="(min-width: 1024px) 112px, (min-width: 810px) and (max-width: 1023.98px) 112px, (max-width: 809.98px) 112px"
-                        src={`data:image/svg+xml,${encodeURIComponent(
-                          '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="rgb(32,34,38)"/><stop offset="1" stop-color="rgb(63,70,82)"/></linearGradient></defs><rect width="640" height="800" fill="url(#bg)"/><rect x="110" y="250" width="420" height="300" rx="30" fill="rgba(255,255,255,0.17)"/><rect x="110" y="215" width="420" height="70" rx="16" fill="rgba(255,255,255,0.24)"/><path d="M 160 230 L 220 280 M 240 230 L 300 280 M 320 230 L 380 280 M 400 230 L 460 280" stroke="rgba(255,255,255,0.58)" stroke-width="14" stroke-linecap="round"/><circle cx="320" cy="400" r="90" fill="rgba(255,255,255,0.22)"/><path d="M 292 350 L 390 400 L 292 450 Z" fill="rgb(255,255,255)"/><text x="320" y="615" fill="rgba(255,255,255,0.86)" font-size="36" font-family="Inter,Arial,sans-serif" text-anchor="middle">Shot 04 / Hero</text></svg>',
-                        )}`}
-                        alt="Ad storyboard preview"
+                        src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=640&q=80"
+                        alt="Studio Microphone"
                         style={{
                           display: "block",
                           width: "100%",
                           height: "100%",
                           borderRadius: "inherit",
                           cornerShape: "inherit",
-                          objectPosition: "46.5% 76.3%",
+                          objectPosition: "center",
                           objectFit: "cover",
                         }}
                       />
@@ -3268,34 +4384,27 @@ export default function HomePage() {
                       <p
                         style={{
                           "--font-selector": "SW50ZXItTWVkaXVt",
-                          "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                          sans-serif`,
+                          "--framer-font-family": `\"Inter\", \"Inter Placeholder\", sans-serif`,
                           "--framer-font-size": "13px",
                           "--framer-font-weight": "500",
                           "--framer-letter-spacing": "-0.02em",
                           "--framer-line-height": "1.4em",
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                         }}
                         className="framer-text"
                       >
-                        Summer Campaign V2
+                        Audiobook Narration
                       </p>
                       <p
                         style={{
                           "--framer-font-size": "13px",
                           "--framer-letter-spacing": "-0.02em",
                           "--framer-line-height": "1.4em",
-                          "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          "--framer-text-color": `var(--token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d, rgb(0, 0, 0))`,
                         }}
                         className="framer-text"
                       >
-                        15s Vertical Ad
+                        Hindi & English
                       </p>
                     </div>
                     <div
@@ -3308,57 +4417,12 @@ export default function HomePage() {
                           "--framer-font-size": "13px",
                           "--framer-letter-spacing": "-0.02em",
                           "--framer-line-height": "1.4em",
-                          "--framer-text-color": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
+                          "--framer-text-color": `var(--token-59ee3882-0ca2-4e7b-853b-72745443032c, rgba(0, 0, 0, 0.6))`,
                         }}
                         className="framer-text"
                       >
-                        02:31
+                        Custom Quote
                       </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="framer-1u6brtn hidden-12tyhur"
-                  data-framer-name="Dialog"
-                  style={{
-                    willChange: "transform",
-                    opacity: "1",
-                    transform: "none",
-                  }}
-                ></div>
-                <div className="ssr-variant hidden-12tyhur">
-                  <div
-                    className="framer-1g04239-container hidden-72rtr7 hidden-ck7hjr"
-                    style={{ transform: "translateX(-50%)" }}
-                  >
-                    <div
-                      className="framer-vwyjY framer-dh6w4m framer-v-dh6w4m"
-                      data-framer-name="Pause"
-                      style={{ height: "100%", width: "100%" }}
-                    >
-                      <div className="framer-2dty2h-container">
-                        {/* $ */}
-                        <div style={{ height: "100%", width: "100%" }}></div>
-                        {/* /$ */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
-                  <div className="framer-1g04239-container hidden-72rtr7 hidden-ck7hjr">
-                    <div
-                      className="framer-vwyjY framer-dh6w4m framer-v-dh6w4m"
-                      data-framer-name="Pause"
-                      style={{ height: "100%", width: "100%" }}
-                    >
-                      <div className="framer-2dty2h-container">
-                        {/* $ */}
-                        <div style={{ height: "100%", width: "100%" }}></div>
-                        {/* /$ */}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -3416,9 +4480,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Study conversations.
-                                <br className="framer-text" />
-                                Find insights.
+                                Why Tasadezy Voices
                               </h3>
                             </div>
                             <div
@@ -3450,8 +4512,10 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Dialog gives you refined data to make product
-                                and marketing decisions from real conversations.
+                                From recording to delivery, we take care of
+                                every detail so you can stay focused on
+                                creating, scaling, and shipping without
+                                compromise.
                               </p>
                             </div>
                           </div>
@@ -3630,7 +4694,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Get real-time feedback
+                                  Reliable & On-Time
                                 </p>
                               </div>
                             </div>
@@ -3663,8 +4727,8 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Uncover trends from daily chats instead of
-                                running survey campaigns.
+                                Consistent delivery you can trust, always on
+                                schedule without compromise.
                               </p>
                             </div>
                           </div>
@@ -3724,7 +4788,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Clarify your content
+                                  Studio-Quality, Affordable
                                 </p>
                               </div>
                             </div>
@@ -3757,9 +4821,8 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Use real customer questions to improve all
-                                user-facing content, keeping it clear and
-                                relevant.
+                                Broadcast-ready audio with premium quality at
+                                competitive rates
                               </p>
                             </div>
                           </div>
@@ -3819,7 +4882,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Identify opportunities
+                                  Secure & Confidential
                                 </p>
                               </div>
                             </div>
@@ -3852,8 +4915,8 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Spot recurring needs to improve current products
-                                and prioritize what to build next.
+                                Your scripts and content stay protected at every
+                                stage.
                               </p>
                             </div>
                           </div>
@@ -3913,7 +4976,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Refine your marketing
+                                  Guaranteed Satisfaction
                                 </p>
                               </div>
                             </div>
@@ -3946,8 +5009,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Improve campaigns and messaging with real
-                                customer interests and feedback.
+                                We refine until everything sounds exactly right.
                               </p>
                             </div>
                           </div>
@@ -4194,9 +5256,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Study conversations.
-                                <br className="framer-text" />
-                                Find insights.
+                                Why Tasadezy Voices
                               </h3>
                             </div>
                             <div
@@ -4228,8 +5288,10 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Dialog gives you refined data to make product
-                                and marketing decisions from real conversations.
+                                From recording to delivery, we take care of
+                                every detail so you can stay focused on
+                                creating, scaling, and shipping without
+                                compromise.
                               </p>
                             </div>
                           </div>
@@ -4409,7 +5471,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Get real-time feedback
+                                  Reliable & On-Time
                                 </p>
                               </div>
                             </div>
@@ -4442,8 +5504,8 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Uncover trends from daily chats instead of
-                                running survey campaigns.
+                                Consistent delivery you can trust, always on
+                                schedule without compromise.
                               </p>
                             </div>
                           </div>
@@ -4503,7 +5565,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Clarify your content
+                                  Studio-Quality, Affordable
                                 </p>
                               </div>
                             </div>
@@ -4536,9 +5598,8 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Use real customer questions to improve all
-                                user-facing content, keeping it clear and
-                                relevant.
+                                Broadcast-ready audio with premium quality at
+                                competitive rates
                               </p>
                             </div>
                           </div>
@@ -4598,7 +5659,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Identify opportunities
+                                  Secure & Confidential
                                 </p>
                               </div>
                             </div>
@@ -4631,8 +5692,8 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Spot recurring needs to improve current products
-                                and prioritize what to build next.
+                                Your scripts and content stay protected at every
+                                stage.
                               </p>
                             </div>
                           </div>
@@ -4692,7 +5753,7 @@ export default function HomePage() {
                                   )`,
                                   }}
                                 >
-                                  Refine your marketing
+                                  Guaranteed Satisfaction
                                 </p>
                               </div>
                             </div>
@@ -4725,8 +5786,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Improve campaigns and messaging with real
-                                customer interests and feedback.
+                                We refine until everything sounds exactly right.
                               </p>
                             </div>
                           </div>
@@ -4922,852 +5982,6 @@ export default function HomePage() {
                           </div>
                         </div>
                       </div>
-                      <div className="framer-i60x6q">
-                        <div className="framer-1sl9pme-container">
-                          <div
-                            className="framer-3ZMNa framer-0jnnh framer-s23tp framer-1gich2o framer-v-mc4ugk"
-                            data-framer-name="Mobile"
-                            style={{ maxWidth: "100%", width: "100%" }}
-                          >
-                            <div className="framer-vg0ifr">
-                              <div className="framer-x8aqh2">
-                                <div className="framer-1uz4t88">
-                                  <div
-                                    className="framer-1sauagv"
-                                    style={{
-                                      "--extracted-a0htzi": `var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )`,
-                                      "--framer-link-text-color":
-                                        "rgb(0, 153, 255)",
-                                      "--framer-link-text-decoration":
-                                        "underline",
-                                      transform: "none",
-                                    }}
-                                    data-framer-component-type="RichTextContainer"
-                                  >
-                                    <h3
-                                      className="framer-text framer-styles-preset-1ljffqz"
-                                      data-styles-preset="ef412AXUV"
-                                      style={{
-                                        "--framer-text-alignment": "left",
-                                        "--framer-text-color": `var(
-                                        --extracted-a0htzi,
-                                        var(
-                                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                          rgb(255, 255, 255)
-                                        )
-                                      )`,
-                                      }}
-                                    >
-                                      Set up in minutes
-                                    </h3>
-                                  </div>
-                                  <div
-                                    className="framer-1vzieru"
-                                    style={{
-                                      "--extracted-r6o4lv": `var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )`,
-                                      "--framer-link-text-color":
-                                        "rgb(0, 153, 255)",
-                                      "--framer-link-text-decoration":
-                                        "underline",
-                                      filter: "blur(0px)",
-                                      WebkitFilter: "blur(0px)",
-                                      transform: "none",
-                                    }}
-                                    data-framer-component-type="RichTextContainer"
-                                  >
-                                    <p
-                                      className="framer-text framer-styles-preset-1wcqtva"
-                                      data-styles-preset="gzOwYrXMQ"
-                                      style={{
-                                        "--framer-text-alignment": "left",
-                                        "--framer-text-color": `var(
-                                        --extracted-r6o4lv,
-                                        var(
-                                          --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                          rgba(255, 255, 255, 0.6)
-                                        )
-                                      )`,
-                                      }}
-                                    >
-                                      Connect your store and data sources
-                                      easily. Dialog is ready to assist with no
-                                      heavy integration or complex setup.
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="framer-ldhb5a"
-                                  style={{
-                                    backgroundColor:
-                                      "rgba(255, 255, 255, 0.08)",
-                                    borderBottomLeftRadius: "24px",
-                                    borderBottomRightRadius: "24px",
-                                    borderTopLeftRadius: "24px",
-                                    borderTopRightRadius: "24px",
-                                  }}
-                                >
-                                  <div
-                                    className="framer-1kwl6cm"
-                                    data-framer-name="01@3x-min"
-                                  >
-                                    <div
-                                      style={{
-                                        position: "absolute",
-                                        borderRadius: "inherit",
-                                        cornerShape: "inherit",
-                                        top: "0",
-                                        right: "0",
-                                        bottom: "0",
-                                        left: "0",
-                                      }}
-                                      data-framer-background-image-wrapper="true"
-                                    >
-                                      <img
-                                        decoding="async"
-                                        loading="lazy"
-                                        width="1344"
-                                        height="960"
-                                        sizes="(min-width: 810px) and (max-width: 1023.98px) max(min(100vw - 64px, 1080px), 1px), (max-width: 809.98px) max(min(100vw - 64px, 1080px), 1px)"
-                                        srcSet="
-                                        https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?scale-down-to=512&width=1344&height=960   512w,
-                                        https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?scale-down-to=1024&width=1344&height=960 1024w,
-                                        https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?width=1344&height=960                        1344w
-                                      "
-                                        src="https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?width=1344&height=960"
-                                        alt
-                                        style={{
-                                          display: "block",
-                                          width: "100%",
-                                          height: "100%",
-                                          borderRadius: "inherit",
-                                          cornerShape: "inherit",
-                                          objectPosition: "center",
-                                          objectFit: "cover",
-                                        }}
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="framer-1jlo61s">
-                                <div className="framer-4gprt6">
-                                  <div
-                                    className="framer-1uflb8b"
-                                    style={{
-                                      "--extracted-a0htzi": `var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )`,
-                                      "--framer-link-text-color":
-                                        "rgb(0, 153, 255)",
-                                      "--framer-link-text-decoration":
-                                        "underline",
-                                      transform: "none",
-                                    }}
-                                    data-framer-component-type="RichTextContainer"
-                                  >
-                                    <h3
-                                      className="framer-text framer-styles-preset-1ljffqz"
-                                      data-styles-preset="ef412AXUV"
-                                      style={{
-                                        "--framer-text-alignment": "left",
-                                        "--framer-text-color": `var(
-                                        --extracted-a0htzi,
-                                        var(
-                                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                          rgb(255, 255, 255)
-                                        )
-                                      )`,
-                                      }}
-                                    >
-                                      Secure with guardrails
-                                    </h3>
-                                  </div>
-                                  <div
-                                    className="framer-mbxzjb"
-                                    style={{
-                                      "--extracted-r6o4lv": `var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )`,
-                                      "--framer-link-text-color":
-                                        "rgb(0, 153, 255)",
-                                      "--framer-link-text-decoration":
-                                        "underline",
-                                      filter: "blur(0px)",
-                                      WebkitFilter: "blur(0px)",
-                                      transform: "none",
-                                    }}
-                                    data-framer-component-type="RichTextContainer"
-                                  >
-                                    <p
-                                      className="framer-text framer-styles-preset-1wcqtva"
-                                      data-styles-preset="gzOwYrXMQ"
-                                      style={{
-                                        "--framer-text-alignment": "left",
-                                        "--framer-text-color": `var(
-                                        --extracted-r6o4lv,
-                                        var(
-                                          --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                          rgba(255, 255, 255, 0.6)
-                                        )
-                                      )`,
-                                      }}
-                                    >
-                                      Control exactly what Dialog can say and
-                                      do. Block sensitive topics, restrict
-                                      sources, and stay in full control.
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="framer-j9cg5b"
-                                  style={{
-                                    backgroundColor:
-                                      "rgba(255, 255, 255, 0.08)",
-                                    borderBottomLeftRadius: "24px",
-                                    borderBottomRightRadius: "24px",
-                                    borderTopLeftRadius: "24px",
-                                    borderTopRightRadius: "24px",
-                                  }}
-                                >
-                                  <div
-                                    className="framer-1ygibcx"
-                                    data-framer-name="01@3x-min"
-                                    style={{
-                                      borderBottomLeftRadius: "24px",
-                                      borderBottomRightRadius: "24px",
-                                      borderTopLeftRadius: "24px",
-                                      borderTopRightRadius: "24px",
-                                    }}
-                                  >
-                                    <div
-                                      style={{
-                                        position: "absolute",
-                                        borderRadius: "inherit",
-                                        cornerShape: "inherit",
-                                        top: "0",
-                                        right: "0",
-                                        bottom: "0",
-                                        left: "0",
-                                      }}
-                                      data-framer-background-image-wrapper="true"
-                                    >
-                                      <img
-                                        decoding="async"
-                                        loading="lazy"
-                                        width="1344"
-                                        height="960"
-                                        sizes="(min-width: 810px) and (max-width: 1023.98px) max(min(100vw - 64px, 1080px), 1px), (max-width: 809.98px) max(min(100vw - 64px, 1080px), 1px)"
-                                        srcSet="
-                                        https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?scale-down-to=512&width=1344&height=960   512w,
-                                        https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?scale-down-to=1024&width=1344&height=960 1024w,
-                                        https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?width=1344&height=960                        1344w
-                                      "
-                                        src="https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?width=1344&height=960"
-                                        alt
-                                        style={{
-                                          display: "block",
-                                          width: "100%",
-                                          height: "100%",
-                                          borderRadius: "inherit",
-                                          cornerShape: "inherit",
-                                          objectPosition: "center",
-                                          objectFit: "cover",
-                                        }}
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="framer-gp49iu">
-                                <div className="framer-rjrpqz">
-                                  <div
-                                    className="framer-18xlkua"
-                                    style={{
-                                      "--extracted-a0htzi": `var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )`,
-                                      "--framer-link-text-color":
-                                        "rgb(0, 153, 255)",
-                                      "--framer-link-text-decoration":
-                                        "underline",
-                                      transform: "none",
-                                    }}
-                                    data-framer-component-type="RichTextContainer"
-                                  >
-                                    <h3
-                                      className="framer-text framer-styles-preset-1ljffqz"
-                                      data-styles-preset="ef412AXUV"
-                                      style={{
-                                        "--framer-text-alignment": "left",
-                                        "--framer-text-color": `var(
-                                        --extracted-a0htzi,
-                                        var(
-                                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                          rgb(255, 255, 255)
-                                        )
-                                      )`,
-                                      }}
-                                    >
-                                      Deliver on-brand answers
-                                    </h3>
-                                  </div>
-                                  <div
-                                    className="framer-lhasrp"
-                                    style={{
-                                      "--extracted-r6o4lv": `var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )`,
-                                      "--framer-link-text-color":
-                                        "rgb(0, 153, 255)",
-                                      "--framer-link-text-decoration":
-                                        "underline",
-                                      filter: "blur(0px)",
-                                      WebkitFilter: "blur(0px)",
-                                      transform: "none",
-                                    }}
-                                    data-framer-component-type="RichTextContainer"
-                                  >
-                                    <p
-                                      className="framer-text framer-styles-preset-1wcqtva"
-                                      data-styles-preset="gzOwYrXMQ"
-                                      style={{
-                                        "--framer-text-alignment": "left",
-                                        "--framer-text-color": `var(
-                                        --extracted-r6o4lv,
-                                        var(
-                                          --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                          rgba(255, 255, 255, 0.6)
-                                        )
-                                      )`,
-                                      }}
-                                    >
-                                      Dialog uses your data to provide precise,
-                                      consistent information that reflects your
-                                      brand’s voice and expertise.
-                                    </p>
-                                  </div>
-                                </div>
-                                <div
-                                  className="framer-sac2nx"
-                                  style={{
-                                    backgroundColor:
-                                      "rgba(255, 255, 255, 0.08)",
-                                    borderBottomLeftRadius: "24px",
-                                    borderBottomRightRadius: "24px",
-                                    borderTopLeftRadius: "24px",
-                                    borderTopRightRadius: "24px",
-                                  }}
-                                >
-                                  <div
-                                    className="framer-5stu1k"
-                                    data-framer-name="01@3x-min"
-                                    style={{
-                                      borderBottomLeftRadius: "0px",
-                                      borderBottomRightRadius: "0px",
-                                      borderTopLeftRadius: "0px",
-                                      borderTopRightRadius: "0px",
-                                    }}
-                                  >
-                                    <div
-                                      style={{
-                                        position: "absolute",
-                                        borderRadius: "inherit",
-                                        cornerShape: "inherit",
-                                        top: "0",
-                                        right: "0",
-                                        bottom: "0",
-                                        left: "0",
-                                      }}
-                                      data-framer-background-image-wrapper="true"
-                                    >
-                                      <img
-                                        decoding="async"
-                                        loading="lazy"
-                                        width="1344"
-                                        height="960"
-                                        sizes="(min-width: 810px) and (max-width: 1023.98px) max(min(100vw - 64px, 1080px), 1px), (max-width: 809.98px) max(min(100vw - 64px, 1080px), 1px)"
-                                        srcSet="
-                                        https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?scale-down-to=512&width=1344&height=960   512w,
-                                        https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?scale-down-to=1024&width=1344&height=960 1024w,
-                                        https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?width=1344&height=960                        1344w
-                                      "
-                                        src="https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?width=1344&height=960"
-                                        alt
-                                        style={{
-                                          display: "block",
-                                          width: "100%",
-                                          height: "100%",
-                                          borderRadius: "inherit",
-                                          cornerShape: "inherit",
-                                          objectPosition: "center",
-                                          objectFit: "cover",
-                                        }}
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="framer-1waa3tp">
-                              <div
-                                className="framer-1pj3ih0"
-                                style={{
-                                  "--extracted-a0htzi": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <h3
-                                  className="framer-text framer-styles-preset-1ljffqz"
-                                  data-styles-preset="ef412AXUV"
-                                  style={{
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --extracted-a0htzi,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Quick setup, secure answers and good tone of
-                                  voice
-                                </h3>
-                              </div>
-                              <div
-                                className="framer-jclepr"
-                                style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  filter: "blur(0px)",
-                                  WebkitFilter: "blur(0px)",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                      rgba(255, 255, 255, 0.6)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Stay in control with robust guardrails and
-                                  data protection, ensuring your AI always works
-                                  safely and effectively for your business.
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="framer-17m4g8i">
-                          <div className="framer-h1u2o0">
-                            <div className="framer-1c7kvu1">
-                              <div className="framer-160ohh7">
-                                <div
-                                  data-framer-component-type="SVG"
-                                  style={{
-                                    imageRendering: "pixelated",
-                                    flexShrink: "0",
-                                  }}
-                                  className="framer-c8l36g"
-                                  aria-hidden="true"
-                                >
-                                  <div
-                                    className="svgContainer"
-                                    style={{
-                                      width: "100%",
-                                      height: "100%",
-                                      aspectRatio: "inherit",
-                                    }}
-                                  >
-                                    <svg
-                                      style={{ width: "100%", height: "100%" }}
-                                    >
-                                      <use href="#svg1986906551_1462"></use>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-1ol3fs0"
-                                style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Speaks all languages
-                                </p>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-108d3le"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                filter: "blur(0px)",
-                                WebkitFilter: "blur(0px)",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-18a68lg"
-                                data-styles-preset="gQz3iUqtQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Support your customers in their native language,
-                                wherever they are.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="framer-18huezi">
-                            <div className="framer-1q0mlxu">
-                              <div className="framer-24micg">
-                                <div
-                                  data-framer-component-type="SVG"
-                                  style={{
-                                    imageRendering: "pixelated",
-                                    flexShrink: "0",
-                                  }}
-                                  className="framer-1dz5z62"
-                                  aria-hidden="true"
-                                >
-                                  <div
-                                    className="svgContainer"
-                                    style={{
-                                      width: "100%",
-                                      height: "100%",
-                                      aspectRatio: "inherit",
-                                    }}
-                                  >
-                                    <svg
-                                      style={{ width: "100%", height: "100%" }}
-                                    >
-                                      <use href="#svg1585965071_1442"></use>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-1ruoq59"
-                                style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  24/7 Assistance
-                                </p>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-cr43o8"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                filter: "blur(0px)",
-                                WebkitFilter: "blur(0px)",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-18a68lg"
-                                data-styles-preset="gQz3iUqtQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Provide answers the moment they’re needed, no
-                                matter the hour.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="framer-14wz3u0">
-                            <div className="framer-eyxlms">
-                              <div className="framer-x4m37v">
-                                <div
-                                  data-framer-component-type="SVG"
-                                  style={{
-                                    imageRendering: "pixelated",
-                                    flexShrink: "0",
-                                  }}
-                                  className="framer-rskpct"
-                                  aria-hidden="true"
-                                >
-                                  <div
-                                    className="svgContainer"
-                                    style={{
-                                      width: "100%",
-                                      height: "100%",
-                                      aspectRatio: "inherit",
-                                    }}
-                                  >
-                                    <svg
-                                      style={{ width: "100%", height: "100%" }}
-                                    >
-                                      <use href="#svg-2024223384_1684"></use>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-maafaz"
-                                style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Full customization
-                                </p>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-ge6614"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                filter: "blur(0px)",
-                                WebkitFilter: "blur(0px)",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-18a68lg"
-                                data-styles-preset="gQz3iUqtQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Make your agent feel native by aligning visuals,
-                                tone, and behavior.
-                              </p>
-                            </div>
-                          </div>
-                          <div className="framer-68y93n">
-                            <div className="framer-9njk9l">
-                              <div className="framer-17diqkv">
-                                <div
-                                  data-framer-component-type="SVG"
-                                  style={{
-                                    imageRendering: "pixelated",
-                                    flexShrink: "0",
-                                  }}
-                                  className="framer-1smywcy"
-                                  aria-hidden="true"
-                                >
-                                  <div
-                                    className="svgContainer"
-                                    style={{
-                                      width: "100%",
-                                      height: "100%",
-                                      aspectRatio: "inherit",
-                                    }}
-                                  >
-                                    <svg
-                                      style={{ width: "100%", height: "100%" }}
-                                    >
-                                      <use href="#svg-506668441_2019"></use>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-jbcq3k"
-                                style={{
-                                  "--extracted-r6o4lv": `var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )`,
-                                  "--framer-link-text-color":
-                                    "rgb(0, 153, 255)",
-                                  "--framer-link-text-decoration": "underline",
-                                  transform: "none",
-                                }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  className="framer-text framer-styles-preset-1wcqtva"
-                                  data-styles-preset="gzOwYrXMQ"
-                                  style={{
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --extracted-r6o4lv,
-                                    var(
-                                      --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                      rgb(255, 255, 255)
-                                    )
-                                  )`,
-                                  }}
-                                >
-                                  Controlled suggestions
-                                </p>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-1c5wx9e"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                filter: "blur(0px)",
-                                WebkitFilter: "blur(0px)",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-18a68lg"
-                                data-styles-preset="gQz3iUqtQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Predefine key questions and answers to keep
-                                interactions consistent and on-brand.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -5822,9 +6036,7 @@ export default function HomePage() {
                               )`,
                               }}
                             >
-                              Study conversations.
-                              <br className="framer-text" />
-                              Find insights.
+                              Why Tasadezy Voices
                             </h3>
                           </div>
                           <div
@@ -5856,8 +6068,9 @@ export default function HomePage() {
                               )`,
                               }}
                             >
-                              Dialog gives you refined data to make product and
-                              marketing decisions from real conversations.
+                              From recording to delivery, we take care of every
+                              detail so you can stay focused on creating,
+                              scaling, and shipping without compromise.
                             </p>
                           </div>
                         </div>
@@ -6035,7 +6248,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Get real-time feedback
+                                Reliable & On-Time
                               </p>
                             </div>
                           </div>
@@ -6068,8 +6281,8 @@ export default function HomePage() {
                               )`,
                               }}
                             >
-                              Uncover trends from daily chats instead of running
-                              survey campaigns.
+                              Consistent delivery you can trust, always on
+                              schedule without compromise.
                             </p>
                           </div>
                         </div>
@@ -6128,7 +6341,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Clarify your content
+                                Studio-Quality, Affordable
                               </p>
                             </div>
                           </div>
@@ -6161,9 +6374,8 @@ export default function HomePage() {
                               )`,
                               }}
                             >
-                              Use real customer questions to improve all
-                              user-facing content, keeping it clear and
-                              relevant.
+                              Broadcast-ready audio with premium quality at
+                              competitive rates
                             </p>
                           </div>
                         </div>
@@ -6222,7 +6434,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Identify opportunities
+                                Secure & Confidential
                               </p>
                             </div>
                           </div>
@@ -6255,8 +6467,8 @@ export default function HomePage() {
                               )`,
                               }}
                             >
-                              Spot recurring needs to improve current products
-                              and prioritize what to build next.
+                              Your scripts and content stay protected at every
+                              stage.
                             </p>
                           </div>
                         </div>
@@ -6315,7 +6527,7 @@ export default function HomePage() {
                                 )`,
                                 }}
                               >
-                                Refine your marketing
+                                Guaranteed Satisfaction
                               </p>
                             </div>
                           </div>
@@ -6348,8 +6560,7 @@ export default function HomePage() {
                               )`,
                               }}
                             >
-                              Improve campaigns and messaging with real customer
-                              interests and feedback.
+                              We refine until everything sounds exactly right.
                             </p>
                           </div>
                         </div>
@@ -6542,843 +6753,6 @@ export default function HomePage() {
                         </div>
                       </div>
                     </div>
-                    <div className="framer-i60x6q">
-                      <div className="framer-1sl9pme-container">
-                        <div
-                          className="framer-3ZMNa framer-0jnnh framer-s23tp framer-1gich2o framer-v-mc4ugk"
-                          data-framer-name="Mobile"
-                          style={{ maxWidth: "100%", width: "100%" }}
-                        >
-                          <div className="framer-vg0ifr">
-                            <div className="framer-x8aqh2">
-                              <div className="framer-1uz4t88">
-                                <div
-                                  className="framer-1sauagv"
-                                  style={{
-                                    "--extracted-a0htzi": `var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <h3
-                                    className="framer-text framer-styles-preset-1ljffqz"
-                                    data-styles-preset="ef412AXUV"
-                                    style={{
-                                      "--framer-text-alignment": "left",
-                                      "--framer-text-color": `var(
-                                      --extracted-a0htzi,
-                                      var(
-                                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                        rgb(255, 255, 255)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Set up in minutes
-                                  </h3>
-                                </div>
-                                <div
-                                  className="framer-1vzieru"
-                                  style={{
-                                    "--extracted-r6o4lv": `var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    filter: "blur(0px)",
-                                    WebkitFilter: "blur(0px)",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <p
-                                    className="framer-text framer-styles-preset-1wcqtva"
-                                    data-styles-preset="gzOwYrXMQ"
-                                    style={{
-                                      "--framer-text-alignment": "left",
-                                      "--framer-text-color": `var(
-                                      --extracted-r6o4lv,
-                                      var(
-                                        --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                        rgba(255, 255, 255, 0.6)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Connect your store and data sources easily.
-                                    Dialog is ready to assist with no heavy
-                                    integration or complex setup.
-                                  </p>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-ldhb5a"
-                                style={{
-                                  backgroundColor: "rgba(255, 255, 255, 0.08)",
-                                  borderBottomLeftRadius: "24px",
-                                  borderBottomRightRadius: "24px",
-                                  borderTopLeftRadius: "24px",
-                                  borderTopRightRadius: "24px",
-                                }}
-                              >
-                                <div
-                                  className="framer-1kwl6cm"
-                                  data-framer-name="01@3x-min"
-                                >
-                                  <div
-                                    style={{
-                                      position: "absolute",
-                                      borderRadius: "inherit",
-                                      cornerShape: "inherit",
-                                      top: "0",
-                                      right: "0",
-                                      bottom: "0",
-                                      left: "0",
-                                    }}
-                                    data-framer-background-image-wrapper="true"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      loading="lazy"
-                                      width="1344"
-                                      height="960"
-                                      sizes="(min-width: 810px) and (max-width: 1023.98px) max(min(100vw - 64px, 1080px), 1px), (max-width: 809.98px) max(min(100vw - 64px, 1080px), 1px)"
-                                      srcSet="
-                                      https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?scale-down-to=512&width=1344&height=960   512w,
-                                      https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?scale-down-to=1024&width=1344&height=960 1024w,
-                                      https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?width=1344&height=960                        1344w
-                                    "
-                                      src="https://framerusercontent.com/images/XVPjHneh6Zzb2iKpbgfwc0QI4.png?width=1344&height=960"
-                                      alt
-                                      style={{
-                                        display: "block",
-                                        width: "100%",
-                                        height: "100%",
-                                        borderRadius: "inherit",
-                                        cornerShape: "inherit",
-                                        objectPosition: "center",
-                                        objectFit: "cover",
-                                      }}
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="framer-1jlo61s">
-                              <div className="framer-4gprt6">
-                                <div
-                                  className="framer-1uflb8b"
-                                  style={{
-                                    "--extracted-a0htzi": `var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <h3
-                                    className="framer-text framer-styles-preset-1ljffqz"
-                                    data-styles-preset="ef412AXUV"
-                                    style={{
-                                      "--framer-text-alignment": "left",
-                                      "--framer-text-color": `var(
-                                      --extracted-a0htzi,
-                                      var(
-                                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                        rgb(255, 255, 255)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Secure with guardrails
-                                  </h3>
-                                </div>
-                                <div
-                                  className="framer-mbxzjb"
-                                  style={{
-                                    "--extracted-r6o4lv": `var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    filter: "blur(0px)",
-                                    WebkitFilter: "blur(0px)",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <p
-                                    className="framer-text framer-styles-preset-1wcqtva"
-                                    data-styles-preset="gzOwYrXMQ"
-                                    style={{
-                                      "--framer-text-alignment": "left",
-                                      "--framer-text-color": `var(
-                                      --extracted-r6o4lv,
-                                      var(
-                                        --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                        rgba(255, 255, 255, 0.6)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Control exactly what Dialog can say and do.
-                                    Block sensitive topics, restrict sources,
-                                    and stay in full control.
-                                  </p>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-j9cg5b"
-                                style={{
-                                  backgroundColor: "rgba(255, 255, 255, 0.08)",
-                                  borderBottomLeftRadius: "24px",
-                                  borderBottomRightRadius: "24px",
-                                  borderTopLeftRadius: "24px",
-                                  borderTopRightRadius: "24px",
-                                }}
-                              >
-                                <div
-                                  className="framer-1ygibcx"
-                                  data-framer-name="01@3x-min"
-                                  style={{
-                                    borderBottomLeftRadius: "24px",
-                                    borderBottomRightRadius: "24px",
-                                    borderTopLeftRadius: "24px",
-                                    borderTopRightRadius: "24px",
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      position: "absolute",
-                                      borderRadius: "inherit",
-                                      cornerShape: "inherit",
-                                      top: "0",
-                                      right: "0",
-                                      bottom: "0",
-                                      left: "0",
-                                    }}
-                                    data-framer-background-image-wrapper="true"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      loading="lazy"
-                                      width="1344"
-                                      height="960"
-                                      sizes="(min-width: 810px) and (max-width: 1023.98px) max(min(100vw - 64px, 1080px), 1px), (max-width: 809.98px) max(min(100vw - 64px, 1080px), 1px)"
-                                      srcSet="
-                                      https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?scale-down-to=512&width=1344&height=960   512w,
-                                      https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?scale-down-to=1024&width=1344&height=960 1024w,
-                                      https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?width=1344&height=960                        1344w
-                                    "
-                                      src="https://framerusercontent.com/images/fcTizdYcSGUM9Ymq8LX9MoluNt4.png?width=1344&height=960"
-                                      alt
-                                      style={{
-                                        display: "block",
-                                        width: "100%",
-                                        height: "100%",
-                                        borderRadius: "inherit",
-                                        cornerShape: "inherit",
-                                        objectPosition: "center",
-                                        objectFit: "cover",
-                                      }}
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="framer-gp49iu">
-                              <div className="framer-rjrpqz">
-                                <div
-                                  className="framer-18xlkua"
-                                  style={{
-                                    "--extracted-a0htzi": `var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <h3
-                                    className="framer-text framer-styles-preset-1ljffqz"
-                                    data-styles-preset="ef412AXUV"
-                                    style={{
-                                      "--framer-text-alignment": "left",
-                                      "--framer-text-color": `var(
-                                      --extracted-a0htzi,
-                                      var(
-                                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                        rgb(255, 255, 255)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Deliver on-brand answers
-                                  </h3>
-                                </div>
-                                <div
-                                  className="framer-lhasrp"
-                                  style={{
-                                    "--extracted-r6o4lv": `var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )`,
-                                    "--framer-link-text-color":
-                                      "rgb(0, 153, 255)",
-                                    "--framer-link-text-decoration":
-                                      "underline",
-                                    filter: "blur(0px)",
-                                    WebkitFilter: "blur(0px)",
-                                    transform: "none",
-                                  }}
-                                  data-framer-component-type="RichTextContainer"
-                                >
-                                  <p
-                                    className="framer-text framer-styles-preset-1wcqtva"
-                                    data-styles-preset="gzOwYrXMQ"
-                                    style={{
-                                      "--framer-text-alignment": "left",
-                                      "--framer-text-color": `var(
-                                      --extracted-r6o4lv,
-                                      var(
-                                        --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                        rgba(255, 255, 255, 0.6)
-                                      )
-                                    )`,
-                                    }}
-                                  >
-                                    Dialog uses your data to provide precise,
-                                    consistent information that reflects your
-                                    brand’s voice and expertise.
-                                  </p>
-                                </div>
-                              </div>
-                              <div
-                                className="framer-sac2nx"
-                                style={{
-                                  backgroundColor: "rgba(255, 255, 255, 0.08)",
-                                  borderBottomLeftRadius: "24px",
-                                  borderBottomRightRadius: "24px",
-                                  borderTopLeftRadius: "24px",
-                                  borderTopRightRadius: "24px",
-                                }}
-                              >
-                                <div
-                                  className="framer-5stu1k"
-                                  data-framer-name="01@3x-min"
-                                  style={{
-                                    borderBottomLeftRadius: "0px",
-                                    borderBottomRightRadius: "0px",
-                                    borderTopLeftRadius: "0px",
-                                    borderTopRightRadius: "0px",
-                                  }}
-                                >
-                                  <div
-                                    style={{
-                                      position: "absolute",
-                                      borderRadius: "inherit",
-                                      cornerShape: "inherit",
-                                      top: "0",
-                                      right: "0",
-                                      bottom: "0",
-                                      left: "0",
-                                    }}
-                                    data-framer-background-image-wrapper="true"
-                                  >
-                                    <img
-                                      decoding="async"
-                                      loading="lazy"
-                                      width="1344"
-                                      height="960"
-                                      sizes="(min-width: 810px) and (max-width: 1023.98px) max(min(100vw - 64px, 1080px), 1px), (max-width: 809.98px) max(min(100vw - 64px, 1080px), 1px)"
-                                      srcSet="
-                                      https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?scale-down-to=512&width=1344&height=960   512w,
-                                      https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?scale-down-to=1024&width=1344&height=960 1024w,
-                                      https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?width=1344&height=960                        1344w
-                                    "
-                                      src="https://framerusercontent.com/images/bLY4zmBXEI5X95WSJxrVQx3jRHE.png?width=1344&height=960"
-                                      alt
-                                      style={{
-                                        display: "block",
-                                        width: "100%",
-                                        height: "100%",
-                                        borderRadius: "inherit",
-                                        cornerShape: "inherit",
-                                        objectPosition: "center",
-                                        objectFit: "cover",
-                                      }}
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="framer-1waa3tp">
-                            <div
-                              className="framer-1pj3ih0"
-                              style={{
-                                "--extracted-a0htzi": `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <h3
-                                className="framer-text framer-styles-preset-1ljffqz"
-                                data-styles-preset="ef412AXUV"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-a0htzi,
-                                  var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Quick setup, secure answers and good tone of
-                                voice
-                              </h3>
-                            </div>
-                            <div
-                              className="framer-jclepr"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                rgba(255, 255, 255, 0.6)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                filter: "blur(0px)",
-                                WebkitFilter: "blur(0px)",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                    rgba(255, 255, 255, 0.6)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Stay in control with robust guardrails and data
-                                protection, ensuring your AI always works safely
-                                and effectively for your business.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="framer-17m4g8i">
-                        <div className="framer-h1u2o0">
-                          <div className="framer-1c7kvu1">
-                            <div className="framer-160ohh7">
-                              <div
-                                data-framer-component-type="SVG"
-                                style={{
-                                  imageRendering: "pixelated",
-                                  flexShrink: "0",
-                                }}
-                                className="framer-c8l36g"
-                                aria-hidden="true"
-                              >
-                                <div
-                                  className="svgContainer"
-                                  style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    aspectRatio: "inherit",
-                                  }}
-                                >
-                                  <svg
-                                    style={{ width: "100%", height: "100%" }}
-                                  >
-                                    <use href="#svg1986906551_1462"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-1ol3fs0"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Speaks all languages
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="framer-108d3le"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                              rgba(255, 255, 255, 0.6)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              filter: "blur(0px)",
-                              WebkitFilter: "blur(0px)",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              className="framer-text framer-styles-preset-18a68lg"
-                              data-styles-preset="gQz3iUqtQ"
-                              style={{
-                                "--framer-text-alignment": "left",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )
-                              )`,
-                              }}
-                            >
-                              Support your customers in their native language,
-                              wherever they are.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="framer-18huezi">
-                          <div className="framer-1q0mlxu">
-                            <div className="framer-24micg">
-                              <div
-                                data-framer-component-type="SVG"
-                                style={{
-                                  imageRendering: "pixelated",
-                                  flexShrink: "0",
-                                }}
-                                className="framer-1dz5z62"
-                                aria-hidden="true"
-                              >
-                                <div
-                                  className="svgContainer"
-                                  style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    aspectRatio: "inherit",
-                                  }}
-                                >
-                                  <svg
-                                    style={{ width: "100%", height: "100%" }}
-                                  >
-                                    <use href="#svg1585965071_1442"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-1ruoq59"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )
-                                )`,
-                                }}
-                              >
-                                24/7 Assistance
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="framer-cr43o8"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                              rgba(255, 255, 255, 0.6)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              filter: "blur(0px)",
-                              WebkitFilter: "blur(0px)",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              className="framer-text framer-styles-preset-18a68lg"
-                              data-styles-preset="gQz3iUqtQ"
-                              style={{
-                                "--framer-text-alignment": "left",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )
-                              )`,
-                              }}
-                            >
-                              Provide answers the moment they’re needed, no
-                              matter the hour.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="framer-14wz3u0">
-                          <div className="framer-eyxlms">
-                            <div className="framer-x4m37v">
-                              <div
-                                data-framer-component-type="SVG"
-                                style={{
-                                  imageRendering: "pixelated",
-                                  flexShrink: "0",
-                                }}
-                                className="framer-rskpct"
-                                aria-hidden="true"
-                              >
-                                <div
-                                  className="svgContainer"
-                                  style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    aspectRatio: "inherit",
-                                  }}
-                                >
-                                  <svg
-                                    style={{ width: "100%", height: "100%" }}
-                                  >
-                                    <use href="#svg-2024223384_1684"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-maafaz"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Full customization
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="framer-ge6614"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                              rgba(255, 255, 255, 0.6)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              filter: "blur(0px)",
-                              WebkitFilter: "blur(0px)",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              className="framer-text framer-styles-preset-18a68lg"
-                              data-styles-preset="gQz3iUqtQ"
-                              style={{
-                                "--framer-text-alignment": "left",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )
-                              )`,
-                              }}
-                            >
-                              Make your agent feel native by aligning visuals,
-                              tone, and behavior.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="framer-68y93n">
-                          <div className="framer-9njk9l">
-                            <div className="framer-17diqkv">
-                              <div
-                                data-framer-component-type="SVG"
-                                style={{
-                                  imageRendering: "pixelated",
-                                  flexShrink: "0",
-                                }}
-                                className="framer-1smywcy"
-                                aria-hidden="true"
-                              >
-                                <div
-                                  className="svgContainer"
-                                  style={{
-                                    width: "100%",
-                                    height: "100%",
-                                    aspectRatio: "inherit",
-                                  }}
-                                >
-                                  <svg
-                                    style={{ width: "100%", height: "100%" }}
-                                  >
-                                    <use href="#svg-506668441_2019"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              className="framer-jbcq3k"
-                              style={{
-                                "--extracted-r6o4lv": `var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )`,
-                                "--framer-link-text-color": "rgb(0, 153, 255)",
-                                "--framer-link-text-decoration": "underline",
-                                transform: "none",
-                              }}
-                              data-framer-component-type="RichTextContainer"
-                            >
-                              <p
-                                className="framer-text framer-styles-preset-1wcqtva"
-                                data-styles-preset="gzOwYrXMQ"
-                                style={{
-                                  "--framer-text-alignment": "left",
-                                  "--framer-text-color": `var(
-                                  --extracted-r6o4lv,
-                                  var(
-                                    --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                    rgb(255, 255, 255)
-                                  )
-                                )`,
-                                }}
-                              >
-                                Controlled suggestions
-                              </p>
-                            </div>
-                          </div>
-                          <div
-                            className="framer-1c5wx9e"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                              rgba(255, 255, 255, 0.6)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              filter: "blur(0px)",
-                              WebkitFilter: "blur(0px)",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              className="framer-text framer-styles-preset-18a68lg"
-                              data-styles-preset="gQz3iUqtQ"
-                              style={{
-                                "--framer-text-alignment": "left",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-c2233bf0-e9fa-44f7-ac93-1d8a6734c962,
-                                  rgba(255, 255, 255, 0.6)
-                                )
-                              )`,
-                              }}
-                            >
-                              Predefine key questions and answers to keep
-                              interactions consistent and on-brand.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -7444,7 +6818,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          Quick links
+                          Product
                         </p>
                       </div>
                       <div className="framer-nqw9dh">
@@ -7483,7 +6857,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/ai-pdp-assistant"
                             >
-                              AI PDP assistant
+                              Audio Production
                             </a>
                             {/* /$ */}
                           </p>
@@ -7503,7 +6877,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/smart-reengagement"
                             >
-                              Smart reengagement
+                              Multi-Language Reach
                             </a>
                             {/* /$ */}
                           </p>
@@ -7620,9 +6994,9 @@ export default function HomePage() {
                             <a
                               className="framer-text framer-styles-preset-3eabr4"
                               data-styles-preset="nS4X1CdzJ"
-                              href="./customers"
+                              href="./Services"
                             >
-                              Customers
+                              Services
                             </a>
                             {/* /$ */}
                           </p>
@@ -7835,137 +7209,6 @@ export default function HomePage() {
                   data-framer-name="Tablet Light"
                   style={{ width: "100%" }}
                 >
-                  <div className="framer-dysdbf">
-                    <div className="framer-1281x1k">
-                      <div
-                        className="framer-1vn6gx7"
-                        style={{
-                          "--extracted-1eung3n": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <h4
-                          className="framer-text framer-styles-preset-10qm3y"
-                          data-styles-preset="YrF8MRMHq"
-                          dir="auto"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-1eung3n,
-                            var(
-                              --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                              rgb(0, 0, 0)
-                            )
-                          )`,
-                          }}
-                        >
-                          Ready to start?
-                        </h4>
-                      </div>
-                      <div
-                        className="framer-7afv0y"
-                        style={{
-                          "--extracted-r6o4lv": `var(
-                          --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                          rgba(0, 0, 0, 0.6)
-                        )`,
-                          "--framer-link-text-color": "rgb(0, 153, 255)",
-                          "--framer-link-text-decoration": "underline",
-                          filter: "blur(0px)",
-                          WebkitFilter: "blur(0px)",
-                          transform: "none",
-                        }}
-                        data-framer-component-type="RichTextContainer"
-                      >
-                        <p
-                          className="framer-text framer-styles-preset-1wcqtva"
-                          data-styles-preset="gzOwYrXMQ"
-                          style={{
-                            "--framer-text-alignment": "left",
-                            "--framer-text-color": `var(
-                            --extracted-r6o4lv,
-                            var(
-                              --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                              rgba(0, 0, 0, 0.6)
-                            )
-                          )`,
-                          }}
-                        >
-                          Try Dialog today or book a demo.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="framer-1qj8p8r">
-                      {/* $ */}
-                      <div className="framer-pjqtak-container">
-                        {/* $ */}
-                        <a
-                          className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                          data-framer-name="Primary Large"
-                          style={{
-                            backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
-                            filter: "blur(0px)",
-                            WebkitBackdropFilter: "none",
-                            WebkitFilter: "blur(0px)",
-                            borderBottomLeftRadius: "28px",
-                            borderBottomRightRadius: "28px",
-                            borderTopLeftRadius: "28px",
-                            borderTopRightRadius: "28px",
-                            boxShadow: "none",
-                          }}
-                          href="./calendar"
-                        >
-                          <div
-                            className="framer-1swh0y3"
-                            style={{
-                              "--extracted-r6o4lv": `var(
-                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                              rgb(255, 255, 255)
-                            )`,
-                              "--framer-link-text-color": "rgb(0, 153, 255)",
-                              "--framer-link-text-decoration": "underline",
-                              transform: "none",
-                            }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--font-selector": "SW50ZXItTWVkaXVt",
-                                "--framer-font-family": `\"Inter\",
-                                \"Inter Placeholder\", sans-serif`,
-                                "--framer-font-size": "14px",
-                                "--framer-font-weight": "500",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.4em",
-                                "--framer-text-color": `var(
-                                --extracted-r6o4lv,
-                                var(
-                                  --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                  rgb(255, 255, 255)
-                                )
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              Book a demo
-                            </p>
-                          </div>
-                        </a>
-                        {/* /$ */}
-                      </div>
-                      {/* /$ */}
-                    </div>
-                  </div>
                   <div
                     className="framer-1fagb03"
                     style={{ backgroundColor: "rgba(0, 0, 0, 0.06)" }}
@@ -8057,7 +7300,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/ai-pdp-assistant"
                             >
-                              AI PDP assistant
+                              Audio Production
                             </a>
                             {/* /$ */}
                           </p>
@@ -8077,7 +7320,7 @@ export default function HomePage() {
                               data-styles-preset="nS4X1CdzJ"
                               href="./solutions/smart-reengagement"
                             >
-                              Smart reengagement
+                              Multi-Language Reach
                             </a>
                             {/* /$ */}
                           </p>
@@ -8194,9 +7437,9 @@ export default function HomePage() {
                             <a
                               className="framer-text framer-styles-preset-3eabr4"
                               data-styles-preset="nS4X1CdzJ"
-                              href="./customers"
+                              href="./Services"
                             >
-                              Customers
+                              Services
                             </a>
                             {/* /$ */}
                           </p>
@@ -8412,138 +7655,6 @@ export default function HomePage() {
                 data-framer-name="Mobile Light"
                 style={{ width: "100%" }}
               >
-                <div className="framer-dysdbf">
-                  <div className="framer-1281x1k">
-                    <div
-                      className="framer-1vn6gx7"
-                      style={{
-                        "--extracted-1eung3n": `var(
-                        --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                        rgb(0, 0, 0)
-                      )`,
-                        "--framer-link-text-color": "rgb(0, 153, 255)",
-                        "--framer-link-text-decoration": "underline",
-                        transform: "none",
-                      }}
-                      data-framer-component-type="RichTextContainer"
-                    >
-                      <h4
-                        className="framer-text framer-styles-preset-10qm3y"
-                        data-styles-preset="YrF8MRMHq"
-                        dir="auto"
-                        style={{
-                          "--framer-text-alignment": "left",
-                          "--framer-text-color": `var(
-                          --extracted-1eung3n,
-                          var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )
-                        )`,
-                        }}
-                      >
-                        Ready to start?
-                      </h4>
-                    </div>
-                    <div
-                      className="framer-7afv0y"
-                      style={{
-                        "--extracted-r6o4lv": `var(
-                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                        rgba(0, 0, 0, 0.6)
-                      )`,
-                        "--framer-link-text-color": "rgb(0, 153, 255)",
-                        "--framer-link-text-decoration": "underline",
-                        filter: "blur(0px)",
-                        WebkitFilter: "blur(0px)",
-                        transform: "none",
-                      }}
-                      data-framer-component-type="RichTextContainer"
-                    >
-                      <p
-                        className="framer-text framer-styles-preset-1wcqtva"
-                        data-styles-preset="gzOwYrXMQ"
-                        style={{
-                          "--framer-text-alignment": "left",
-                          "--framer-text-color": `var(
-                          --extracted-r6o4lv,
-                          var(
-                            --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                            rgba(0, 0, 0, 0.6)
-                          )
-                        )`,
-                        }}
-                      >
-                        Try Dialog today or book a demo.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="framer-1qj8p8r">
-                    {/* $ */}
-                    <div className="framer-pjqtak-container">
-                      {/* $ */}
-                      <a
-                        className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
-                        data-framer-name="Primary Large"
-                        style={{
-                          backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
-                          filter: "blur(0px)",
-                          WebkitBackdropFilter: "none",
-                          WebkitFilter: "blur(0px)",
-                          width: "100%",
-                          borderBottomLeftRadius: "28px",
-                          borderBottomRightRadius: "28px",
-                          borderTopLeftRadius: "28px",
-                          borderTopRightRadius: "28px",
-                          boxShadow: "none",
-                        }}
-                        href="./calendar"
-                      >
-                        <div
-                          className="framer-1swh0y3"
-                          style={{
-                            "--extracted-r6o4lv": `var(
-                            --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                            rgb(255, 255, 255)
-                          )`,
-                            "--framer-link-text-color": "rgb(0, 153, 255)",
-                            "--framer-link-text-decoration": "underline",
-                            transform: "none",
-                          }}
-                          data-framer-component-type="RichTextContainer"
-                        >
-                          <p
-                            style={{
-                              "--font-selector": "SW50ZXItTWVkaXVt",
-                              "--framer-font-family": `\"Inter\", \"Inter Placeholder\",
-                              sans-serif`,
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "500",
-                              "--framer-letter-spacing": "-0.02em",
-                              "--framer-line-height": "1.4em",
-                              "--framer-text-color": `var(
-                              --extracted-r6o4lv,
-                              var(
-                                --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
-                                rgb(255, 255, 255)
-                              )
-                            )`,
-                            }}
-                            className="framer-text"
-                          >
-                            Book a demo
-                          </p>
-                        </div>
-                      </a>
-                      {/* /$ */}
-                    </div>
-                    {/* /$ */}
-                  </div>
-                </div>
                 <div
                   className="framer-1fagb03"
                   style={{ backgroundColor: "rgba(0, 0, 0, 0.06)" }}
@@ -8631,7 +7742,7 @@ export default function HomePage() {
                             data-styles-preset="nS4X1CdzJ"
                             href="./solutions/ai-pdp-assistant"
                           >
-                            AI PDP assistant
+                            Audio Production
                           </a>
                           {/* /$ */}
                         </p>
@@ -8651,7 +7762,7 @@ export default function HomePage() {
                             data-styles-preset="nS4X1CdzJ"
                             href="./solutions/smart-reengagement"
                           >
-                            Smart reengagement
+                            Multi-Language Reach
                           </a>
                           {/* /$ */}
                         </p>
@@ -8768,9 +7879,9 @@ export default function HomePage() {
                           <a
                             className="framer-text framer-styles-preset-3eabr4"
                             data-styles-preset="nS4X1CdzJ"
-                            href="./customers"
+                            href="./Services"
                           >
-                            Customers
+                            Services
                           </a>
                           {/* /$ */}
                         </p>
@@ -9286,11 +8397,7 @@ export default function HomePage() {
           id="svg663402036_1422"
         >
           <path
-            d="M 3 4.5 C 3 3.948 3.448 3.5 4 3.5 L 11.5 3.5 C 12.052 3.5 12.5 3.948 12.5 4.5 L 12.5 5.5 L 15.5 3.75 C 16.167 3.361 17 3.842 17 4.614 L 17 12.386 C 17 13.158 16.167 13.639 15.5 13.25 L 12.5 11.5 L 12.5 12.5 C 12.5 13.052 12.052 13.5 11.5 13.5 L 4 13.5 C 3.448 13.5 3 13.052 3 12.5 Z"
-            fill="#717171"
-          ></path>
-          <path
-            d="M 7.25 6.625 C 7.25 6.327 7.583 6.15 7.831 6.315 L 10.456 8.065 C 10.678 8.213 10.678 8.537 10.456 8.685 L 7.831 10.435 C 7.583 10.6 7.25 10.423 7.25 10.125 Z"
+            d="M17.9419 17.0578L14.0302 13.1469C15.1639 11.7857 15.7293 10.0398 15.6086 8.27244C15.488 6.50506 14.6906 4.85223 13.3823 3.65779C12.074 2.46334 10.3557 1.81926 8.58462 1.85951C6.81357 1.89976 5.12622 2.62125 3.87358 3.87389C2.62094 5.12653 1.89945 6.81388 1.8592 8.58492C1.81895 10.356 2.46304 12.0744 3.65748 13.3826C4.85192 14.6909 6.50475 15.4883 8.27214 15.6089C10.0395 15.7296 11.7854 15.1642 13.1466 14.0305L17.0575 17.9422C17.1156 18.0003 17.1845 18.0463 17.2604 18.0777C17.3363 18.1092 17.4176 18.1253 17.4997 18.1253C17.5818 18.1253 17.6631 18.1092 17.739 18.0777C17.8149 18.0463 17.8838 18.0003 17.9419 17.9422C17.9999 17.8841 18.046 17.8152 18.0774 17.7393C18.1089 17.6634 18.125 17.5821 18.125 17.5C18.125 17.4179 18.1089 17.3366 18.0774 17.2607C18.046 17.1848 17.9999 17.1159 17.9419 17.0578ZM3.12469 8.75C3.12469 7.63748 3.45459 6.54994 4.07267 5.62491C4.69076 4.69989 5.56926 3.97892 6.5971 3.55317C7.62493 3.12743 8.75593 3.01604 9.84707 3.23308C10.9382 3.45012 11.9405 3.98585 12.7272 4.77252C13.5138 5.55919 14.0496 6.56147 14.2666 7.65261C14.4837 8.74376 14.3723 9.87476 13.9465 10.9026C13.5208 11.9304 12.7998 12.8089 11.8748 13.427C10.9497 14.0451 9.86221 14.375 8.74969 14.375C7.25836 14.3733 5.82858 13.7802 4.77404 12.7256C3.71951 11.6711 3.12634 10.2413 3.12469 8.75Z"
             fill="#717171"
           ></path>
         </svg>
@@ -9302,15 +8409,21 @@ export default function HomePage() {
           id="svg-630423330_2165"
         >
           <path
-            d="M 1.25 3.25 C 1.25 2.56 1.81 2 2.5 2 L 11.5 2 C 12.19 2 12.75 2.56 12.75 3.25 L 12.75 4.5 L 1.25 4.5 Z"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M5 2C5.22324 2 5.41943 2.14799 5.48076 2.36264L6.02289 4.2601C6.26018 5.09062 6.90938 5.73982 7.7399 5.97711L9.63736 6.51924C9.85201 6.58057 10 6.77676 10 7C10 7.22324 9.85201 7.41943 9.63736 7.48076L7.7399 8.02289C6.90938 8.26019 6.26018 8.90938 6.02289 9.7399L5.48076 11.6374C5.41943 11.852 5.22324 12 5 12C4.77676 12 4.58057 11.852 4.51924 11.6374L3.97711 9.7399C3.73982 8.90938 3.09062 8.26018 2.2601 8.02289L0.362639 7.48076C0.147989 7.41943 0 7.22324 0 7C0 6.77676 0.147989 6.58057 0.362639 6.51924L2.2601 5.97711C3.09062 5.73982 3.73982 5.09062 3.97711 4.2601L4.51924 2.36264C4.58057 2.14799 4.77676 2 5 2Z"
             fill="black"
           ></path>
           <path
-            d="M 1.25 5.5 L 12.75 5.5 L 12.75 10.75 C 12.75 11.44 12.19 12 11.5 12 L 2.5 12 C 1.81 12 1.25 11.44 1.25 10.75 Z"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M11 0C11.2294 0 11.4294 0.156149 11.4851 0.378732L11.6576 1.06904C11.8144 1.69604 12.304 2.1856 12.931 2.34235L13.6213 2.51493C13.8439 2.57057 14 2.77057 14 3C14 3.22943 13.8439 3.42943 13.6213 3.48507L12.931 3.65765C12.304 3.8144 11.8144 4.30396 11.6576 4.93096L11.4851 5.62127C11.4294 5.84385 11.2294 6 11 6C10.7706 6 10.5706 5.84385 10.5149 5.62127L10.3424 4.93096C10.1856 4.30396 9.69604 3.8144 9.06904 3.65765L8.37873 3.48507C8.15615 3.42943 8 3.22943 8 3C8 2.77057 8.15615 2.57057 8.37873 2.51493L9.06904 2.34235C9.69604 2.1856 10.1856 1.69604 10.3424 1.06904L10.5149 0.378732C10.5706 0.156149 10.7706 0 11 0Z"
             fill="black"
           ></path>
           <path
-            d="M 5.9 7.05 C 5.9 6.736 6.253 6.548 6.515 6.722 L 8.915 8.322 C 9.149 8.478 9.149 8.822 8.915 8.978 L 6.515 10.578 C 6.253 10.752 5.9 10.564 5.9 10.25 Z"
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M10 9C10.2152 9 10.4063 9.13772 10.4743 9.34189L10.7372 10.1304C10.8367 10.429 11.071 10.6633 11.3696 10.7628L12.1581 11.0257C12.3623 11.0937 12.5 11.2848 12.5 11.5C12.5 11.7152 12.3623 11.9063 12.1581 11.9743L11.3696 12.2372C11.071 12.3367 10.8367 12.571 10.7372 12.8696L10.4743 13.6581C10.4063 13.8623 10.2152 14 10 14C9.78478 14 9.59372 13.8623 9.52566 13.6581L9.26283 12.8696C9.16329 12.571 8.92898 12.3367 8.63037 12.2372L7.84189 11.9743C7.63771 11.9063 7.5 11.7152 7.5 11.5C7.5 11.2848 7.63771 11.0937 7.84189 11.0257L8.63037 10.7628C8.92898 10.6633 9.16329 10.429 9.26283 10.1304L9.52566 9.34189C9.59372 9.13772 9.78478 9 10 9Z"
             fill="black"
           ></path>
         </svg>
@@ -9322,29 +8435,25 @@ export default function HomePage() {
           id="svg-1364026159_2701"
         >
           <path
-            d="M 3 2 C 2.448 2 2 2.448 2 3 L 2 4.75 C 2 5.026 2.224 5.25 2.5 5.25 C 2.776 5.25 3 5.026 3 4.75 L 3 3 L 4.75 3 C 5.026 3 5.25 2.776 5.25 2.5 C 5.25 2.224 5.026 2 4.75 2 Z M 11.25 2 C 10.974 2 10.75 2.224 10.75 2.5 C 10.75 2.776 10.974 3 11.25 3 L 13 3 L 13 4.75 C 13 5.026 13.224 5.25 13.5 5.25 C 13.776 5.25 14 5.026 14 4.75 L 14 3 C 14 2.448 13.552 2 13 2 Z M 2.5 10.75 C 2.224 10.75 2 10.974 2 11.25 L 2 13 C 2 13.552 2.448 14 3 14 L 4.75 14 C 5.026 14 5.25 13.776 5.25 13.5 C 5.25 13.224 5.026 13 4.75 13 L 3 13 L 3 11.25 C 3 10.974 2.776 10.75 2.5 10.75 Z M 13.5 10.75 C 13.224 10.75 13 10.974 13 11.25 L 13 13 L 11.25 13 C 10.974 13 10.75 13.224 10.75 13.5 C 10.75 13.776 10.974 14 11.25 14 L 13 14 C 13.552 14 14 13.552 14 13 L 14 11.25 C 14 10.974 13.776 10.75 13.5 10.75 Z"
-            fill="black"
-          ></path>
-          <path
-            d="M 5.25 5.75 C 4.836 5.75 4.5 6.086 4.5 6.5 L 4.5 9.5 C 4.5 9.914 4.836 10.25 5.25 10.25 L 10.75 10.25 C 11.164 10.25 11.5 9.914 11.5 9.5 L 11.5 6.5 C 11.5 6.086 11.164 5.75 10.75 5.75 Z M 7.15 6.95 C 7.15 6.689 7.443 6.532 7.661 6.678 L 9.511 7.911 C 9.706 8.041 9.706 8.327 9.511 8.456 L 7.661 9.69 C 7.443 9.835 7.15 9.679 7.15 9.417 Z"
+            d="M14 2.5V4.75C14 4.88261 13.9473 5.00979 13.8536 5.10355C13.7598 5.19732 13.6326 5.25 13.5 5.25C13.3674 5.25 13.2402 5.19732 13.1464 5.10355C13.0527 5.00979 13 4.88261 13 4.75V3H11.25C11.1174 3 10.9902 2.94732 10.8964 2.85355C10.8027 2.75979 10.75 2.63261 10.75 2.5C10.75 2.36739 10.8027 2.24021 10.8964 2.14645C10.9902 2.05268 11.1174 2 11.25 2H13.5C13.6326 2 13.7598 2.05268 13.8536 2.14645C13.9473 2.24021 14 2.36739 14 2.5ZM13.5 10.75C13.3674 10.75 13.2402 10.8027 13.1464 10.8964C13.0527 10.9902 13 11.1174 13 11.25V13H11.25C11.1174 13 10.9902 13.0527 10.8964 13.1464C10.8027 13.2402 10.75 13.3674 10.75 13.5C10.75 13.6326 10.8027 13.7598 10.8964 13.8536C10.9902 13.9473 11.1174 14 11.25 14H13.5C13.6326 14 13.7598 13.9473 13.8536 13.8536C13.9473 13.7598 14 13.6326 14 13.5V11.25C14 11.1174 13.9473 10.9902 13.8536 10.8964C13.7598 10.8027 13.6326 10.75 13.5 10.75ZM4.75 13H3V11.25C3 11.1174 2.94732 10.9902 2.85355 10.8964C2.75979 10.8027 2.63261 10.75 2.5 10.75C2.36739 10.75 2.24021 10.8027 2.14645 10.8964C2.05268 10.9902 2 11.1174 2 11.25V13.5C2 13.6326 2.05268 13.7598 2.14645 13.8536C2.24021 13.9473 2.36739 14 2.5 14H4.75C4.88261 14 5.00979 13.9473 5.10355 13.8536C5.19732 13.7598 5.25 13.6326 5.25 13.5C5.25 13.3674 5.19732 13.2402 5.10355 13.1464C5.00979 13.0527 4.88261 13 4.75 13ZM2.5 5.25C2.63261 5.25 2.75979 5.19732 2.85355 5.10355C2.94732 5.00979 3 4.88261 3 4.75V3H4.75C4.88261 3 5.00979 2.94732 5.10355 2.85355C5.19732 2.75979 5.25 2.63261 5.25 2.5C5.25 2.36739 5.19732 2.24021 5.10355 2.14645C5.00979 2.05268 4.88261 2 4.75 2H2.5C2.36739 2 2.24021 2.05268 2.14645 2.14645C2.05268 2.24021 2 2.36739 2 2.5V4.75C2 4.88261 2.05268 5.00979 2.14645 5.10355C2.24021 5.19732 2.36739 5.25 2.5 5.25ZM6.3125 8.84437C5.6333 9.13903 5.04295 9.60614 4.6 10.1994C4.54411 10.2737 4.51003 10.3621 4.50159 10.4546C4.49316 10.5472 4.5107 10.6403 4.55225 10.7235C4.5938 10.8066 4.6577 10.8766 4.7368 10.9254C4.81589 10.9743 4.90704 11.0001 5 11H11C11.093 11.0001 11.1841 10.9743 11.2632 10.9254C11.3423 10.8766 11.4062 10.8066 11.4478 10.7235C11.4893 10.6403 11.5068 10.5472 11.4984 10.4546C11.49 10.3621 11.4559 10.2737 11.4 10.1994C10.9571 9.60614 10.3667 9.13903 9.6875 8.84437C10.0598 8.50446 10.3206 8.05993 10.4358 7.56912C10.5509 7.07832 10.515 6.56416 10.3327 6.09414C10.1504 5.62412 9.83029 5.22019 9.41433 4.93536C8.99837 4.65053 8.50601 4.49812 8.00187 4.49812C7.49774 4.49812 7.00538 4.65053 6.58942 4.93536C6.17346 5.22019 5.85332 5.62412 5.67103 6.09414C5.48874 6.56416 5.45281 7.07832 5.56796 7.56912C5.6831 8.05993 5.94394 8.50446 6.31625 8.84437H6.3125Z"
             fill="black"
           ></path>
         </svg>
         <svg viewbox="0 0 16 16" id="svg10435201218">
           <path
-            d="M 2.25 4.25 C 2.25 3.56 2.81 3 3.5 3 L 12.5 3 C 13.19 3 13.75 3.56 13.75 4.25 L 13.75 5 L 2.25 5 Z"
+            d="M 6 3 C 6.223 3 6.419 3.148 6.481 3.363 L 7.023 5.26 C 7.26 6.091 7.909 6.74 8.74 6.977 L 10.637 7.519 C 10.852 7.581 11 7.777 11 8 C 11 8.223 10.852 8.419 10.637 8.481 L 8.74 9.023 C 7.909 9.26 7.26 9.909 7.023 10.74 L 6.481 12.637 C 6.419 12.852 6.223 13 6 13 C 5.777 13 5.581 12.852 5.519 12.637 L 4.977 10.74 C 4.74 9.909 4.091 9.26 3.26 9.023 L 1.363 8.481 C 1.148 8.419 1 8.223 1 8 C 1 7.777 1.148 7.581 1.363 7.519 L 3.26 6.977 C 4.091 6.74 4.74 6.091 4.977 5.26 L 5.519 3.363 C 5.581 3.148 5.777 3 6 3 Z"
             fill={
               'var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4)) /* {"name":"a-40"} */'
             }
           ></path>
           <path
-            d="M 2.25 6 L 13.75 6 L 13.75 10.75 C 13.75 11.44 13.19 12 12.5 12 L 3.5 12 C 2.81 12 2.25 11.44 2.25 10.75 Z M 6.65 7.3 C 6.65 7.021 6.963 6.854 7.197 7.009 L 9.297 8.409 C 9.506 8.549 9.506 8.851 9.297 8.991 L 7.197 10.391 C 6.963 10.546 6.65 10.379 6.65 10.1 Z"
+            d="M 12 1 C 12.229 1 12.429 1.156 12.485 1.379 L 12.658 2.069 C 12.814 2.696 13.304 3.186 13.931 3.342 L 14.621 3.515 C 14.844 3.571 15 3.771 15 4 C 15 4.229 14.844 4.429 14.621 4.485 L 13.931 4.658 C 13.304 4.814 12.814 5.304 12.658 5.931 L 12.485 6.621 C 12.429 6.844 12.229 7 12 7 C 11.771 7 11.571 6.844 11.515 6.621 L 11.342 5.931 C 11.186 5.304 10.696 4.814 10.069 4.658 L 9.379 4.485 C 9.156 4.429 9 4.229 9 4 C 9 3.771 9.156 3.571 9.379 3.515 L 10.069 3.342 C 10.696 3.186 11.186 2.696 11.342 2.069 L 11.515 1.379 C 11.571 1.156 11.771 1 12 1 Z"
             fill={
               'var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4)) /* {"name":"a-40"} */'
             }
           ></path>
           <path
-            d="M 12.9 1.25 C 13.083 1.25 13.244 1.371 13.295 1.548 L 13.436 2.041 C 13.536 2.39 13.81 2.664 14.159 2.764 L 14.652 2.905 C 14.829 2.956 14.95 3.117 14.95 3.3 C 14.95 3.483 14.829 3.644 14.652 3.695 L 14.159 3.836 C 13.81 3.936 13.536 4.21 13.436 4.559 L 13.295 5.052 C 13.244 5.229 13.083 5.35 12.9 5.35 C 12.717 5.35 12.556 5.229 12.505 5.052 L 12.364 4.559 C 12.264 4.21 11.99 3.936 11.641 3.836 L 11.148 3.695 C 10.971 3.644 10.85 3.483 10.85 3.3 C 10.85 3.117 10.971 2.956 11.148 2.905 L 11.641 2.764 C 11.99 2.664 12.264 2.39 12.364 2.041 L 12.505 1.548 C 12.556 1.371 12.717 1.25 12.9 1.25 Z"
+            d="M 11 10 C 11.215 10 11.406 10.138 11.474 10.342 L 11.737 11.13 C 11.837 11.429 12.071 11.663 12.37 11.763 L 13.158 12.026 C 13.362 12.094 13.5 12.285 13.5 12.5 C 13.5 12.715 13.362 12.906 13.158 12.974 L 12.37 13.237 C 12.071 13.337 11.837 13.571 11.737 13.87 L 11.474 14.658 C 11.406 14.862 11.215 15 11 15 C 10.785 15 10.594 14.862 10.526 14.658 L 10.263 13.87 C 10.163 13.571 9.929 13.337 9.63 13.237 L 8.842 12.974 C 8.638 12.906 8.5 12.715 8.5 12.5 C 8.5 12.285 8.638 12.094 8.842 12.026 L 9.63 11.763 C 9.929 11.663 10.163 11.429 10.263 11.13 L 10.526 10.342 C 10.594 10.138 10.785 10 11 10 Z"
             fill={
               'var(--token-b9f4e443-4be5-4356-a0ac-25ead1110ff2, rgba(0, 0, 0, 0.4)) /* {"name":"a-40"} */'
             }
