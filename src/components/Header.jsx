@@ -35,6 +35,7 @@ export default function Header() {
                   gap: "8px",
                   padding: "6px 16px 6px 8px",
                   textDecoration: "none",
+                  width: "fit-content",
                 }}
                 href="/"
                 data-framer-page-link-current="true"

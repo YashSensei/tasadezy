@@ -4,28 +4,31 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./DemosPage.css";
 
+/* ─── Font injection ─────────────────────────────────────────────── */
+if (!document.head.querySelector("[data-tasa-inter]")) {
+  const l = document.createElement("link");
+  l.rel = "stylesheet";
+  l.setAttribute("data-tasa-inter", "1");
+  l.href =
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap";
+  document.head.appendChild(l);
+}
+
+/* ─── Helpers ────────────────────────────────────────────────────── */
 function describeDemo(item) {
   const parts = [];
-
-  if (item.voiceType && item.voiceType !== "Unknown") {
+  if (item.voiceType && item.voiceType !== "Unknown")
     parts.push(item.voiceType);
-  }
-
-  if (item.useCase && item.useCase !== "General") {
-    parts.push(item.useCase);
-  }
-
-  if (item.artist && item.artist !== "Unknown") {
+  if (item.useCase && item.useCase !== "General") parts.push(item.useCase);
+  if (item.artist && item.artist !== "Unknown")
     parts.push(`Artist: ${item.artist}`);
-  }
-
   return parts.length > 0 ? parts.join(" · ") : "Professional voice-over demo.";
 }
 
 function encodeAssetPath(path) {
   return String(path)
     .split("/")
-    .map((segment) => encodeURIComponent(segment))
+    .map((s) => encodeURIComponent(s))
     .join("/");
 }
 
@@ -38,6 +41,277 @@ function langOrder(lang) {
   return 2;
 }
 
+/* ─── Neomorphism tokens — identical to ContactPage ─────────────── */
+const CARD = "#f7f7f7";
+const SD = "#d8d8d8"; // dark shadow
+const SL = "#ffffff"; // light shadow
+const FONT = "'Inter', sans-serif";
+
+const neu = {
+  card: {
+    background: CARD,
+    borderRadius: "24px",
+    boxShadow: `8px 8px 24px ${SD}, -8px -8px 24px ${SL}`,
+  },
+  pill: {
+    background: CARD,
+    borderRadius: "999px",
+    boxShadow: `5px 5px 14px ${SD}, -5px -5px 14px ${SL}`,
+  },
+  pillInset: {
+    background: CARD,
+    borderRadius: "999px",
+    boxShadow: `inset 5px 5px 12px ${SD}, inset -5px -5px 12px ${SL}`,
+  },
+  circle: {
+    background: CARD,
+    borderRadius: "50%",
+    boxShadow: `4px 4px 10px ${SD}, -4px -4px 10px ${SL}`,
+  },
+  inset: {
+    background: CARD,
+    borderRadius: "16px",
+    boxShadow: `inset 5px 5px 14px ${SD}, inset -5px -5px 14px ${SL}`,
+  },
+};
+
+/* ─── Play/Pause SVG icons ───────────────────────────────────────── */
+const PlayIcon = () => (
+  <svg width="11" height="13" viewBox="0 0 11 13" fill="currentColor">
+    <path d="M1 1.5l9 5-9 5V1.5z" />
+  </svg>
+);
+const PauseIcon = () => (
+  <svg width="11" height="13" viewBox="0 0 11 13" fill="currentColor">
+    <rect x="1" y="1.5" width="3.5" height="10" rx="1" />
+    <rect x="6.5" y="1.5" width="3.5" height="10" rx="1" />
+  </svg>
+);
+
+/* ─── Waveform bars ──────────────────────────────────────────────── */
+const WAVE_HEIGHTS = [10, 6, 14, 8, 12, 5, 10, 9, 13];
+
+function Waveform({ playing }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-end",
+        gap: "3px",
+        height: "18px",
+      }}
+    >
+      {WAVE_HEIGHTS.map((h, i) => (
+        <span
+          key={i}
+          className={playing ? "wave-bar wave-bar--playing" : "wave-bar"}
+          style={{
+            display: "block",
+            width: "3px",
+            height: `${h}px`,
+            borderRadius: "3px",
+            background: playing ? "#111827" : SD,
+            transformOrigin: "bottom",
+            animationDelay: playing ? `${i * 0.13}s` : "0s",
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+/* ─── Filter chip ────────────────────────────────────────────────── */
+function FilterChip({ label, active, onClick, langClass }) {
+  const [hov, setHov] = useState(false);
+
+  const style = active
+    ? {
+        ...neu.pillInset,
+        padding: "8px 20px",
+        fontSize: "13px",
+        fontWeight: 700,
+        color: "#111827",
+        border: "none",
+        cursor: "pointer",
+        fontFamily: FONT,
+        letterSpacing: "-0.01em",
+        transition: "box-shadow 0.2s",
+      }
+    : {
+        ...neu.pill,
+        boxShadow: hov
+          ? `7px 7px 18px ${SD}, -7px -7px 18px ${SL}`
+          : neu.pill.boxShadow,
+        padding: "8px 20px",
+        fontSize: "13px",
+        fontWeight: 500,
+        color: "#6b7280",
+        border: "none",
+        cursor: "pointer",
+        fontFamily: FONT,
+        letterSpacing: "-0.01em",
+        transition: "box-shadow 0.2s",
+      };
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={style}
+    >
+      {label}
+    </button>
+  );
+}
+
+/* ─── Demo card ──────────────────────────────────────────────────── */
+function DemoCard({ item, isPlaying, onToggle }) {
+  const [hov, setHov] = useState(false);
+  const title = item.title || item.file;
+  const language = item.language || "Unknown";
+  const meta = describeDemo(item);
+
+  return (
+    <article
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        ...neu.card,
+        boxShadow: isPlaying
+          ? `10px 10px 28px ${SD}, -10px -10px 28px ${SL}`
+          : hov
+            ? `10px 10px 28px ${SD}, -10px -28px 28px ${SL}`
+            : neu.card.boxShadow,
+        padding: "22px 22px 18px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "0",
+        transition: "box-shadow 0.25s ease",
+        breakInside: "avoid",
+        marginBottom: "20px",
+        outline: isPlaying ? `2px solid rgba(0,0,0,0.07)` : "none",
+        outlineOffset: "0px",
+      }}
+    >
+      {/* Top row */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          gap: "10px",
+          marginBottom: "6px",
+        }}
+      >
+        <p
+          style={{
+            fontSize: "14.5px",
+            fontWeight: 700,
+            color: "#111827",
+            lineHeight: 1.35,
+            margin: 0,
+            flex: 1,
+            minWidth: 0,
+            letterSpacing: "-0.02em",
+            fontFamily: FONT,
+          }}
+        >
+          {title}
+        </p>
+        {/* Language badge — neu inset pill */}
+        <span
+          style={{
+            ...neu.pillInset,
+            flexShrink: 0,
+            fontSize: "9px",
+            fontWeight: 700,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            padding: "5px 12px",
+            color: "#6b7280",
+            fontFamily: FONT,
+          }}
+        >
+          {language}
+        </span>
+      </div>
+
+      {/* Meta */}
+      <p
+        style={{
+          fontSize: "12.5px",
+          color: "#9ca3af",
+          margin: "0 0 18px",
+          lineHeight: 1.45,
+          fontFamily: FONT,
+        }}
+      >
+        {meta}
+      </p>
+
+      {/* Footer: play + waveform */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          paddingTop: "14px",
+          borderTop: `1px solid rgba(0,0,0,0.05)`,
+        }}
+      >
+        <PlayButton playing={isPlaying} onToggle={onToggle} />
+        <Waveform playing={isPlaying} />
+      </div>
+    </article>
+  );
+}
+
+/* ─── Play button ────────────────────────────────────────────────── */
+function PlayButton({ playing, onToggle }) {
+  const [hov, setHov] = useState(false);
+
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      aria-label={playing ? "Pause" : "Play"}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: "7px",
+        borderRadius: "999px",
+        padding: "8px 18px 8px 14px",
+        fontSize: "12.5px",
+        fontWeight: 600,
+        fontFamily: FONT,
+        letterSpacing: "-0.01em",
+        border: "none",
+        cursor: "pointer",
+        transition: "box-shadow 0.2s ease, background 0.2s ease",
+        color: playing ? CARD : "#111827",
+        background: playing
+          ? "linear-gradient(135deg, #374151 0%, #111827 100%)"
+          : CARD,
+        boxShadow: playing
+          ? `4px 4px 12px ${SD}, -2px -2px 8px ${SL}`
+          : hov
+            ? `inset 4px 4px 10px ${SD}, inset -4px -4px 10px ${SL}`
+            : `5px 5px 14px ${SD}, -5px -5px 14px ${SL}`,
+      }}
+    >
+      <span style={{ display: "flex", alignItems: "center" }}>
+        {playing ? <PauseIcon /> : <PlayIcon />}
+      </span>
+      {playing ? "Pause" : "Play"}
+    </button>
+  );
+}
+
+/* ─── Main page ──────────────────────────────────────────────────── */
 function DemosPage() {
   const [items, setItems] = useState([]);
   const [activeFilter, setActiveFilter] = useState("all");
@@ -47,31 +321,22 @@ function DemosPage() {
 
   useEffect(() => {
     let ignore = false;
-
     async function loadManifest() {
       try {
-        const response = await fetch(
+        const res = await fetch(
           "/assets/new_voice_samples/audio-manifest.json",
         );
-        if (!response.ok) {
-          throw new Error("Failed to load manifest.");
-        }
-
-        const data = await response.json();
-        if (!ignore) {
-          setItems(Array.isArray(data) ? data : []);
-        }
+        if (!res.ok) throw new Error("Failed to load manifest.");
+        const data = await res.json();
+        if (!ignore) setItems(Array.isArray(data) ? data : []);
       } catch {
-        if (!ignore) {
+        if (!ignore)
           setErrorMessage(
             "Could not load demos. Check that assets are available in the public folder.",
           );
-        }
       }
     }
-
     loadManifest();
-
     return () => {
       ignore = true;
     };
@@ -83,8 +348,7 @@ function DemosPage() {
     );
     const sorted = Array.from(values).sort((a, b) => {
       const diff = langOrder(a) - langOrder(b);
-      if (diff !== 0) return diff;
-      return a.localeCompare(b);
+      return diff !== 0 ? diff : a.localeCompare(b);
     });
     return ["All", ...sorted];
   }, [items]);
@@ -96,33 +360,30 @@ function DemosPage() {
       activeFilter === "all"
         ? items
         : items.filter(
-          (item) =>
-            String(item.language || "")
-              .trim()
-              .toLowerCase() === activeFilter,
-        );
-
+            (item) =>
+              String(item.language || "")
+                .trim()
+                .toLowerCase() === activeFilter,
+          );
     return [...filtered].sort((a, b) => {
       const diff = langOrder(a.language) - langOrder(b.language);
-      if (diff !== 0) return diff;
-      return String(a.language || "").localeCompare(String(b.language || ""));
+      return diff !== 0
+        ? diff
+        : String(a.language || "").localeCompare(String(b.language || ""));
     });
   }, [items, activeFilter]);
 
   const togglePlay = (file) => {
     const current = audioRefs.current[file];
     if (!current) return;
-
     const isPlaying = !current.paused;
-
     if (activeFile && activeFile !== file) {
-      const previous = audioRefs.current[activeFile];
-      if (previous) {
-        previous.pause();
-        previous.currentTime = 0;
+      const prev = audioRefs.current[activeFile];
+      if (prev) {
+        prev.pause();
+        prev.currentTime = 0;
       }
     }
-
     if (isPlaying) {
       current.pause();
       setActiveFile("");
@@ -133,106 +394,143 @@ function DemosPage() {
   };
 
   return (
-    <div className="demos-wrap">
+    <div
+      style={{ minHeight: "100vh", background: "#f7f7f7", fontFamily: FONT }}
+    >
+      <style>{`
+        * { -webkit-font-smoothing: antialiased; }
+        @keyframes wave-bounce {
+          0%, 100% { transform: scaleY(0.25); }
+          50%       { transform: scaleY(1); }
+        }
+        .wave-bar--playing {
+          animation: wave-bounce 1.1s ease-in-out infinite;
+        }
+      `}</style>
+
       <Header />
 
-      <main className="demos-main">
-        <div className="demos-container">
-          {/* Hero */}
-          <section className="demo-hero">
-
-            <h1>Find the perfect voice.</h1>
-            <p className="lead">
-              Browse our curated library of professional voice demos across languages and styles.
+      <main style={{ padding: "0 0 100px" }}>
+        <div style={{ width: "min(1100px, 92vw)", margin: "0 auto" }}>
+          {/* ── Hero ─────────────────────────────────────────── */}
+          <section style={{ padding: "80px 0 44px", textAlign: "left" }}>
+            <h1
+              style={{
+                margin: "0 0 14px",
+                fontSize: "clamp(2.6rem, 5.5vw, 4.2rem)",
+                lineHeight: 1.04,
+                fontFamily: FONT,
+                fontWeight: 800,
+                color: "#111827",
+                letterSpacing: "-0.04em",
+              }}
+            >
+              Find the perfect <span style={{ color: "#c9cdd8" }}>voice.</span>
+            </h1>
+            <p
+              style={{
+                maxWidth: "500px",
+                color: "#6b7280",
+                fontSize: "1.05rem",
+                margin: 0,
+                lineHeight: 1.65,
+                fontFamily: FONT,
+              }}
+            >
+              Browse our curated library of professional voice demos across
+              languages and styles.
             </p>
           </section>
 
-          {/* Filter chips */}
-          <section className="chip-row" aria-label="Language filters">
+          {/* ── Filter chips ─────────────────────────────────── */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "nowrap", // ← was "wrap"
+              gap: "10px",
+              marginBottom: "36px",
+              overflowX: "auto", // ← allow horizontal scroll on small screens
+              paddingBottom: "4px", // ← prevent shadow clipping
+              scrollbarWidth: "none", // ← hide scrollbar (Firefox)
+            }}
+            aria-label="Language filters"
+          >
             {languages.map((language) => {
               const value = language.toLowerCase();
               return (
-                <button
+                <FilterChip
                   key={language}
-                  type="button"
-                  className={[
-                    "chip",
-                    language.toLowerCase() === "all"
-                      ? "all-chip"
-                      : getLangClass(language),
-                    activeFilter === value ? "active" : "",
-                  ]
-                    .filter(Boolean)
-                    .join(" ")}
+                  label={language}
+                  active={activeFilter === value}
                   onClick={() => setActiveFilter(value)}
-                >
-                  {language}
-                </button>
+                  langClass={getLangClass(language)}
+                />
               );
             })}
-          </section>
+          </div>
 
-          {/* Grid */}
+          {/* ── Grid / Error ──────────────────────────────────── */}
           {errorMessage ? (
-            <section className="demo-error-card">
-              <span className="material-symbols-outlined" style={{ fontSize: "32px", color: "#999" }}>error_outline</span>
-              <h3>Unable to load demos</h3>
-              <p>{errorMessage}</p>
-            </section>
+            <div
+              style={{
+                ...neu.card,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "12px",
+                padding: "60px 32px",
+                textAlign: "center",
+              }}
+            >
+              <div
+                style={{
+                  ...neu.circle,
+                  width: "60px",
+                  height: "60px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "26px",
+                  color: "#9ca3af",
+                }}
+              >
+                ⚠
+              </div>
+              <h3
+                style={{
+                  margin: 0,
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "#111827",
+                  fontFamily: FONT,
+                }}
+              >
+                Unable to load demos
+              </h3>
+              <p
+                style={{
+                  margin: 0,
+                  fontSize: "14px",
+                  color: "#9ca3af",
+                  fontFamily: FONT,
+                }}
+              >
+                {errorMessage}
+              </p>
+            </div>
           ) : (
-            <section className="demo-grid">
+            <div className="demo-grid-neu">
               {visibleItems.map((item) => {
-                const title = item.title || item.file;
-                const language = item.language || "Unknown";
                 const src = `/assets/new_voice_samples/${encodeAssetPath(item.file)}`;
                 const isPlaying = activeFile === item.file;
 
                 return (
-                  <article key={item.file} className={`demo-card${isPlaying ? " is-active" : ""}`}>
-                    <div className="card-top">
-                      <p className="card-name">{title}</p>
-                      <span className={`card-lang ${getLangClass(language)}`}>{language}</span>
-                    </div>
-
-                    <p className="card-meta">{describeDemo(item)}</p>
-
-                    <div className="card-footer">
-                      <button
-                        type="button"
-                        className={`card-play-btn${isPlaying ? " is-playing" : ""}`}
-                        onClick={() => togglePlay(item.file)}
-                        aria-label={isPlaying ? "Pause" : "Play"}
-                      >
-                        {isPlaying ? (
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="white">
-                            <rect x="2" y="2" width="4" height="10" rx="1" />
-                            <rect x="8" y="2" width="4" height="10" rx="1" />
-                          </svg>
-                        ) : (
-                          <svg width="12" height="14" viewBox="0 0 12 14" fill="white">
-                            <path d="M1 1l10 6-10 6V1z" />
-                          </svg>
-                        )}
-                        {isPlaying ? "Pause" : "Play"}
-                      </button>
-
-                      <div
-                        className={`card-waveform${isPlaying ? " is-playing" : ""}`}
-                        aria-hidden="true"
-                      >
-                        {[10, 6, 14, 8, 12, 5, 10, 9, 13].map((h, i) => (
-                          <span
-                            key={i}
-                            className="wave-bar"
-                            style={{
-                              height: `${h}px`,
-                              animationDelay: `${i * 0.15}s`,
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
-
+                  <div key={item.file}>
+                    <DemoCard
+                      item={item}
+                      isPlaying={isPlaying}
+                      onToggle={() => togglePlay(item.file)}
+                    />
                     <audio
                       ref={(node) => {
                         if (node) audioRefs.current[item.file] = node;
@@ -242,11 +540,12 @@ function DemosPage() {
                       onEnded={() => {
                         if (activeFile === item.file) setActiveFile("");
                       }}
+                      style={{ display: "none" }}
                     />
-                  </article>
+                  </div>
                 );
               })}
-            </section>
+            </div>
           )}
         </div>
       </main>

@@ -9868,12 +9868,11 @@ html body {
   line-height: 1.5 !important;
 }
 
-
 /* Decreased font size for the bottom icon row */
 #dark-section .framer-8b9xts p.framer-styles-preset-1wcqtva {
   font-size: 1.05rem !important; /* Slightly smaller Title */
   font-weight: 600 !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 #dark-section .framer-8b9xts p.framer-styles-preset-18a68lg {
