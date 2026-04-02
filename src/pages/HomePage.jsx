@@ -531,76 +531,41 @@ export default function HomePage() {
                     overflow: "hidden",
                   }}
                 >
-                  <ul
+                  {/* Duplicate lists for infinite scroll */}
+                  <div
+                    className="marquee-track"
                     style={{
                       display: "flex",
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "100%",
-                      maxHeight: "100%",
-                      placeItems: "center",
-                      margin: "0",
-                      padding: "0",
-                      listStyleType: "none",
-                      textIndent: "none",
                       gap: "16px",
-                      position: "relative",
-                      flexDirection: "row",
-                      willChange: "auto",
-                      transform: "translateX(-0px)",
+                      animation: "scrollHorizontal 40s linear infinite",
+                      width: "max-content",
                     }}
                   >
-                    <li>
-                      <div
-                        className="framer-xox0qf"
-                        data-framer-name="Delsey 1"
-                        id="xox0qf"
-                        style={{ flexShrink: "0" }}
-                      >
+                    <ul
+                      style={{
+                        display: "flex",
+                        placeItems: "center",
+                        margin: "0",
+                        padding: "0",
+                        listStyleType: "none",
+                        gap: "16px",
+                        flexDirection: "row",
+                      }}
+                    >
+                      <li>
                         <div
-                          className="framer-xgs5bz"
-                          data-framer-name="Overlay"
-                        ></div>
-                        <div className="framer-ypmu35" data-framer-name="Image">
+                          className="framer-xox0qf"
+                          data-framer-name="Delsey 1"
+                          id="xox0qf"
+                          style={{ flexShrink: "0" }}
+                        >
                           <div
-                            style={{
-                              position: "absolute",
-                              borderRadius: "inherit",
-                              cornerShape: "inherit",
-                              top: "0",
-                              right: "0",
-                              bottom: "0",
-                              left: "0",
-                            }}
-                            data-framer-background-image-wrapper="true"
-                          >
-                            <img
-                              decoding="async"
-                              width="600"
-                              height="600"
-                              sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
-                              srcSet="
-                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?scale-down-to=512&width=600&height=600 512w,
-                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600                       600w
-                            "
-                              src="https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600"
-                              alt
-                              style={{
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
-                                borderRadius: "inherit",
-                                cornerShape: "inherit",
-                                objectPosition: "center",
-                                objectFit: "cover",
-                              }}
-                            />
-                          </div>
-                        </div>
-                        <div className="framer-1c32jxo">
+                            className="framer-xgs5bz"
+                            data-framer-name="Overlay"
+                          ></div>
                           <div
-                            className="framer-16yk5dv"
-                            data-framer-name="Delsey"
+                            className="framer-ypmu35"
+                            data-framer-name="Image"
                           >
                             <div
                               style={{
@@ -616,16 +581,14 @@ export default function HomePage() {
                             >
                               <img
                                 decoding="async"
-                                width="2269"
-                                height="181"
-                                sizes="(min-width: 1024px) 175.5028px, (min-width: 810px) and (max-width: 1023.98px) 175.5028px, (max-width: 809.98px) 175.5028px"
+                                width="600"
+                                height="600"
+                                sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
                                 srcSet="
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=512&width=2269&height=181   512w,
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=1024&width=2269&height=181 1024w,
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=2048&width=2269&height=181 2048w,
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181                        2269w
-                              "
-                                src="https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181"
+                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?scale-down-to=512&width=600&height=600 512w,
+                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600                       600w
+                            "
+                                src="https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600"
                                 alt
                                 style={{
                                   display: "block",
@@ -639,46 +602,11 @@ export default function HomePage() {
                               />
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1arzejl"
-                        data-framer-name="Delsey 2"
-                        id="1arzejl"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-12yh6su"
-                          data-framer-name="Image animation"
-                          id="card-1-1"
-                        >
-                          <div
-                            className="framer-33x4c7"
-                            style={{ transform: "none" }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--framer-font-size": "14px",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.5em",
-                                "--framer-text-color": `var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )`,
-                              }}
-                              className="framer-text"
+                          <div className="framer-1c32jxo">
+                            <div
+                              className="framer-16yk5dv"
+                              data-framer-name="Delsey"
                             >
-                              “We recently integrated this app into our Shopify
-                              Plus store, and it’s an easy CRO quick win. By
-                              providing real-time guidance, it increases
-                              conversions and reduces product returns.”
-                            </p>
-                          </div>
-                          <div className="framer-1nszkyw">
-                            <div className="framer-ybis5y">
                               <div
                                 style={{
                                   position: "absolute",
@@ -693,9 +621,16 @@ export default function HomePage() {
                               >
                                 <img
                                   decoding="async"
-                                  width="400"
-                                  height="400"
-                                  src="https://framerusercontent.com/images/5kEjUwJdKzWmcjbqYnnugi5zs.png?width=400&height=400"
+                                  width="2269"
+                                  height="181"
+                                  sizes="(min-width: 1024px) 175.5028px, (min-width: 810px) and (max-width: 1023.98px) 175.5028px, (max-width: 809.98px) 175.5028px"
+                                  srcSet="
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=512&width=2269&height=181   512w,
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=1024&width=2269&height=181 1024w,
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=2048&width=2269&height=181 2048w,
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181                        2269w
+                              "
+                                  src="https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181"
                                   alt
                                   style={{
                                     display: "block",
@@ -709,353 +644,579 @@ export default function HomePage() {
                                 />
                               </div>
                             </div>
-                            <div className="framer-eup4sl">
-                              <div
-                                className="framer-vmvpkb"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          className="framer-1arzejl"
+                          data-framer-name="Delsey 2"
+                          id="1arzejl"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-12yh6su"
+                            data-framer-name="Image animation"
+                            id="card-1-1"
+                          >
+                            <div
+                              className="framer-33x4c7"
+                              style={{ transform: "none" }}
+                              data-framer-component-type="RichTextContainer"
+                            >
+                              <p
+                                style={{
+                                  "--framer-font-size": "14px",
+                                  "--framer-letter-spacing": "-0.02em",
+                                  "--framer-line-height": "1.5em",
+                                  "--framer-text-color": `var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )`,
+                                }}
+                                className="framer-text"
                               >
-                                <p
+                                “We recently integrated this app into our
+                                Shopify Plus store, and it’s an easy CRO quick
+                                win. By providing real-time guidance, it
+                                increases conversions and reduces product
+                                returns.”
+                              </p>
+                            </div>
+                            <div className="framer-1nszkyw">
+                              <div className="framer-ybis5y">
+                                <div
                                   style={{
-                                    "--font-selector": "SW50ZXItTWVkaXVt",
-                                    "--framer-font-family": `\"Inter\",
-                                    \"Inter Placeholder\", sans-serif`,
-                                    "--framer-font-size": "14px",
-                                    "--framer-font-weight": "500",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "20px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )`,
+                                    position: "absolute",
+                                    borderRadius: "inherit",
+                                    cornerShape: "inherit",
+                                    top: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    left: "0",
                                   }}
-                                  className="framer-text"
+                                  data-framer-background-image-wrapper="true"
                                 >
-                                  Guillaume A.
-                                </p>
+                                  <img
+                                    decoding="async"
+                                    width="400"
+                                    height="400"
+                                    src="https://framerusercontent.com/images/5kEjUwJdKzWmcjbqYnnugi5zs.png?width=400&height=400"
+                                    alt
+                                    style={{
+                                      display: "block",
+                                      width: "100%",
+                                      height: "100%",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      objectPosition: "center",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
                               </div>
-                              <div
-                                className="framer-1q4a4vq"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--framer-font-size": "12px",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "16px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                              <div className="framer-eup4sl">
+                                <div
+                                  className="framer-vmvpkb"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--font-selector": "SW50ZXItTWVkaXVt",
+                                      "--framer-font-family": `\"Inter\",
+                                    \"Inter Placeholder\", sans-serif`,
+                                      "--framer-font-size": "14px",
+                                      "--framer-font-weight": "500",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "20px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Guillaume A.
+                                  </p>
+                                </div>
+                                <div
+                                  className="framer-1q4a4vq"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
                                 >
-                                  E-shop Manager @DelseyParis
-                                </p>
+                                  <p
+                                    style={{
+                                      "--framer-font-size": "12px",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "16px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    E-shop Manager @DelseyParis
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1g9y9jn"
-                        data-framer-name="OMC 1"
-                        id="1g9y9jn"
-                        style={{ flexShrink: "0" }}
-                      >
+                      </li>
+                      <li>
                         <div
-                          className="framer-15adrdc"
-                          data-framer-name="Overlay"
-                        ></div>
-                        <div className="framer-xiibck" data-framer-name="Image">
+                          className="framer-1g9y9jn"
+                          data-framer-name="OMC 1"
+                          id="1g9y9jn"
+                          style={{ flexShrink: "0" }}
+                        >
                           <div
-                            style={{
-                              position: "absolute",
-                              borderRadius: "inherit",
-                              cornerShape: "inherit",
-                              top: "0",
-                              right: "0",
-                              bottom: "0",
-                              left: "0",
-                            }}
-                            data-framer-background-image-wrapper="true"
+                            className="framer-15adrdc"
+                            data-framer-name="Overlay"
+                          ></div>
+                          <div
+                            className="framer-xiibck"
+                            data-framer-name="Image"
                           >
-                            <img
-                              decoding="async"
-                              width="666"
-                              height="896"
-                              sizes="(min-width: 1024px) 385px, (min-width: 810px) and (max-width: 1023.98px) 385px, (max-width: 809.98px) 385px"
-                              srcSet="
-                              https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896 666w
-                            "
-                              src="https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896"
-                              alt
+                            <div
                               style={{
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
+                                position: "absolute",
                                 borderRadius: "inherit",
                                 cornerShape: "inherit",
-                                objectPosition: "center",
-                                objectFit: "cover",
+                                top: "0",
+                                right: "0",
+                                bottom: "0",
+                                left: "0",
                               }}
-                            />
+                              data-framer-background-image-wrapper="true"
+                            >
+                              <img
+                                decoding="async"
+                                width="666"
+                                height="896"
+                                sizes="(min-width: 1024px) 385px, (min-width: 810px) and (max-width: 1023.98px) 385px, (max-width: 809.98px) 385px"
+                                srcSet="
+                              https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896 666w
+                            "
+                                src="https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896"
+                                alt
+                                style={{
+                                  display: "block",
+                                  width: "100%",
+                                  height: "100%",
+                                  borderRadius: "inherit",
+                                  cornerShape: "inherit",
+                                  objectPosition: "center",
+                                  objectFit: "cover",
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="framer-16ui7nu">
+                            <div
+                              data-framer-component-type="SVG"
+                              style={{
+                                imageRendering: "pixelated",
+                                flexShrink: "0",
+                                backgroundSize: "100% 100%",
+                                backgroundImage:
+                                  'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 178.383 15.953%22 overflow=%22visible%22><path d=%22M 31.85 15.577 L 29.203 15.577 L 29.203 8.596 L 21.75 8.596 L 21.75 15.577 L 19.103 15.577 L 19.103 0.351 L 21.75 0.351 L 21.75 7.379 L 29.203 7.379 L 29.203 0.351 L 31.85 0.351 Z M 53.625 15.577 L 51.745 15.577 L 45.755 2.881 L 45.709 2.881 L 45.639 15.577 L 44.199 15.577 L 44.362 0.351 L 47.519 0.351 L 53.415 12.812 L 53.463 12.812 L 59.265 0.351 L 62.145 0.351 L 62.307 15.577 L 59.754 15.577 L 59.591 2.883 Z M 68.037 0.351 L 72.682 7.753 L 77.302 0.351 L 78.973 0.351 L 73.425 9.183 L 73.425 15.577 L 70.755 15.577 L 70.755 9.462 L 65.089 0.351 L 68.037 0.351 Z M 127.35 15.577 L 116.88 15.577 L 116.88 0.351 L 126.816 0.351 L 126.816 1.545 L 119.526 1.545 L 119.526 7.331 L 126.119 7.331 L 126.119 8.457 L 119.526 8.457 L 119.526 14.382 L 127.35 14.382 Z M 163.318 2.881 L 157.352 15.577 L 155.472 15.577 L 149.482 2.881 L 149.435 2.881 L 149.366 15.577 L 147.926 15.577 L 148.088 0.351 L 151.246 0.351 L 157.143 12.812 L 157.189 12.812 L 162.994 0.351 L 165.874 0.351 L 166.036 15.577 L 163.483 15.577 L 163.318 2.881 Z M 7.755 0 C 12.722 0 15.578 3.186 15.577 7.986 C 15.577 12.812 12.722 15.952 7.754 15.952 C 2.809 15.952 0 12.812 0 7.986 C 0 3.186 2.809 0 7.754 0 Z M 12.606 7.986 C 12.606 3.372 10.981 1.078 7.754 1.078 C 4.549 1.078 2.947 3.372 2.947 7.986 C 2.947 12.626 4.504 14.875 7.754 14.875 C 11.028 14.875 12.606 12.626 12.606 7.986 Z M 99.063 13.094 L 99.063 13.094 C 99.063 13.094 99.063 13.093 99.063 13.093 Z M 99.063 13.094 C 99.042 13.131 97.431 15.953 92.888 15.953 C 87.943 15.953 85.04 12.861 85.04 8.103 C 85.04 3.255 88.106 0 92.888 0 C 95.906 0 98.204 1.827 98.204 1.827 L 97.833 2.881 C 97.833 2.881 95.512 1.149 93.074 1.149 C 89.94 1.149 87.99 3.161 87.99 7.986 C 87.99 12.837 89.985 14.804 93.166 14.804 C 96.672 14.804 98.46 12.182 98.46 12.182 Z M 113.492 15.577 L 110.428 15.577 L 106.597 9.908 L 104.322 9.908 L 104.322 15.577 L 101.838 15.577 L 101.838 0.351 L 106.295 0.351 C 110.01 0.351 112.332 2.015 112.332 5.014 C 112.332 7.331 110.892 8.762 109.151 9.44 Z M 109.452 5.131 C 109.452 2.459 108.315 1.499 105.993 1.499 L 104.322 1.499 L 104.322 8.762 L 106.202 8.762 C 108.315 8.762 109.452 7.986 109.452 5.131 Z M 144.539 15.577 L 141.729 15.577 L 139.989 10.985 L 133.14 10.985 L 131.353 15.577 L 129.889 15.577 L 135.973 0.351 L 138.782 0.351 Z M 139.594 9.908 L 136.669 1.967 L 133.581 9.908 Z M 178.383 0.129 L 177.915 12.825 L 176.276 12.825 L 175.809 0.129 Z M 176.193 14.893 C 176.193 14.389 176.593 13.978 177.096 13.964 C 177.434 13.955 177.75 14.13 177.921 14.421 C 178.093 14.712 178.093 15.073 177.921 15.364 C 177.75 15.655 177.434 15.83 177.096 15.821 C 176.593 15.807 176.193 15.396 176.193 14.893 Z%22 fill=%22rgb(255, 255, 255)%22></path></svg>")',
+                              }}
+                              className="framer-16ciedp"
+                              aria-hidden="true"
+                            ></div>
                           </div>
                         </div>
-                        <div className="framer-16ui7nu">
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 178.383 15.953%22 overflow=%22visible%22><path d=%22M 31.85 15.577 L 29.203 15.577 L 29.203 8.596 L 21.75 8.596 L 21.75 15.577 L 19.103 15.577 L 19.103 0.351 L 21.75 0.351 L 21.75 7.379 L 29.203 7.379 L 29.203 0.351 L 31.85 0.351 Z M 53.625 15.577 L 51.745 15.577 L 45.755 2.881 L 45.709 2.881 L 45.639 15.577 L 44.199 15.577 L 44.362 0.351 L 47.519 0.351 L 53.415 12.812 L 53.463 12.812 L 59.265 0.351 L 62.145 0.351 L 62.307 15.577 L 59.754 15.577 L 59.591 2.883 Z M 68.037 0.351 L 72.682 7.753 L 77.302 0.351 L 78.973 0.351 L 73.425 9.183 L 73.425 15.577 L 70.755 15.577 L 70.755 9.462 L 65.089 0.351 L 68.037 0.351 Z M 127.35 15.577 L 116.88 15.577 L 116.88 0.351 L 126.816 0.351 L 126.816 1.545 L 119.526 1.545 L 119.526 7.331 L 126.119 7.331 L 126.119 8.457 L 119.526 8.457 L 119.526 14.382 L 127.35 14.382 Z M 163.318 2.881 L 157.352 15.577 L 155.472 15.577 L 149.482 2.881 L 149.435 2.881 L 149.366 15.577 L 147.926 15.577 L 148.088 0.351 L 151.246 0.351 L 157.143 12.812 L 157.189 12.812 L 162.994 0.351 L 165.874 0.351 L 166.036 15.577 L 163.483 15.577 L 163.318 2.881 Z M 7.755 0 C 12.722 0 15.578 3.186 15.577 7.986 C 15.577 12.812 12.722 15.952 7.754 15.952 C 2.809 15.952 0 12.812 0 7.986 C 0 3.186 2.809 0 7.754 0 Z M 12.606 7.986 C 12.606 3.372 10.981 1.078 7.754 1.078 C 4.549 1.078 2.947 3.372 2.947 7.986 C 2.947 12.626 4.504 14.875 7.754 14.875 C 11.028 14.875 12.606 12.626 12.606 7.986 Z M 99.063 13.094 L 99.063 13.094 C 99.063 13.094 99.063 13.093 99.063 13.093 Z M 99.063 13.094 C 99.042 13.131 97.431 15.953 92.888 15.953 C 87.943 15.953 85.04 12.861 85.04 8.103 C 85.04 3.255 88.106 0 92.888 0 C 95.906 0 98.204 1.827 98.204 1.827 L 97.833 2.881 C 97.833 2.881 95.512 1.149 93.074 1.149 C 89.94 1.149 87.99 3.161 87.99 7.986 C 87.99 12.837 89.985 14.804 93.166 14.804 C 96.672 14.804 98.46 12.182 98.46 12.182 Z M 113.492 15.577 L 110.428 15.577 L 106.597 9.908 L 104.322 9.908 L 104.322 15.577 L 101.838 15.577 L 101.838 0.351 L 106.295 0.351 C 110.01 0.351 112.332 2.015 112.332 5.014 C 112.332 7.331 110.892 8.762 109.151 9.44 Z M 109.452 5.131 C 109.452 2.459 108.315 1.499 105.993 1.499 L 104.322 1.499 L 104.322 8.762 L 106.202 8.762 C 108.315 8.762 109.452 7.986 109.452 5.131 Z M 144.539 15.577 L 141.729 15.577 L 139.989 10.985 L 133.14 10.985 L 131.353 15.577 L 129.889 15.577 L 135.973 0.351 L 138.782 0.351 Z M 139.594 9.908 L 136.669 1.967 L 133.581 9.908 Z M 178.383 0.129 L 177.915 12.825 L 176.276 12.825 L 175.809 0.129 Z M 176.193 14.893 C 176.193 14.389 176.593 13.978 177.096 13.964 C 177.434 13.955 177.75 14.13 177.921 14.421 C 178.093 14.712 178.093 15.073 177.921 15.364 C 177.75 15.655 177.434 15.83 177.096 15.821 C 176.593 15.807 176.193 15.396 176.193 14.893 Z%22 fill=%22rgb(255, 255, 255)%22></path></svg>")',
-                            }}
-                            className="framer-16ciedp"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1fetau4"
-                        data-framer-name="OMC 2"
-                        id="1fetau4"
-                        style={{ flexShrink: "0" }}
-                      >
+                      </li>
+                      <li>
                         <div
-                          className="framer-7l4kyv"
-                          data-framer-name="Image animation"
-                          id="card-1"
+                          className="framer-1fetau4"
+                          data-framer-name="OMC 2"
+                          id="1fetau4"
+                          style={{ flexShrink: "0" }}
                         >
                           <div
-                            className="framer-11n8uzv"
-                            style={{ transform: "none" }}
-                            data-framer-component-type="RichTextContainer"
+                            className="framer-7l4kyv"
+                            data-framer-name="Image animation"
+                            id="card-1"
                           >
-                            <p
-                              style={{
-                                "--framer-font-size": "14px",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.5em",
-                                "--framer-text-color": `var(
+                            <div
+                              className="framer-11n8uzv"
+                              style={{ transform: "none" }}
+                              data-framer-component-type="RichTextContainer"
+                            >
+                              <p
+                                style={{
+                                  "--framer-font-size": "14px",
+                                  "--framer-letter-spacing": "-0.02em",
+                                  "--framer-line-height": "1.5em",
+                                  "--framer-text-color": `var(
                                 --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                 rgb(0, 0, 0)
                               )`,
-                              }}
-                              className="framer-text"
-                            >
-                              “Providing advice and decision-making support is a
-                              key priority at Oh My Cream. The results of the
-                              first module have fully lived up to our
-                              expectations, and we have great ambitions for
-                              deploying the Dialog solutions across the rest of
-                              the site.”
-                            </p>
-                          </div>
-                          <div className="framer-124ib6k">
-                            <div className="framer-kdzohd">
-                              <div
-                                style={{
-                                  position: "absolute",
-                                  borderRadius: "inherit",
-                                  cornerShape: "inherit",
-                                  top: "0",
-                                  right: "0",
-                                  bottom: "0",
-                                  left: "0",
                                 }}
-                                data-framer-background-image-wrapper="true"
+                                className="framer-text"
                               >
-                                <img
-                                  decoding="async"
-                                  width="400"
-                                  height="400"
-                                  src="https://framerusercontent.com/images/i0WM5Z1v3QyyE52QxbBd1L9L1I.png?width=400&height=400"
-                                  alt
+                                “Providing advice and decision-making support is
+                                a key priority at Oh My Cream. The results of
+                                the first module have fully lived up to our
+                                expectations, and we have great ambitions for
+                                deploying the Dialog solutions across the rest
+                                of the site.”
+                              </p>
+                            </div>
+                            <div className="framer-124ib6k">
+                              <div className="framer-kdzohd">
+                                <div
                                   style={{
-                                    display: "block",
-                                    width: "100%",
-                                    height: "100%",
+                                    position: "absolute",
                                     borderRadius: "inherit",
                                     cornerShape: "inherit",
-                                    objectPosition: "center",
-                                    objectFit: "cover",
+                                    top: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    left: "0",
                                   }}
-                                />
+                                  data-framer-background-image-wrapper="true"
+                                >
+                                  <img
+                                    decoding="async"
+                                    width="400"
+                                    height="400"
+                                    src="https://framerusercontent.com/images/i0WM5Z1v3QyyE52QxbBd1L9L1I.png?width=400&height=400"
+                                    alt
+                                    style={{
+                                      display: "block",
+                                      width: "100%",
+                                      height: "100%",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      objectPosition: "center",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div className="framer-pvm393">
-                              <div
-                                className="framer-oxpi7u"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--font-selector": "SW50ZXItTWVkaXVt",
-                                    "--framer-font-family": `\"Inter\",
+                              <div className="framer-pvm393">
+                                <div
+                                  className="framer-oxpi7u"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--font-selector": "SW50ZXItTWVkaXVt",
+                                      "--framer-font-family": `\"Inter\",
                                     \"Inter Placeholder\", sans-serif`,
-                                    "--framer-font-size": "14px",
-                                    "--framer-font-weight": "500",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "20px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                                      "--framer-font-size": "14px",
+                                      "--framer-font-weight": "500",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "20px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Sarah Mandel Azran
+                                  </p>
+                                </div>
+                                <div
+                                  className="framer-wj6u5z"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
                                 >
-                                  Sarah Mandel Azran
-                                </p>
-                              </div>
-                              <div
-                                className="framer-wj6u5z"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--framer-font-size": "12px",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "16px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                                  <p
+                                    style={{
+                                      "--framer-font-size": "12px",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "16px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  Head of e-commerce &amp; digital @OhMyCream
-                                </p>
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Head of e-commerce &amp; digital @OhMyCream
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1qjtmhf"
-                        data-framer-name="MG 1"
-                        id="1qjtmhf"
-                        style={{ flexShrink: "0" }}
-                      >
+                      </li>
+                      <li>
                         <div
-                          className="framer-gf2v8x"
-                          data-framer-name="Overlay"
-                        ></div>
-                        <div className="framer-8nwzjo" data-framer-name="Image">
+                          className="framer-1qjtmhf"
+                          data-framer-name="MG 1"
+                          id="1qjtmhf"
+                          style={{ flexShrink: "0" }}
+                        >
                           <div
-                            style={{
-                              position: "absolute",
-                              borderRadius: "inherit",
-                              cornerShape: "inherit",
-                              top: "0",
-                              right: "0",
-                              bottom: "0",
-                              left: "0",
-                            }}
-                            data-framer-background-image-wrapper="true"
+                            className="framer-gf2v8x"
+                            data-framer-name="Overlay"
+                          ></div>
+                          <div
+                            className="framer-8nwzjo"
+                            data-framer-name="Image"
                           >
-                            <img
-                              decoding="async"
-                              width="590"
-                              height="332"
-                              sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
-                              srcSet="
+                            <div
+                              style={{
+                                position: "absolute",
+                                borderRadius: "inherit",
+                                cornerShape: "inherit",
+                                top: "0",
+                                right: "0",
+                                bottom: "0",
+                                left: "0",
+                              }}
+                              data-framer-background-image-wrapper="true"
+                            >
+                              <img
+                                decoding="async"
+                                width="590"
+                                height="332"
+                                sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
+                                srcSet="
                               https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?scale-down-to=512&width=590&height=332 512w,
                               https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332                       590w
                             "
-                              src="https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332"
-                              alt
-                              style={{
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
-                                borderRadius: "inherit",
-                                cornerShape: "inherit",
-                                objectPosition: "32.6% 52.5%",
-                                objectFit: "cover",
-                              }}
-                            />
+                                src="https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332"
+                                alt
+                                style={{
+                                  display: "block",
+                                  width: "100%",
+                                  height: "100%",
+                                  borderRadius: "inherit",
+                                  cornerShape: "inherit",
+                                  objectPosition: "32.6% 52.5%",
+                                  objectFit: "cover",
+                                }}
+                              />
+                            </div>
                           </div>
-                        </div>
-                        <div className="framer-1takkf5">
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                            }}
-                            className="framer-1mo95ae"
-                            aria-hidden="true"
-                          >
+                          <div className="framer-1takkf5">
                             <div
-                              className="svgContainer"
+                              data-framer-component-type="SVG"
                               style={{
-                                width: "100%",
-                                height: "100%",
-                                aspectRatio: "inherit",
+                                imageRendering: "pixelated",
+                                flexShrink: "0",
                               }}
+                              className="framer-1mo95ae"
+                              aria-hidden="true"
                             >
-                              <svg style={{ width: "100%", height: "100%" }}>
-                                <use href="#svg-527478463_6871"></use>
-                              </svg>
+                              <div
+                                className="svgContainer"
+                                style={{
+                                  width: "100%",
+                                  height: "100%",
+                                  aspectRatio: "inherit",
+                                }}
+                              >
+                                <svg style={{ width: "100%", height: "100%" }}>
+                                  <use href="#svg-527478463_6871"></use>
+                                </svg>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-r69b10"
-                        data-framer-name="MG 2"
-                        id="r69b10"
-                        style={{ flexShrink: "0" }}
-                      >
+                      </li>
+                      <li>
                         <div
-                          className="framer-9uwhvb"
-                          data-framer-name="Image animation"
-                          id="card-1-3"
+                          className="framer-r69b10"
+                          data-framer-name="MG 2"
+                          id="r69b10"
+                          style={{ flexShrink: "0" }}
                         >
                           <div
-                            className="framer-17z7aqx"
-                            style={{ transform: "none" }}
-                            data-framer-component-type="RichTextContainer"
+                            className="framer-9uwhvb"
+                            data-framer-name="Image animation"
+                            id="card-1-3"
                           >
-                            <p
-                              style={{
-                                "--framer-font-size": "14px",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.5em",
-                                "--framer-text-color": `var(
+                            <div
+                              className="framer-17z7aqx"
+                              style={{ transform: "none" }}
+                              data-framer-component-type="RichTextContainer"
+                            >
+                              <p
+                                style={{
+                                  "--framer-font-size": "14px",
+                                  "--framer-letter-spacing": "-0.02em",
+                                  "--framer-line-height": "1.5em",
+                                  "--framer-text-color": `var(
                                 --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                 rgb(0, 0, 0)
                               )`,
-                              }}
-                              className="framer-text"
-                            >
-                              “We are at the very beginning of our journey with
-                              Dialog, yet we can already see its transformative
-                              potential in reshaping how we interact with our
-                              Services. In a highly competitive market
-                              (automotive industry), Dialog is proving to be a
-                              game-changer for MG Motor.”
-                            </p>
+                                }}
+                                className="framer-text"
+                              >
+                                “We are at the very beginning of our journey
+                                with Dialog, yet we can already see its
+                                transformative potential in reshaping how we
+                                interact with our Services. In a highly
+                                competitive market (automotive industry), Dialog
+                                is proving to be a game-changer for MG Motor.”
+                              </p>
+                            </div>
+                            <div className="framer-vqxud8">
+                              <div className="framer-1u3gy8o">
+                                <div
+                                  style={{
+                                    position: "absolute",
+                                    borderRadius: "inherit",
+                                    cornerShape: "inherit",
+                                    top: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    left: "0",
+                                  }}
+                                  data-framer-background-image-wrapper="true"
+                                >
+                                  <img
+                                    decoding="async"
+                                    width="180"
+                                    height="180"
+                                    src="https://framerusercontent.com/images/qA5TImT90dVJ2IW6tjPWo83Yak.png?width=180&height=180"
+                                    alt
+                                    style={{
+                                      display: "block",
+                                      width: "100%",
+                                      height: "100%",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      objectPosition: "center",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="framer-19a9822">
+                                <div
+                                  className="framer-1smp7go"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--font-selector": "SW50ZXItTWVkaXVt",
+                                      "--framer-font-family": `\"Inter\",
+                                    \"Inter Placeholder\", sans-serif`,
+                                      "--framer-font-size": "14px",
+                                      "--framer-font-weight": "500",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "20px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Pierre-Edouard Sabary
+                                  </p>
+                                </div>
+                                <div
+                                  className="framer-hfnzse"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--framer-font-size": "12px",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "16px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Digital Marketing Manager @MGMotorFrance
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <div className="framer-vqxud8">
-                            <div className="framer-1u3gy8o">
+                        </div>
+                      </li>
+                    </ul>
+                    <ul
+                      style={{
+                        display: "flex",
+                        placeItems: "center",
+                        margin: "0",
+                        padding: "0",
+                        listStyleType: "none",
+                        gap: "16px",
+                        flexDirection: "row",
+                      }}
+                    >
+                      <li>
+                        <div
+                          className="framer-xox0qf"
+                          data-framer-name="Delsey 1"
+                          id="xox0qf"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-xgs5bz"
+                            data-framer-name="Overlay"
+                          ></div>
+                          <div
+                            className="framer-ypmu35"
+                            data-framer-name="Image"
+                          >
+                            <div
+                              style={{
+                                position: "absolute",
+                                borderRadius: "inherit",
+                                cornerShape: "inherit",
+                                top: "0",
+                                right: "0",
+                                bottom: "0",
+                                left: "0",
+                              }}
+                              data-framer-background-image-wrapper="true"
+                            >
+                              <img
+                                decoding="async"
+                                width="600"
+                                height="600"
+                                sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
+                                srcSet="
+                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?scale-down-to=512&width=600&height=600 512w,
+                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600                       600w
+                            "
+                                src="https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600"
+                                alt
+                                style={{
+                                  display: "block",
+                                  width: "100%",
+                                  height: "100%",
+                                  borderRadius: "inherit",
+                                  cornerShape: "inherit",
+                                  objectPosition: "center",
+                                  objectFit: "cover",
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="framer-1c32jxo">
+                            <div
+                              className="framer-16yk5dv"
+                              data-framer-name="Delsey"
+                            >
                               <div
                                 style={{
                                   position: "absolute",
@@ -1070,9 +1231,16 @@ export default function HomePage() {
                               >
                                 <img
                                   decoding="async"
-                                  width="180"
-                                  height="180"
-                                  src="https://framerusercontent.com/images/qA5TImT90dVJ2IW6tjPWo83Yak.png?width=180&height=180"
+                                  width="2269"
+                                  height="181"
+                                  sizes="(min-width: 1024px) 175.5028px, (min-width: 810px) and (max-width: 1023.98px) 175.5028px, (max-width: 809.98px) 175.5028px"
+                                  srcSet="
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=512&width=2269&height=181   512w,
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=1024&width=2269&height=181 1024w,
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=2048&width=2269&height=181 2048w,
+                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181                        2269w
+                              "
+                                  src="https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181"
                                   alt
                                   style={{
                                     display: "block",
@@ -1086,65 +1254,524 @@ export default function HomePage() {
                                 />
                               </div>
                             </div>
-                            <div className="framer-19a9822">
-                              <div
-                                className="framer-1smp7go"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          className="framer-1arzejl"
+                          data-framer-name="Delsey 2"
+                          id="1arzejl"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-12yh6su"
+                            data-framer-name="Image animation"
+                            id="card-1-1"
+                          >
+                            <div
+                              className="framer-33x4c7"
+                              style={{ transform: "none" }}
+                              data-framer-component-type="RichTextContainer"
+                            >
+                              <p
+                                style={{
+                                  "--framer-font-size": "14px",
+                                  "--framer-letter-spacing": "-0.02em",
+                                  "--framer-line-height": "1.5em",
+                                  "--framer-text-color": `var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )`,
+                                }}
+                                className="framer-text"
                               >
-                                <p
+                                “We recently integrated this app into our
+                                Shopify Plus store, and it’s an easy CRO quick
+                                win. By providing real-time guidance, it
+                                increases conversions and reduces product
+                                returns.”
+                              </p>
+                            </div>
+                            <div className="framer-1nszkyw">
+                              <div className="framer-ybis5y">
+                                <div
                                   style={{
-                                    "--font-selector": "SW50ZXItTWVkaXVt",
-                                    "--framer-font-family": `\"Inter\",
-                                    \"Inter Placeholder\", sans-serif`,
-                                    "--framer-font-size": "14px",
-                                    "--framer-font-weight": "500",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "20px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )`,
+                                    position: "absolute",
+                                    borderRadius: "inherit",
+                                    cornerShape: "inherit",
+                                    top: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    left: "0",
                                   }}
-                                  className="framer-text"
+                                  data-framer-background-image-wrapper="true"
                                 >
-                                  Pierre-Edouard Sabary
-                                </p>
+                                  <img
+                                    decoding="async"
+                                    width="400"
+                                    height="400"
+                                    src="https://framerusercontent.com/images/5kEjUwJdKzWmcjbqYnnugi5zs.png?width=400&height=400"
+                                    alt
+                                    style={{
+                                      display: "block",
+                                      width: "100%",
+                                      height: "100%",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      objectPosition: "center",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
                               </div>
-                              <div
-                                className="framer-hfnzse"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--framer-font-size": "12px",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "16px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                              <div className="framer-eup4sl">
+                                <div
+                                  className="framer-vmvpkb"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--font-selector": "SW50ZXItTWVkaXVt",
+                                      "--framer-font-family": `\"Inter\",
+                                    \"Inter Placeholder\", sans-serif`,
+                                      "--framer-font-size": "14px",
+                                      "--framer-font-weight": "500",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "20px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Guillaume A.
+                                  </p>
+                                </div>
+                                <div
+                                  className="framer-1q4a4vq"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
                                 >
-                                  Digital Marketing Manager @MGMotorFrance
-                                </p>
+                                  <p
+                                    style={{
+                                      "--framer-font-size": "12px",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "16px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    E-shop Manager @DelseyParis
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </li>
-                  </ul>
+                      </li>
+                      <li>
+                        <div
+                          className="framer-1g9y9jn"
+                          data-framer-name="OMC 1"
+                          id="1g9y9jn"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-15adrdc"
+                            data-framer-name="Overlay"
+                          ></div>
+                          <div
+                            className="framer-xiibck"
+                            data-framer-name="Image"
+                          >
+                            <div
+                              style={{
+                                position: "absolute",
+                                borderRadius: "inherit",
+                                cornerShape: "inherit",
+                                top: "0",
+                                right: "0",
+                                bottom: "0",
+                                left: "0",
+                              }}
+                              data-framer-background-image-wrapper="true"
+                            >
+                              <img
+                                decoding="async"
+                                width="666"
+                                height="896"
+                                sizes="(min-width: 1024px) 385px, (min-width: 810px) and (max-width: 1023.98px) 385px, (max-width: 809.98px) 385px"
+                                srcSet="
+                              https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896 666w
+                            "
+                                src="https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896"
+                                alt
+                                style={{
+                                  display: "block",
+                                  width: "100%",
+                                  height: "100%",
+                                  borderRadius: "inherit",
+                                  cornerShape: "inherit",
+                                  objectPosition: "center",
+                                  objectFit: "cover",
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="framer-16ui7nu">
+                            <div
+                              data-framer-component-type="SVG"
+                              style={{
+                                imageRendering: "pixelated",
+                                flexShrink: "0",
+                                backgroundSize: "100% 100%",
+                                backgroundImage:
+                                  'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 178.383 15.953%22 overflow=%22visible%22><path d=%22M 31.85 15.577 L 29.203 15.577 L 29.203 8.596 L 21.75 8.596 L 21.75 15.577 L 19.103 15.577 L 19.103 0.351 L 21.75 0.351 L 21.75 7.379 L 29.203 7.379 L 29.203 0.351 L 31.85 0.351 Z M 53.625 15.577 L 51.745 15.577 L 45.755 2.881 L 45.709 2.881 L 45.639 15.577 L 44.199 15.577 L 44.362 0.351 L 47.519 0.351 L 53.415 12.812 L 53.463 12.812 L 59.265 0.351 L 62.145 0.351 L 62.307 15.577 L 59.754 15.577 L 59.591 2.883 Z M 68.037 0.351 L 72.682 7.753 L 77.302 0.351 L 78.973 0.351 L 73.425 9.183 L 73.425 15.577 L 70.755 15.577 L 70.755 9.462 L 65.089 0.351 L 68.037 0.351 Z M 127.35 15.577 L 116.88 15.577 L 116.88 0.351 L 126.816 0.351 L 126.816 1.545 L 119.526 1.545 L 119.526 7.331 L 126.119 7.331 L 126.119 8.457 L 119.526 8.457 L 119.526 14.382 L 127.35 14.382 Z M 163.318 2.881 L 157.352 15.577 L 155.472 15.577 L 149.482 2.881 L 149.435 2.881 L 149.366 15.577 L 147.926 15.577 L 148.088 0.351 L 151.246 0.351 L 157.143 12.812 L 157.189 12.812 L 162.994 0.351 L 165.874 0.351 L 166.036 15.577 L 163.483 15.577 L 163.318 2.881 Z M 7.755 0 C 12.722 0 15.578 3.186 15.577 7.986 C 15.577 12.812 12.722 15.952 7.754 15.952 C 2.809 15.952 0 12.812 0 7.986 C 0 3.186 2.809 0 7.754 0 Z M 12.606 7.986 C 12.606 3.372 10.981 1.078 7.754 1.078 C 4.549 1.078 2.947 3.372 2.947 7.986 C 2.947 12.626 4.504 14.875 7.754 14.875 C 11.028 14.875 12.606 12.626 12.606 7.986 Z M 99.063 13.094 L 99.063 13.094 C 99.063 13.094 99.063 13.093 99.063 13.093 Z M 99.063 13.094 C 99.042 13.131 97.431 15.953 92.888 15.953 C 87.943 15.953 85.04 12.861 85.04 8.103 C 85.04 3.255 88.106 0 92.888 0 C 95.906 0 98.204 1.827 98.204 1.827 L 97.833 2.881 C 97.833 2.881 95.512 1.149 93.074 1.149 C 89.94 1.149 87.99 3.161 87.99 7.986 C 87.99 12.837 89.985 14.804 93.166 14.804 C 96.672 14.804 98.46 12.182 98.46 12.182 Z M 113.492 15.577 L 110.428 15.577 L 106.597 9.908 L 104.322 9.908 L 104.322 15.577 L 101.838 15.577 L 101.838 0.351 L 106.295 0.351 C 110.01 0.351 112.332 2.015 112.332 5.014 C 112.332 7.331 110.892 8.762 109.151 9.44 Z M 109.452 5.131 C 109.452 2.459 108.315 1.499 105.993 1.499 L 104.322 1.499 L 104.322 8.762 L 106.202 8.762 C 108.315 8.762 109.452 7.986 109.452 5.131 Z M 144.539 15.577 L 141.729 15.577 L 139.989 10.985 L 133.14 10.985 L 131.353 15.577 L 129.889 15.577 L 135.973 0.351 L 138.782 0.351 Z M 139.594 9.908 L 136.669 1.967 L 133.581 9.908 Z M 178.383 0.129 L 177.915 12.825 L 176.276 12.825 L 175.809 0.129 Z M 176.193 14.893 C 176.193 14.389 176.593 13.978 177.096 13.964 C 177.434 13.955 177.75 14.13 177.921 14.421 C 178.093 14.712 178.093 15.073 177.921 15.364 C 177.75 15.655 177.434 15.83 177.096 15.821 C 176.593 15.807 176.193 15.396 176.193 14.893 Z%22 fill=%22rgb(255, 255, 255)%22></path></svg>")',
+                              }}
+                              className="framer-16ciedp"
+                              aria-hidden="true"
+                            ></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          className="framer-1fetau4"
+                          data-framer-name="OMC 2"
+                          id="1fetau4"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-7l4kyv"
+                            data-framer-name="Image animation"
+                            id="card-1"
+                          >
+                            <div
+                              className="framer-11n8uzv"
+                              style={{ transform: "none" }}
+                              data-framer-component-type="RichTextContainer"
+                            >
+                              <p
+                                style={{
+                                  "--framer-font-size": "14px",
+                                  "--framer-letter-spacing": "-0.02em",
+                                  "--framer-line-height": "1.5em",
+                                  "--framer-text-color": `var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )`,
+                                }}
+                                className="framer-text"
+                              >
+                                “Providing advice and decision-making support is
+                                a key priority at Oh My Cream. The results of
+                                the first module have fully lived up to our
+                                expectations, and we have great ambitions for
+                                deploying the Dialog solutions across the rest
+                                of the site.”
+                              </p>
+                            </div>
+                            <div className="framer-124ib6k">
+                              <div className="framer-kdzohd">
+                                <div
+                                  style={{
+                                    position: "absolute",
+                                    borderRadius: "inherit",
+                                    cornerShape: "inherit",
+                                    top: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    left: "0",
+                                  }}
+                                  data-framer-background-image-wrapper="true"
+                                >
+                                  <img
+                                    decoding="async"
+                                    width="400"
+                                    height="400"
+                                    src="https://framerusercontent.com/images/i0WM5Z1v3QyyE52QxbBd1L9L1I.png?width=400&height=400"
+                                    alt
+                                    style={{
+                                      display: "block",
+                                      width: "100%",
+                                      height: "100%",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      objectPosition: "center",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="framer-pvm393">
+                                <div
+                                  className="framer-oxpi7u"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--font-selector": "SW50ZXItTWVkaXVt",
+                                      "--framer-font-family": `\"Inter\",
+                                    \"Inter Placeholder\", sans-serif`,
+                                      "--framer-font-size": "14px",
+                                      "--framer-font-weight": "500",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "20px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Sarah Mandel Azran
+                                  </p>
+                                </div>
+                                <div
+                                  className="framer-wj6u5z"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--framer-font-size": "12px",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "16px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Head of e-commerce &amp; digital @OhMyCream
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          className="framer-1qjtmhf"
+                          data-framer-name="MG 1"
+                          id="1qjtmhf"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-gf2v8x"
+                            data-framer-name="Overlay"
+                          ></div>
+                          <div
+                            className="framer-8nwzjo"
+                            data-framer-name="Image"
+                          >
+                            <div
+                              style={{
+                                position: "absolute",
+                                borderRadius: "inherit",
+                                cornerShape: "inherit",
+                                top: "0",
+                                right: "0",
+                                bottom: "0",
+                                left: "0",
+                              }}
+                              data-framer-background-image-wrapper="true"
+                            >
+                              <img
+                                decoding="async"
+                                width="590"
+                                height="332"
+                                sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
+                                srcSet="
+                              https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?scale-down-to=512&width=590&height=332 512w,
+                              https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332                       590w
+                            "
+                                src="https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332"
+                                alt
+                                style={{
+                                  display: "block",
+                                  width: "100%",
+                                  height: "100%",
+                                  borderRadius: "inherit",
+                                  cornerShape: "inherit",
+                                  objectPosition: "32.6% 52.5%",
+                                  objectFit: "cover",
+                                }}
+                              />
+                            </div>
+                          </div>
+                          <div className="framer-1takkf5">
+                            <div
+                              data-framer-component-type="SVG"
+                              style={{
+                                imageRendering: "pixelated",
+                                flexShrink: "0",
+                              }}
+                              className="framer-1mo95ae"
+                              aria-hidden="true"
+                            >
+                              <div
+                                className="svgContainer"
+                                style={{
+                                  width: "100%",
+                                  height: "100%",
+                                  aspectRatio: "inherit",
+                                }}
+                              >
+                                <svg style={{ width: "100%", height: "100%" }}>
+                                  <use href="#svg-527478463_6871"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          className="framer-r69b10"
+                          data-framer-name="MG 2"
+                          id="r69b10"
+                          style={{ flexShrink: "0" }}
+                        >
+                          <div
+                            className="framer-9uwhvb"
+                            data-framer-name="Image animation"
+                            id="card-1-3"
+                          >
+                            <div
+                              className="framer-17z7aqx"
+                              style={{ transform: "none" }}
+                              data-framer-component-type="RichTextContainer"
+                            >
+                              <p
+                                style={{
+                                  "--framer-font-size": "14px",
+                                  "--framer-letter-spacing": "-0.02em",
+                                  "--framer-line-height": "1.5em",
+                                  "--framer-text-color": `var(
+                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                rgb(0, 0, 0)
+                              )`,
+                                }}
+                                className="framer-text"
+                              >
+                                “We are at the very beginning of our journey
+                                with Dialog, yet we can already see its
+                                transformative potential in reshaping how we
+                                interact with our Services. In a highly
+                                competitive market (automotive industry), Dialog
+                                is proving to be a game-changer for MG Motor.”
+                              </p>
+                            </div>
+                            <div className="framer-vqxud8">
+                              <div className="framer-1u3gy8o">
+                                <div
+                                  style={{
+                                    position: "absolute",
+                                    borderRadius: "inherit",
+                                    cornerShape: "inherit",
+                                    top: "0",
+                                    right: "0",
+                                    bottom: "0",
+                                    left: "0",
+                                  }}
+                                  data-framer-background-image-wrapper="true"
+                                >
+                                  <img
+                                    decoding="async"
+                                    width="180"
+                                    height="180"
+                                    src="https://framerusercontent.com/images/qA5TImT90dVJ2IW6tjPWo83Yak.png?width=180&height=180"
+                                    alt
+                                    style={{
+                                      display: "block",
+                                      width: "100%",
+                                      height: "100%",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      objectPosition: "center",
+                                      objectFit: "cover",
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="framer-19a9822">
+                                <div
+                                  className="framer-1smp7go"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--font-selector": "SW50ZXItTWVkaXVt",
+                                      "--framer-font-family": `\"Inter\",
+                                    \"Inter Placeholder\", sans-serif`,
+                                      "--framer-font-size": "14px",
+                                      "--framer-font-weight": "500",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "20px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Pierre-Edouard Sabary
+                                  </p>
+                                </div>
+                                <div
+                                  className="framer-hfnzse"
+                                  style={{ transform: "none" }}
+                                  data-framer-component-type="RichTextContainer"
+                                >
+                                  <p
+                                    style={{
+                                      "--framer-font-size": "12px",
+                                      "--framer-letter-spacing": "-0.02em",
+                                      "--framer-line-height": "16px",
+                                      "--framer-text-alignment": "left",
+                                      "--framer-text-color": `var(
+                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                                    rgb(0, 0, 0)
+                                  )`,
+                                    }}
+                                    className="framer-text"
+                                  >
+                                    Digital Marketing Manager @MGMotorFrance
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </section>
                 {/* /$ */}
               </div>
             </div>
           </div>
-          <div className="framer-1k8skic" data-framer-name="Section" id="services">
+          <div
+            className="framer-1k8skic"
+            data-framer-name="Section"
+            id="services"
+          >
             <div className="framer-vvv07x" data-framer-name="Image animation">
               <div className="framer-ieyowq">
                 <div className="framer-mo4r5y" data-framer-name="Button">
@@ -4141,7 +4768,17 @@ export default function HomePage() {
                           </div>
                           {/* /$ */}
                         </div>
-                        <div className="framer-uf134s" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
+                        <div
+                          className="framer-uf134s"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            zIndex: 0,
+                          }}
+                        >
                           <div
                             className="framer-1yo9pd4"
                             data-framer-name="Product-analytics-min"
@@ -4171,9 +4808,7 @@ export default function HomePage() {
                                 left: "0",
                               }}
                               data-framer-background-image-wrapper="true"
-                            >
-
-                            </div>
+                            ></div>
                           </div>
                         </div>
                         <div className="framer-8b9xts">
@@ -4694,7 +5329,17 @@ export default function HomePage() {
                           </div>
                           {/* /$ */}
                         </div>
-                        <div className="framer-uf134s" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
+                        <div
+                          className="framer-uf134s"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            zIndex: 0,
+                          }}
+                        >
                           <div
                             className="framer-1yo9pd4"
                             data-framer-name="Product-analytics-min"
@@ -4725,8 +5370,7 @@ export default function HomePage() {
                                 left: "0",
                               }}
                               data-framer-background-image-wrapper="true"
-                            >
-                            </div>
+                            ></div>
                           </div>
                         </div>
                         <div className="framer-8b9xts">
@@ -5248,7 +5892,17 @@ export default function HomePage() {
                         </div>
                         {/* /$ */}
                       </div>
-                      <div className="framer-uf134s" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
+                      <div
+                        className="framer-uf134s"
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          zIndex: 0,
+                        }}
+                      >
                         <div
                           className="framer-1yo9pd4"
                           data-framer-name="Product-analytics-min"
@@ -5279,9 +5933,7 @@ export default function HomePage() {
                               left: "0",
                             }}
                             data-framer-background-image-wrapper="true"
-                          >
-
-                          </div>
+                          ></div>
                         </div>
                       </div>
                       <div className="framer-8b9xts">

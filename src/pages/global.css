@@ -9915,3 +9915,13 @@ html body {
     rgba(0, 0, 0, 0) 100%
   ) !important;
 }
+
+/* Ensure marquee works correctly */
+@keyframes scrollHorizontal {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 8px)); }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused !important;
+}
