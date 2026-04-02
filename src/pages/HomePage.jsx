@@ -1,9 +1,60 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./global.css";
 
 export default function HomePage() {
+  const workflowSectionRef = useRef(null);
+
+  useEffect(() => {
+    const sectionEl = workflowSectionRef.current;
+    if (!sectionEl) return;
+
+    let frame = 0;
+
+    const updateWorkflowExpand = () => {
+      frame = 0;
+
+      if (window.innerWidth < 1024) {
+        sectionEl.style.setProperty("--workflow-expand", "0");
+        return;
+      }
+
+      const rect = sectionEl.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 1;
+
+      if (rect.top > viewportHeight * 0.72) {
+        sectionEl.style.setProperty("--workflow-expand", "0");
+        return;
+      }
+
+      const start = viewportHeight * 0.58;
+      const end = viewportHeight * 0.1;
+      const rawProgress = (start - rect.top) / (start - end);
+      const clampedProgress = Math.max(0, Math.min(1, rawProgress));
+
+      sectionEl.style.setProperty(
+        "--workflow-expand",
+        clampedProgress.toFixed(4),
+      );
+    };
+
+    const queueUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateWorkflowExpand);
+    };
+
+    updateWorkflowExpand();
+    window.addEventListener("scroll", queueUpdate, { passive: true });
+    window.addEventListener("resize", queueUpdate);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", queueUpdate);
+      window.removeEventListener("resize", queueUpdate);
+    };
+  }, []);
+
   const tData = [
     {
       name: "Anil Pandey",
@@ -3812,7 +3863,7 @@ export default function HomePage() {
                           }}
                           className="framer-text"
                         >
-                          READ MORE
+                          Read more
                         </p>
                       </div>
                     </a>
@@ -5675,58 +5726,64 @@ export default function HomePage() {
 
           <section
             id="about"
+            ref={workflowSectionRef}
             className="workflow-section"
             aria-labelledby="workflow-title"
           >
             <div className="workflow-shell">
-              <div className="workflow-hero-grid">
-                <div className="workflow-header">
-                  <p className="workflow-kicker">HOW WE WORK</p>
-                  <h2 id="workflow-title" className="workflow-title">
-                    Easy Steps for Your Project
-                  </h2>
-                  <p className="workflow-flow">
-                    Consultation ... Casting ... Recording ... Editing ...
-                    Delivery
-                  </p>
-                  <a className="workflow-button" href="/contact">
-                    Learn more
-                  </a>
+              <div className="workflow-shell-layout">
+                <div className="workflow-hero-grid">
+                  <div className="workflow-header">
+                    <h2 id="workflow-title" className="workflow-title">
+                      Easy Steps for Your Project
+                    </h2>
+                    <p className="workflow-flow">
+                      Consultation ... Casting ... Recording ... Editing ...
+                      Delivery
+                    </p>
+                    <a
+                      className="mt-[22px] bg-white text-black text-base inline-flex items-center justify-center min-w-[156px] px-[22px] py-[13px] rounded-full"
+                      href="/contact"
+                    >
+                      Learn more
+                    </a>
+                  </div>
                 </div>
-              </div>
 
-              <div
-                className="workflow-steps"
-                role="list"
-                aria-label="How we work steps"
-              >
-                <article className="workflow-step-card" role="listitem">
-                  <p className="workflow-step-index">01</p>
-                  <h3>Planning</h3>
-                  <p>
-                    The journey begins with a conversation. We take the time to
-                    listen to your project requirements, goals, and preferences.
-                  </p>
-                </article>
+                <div
+                  className="workflow-steps"
+                  role="list"
+                  aria-label="How we work steps"
+                >
+                  <article className="workflow-step-card" role="listitem">
+                    <p className="workflow-step-index">01</p>
+                    <h3>Planning</h3>
+                    <p>
+                      The journey begins with a conversation. We take the time
+                      to listen to your project requirements, goals, and
+                      preferences.
+                    </p>
+                  </article>
 
-                <article className="workflow-step-card" role="listitem">
-                  <p className="workflow-step-index">02</p>
-                  <h3>Recording</h3>
-                  <p>
-                    During the recording session, our focus is on capturing
-                    clear, dynamic, and compelling voice performances.
-                  </p>
-                </article>
+                  <article className="workflow-step-card" role="listitem">
+                    <p className="workflow-step-index">02</p>
+                    <h3>Recording</h3>
+                    <p>
+                      During the recording session, our focus is on capturing
+                      clear, dynamic, and compelling voice performances.
+                    </p>
+                  </article>
 
-                <article className="workflow-step-card" role="listitem">
-                  <p className="workflow-step-index">03</p>
-                  <h3>Result</h3>
-                  <p>
-                    We&apos;ve had the privilege of working on a variety of
-                    projects, each one showcasing our commitment to quality and
-                    excellence.
-                  </p>
-                </article>
+                  <article className="workflow-step-card" role="listitem">
+                    <p className="workflow-step-index">03</p>
+                    <h3>Result</h3>
+                    <p>
+                      We&apos;ve had the privilege of working on a variety of
+                      projects, each one showcasing our commitment to quality
+                      and excellence.
+                    </p>
+                  </article>
+                </div>
               </div>
             </div>
           </section>
