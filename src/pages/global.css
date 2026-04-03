@@ -2299,6 +2299,41 @@ body {
   position: relative;
   overflow: visible;
 }
+.framer-translation-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 10, 14, 0.22) 0%,
+      rgba(8, 10, 14, 0.58) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8, 10, 14, 0.48) 0%,
+      rgba(8, 10, 14, 0.2) 50%,
+      rgba(8, 10, 14, 0.48) 100%
+    );
+  pointer-events: none;
+}
+
+.framer-5OHkW #carousel-4 .framer-1oy8iyl {
+  opacity: 1;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  left: auto;
+  bottom: auto;
+  transform: none;
+}
+.framer-5OHkW #carousel-4 .framer-aq3exa,
+.framer-5OHkW #carousel-4 .framer-1areu97 {
+  z-index: 2;
+}
+.framer-5OHkW #carousel-4 #ui-elements {
+  display: none;
+}
 .framer-5OHkW .framer-1qvc89e {
   background-color: var(--token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60, #fff);
   z-index: 1;
@@ -3019,6 +3054,9 @@ body {
     gap: 0;
     padding: 0;
   }
+  .framer-5OHkW #carousel-4 .framer-1oy8iyl {
+    height: 100%;
+  }
   .framer-5OHkW .framer-aq3exa {
     order: 1;
     align-content: flex-start;
@@ -3091,8 +3129,8 @@ body {
   place-content: center flex-start;
   align-items: center;
   gap: 48px;
-  width: min-content;
-  height: 48px;
+  width: max-content;
+  height: 90%;
   padding: 8px 20px;
   text-decoration: none;
   display: flex;
@@ -10103,6 +10141,7 @@ html body {
     position: sticky;
     top: 150px;
     z-index: 3;
+    height: 580px;
   }
 
   .framer-5OHkW #carousel-5.why-voice-card {

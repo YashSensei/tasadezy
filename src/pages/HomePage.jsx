@@ -124,79 +124,21 @@ export default function HomePage() {
 
   const serviceCardGraphics = {
     // 1. Voice & Dubbing
-    voice: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <rect x="340" y="220" width="120" height="200" rx="60" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8"/>
-      <path d="M 280 370 C 280 470, 520 470, 520 370" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="400" y1="465" x2="400" y2="580" stroke="rgba(0,0,0,0.3)" stroke-width="8" stroke-linecap="round"/>
-      <path d="M 180 340 Q 280 300, 360 360 T 520 370 T 640 340" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round"/>
-    </svg>`,
+    voice: "/assets/images/card_1.png",
 
     // 2. Audio Production
-    audio: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <line x1="280" y1="240" x2="280" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="360" y1="240" x2="360" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="440" y1="240" x2="440" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="520" y1="240" x2="520" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      
-      <circle cx="280" cy="460" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      <circle cx="360" cy="300" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      <circle cx="440" cy="500" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      <circle cx="520" cy="380" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      
-      <path d="M 220 620 Q 250 590, 290 620 T 370 620 T 450 620 T 530 620 T 590 620" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="6" stroke-linecap="round"/>
-    </svg>`,
+    audio: "/assets/images/card_2.png",
 
     // 3. Translation & Transcription
-    language: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <circle cx="280" cy="320" r="70" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="8"/>
-      <text x="280" y="332" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="rgba(0,0,0,0.6)" text-anchor="middle">EN</text>
-      
-      <circle cx="520" cy="480" r="70" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="8"/>
-      <text x="520" y="492" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="rgba(0,0,0,0.6)" text-anchor="middle">HI</text>
-      
-      <path d="M 330 370 C 400 440, 420 400, 470 430" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
-    </svg>`,
+    language: "/assets/images/card_3.png",
 
     // 4. Video & Ad Production
-    video: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <rect x="200" y="240" width="400" height="240" rx="16" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8"/>
-      
-      <path d="M 375 320 L 445 360 L 375 400 Z" fill="url(#accent)"/>
-      
-      <line x1="200" y1="540" x2="600" y2="540" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      
-      <line x1="200" y1="540" x2="380" y2="540" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
-      
-      <circle cx="380" cy="540" r="12" fill="rgba(0,0,0,0.6)"/>
-    </svg>`,
+    video: "/assets/images/card_4.png",
   };
 
   const ServiceCardGraphic = ({ type }) => {
-    const svgMarkup = serviceCardGraphics[type] ?? serviceCardGraphics.voice;
+    const graphicData = serviceCardGraphics[type] ?? serviceCardGraphics.voice;
+    const isImage = graphicData.startsWith("/");
 
     return (
       <div
@@ -207,9 +149,9 @@ export default function HomePage() {
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-            svgMarkup,
-          )}")`,
+          backgroundImage: isImage
+            ? `url("${graphicData}")`
+            : `url("data:image/svg+xml,${encodeURIComponent(graphicData)}")`,
         }}
       ></div>
     );
@@ -2917,9 +2859,8 @@ export default function HomePage() {
               style={{ opacity: "1", transform: "none" }}
             >
               <div
-                className="framer-1oy8iyl hidden-12tyhur"
+                className="framer-1oy8iyl"
                 data-framer-name="Animated-Gradient-Background 2x-min"
-                style={{ transform: "translateX(-50%)" }}
               >
                 <div
                   style={{
@@ -2936,24 +2877,17 @@ export default function HomePage() {
                   <img
                     decoding="async"
                     loading="lazy"
-                    width="2560"
-                    height="1800"
-                    sizes="(min-width: 1024px) 1280px, (min-width: 810px) and (max-width: 1023.98px) 1280px, (max-width: 809.98px) 1280px"
-                    srcSet="
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=512&width=2560&height=1800   512w,
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=1024&width=2560&height=1800 1024w,
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=2048&width=2560&height=1800 2048w,
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?width=2560&height=1800                        2560w
-                  "
-                    src="https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?width=2560&height=1800"
-                    alt
+                    width="1536"
+                    height="1024"
+                    src="/assets/images/card_5.png"
+                    alt="Translation and transcription service background"
                     style={{
                       display: "block",
                       width: "100%",
                       height: "100%",
                       borderRadius: "inherit",
                       cornerShape: "inherit",
-                      objectPosition: "center",
+                      objectPosition: "center 58%",
                       objectFit: "cover",
                     }}
                   />
@@ -2974,7 +2908,7 @@ export default function HomePage() {
                       <span
                         style={{
                           "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
                           rgb(0, 0, 0)
                         )`,
                         }}
@@ -2999,8 +2933,8 @@ export default function HomePage() {
                       <span
                         style={{
                           "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
+                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                          rgb(46, 46, 46)
                         )`,
                         }}
                         className="framer-text"
@@ -3022,8 +2956,8 @@ export default function HomePage() {
                       style={{
                         "--framer-text-alignment": "center",
                         "--framer-text-color": `var(
-                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                        rgba(0, 0, 0, 0.6)
+                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                        rgba(0, 0, 0, 0.82)
                       )`,
                       }}
                     >
@@ -3045,8 +2979,8 @@ export default function HomePage() {
                       style={{
                         "--framer-text-alignment": "left",
                         "--framer-text-color": `var(
-                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                        rgba(0, 0, 0, 0.6)
+                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                        rgba(1, 1, 1, 0.82)
                       )`,
                       }}
                     >
