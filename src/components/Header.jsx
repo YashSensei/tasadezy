@@ -277,7 +277,7 @@ export default function Header() {
                                 )`,
                             }}
                           >
-                            Log in
+                            Contact
                           </p>
                         </div>
                       </a>

@@ -1044,7 +1044,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="./solutions/ai-product-recommender"
+                          href="https://tasadezy.com/services/voice-services/" target="_blank" rel="noopener"
                         >
                           <div
                             className="framer-1swh0y3"
@@ -1201,7 +1201,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="./solutions/ai-product-recommender"
+                          href="https://tasadezy.com/services/voice-services/" target="_blank" rel="noopener"
                         >
                           <div
                             className="framer-1swh0y3"
@@ -1357,7 +1357,7 @@ export default function HomePage() {
                           borderTopRightRadius: "28px",
                           boxShadow: "none",
                         }}
-                        href="./solutions/ai-product-recommender"
+                        href="https://tasadezy.com/services/voice-services/" target="_blank" rel="noopener"
                       >
                         <div
                           className="framer-1swh0y3"
@@ -1521,7 +1521,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="./solutions/ai-pdp-assistant"
+                          href="https://tasadezy.com/services/audiomaker/" target="_blank" rel="noopener"
                         >
                           <div
                             className="framer-1swh0y3"
@@ -1677,7 +1677,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="./solutions/ai-pdp-assistant"
+                          href="https://tasadezy.com/services/audiomaker/" target="_blank" rel="noopener"
                         >
                           <div
                             className="framer-1swh0y3"
@@ -1833,7 +1833,7 @@ export default function HomePage() {
                           borderTopRightRadius: "28px",
                           boxShadow: "none",
                         }}
-                        href="./solutions/ai-pdp-assistant"
+                        href="https://tasadezy.com/services/audiomaker/" target="_blank" rel="noopener"
                       >
                         <div
                           className="framer-1swh0y3"
@@ -1989,7 +1989,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="./solutions/smart-reengagement"
+                          href="https://tasadezy.com/services/dubbing/" target="_blank" rel="noopener"
                         >
                           <div
                             className="framer-1swh0y3"
@@ -2139,7 +2139,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="./solutions/smart-reengagement"
+                          href="https://tasadezy.com/services/dubbing/" target="_blank" rel="noopener"
                         >
                           <div
                             className="framer-1swh0y3"
@@ -2291,7 +2291,7 @@ export default function HomePage() {
                           borderTopRightRadius: "28px",
                           boxShadow: "none",
                         }}
-                        href="./solutions/smart-reengagement"
+                        href="https://tasadezy.com/services/dubbing/" target="_blank" rel="noopener"
                       >
                         <div
                           className="framer-1swh0y3"
@@ -2476,7 +2476,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                          href="/contact"
                           rel="noopener"
                         >
                           <div
@@ -2633,7 +2633,7 @@ export default function HomePage() {
                             borderTopRightRadius: "28px",
                             boxShadow: "none",
                           }}
-                          href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                          href="/contact"
                           rel="noopener"
                         >
                           <div
@@ -2792,7 +2792,7 @@ export default function HomePage() {
                           borderTopRightRadius: "28px",
                           boxShadow: "none",
                         }}
-                        href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                        href="/contact"
                         rel="noopener"
                       >
                         <div
@@ -4080,7 +4080,7 @@ export default function HomePage() {
                                 0px 2px 4px 0px rgba(0, 0, 0, 0.02),
                                 0px 4px 8px 0px rgba(0, 0, 0, 0.02)`,
                               }}
-                              href="./solutions/conversation-insights"
+                              href="https://tasadezy.com/services/translation/" target="_blank" rel="noopener"
                             >
                               <div
                                 className="framer-1swh0y3"
@@ -4641,7 +4641,7 @@ export default function HomePage() {
                                 0px 2px 4px 0px rgba(0, 0, 0, 0.02),
                                 0px 4px 8px 0px rgba(0, 0, 0, 0.02)`,
                               }}
-                              href="./solutions/conversation-insights"
+                              href="https://tasadezy.com/services/translation/" target="_blank" rel="noopener"
                             >
                               <div
                                 className="framer-1swh0y3"
@@ -5205,7 +5205,7 @@ export default function HomePage() {
                               0px 2px 4px 0px rgba(0, 0, 0, 0.02),
                               0px 4px 8px 0px rgba(0, 0, 0, 0.02)`,
                             }}
-                            href="./solutions/conversation-insights"
+                            href="https://tasadezy.com/services/translation/" target="_blank" rel="noopener"
                           >
                             <div
                               className="framer-1swh0y3"

@@ -81,7 +81,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/ai-product-recommender"
+                          href="https://tasadezy.com/services/voice-services/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Voice & Dubbing
                         </a>
@@ -101,7 +103,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/ai-pdp-assistant"
+                          href="https://tasadezy.com/services/audiomaker/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Audio Production
                         </a>
@@ -121,7 +125,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/smart-reengagement"
+                          href="https://tasadezy.com/services/dubbing/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Multi-Language Reach
                         </a>
@@ -141,7 +147,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/conversation-insights"
+                          href="https://tasadezy.com/services/translation/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Translation & Transcription
                         </a>
@@ -198,9 +206,11 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./resources"
+                          href="https://www.facebook.com/tasatheprernnaofficial/"
+                          target="_blank"
+                          rel="noopener"
                         >
-                          Resources
+                          Facebook
                         </a>
                         {/* /$ */}
                       </p>
@@ -218,7 +228,7 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="https://www.linkedin.com/company/askdialog"
+                          href="https://www.linkedin.com/in/sarika-t-428a45110"
                           target="_blank"
                           rel="noopener"
                         >
@@ -240,11 +250,11 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                          href="https://youtube.com/c/TASAThePrernna"
                           target="_blank"
                           rel="noopener"
                         >
-                          Shopify
+                          YouTube
                         </a>
                         {/* /$ */}
                       </p>
@@ -437,7 +447,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/ai-product-recommender"
+                          href="https://tasadezy.com/services/voice-services/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Voice & Dubbing
                         </a>
@@ -457,7 +469,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/ai-pdp-assistant"
+                          href="https://tasadezy.com/services/audiomaker/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Audio Production
                         </a>
@@ -477,7 +491,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/smart-reengagement"
+                          href="https://tasadezy.com/services/dubbing/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Multi-Language Reach
                         </a>
@@ -497,7 +513,9 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./solutions/conversation-insights"
+                          href="https://tasadezy.com/services/translation/"
+                          target="_blank"
+                          rel="noopener"
                         >
                           Translation & Transcription
                         </a>
@@ -554,9 +572,11 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="./resources"
+                          href="https://www.facebook.com/tasatheprernnaofficial/"
+                          target="_blank"
+                          rel="noopener"
                         >
-                          Resources
+                          Facebook
                         </a>
                         {/* /$ */}
                       </p>
@@ -574,7 +594,7 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="https://www.linkedin.com/company/askdialog"
+                          href="https://www.linkedin.com/in/sarika-t-428a45110"
                           target="_blank"
                           rel="noopener"
                         >
@@ -596,11 +616,11 @@ export default function Footer() {
                         <a
                           className="framer-text framer-styles-preset-3eabr4"
                           data-styles-preset="nS4X1CdzJ"
-                          href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                          href="https://youtube.com/c/TASAThePrernna"
                           target="_blank"
                           rel="noopener"
                         >
-                          Shopify
+                          YouTube
                         </a>
                         {/* /$ */}
                       </p>
@@ -794,7 +814,9 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="./solutions/ai-product-recommender"
+                        href="https://tasadezy.com/services/voice-services/"
+                        target="_blank"
+                        rel="noopener"
                       >
                         Voice & Dubbing
                       </a>
@@ -814,7 +836,9 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="./solutions/ai-pdp-assistant"
+                        href="https://tasadezy.com/services/audiomaker/"
+                        target="_blank"
+                        rel="noopener"
                       >
                         Audio Production
                       </a>
@@ -834,7 +858,9 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="./solutions/smart-reengagement"
+                        href="https://tasadezy.com/services/dubbing/"
+                        target="_blank"
+                        rel="noopener"
                       >
                         Multi-Language Reach
                       </a>
@@ -854,7 +880,9 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="./solutions/conversation-insights"
+                        href="https://tasadezy.com/services/translation/"
+                        target="_blank"
+                        rel="noopener"
                       >
                         Translation & Transcription
                       </a>
@@ -911,9 +939,11 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="./resources"
+                        href="https://www.facebook.com/tasatheprernnaofficial/"
+                        target="_blank"
+                        rel="noopener"
                       >
-                        Resources
+                        Facebook
                       </a>
                       {/* /$ */}
                     </p>
@@ -931,7 +961,7 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="https://www.linkedin.com/company/askdialog"
+                        href="https://www.linkedin.com/in/sarika-t-428a45110"
                         target="_blank"
                         rel="noopener"
                       >
@@ -953,11 +983,11 @@ export default function Footer() {
                       <a
                         className="framer-text framer-styles-preset-3eabr4"
                         data-styles-preset="nS4X1CdzJ"
-                        href="https://apps.shopify.com/dialog-ai-sales-assistant"
+                        href="https://youtube.com/c/TASAThePrernna"
                         target="_blank"
                         rel="noopener"
                       >
-                        Shopify
+                        YouTube
                       </a>
                       {/* /$ */}
                     </p>
