@@ -1,84 +1,144 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./global.css";
 
 export default function HomePage() {
+  const workflowSectionRef = useRef(null);
+
+  useEffect(() => {
+    const sectionEl = workflowSectionRef.current;
+    if (!sectionEl) return;
+
+    let frame = 0;
+
+    const updateWorkflowExpand = () => {
+      frame = 0;
+
+      if (window.innerWidth < 1024) {
+        sectionEl.style.setProperty("--workflow-expand", "0");
+        return;
+      }
+
+      const rect = sectionEl.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 1;
+
+      if (rect.top > viewportHeight * 0.72) {
+        sectionEl.style.setProperty("--workflow-expand", "0");
+        return;
+      }
+
+      const start = viewportHeight * 0.58;
+      const end = viewportHeight * 0.1;
+      const rawProgress = (start - rect.top) / (start - end);
+      const clampedProgress = Math.max(0, Math.min(1, rawProgress));
+
+      sectionEl.style.setProperty(
+        "--workflow-expand",
+        clampedProgress.toFixed(4),
+      );
+    };
+
+    const queueUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateWorkflowExpand);
+    };
+
+    updateWorkflowExpand();
+    window.addEventListener("scroll", queueUpdate, { passive: true });
+    window.addEventListener("resize", queueUpdate);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", queueUpdate);
+      window.removeEventListener("resize", queueUpdate);
+    };
+  }, []);
+
+  const tData = [
+    {
+      name: "Anil Pandey",
+      company: "Symansys Technologies India Pvt. Ltd.",
+      rating: 5,
+      testimonial:
+        "Working with Tasadezy Voices has been a pleasure. Their team is not only professional and reliable but also incredibly creative. They took our vision and made it a reality. We look forward to many more collaborations in the future!",
+      image: "https://randomuser.me/api/portraits/men/11.jpg",
+    },
+    {
+      name: "Sameer Shinde",
+      company: "Nucleus Integrated Communication And Integrated, Thane Mumbai",
+      rating: 5,
+      testimonial:
+        "The team at Tasadezy Voices was fantastic to work with. Their a ility to understand our requirements and deliver high-quality voice-over work was impressive. They are our go-to team for all future voice projects.",
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    {
+      name: "Neha Kulkarni",
+      company: "Brightline Media Studio",
+      rating: 5,
+      testimonial:
+        "Tasadezy Voices delivered exactly what we needed for our campaign. The voice-over was crisp, expressive, and perfectly aligned with the brand tone. The turnaround was quick, and the quality was consistently excellent.",
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+    },
+    {
+      name: "Rohit Mehta",
+      company: "FrameFlow Productions",
+      rating: 5,
+      testimonial:
+        "We needed dubbing for a multi-language project, and the team handled it with impressive accuracy. The performances sounded natural, the sync was clean, and the final output saved us a huge amount of editing time.",
+      image: "https://randomuser.me/api/portraits/men/46.jpg",
+    },
+    {
+      name: "Priya Nair",
+      company: "EduSpeak Learning Solutions",
+      rating: 5,
+      testimonial:
+        "Our training videos required clear narration and precise transcription, and Tasadezy Voices delivered both without fuss. The workflow was smooth, the communication was professional, and the result looked polished.",
+      image: "https://randomuser.me/api/portraits/women/62.jpg",
+    },
+    {
+      name: "Amit Verma",
+      company: "PulseCore Advertising",
+      rating: 5,
+      testimonial:
+        "The voice artists understood our script instantly and brought the right energy to it. What we got was not just a recording, but a performance that genuinely improved the final ad. Clean work, reliable delivery, no drama.",
+      image: "https://randomuser.me/api/portraits/men/74.jpg",
+    },
+    {
+      name: "Sana Khan",
+      company: "Global Reach Localization",
+      rating: 5,
+      testimonial:
+        "We worked on regional translation and subtitle support with Tasadezy Voices, and the experience was excellent. Their attention to detail and language quality made the entire process easier for our team.",
+      image: "https://randomuser.me/api/portraits/women/89.jpg",
+    },
+    {
+      name: "Karan Shah",
+      company: "NextWave Content House",
+      rating: 5,
+      testimonial:
+        "Tasadezy Voices has become our preferred partner for voice-over projects. They are responsive, consistent, and seriously dependable, which is rare enough that it deserves mentioning.",
+      image: "https://randomuser.me/api/portraits/men/85.jpg",
+    },
+  ];
+
   const serviceCardGraphics = {
     // 1. Voice & Dubbing
-    voice: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <rect x="340" y="220" width="120" height="200" rx="60" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8"/>
-      <path d="M 280 370 C 280 470, 520 470, 520 370" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="400" y1="465" x2="400" y2="580" stroke="rgba(0,0,0,0.3)" stroke-width="8" stroke-linecap="round"/>
-      <path d="M 180 340 Q 280 300, 360 360 T 520 370 T 640 340" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round"/>
-    </svg>`,
+    voice: "/assets/images/card_1.png",
 
     // 2. Audio Production
-    audio: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <line x1="280" y1="240" x2="280" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="360" y1="240" x2="360" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="440" y1="240" x2="440" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      <line x1="520" y1="240" x2="520" y2="560" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      
-      <circle cx="280" cy="460" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      <circle cx="360" cy="300" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      <circle cx="440" cy="500" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      <circle cx="520" cy="380" r="22" fill="url(#accent)" stroke="rgba(0,0,0,0.4)" stroke-width="3"/>
-      
-      <path d="M 220 620 Q 250 590, 290 620 T 370 620 T 450 620 T 530 620 T 590 620" fill="none" stroke="rgba(0,0,0,0.2)" stroke-width="6" stroke-linecap="round"/>
-    </svg>`,
+    audio: "/assets/images/card_2.png",
 
     // 3. Translation & Transcription
-    language: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <circle cx="280" cy="320" r="70" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="8"/>
-      <text x="280" y="332" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="rgba(0,0,0,0.6)" text-anchor="middle">EN</text>
-      
-      <circle cx="520" cy="480" r="70" fill="none" stroke="rgba(0,0,0,0.15)" stroke-width="8"/>
-      <text x="520" y="492" font-family="Inter, sans-serif" font-size="34" font-weight="500" fill="rgba(0,0,0,0.6)" text-anchor="middle">HI</text>
-      
-      <path d="M 330 370 C 400 440, 420 400, 470 430" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
-    </svg>`,
+    language: "/assets/images/card_3.png",
 
     // 4. Video & Ad Production
-    video: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
-      <defs>
-        <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="rgb(140,140,140)"/>
-          <stop offset="1" stop-color="rgb(20,20,20)"/>
-        </linearGradient>
-      </defs>
-      <rect x="200" y="240" width="400" height="240" rx="16" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="8"/>
-      
-      <path d="M 375 320 L 445 360 L 375 400 Z" fill="url(#accent)"/>
-      
-      <line x1="200" y1="540" x2="600" y2="540" stroke="rgba(0,0,0,0.15)" stroke-width="8" stroke-linecap="round"/>
-      
-      <line x1="200" y1="540" x2="380" y2="540" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
-      
-      <circle cx="380" cy="540" r="12" fill="rgba(0,0,0,0.6)"/>
-    </svg>`,
+    video: "/assets/images/card_4.png",
   };
 
   const ServiceCardGraphic = ({ type }) => {
-    const svgMarkup = serviceCardGraphics[type] ?? serviceCardGraphics.voice;
+    const graphicData = serviceCardGraphics[type] ?? serviceCardGraphics.voice;
+    const isImage = graphicData.startsWith("/");
 
     return (
       <div
@@ -89,9 +149,9 @@ export default function HomePage() {
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-            svgMarkup,
-          )}")`,
+          backgroundImage: isImage
+            ? `url("${graphicData}")`
+            : `url("data:image/svg+xml,${encodeURIComponent(graphicData)}")`,
         }}
       ></div>
     );
@@ -265,10 +325,7 @@ export default function HomePage() {
                         data-framer-name="Primary Large"
                         style={{
                           backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          backgroundColor: "#000",
                           filter: "blur(0px)",
                           WebkitBackdropFilter: "none",
                           WebkitFilter: "blur(0px)",
@@ -323,6 +380,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
             <div className="ssr-variant hidden-72rtr7 hidden-ck7hjr">
               <div
                 className="framer-2ausap-container"
@@ -435,10 +493,7 @@ export default function HomePage() {
                         data-framer-name="Primary Large"
                         style={{
                           backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          backgroundColor: "#000",
                           filter: "blur(0px)",
                           WebkitBackdropFilter: "none",
                           WebkitFilter: "blur(0px)",
@@ -497,6 +552,8 @@ export default function HomePage() {
 
             {/* /$ */}
           </div>
+
+          {/* Testimonials */}
           <div className="framer-m5jucb" data-framer-name="Section">
             <div className="framer-1o5uuy7">
               <div className="framer-1auzmri-container">
@@ -531,620 +588,287 @@ export default function HomePage() {
                     overflow: "hidden",
                   }}
                 >
-                  <ul
+                  {/* Duplicate lists for infinite scroll */}
+                  <div
+                    className="marquee-track"
                     style={{
                       display: "flex",
-                      width: "100%",
-                      height: "100%",
-                      maxWidth: "100%",
-                      maxHeight: "100%",
-                      placeItems: "center",
-                      margin: "0",
-                      padding: "0",
-                      listStyleType: "none",
-                      textIndent: "none",
                       gap: "16px",
-                      position: "relative",
-                      flexDirection: "row",
-                      willChange: "auto",
-                      transform: "translateX(-0px)",
+                      animation: "scrollHorizontal 40s linear infinite",
+                      width: "max-content",
                     }}
                   >
-                    <li>
-                      <div
-                        className="framer-xox0qf"
-                        data-framer-name="Delsey 1"
-                        id="xox0qf"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-xgs5bz"
-                          data-framer-name="Overlay"
-                        ></div>
-                        <div className="framer-ypmu35" data-framer-name="Image">
+                    <ul
+                      style={{
+                        display: "flex",
+                        placeItems: "center",
+                        margin: "0",
+                        padding: "0",
+                        listStyleType: "none",
+                        gap: "16px",
+                        flexDirection: "row",
+                      }}
+                    >
+                      {tData.map((item, index) => (
+                        <li key={index}>
                           <div
-                            style={{
-                              position: "absolute",
-                              borderRadius: "inherit",
-                              cornerShape: "inherit",
-                              top: "0",
-                              right: "0",
-                              bottom: "0",
-                              left: "0",
-                            }}
-                            data-framer-background-image-wrapper="true"
-                          >
-                            <img
-                              decoding="async"
-                              width="600"
-                              height="600"
-                              sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
-                              srcSet="
-                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?scale-down-to=512&width=600&height=600 512w,
-                              https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600                       600w
-                            "
-                              src="https://framerusercontent.com/images/KyvaxAsfcbe2jVZx543AhGVfBWU.png?width=600&height=600"
-                              alt
-                              style={{
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
-                                borderRadius: "inherit",
-                                cornerShape: "inherit",
-                                objectPosition: "center",
-                                objectFit: "cover",
-                              }}
-                            />
-                          </div>
-                        </div>
-                        <div className="framer-1c32jxo">
-                          <div
-                            className="framer-16yk5dv"
-                            data-framer-name="Delsey"
+                            className="framer-1arzejl"
+                            data-framer-name="Delsey 2"
+                            id="1arzejl"
+                            style={{ flexShrink: "0" }}
                           >
                             <div
-                              style={{
-                                position: "absolute",
-                                borderRadius: "inherit",
-                                cornerShape: "inherit",
-                                top: "0",
-                                right: "0",
-                                bottom: "0",
-                                left: "0",
-                              }}
-                              data-framer-background-image-wrapper="true"
+                              className="framer-12yh6su"
+                              data-framer-name="Image animation"
+                              id="card-1-1"
                             >
-                              <img
-                                decoding="async"
-                                width="2269"
-                                height="181"
-                                sizes="(min-width: 1024px) 175.5028px, (min-width: 810px) and (max-width: 1023.98px) 175.5028px, (max-width: 809.98px) 175.5028px"
-                                srcSet="
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=512&width=2269&height=181   512w,
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=1024&width=2269&height=181 1024w,
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?scale-down-to=2048&width=2269&height=181 2048w,
-                                https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181                        2269w
-                              "
-                                src="https://framerusercontent.com/images/P1n8oKtnidO5oYW130m73dm0U8.png?width=2269&height=181"
-                                alt
-                                style={{
-                                  display: "block",
-                                  width: "100%",
-                                  height: "100%",
-                                  borderRadius: "inherit",
-                                  cornerShape: "inherit",
-                                  objectPosition: "center",
-                                  objectFit: "cover",
-                                }}
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1arzejl"
-                        data-framer-name="Delsey 2"
-                        id="1arzejl"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-12yh6su"
-                          data-framer-name="Image animation"
-                          id="card-1-1"
-                        >
-                          <div
-                            className="framer-33x4c7"
-                            style={{ transform: "none" }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--framer-font-size": "14px",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.5em",
-                                "--framer-text-color": `var(
+                              <div
+                                className="framer-33x4c7"
+                                style={{ transform: "none" }}
+                                data-framer-component-type="RichTextContainer"
+                              >
+                                <p
+                                  style={{
+                                    "--framer-font-size": "14px",
+                                    "--framer-letter-spacing": "-0.02em",
+                                    "--framer-line-height": "1.5em",
+                                    "--framer-text-color": `var(
                                 --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                 rgb(0, 0, 0)
                               )`,
-                              }}
-                              className="framer-text"
-                            >
-                              “We recently integrated this app into our Shopify
-                              Plus store, and it’s an easy CRO quick win. By
-                              providing real-time guidance, it increases
-                              conversions and reduces product returns.”
-                            </p>
-                          </div>
-                          <div className="framer-1nszkyw">
-                            <div className="framer-ybis5y">
-                              <div
-                                style={{
-                                  position: "absolute",
-                                  borderRadius: "inherit",
-                                  cornerShape: "inherit",
-                                  top: "0",
-                                  right: "0",
-                                  bottom: "0",
-                                  left: "0",
-                                }}
-                                data-framer-background-image-wrapper="true"
-                              >
-                                <img
-                                  decoding="async"
-                                  width="400"
-                                  height="400"
-                                  src="https://framerusercontent.com/images/5kEjUwJdKzWmcjbqYnnugi5zs.png?width=400&height=400"
-                                  alt
-                                  style={{
-                                    display: "block",
-                                    width: "100%",
-                                    height: "100%",
-                                    borderRadius: "inherit",
-                                    cornerShape: "inherit",
-                                    objectPosition: "center",
-                                    objectFit: "cover",
                                   }}
-                                />
+                                  className="framer-text"
+                                >
+                                  {`“${item.testimonial}”`}
+                                </p>
                               </div>
-                            </div>
-                            <div className="framer-eup4sl">
-                              <div
-                                className="framer-vmvpkb"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--font-selector": "SW50ZXItTWVkaXVt",
-                                    "--framer-font-family": `\"Inter\",
+                              <div className="framer-1nszkyw">
+                                <div className="framer-ybis5y">
+                                  <div
+                                    style={{
+                                      position: "absolute",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      top: "0",
+                                      right: "0",
+                                      bottom: "0",
+                                      left: "0",
+                                    }}
+                                    data-framer-background-image-wrapper="true"
+                                  >
+                                    <img
+                                      decoding="async"
+                                      width="400"
+                                      height="400"
+                                      src={item.image}
+                                      alt
+                                      style={{
+                                        display: "block",
+                                        width: "100%",
+                                        height: "100%",
+                                        borderRadius: "inherit",
+                                        cornerShape: "inherit",
+                                        objectPosition: "center",
+                                        objectFit: "cover",
+                                      }}
+                                    />
+                                  </div>
+                                </div>
+                                <div className="framer-eup4sl">
+                                  <div
+                                    className="framer-vmvpkb"
+                                    style={{ transform: "none" }}
+                                    data-framer-component-type="RichTextContainer"
+                                  >
+                                    <p
+                                      style={{
+                                        "--font-selector": "SW50ZXItTWVkaXVt",
+                                        "--framer-font-family": `\"Inter\",
                                     \"Inter Placeholder\", sans-serif`,
-                                    "--framer-font-size": "14px",
-                                    "--framer-font-weight": "500",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "20px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                                        "--framer-font-size": "14px",
+                                        "--framer-font-weight": "500",
+                                        "--framer-letter-spacing": "-0.02em",
+                                        "--framer-line-height": "20px",
+                                        "--framer-text-alignment": "left",
+                                        "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  Guillaume A.
-                                </p>
-                              </div>
-                              <div
-                                className="framer-1q4a4vq"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--framer-font-size": "12px",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "16px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                                      }}
+                                      className="framer-text"
+                                    >
+                                      {item.name}
+                                    </p>
+                                  </div>
+                                  <div
+                                    className="framer-1q4a4vq"
+                                    style={{ transform: "none" }}
+                                    data-framer-component-type="RichTextContainer"
+                                  >
+                                    <p
+                                      style={{
+                                        "--framer-font-size": "12px",
+                                        "--framer-letter-spacing": "-0.02em",
+                                        "--framer-line-height": "16px",
+                                        "--framer-text-alignment": "left",
+                                        "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  E-shop Manager @DelseyParis
-                                </p>
+                                      }}
+                                      className="framer-text"
+                                    >
+                                      {item.company}
+                                    </p>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1g9y9jn"
-                        data-framer-name="OMC 1"
-                        id="1g9y9jn"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-15adrdc"
-                          data-framer-name="Overlay"
-                        ></div>
-                        <div className="framer-xiibck" data-framer-name="Image">
+                        </li>
+                      ))}
+                    </ul>
+                    <ul
+                      style={{
+                        display: "flex",
+                        placeItems: "center",
+                        margin: "0",
+                        padding: "0",
+                        listStyleType: "none",
+                        gap: "16px",
+                        flexDirection: "row",
+                      }}
+                    >
+                      {tData.map((item, index) => (
+                        <li key={index}>
                           <div
-                            style={{
-                              position: "absolute",
-                              borderRadius: "inherit",
-                              cornerShape: "inherit",
-                              top: "0",
-                              right: "0",
-                              bottom: "0",
-                              left: "0",
-                            }}
-                            data-framer-background-image-wrapper="true"
-                          >
-                            <img
-                              decoding="async"
-                              width="666"
-                              height="896"
-                              sizes="(min-width: 1024px) 385px, (min-width: 810px) and (max-width: 1023.98px) 385px, (max-width: 809.98px) 385px"
-                              srcSet="
-                              https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896 666w
-                            "
-                              src="https://framerusercontent.com/images/7q3dDFYk0PyNucv3c4Au7B9gG8.png?width=666&height=896"
-                              alt
-                              style={{
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
-                                borderRadius: "inherit",
-                                cornerShape: "inherit",
-                                objectPosition: "center",
-                                objectFit: "cover",
-                              }}
-                            />
-                          </div>
-                        </div>
-                        <div className="framer-16ui7nu">
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                'url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 178.383 15.953%22 overflow=%22visible%22><path d=%22M 31.85 15.577 L 29.203 15.577 L 29.203 8.596 L 21.75 8.596 L 21.75 15.577 L 19.103 15.577 L 19.103 0.351 L 21.75 0.351 L 21.75 7.379 L 29.203 7.379 L 29.203 0.351 L 31.85 0.351 Z M 53.625 15.577 L 51.745 15.577 L 45.755 2.881 L 45.709 2.881 L 45.639 15.577 L 44.199 15.577 L 44.362 0.351 L 47.519 0.351 L 53.415 12.812 L 53.463 12.812 L 59.265 0.351 L 62.145 0.351 L 62.307 15.577 L 59.754 15.577 L 59.591 2.883 Z M 68.037 0.351 L 72.682 7.753 L 77.302 0.351 L 78.973 0.351 L 73.425 9.183 L 73.425 15.577 L 70.755 15.577 L 70.755 9.462 L 65.089 0.351 L 68.037 0.351 Z M 127.35 15.577 L 116.88 15.577 L 116.88 0.351 L 126.816 0.351 L 126.816 1.545 L 119.526 1.545 L 119.526 7.331 L 126.119 7.331 L 126.119 8.457 L 119.526 8.457 L 119.526 14.382 L 127.35 14.382 Z M 163.318 2.881 L 157.352 15.577 L 155.472 15.577 L 149.482 2.881 L 149.435 2.881 L 149.366 15.577 L 147.926 15.577 L 148.088 0.351 L 151.246 0.351 L 157.143 12.812 L 157.189 12.812 L 162.994 0.351 L 165.874 0.351 L 166.036 15.577 L 163.483 15.577 L 163.318 2.881 Z M 7.755 0 C 12.722 0 15.578 3.186 15.577 7.986 C 15.577 12.812 12.722 15.952 7.754 15.952 C 2.809 15.952 0 12.812 0 7.986 C 0 3.186 2.809 0 7.754 0 Z M 12.606 7.986 C 12.606 3.372 10.981 1.078 7.754 1.078 C 4.549 1.078 2.947 3.372 2.947 7.986 C 2.947 12.626 4.504 14.875 7.754 14.875 C 11.028 14.875 12.606 12.626 12.606 7.986 Z M 99.063 13.094 L 99.063 13.094 C 99.063 13.094 99.063 13.093 99.063 13.093 Z M 99.063 13.094 C 99.042 13.131 97.431 15.953 92.888 15.953 C 87.943 15.953 85.04 12.861 85.04 8.103 C 85.04 3.255 88.106 0 92.888 0 C 95.906 0 98.204 1.827 98.204 1.827 L 97.833 2.881 C 97.833 2.881 95.512 1.149 93.074 1.149 C 89.94 1.149 87.99 3.161 87.99 7.986 C 87.99 12.837 89.985 14.804 93.166 14.804 C 96.672 14.804 98.46 12.182 98.46 12.182 Z M 113.492 15.577 L 110.428 15.577 L 106.597 9.908 L 104.322 9.908 L 104.322 15.577 L 101.838 15.577 L 101.838 0.351 L 106.295 0.351 C 110.01 0.351 112.332 2.015 112.332 5.014 C 112.332 7.331 110.892 8.762 109.151 9.44 Z M 109.452 5.131 C 109.452 2.459 108.315 1.499 105.993 1.499 L 104.322 1.499 L 104.322 8.762 L 106.202 8.762 C 108.315 8.762 109.452 7.986 109.452 5.131 Z M 144.539 15.577 L 141.729 15.577 L 139.989 10.985 L 133.14 10.985 L 131.353 15.577 L 129.889 15.577 L 135.973 0.351 L 138.782 0.351 Z M 139.594 9.908 L 136.669 1.967 L 133.581 9.908 Z M 178.383 0.129 L 177.915 12.825 L 176.276 12.825 L 175.809 0.129 Z M 176.193 14.893 C 176.193 14.389 176.593 13.978 177.096 13.964 C 177.434 13.955 177.75 14.13 177.921 14.421 C 178.093 14.712 178.093 15.073 177.921 15.364 C 177.75 15.655 177.434 15.83 177.096 15.821 C 176.593 15.807 176.193 15.396 176.193 14.893 Z%22 fill=%22rgb(255, 255, 255)%22></path></svg>")',
-                            }}
-                            className="framer-16ciedp"
-                            aria-hidden="true"
-                          ></div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1fetau4"
-                        data-framer-name="OMC 2"
-                        id="1fetau4"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-7l4kyv"
-                          data-framer-name="Image animation"
-                          id="card-1"
-                        >
-                          <div
-                            className="framer-11n8uzv"
-                            style={{ transform: "none" }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--framer-font-size": "14px",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.5em",
-                                "--framer-text-color": `var(
-                                --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                rgb(0, 0, 0)
-                              )`,
-                              }}
-                              className="framer-text"
-                            >
-                              “Providing advice and decision-making support is a
-                              key priority at Oh My Cream. The results of the
-                              first module have fully lived up to our
-                              expectations, and we have great ambitions for
-                              deploying the Dialog solutions across the rest of
-                              the site.”
-                            </p>
-                          </div>
-                          <div className="framer-124ib6k">
-                            <div className="framer-kdzohd">
-                              <div
-                                style={{
-                                  position: "absolute",
-                                  borderRadius: "inherit",
-                                  cornerShape: "inherit",
-                                  top: "0",
-                                  right: "0",
-                                  bottom: "0",
-                                  left: "0",
-                                }}
-                                data-framer-background-image-wrapper="true"
-                              >
-                                <img
-                                  decoding="async"
-                                  width="400"
-                                  height="400"
-                                  src="https://framerusercontent.com/images/i0WM5Z1v3QyyE52QxbBd1L9L1I.png?width=400&height=400"
-                                  alt
-                                  style={{
-                                    display: "block",
-                                    width: "100%",
-                                    height: "100%",
-                                    borderRadius: "inherit",
-                                    cornerShape: "inherit",
-                                    objectPosition: "center",
-                                    objectFit: "cover",
-                                  }}
-                                />
-                              </div>
-                            </div>
-                            <div className="framer-pvm393">
-                              <div
-                                className="framer-oxpi7u"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--font-selector": "SW50ZXItTWVkaXVt",
-                                    "--framer-font-family": `\"Inter\",
-                                    \"Inter Placeholder\", sans-serif`,
-                                    "--framer-font-size": "14px",
-                                    "--framer-font-weight": "500",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "20px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  Sarah Mandel Azran
-                                </p>
-                              </div>
-                              <div
-                                className="framer-wj6u5z"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--framer-font-size": "12px",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "16px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
-                                    --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                                    rgb(0, 0, 0)
-                                  )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  Head of e-commerce &amp; digital @OhMyCream
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-1qjtmhf"
-                        data-framer-name="MG 1"
-                        id="1qjtmhf"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-gf2v8x"
-                          data-framer-name="Overlay"
-                        ></div>
-                        <div className="framer-8nwzjo" data-framer-name="Image">
-                          <div
-                            style={{
-                              position: "absolute",
-                              borderRadius: "inherit",
-                              cornerShape: "inherit",
-                              top: "0",
-                              right: "0",
-                              bottom: "0",
-                              left: "0",
-                            }}
-                            data-framer-background-image-wrapper="true"
-                          >
-                            <img
-                              decoding="async"
-                              width="590"
-                              height="332"
-                              sizes="(min-width: 1024px) 321px, (min-width: 810px) and (max-width: 1023.98px) 321px, (max-width: 809.98px) 321px"
-                              srcSet="
-                              https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?scale-down-to=512&width=590&height=332 512w,
-                              https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332                       590w
-                            "
-                              src="https://framerusercontent.com/images/cjBSBnCUb05wacvFFt96wDO4Lk.webp?width=590&height=332"
-                              alt
-                              style={{
-                                display: "block",
-                                width: "100%",
-                                height: "100%",
-                                borderRadius: "inherit",
-                                cornerShape: "inherit",
-                                objectPosition: "32.6% 52.5%",
-                                objectFit: "cover",
-                              }}
-                            />
-                          </div>
-                        </div>
-                        <div className="framer-1takkf5">
-                          <div
-                            data-framer-component-type="SVG"
-                            style={{
-                              imageRendering: "pixelated",
-                              flexShrink: "0",
-                            }}
-                            className="framer-1mo95ae"
-                            aria-hidden="true"
+                            className="framer-1arzejl"
+                            data-framer-name="Delsey 2"
+                            id="1arzejl"
+                            style={{ flexShrink: "0" }}
                           >
                             <div
-                              className="svgContainer"
-                              style={{
-                                width: "100%",
-                                height: "100%",
-                                aspectRatio: "inherit",
-                              }}
+                              className="framer-12yh6su"
+                              data-framer-name="Image animation"
+                              id="card-1-1"
                             >
-                              <svg style={{ width: "100%", height: "100%" }}>
-                                <use href="#svg-527478463_6871"></use>
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div
-                        className="framer-r69b10"
-                        data-framer-name="MG 2"
-                        id="r69b10"
-                        style={{ flexShrink: "0" }}
-                      >
-                        <div
-                          className="framer-9uwhvb"
-                          data-framer-name="Image animation"
-                          id="card-1-3"
-                        >
-                          <div
-                            className="framer-17z7aqx"
-                            style={{ transform: "none" }}
-                            data-framer-component-type="RichTextContainer"
-                          >
-                            <p
-                              style={{
-                                "--framer-font-size": "14px",
-                                "--framer-letter-spacing": "-0.02em",
-                                "--framer-line-height": "1.5em",
-                                "--framer-text-color": `var(
+                              <div
+                                className="framer-33x4c7"
+                                style={{ transform: "none" }}
+                                data-framer-component-type="RichTextContainer"
+                              >
+                                <p
+                                  style={{
+                                    "--framer-font-size": "14px",
+                                    "--framer-letter-spacing": "-0.02em",
+                                    "--framer-line-height": "1.5em",
+                                    "--framer-text-color": `var(
                                 --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                 rgb(0, 0, 0)
                               )`,
-                              }}
-                              className="framer-text"
-                            >
-                              “We are at the very beginning of our journey with
-                              Dialog, yet we can already see its transformative
-                              potential in reshaping how we interact with our
-                              Services. In a highly competitive market
-                              (automotive industry), Dialog is proving to be a
-                              game-changer for MG Motor.”
-                            </p>
-                          </div>
-                          <div className="framer-vqxud8">
-                            <div className="framer-1u3gy8o">
-                              <div
-                                style={{
-                                  position: "absolute",
-                                  borderRadius: "inherit",
-                                  cornerShape: "inherit",
-                                  top: "0",
-                                  right: "0",
-                                  bottom: "0",
-                                  left: "0",
-                                }}
-                                data-framer-background-image-wrapper="true"
-                              >
-                                <img
-                                  decoding="async"
-                                  width="180"
-                                  height="180"
-                                  src="https://framerusercontent.com/images/qA5TImT90dVJ2IW6tjPWo83Yak.png?width=180&height=180"
-                                  alt
-                                  style={{
-                                    display: "block",
-                                    width: "100%",
-                                    height: "100%",
-                                    borderRadius: "inherit",
-                                    cornerShape: "inherit",
-                                    objectPosition: "center",
-                                    objectFit: "cover",
                                   }}
-                                />
+                                  className="framer-text"
+                                >
+                                  {`“${item.testimonial}”`}
+                                </p>
                               </div>
-                            </div>
-                            <div className="framer-19a9822">
-                              <div
-                                className="framer-1smp7go"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--font-selector": "SW50ZXItTWVkaXVt",
-                                    "--framer-font-family": `\"Inter\",
+                              <div className="framer-1nszkyw">
+                                <div className="framer-ybis5y">
+                                  <div
+                                    style={{
+                                      position: "absolute",
+                                      borderRadius: "inherit",
+                                      cornerShape: "inherit",
+                                      top: "0",
+                                      right: "0",
+                                      bottom: "0",
+                                      left: "0",
+                                    }}
+                                    data-framer-background-image-wrapper="true"
+                                  >
+                                    <img
+                                      decoding="async"
+                                      width="400"
+                                      height="400"
+                                      src={item.image}
+                                      alt
+                                      style={{
+                                        display: "block",
+                                        width: "100%",
+                                        height: "100%",
+                                        borderRadius: "inherit",
+                                        cornerShape: "inherit",
+                                        objectPosition: "center",
+                                        objectFit: "cover",
+                                      }}
+                                    />
+                                  </div>
+                                </div>
+                                <div className="framer-eup4sl">
+                                  <div
+                                    className="framer-vmvpkb"
+                                    style={{ transform: "none" }}
+                                    data-framer-component-type="RichTextContainer"
+                                  >
+                                    <p
+                                      style={{
+                                        "--font-selector": "SW50ZXItTWVkaXVt",
+                                        "--framer-font-family": `\"Inter\",
                                     \"Inter Placeholder\", sans-serif`,
-                                    "--framer-font-size": "14px",
-                                    "--framer-font-weight": "500",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "20px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                                        "--framer-font-size": "14px",
+                                        "--framer-font-weight": "500",
+                                        "--framer-letter-spacing": "-0.02em",
+                                        "--framer-line-height": "20px",
+                                        "--framer-text-alignment": "left",
+                                        "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  Pierre-Edouard Sabary
-                                </p>
-                              </div>
-                              <div
-                                className="framer-hfnzse"
-                                style={{ transform: "none" }}
-                                data-framer-component-type="RichTextContainer"
-                              >
-                                <p
-                                  style={{
-                                    "--framer-font-size": "12px",
-                                    "--framer-letter-spacing": "-0.02em",
-                                    "--framer-line-height": "16px",
-                                    "--framer-text-alignment": "left",
-                                    "--framer-text-color": `var(
+                                      }}
+                                      className="framer-text"
+                                    >
+                                      {item.name}
+                                    </p>
+                                  </div>
+                                  <div
+                                    className="framer-1q4a4vq"
+                                    style={{ transform: "none" }}
+                                    data-framer-component-type="RichTextContainer"
+                                  >
+                                    <p
+                                      style={{
+                                        "--framer-font-size": "12px",
+                                        "--framer-letter-spacing": "-0.02em",
+                                        "--framer-line-height": "16px",
+                                        "--framer-text-alignment": "left",
+                                        "--framer-text-color": `var(
                                     --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
                                     rgb(0, 0, 0)
                                   )`,
-                                  }}
-                                  className="framer-text"
-                                >
-                                  Digital Marketing Manager @MGMotorFrance
-                                </p>
+                                      }}
+                                      className="framer-text"
+                                    >
+                                      {item.company}
+                                    </p>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </section>
                 {/* /$ */}
               </div>
             </div>
           </div>
-          <div className="framer-1k8skic" data-framer-name="Section" id="services">
+          <div
+            className="framer-1k8skic"
+            data-framer-name="Section"
+            id="services"
+          >
             <div className="framer-vvv07x" data-framer-name="Image animation">
               <div className="framer-ieyowq">
                 <div className="framer-mo4r5y" data-framer-name="Button">
@@ -1310,10 +1034,7 @@ export default function HomePage() {
                           data-framer-name="Primary Large"
                           style={{
                             backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            backgroundColor: "#000",
                             filter: "blur(0px)",
                             WebkitBackdropFilter: "none",
                             WebkitFilter: "blur(0px)",
@@ -1470,10 +1191,7 @@ export default function HomePage() {
                           data-framer-name="Primary Large"
                           style={{
                             backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            backgroundColor: "#000",
                             filter: "blur(0px)",
                             WebkitBackdropFilter: "none",
                             WebkitFilter: "blur(0px)",
@@ -1629,10 +1347,7 @@ export default function HomePage() {
                         data-framer-name="Primary Large"
                         style={{
                           backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          backgroundColor: "#000",
                           filter: "blur(0px)",
                           WebkitBackdropFilter: "none",
                           WebkitFilter: "blur(0px)",
@@ -1796,10 +1511,7 @@ export default function HomePage() {
                           data-framer-name="Primary Large"
                           style={{
                             backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            backgroundColor: "#000",
                             filter: "blur(0px)",
                             WebkitBackdropFilter: "none",
                             WebkitFilter: "blur(0px)",
@@ -1955,10 +1667,7 @@ export default function HomePage() {
                           data-framer-name="Primary Large"
                           style={{
                             backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            backgroundColor: "#000",
                             filter: "blur(0px)",
                             WebkitBackdropFilter: "none",
                             WebkitFilter: "blur(0px)",
@@ -2114,10 +1823,7 @@ export default function HomePage() {
                         data-framer-name="Primary Large"
                         style={{
                           backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          backgroundColor: "#000",
                           filter: "blur(0px)",
                           WebkitBackdropFilter: "none",
                           WebkitFilter: "blur(0px)",
@@ -2273,10 +1979,7 @@ export default function HomePage() {
                           data-framer-name="Primary Large"
                           style={{
                             backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            backgroundColor: "#000",
                             filter: "blur(0px)",
                             WebkitBackdropFilter: "none",
                             WebkitFilter: "blur(0px)",
@@ -2426,10 +2129,7 @@ export default function HomePage() {
                           data-framer-name="Primary Large"
                           style={{
                             backdropFilter: "none",
-                            backgroundColor: `var(
-                            --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                            rgb(0, 0, 0)
-                          )`,
+                            backgroundColor: "#000",
                             filter: "blur(0px)",
                             WebkitBackdropFilter: "none",
                             WebkitFilter: "blur(0px)",
@@ -2581,10 +2281,7 @@ export default function HomePage() {
                         data-framer-name="Primary Large"
                         style={{
                           backdropFilter: "none",
-                          backgroundColor: `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
-                        )`,
+                          backgroundColor: "#000",
                           filter: "blur(0px)",
                           WebkitBackdropFilter: "none",
                           WebkitFilter: "blur(0px)",
@@ -3162,9 +2859,8 @@ export default function HomePage() {
               style={{ opacity: "1", transform: "none" }}
             >
               <div
-                className="framer-1oy8iyl hidden-12tyhur"
+                className="framer-1oy8iyl"
                 data-framer-name="Animated-Gradient-Background 2x-min"
-                style={{ transform: "translateX(-50%)" }}
               >
                 <div
                   style={{
@@ -3181,24 +2877,17 @@ export default function HomePage() {
                   <img
                     decoding="async"
                     loading="lazy"
-                    width="2560"
-                    height="1800"
-                    sizes="(min-width: 1024px) 1280px, (min-width: 810px) and (max-width: 1023.98px) 1280px, (max-width: 809.98px) 1280px"
-                    srcSet="
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=512&width=2560&height=1800   512w,
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=1024&width=2560&height=1800 1024w,
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=2048&width=2560&height=1800 2048w,
-                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?width=2560&height=1800                        2560w
-                  "
-                    src="https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?width=2560&height=1800"
-                    alt
+                    width="1536"
+                    height="1024"
+                    src="/assets/images/card_5.png"
+                    alt="Translation and transcription service background"
                     style={{
                       display: "block",
                       width: "100%",
                       height: "100%",
                       borderRadius: "inherit",
                       cornerShape: "inherit",
-                      objectPosition: "center",
+                      objectPosition: "center 58%",
                       objectFit: "cover",
                     }}
                   />
@@ -3219,7 +2908,7 @@ export default function HomePage() {
                       <span
                         style={{
                           "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
+                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
                           rgb(0, 0, 0)
                         )`,
                         }}
@@ -3244,8 +2933,8 @@ export default function HomePage() {
                       <span
                         style={{
                           "--framer-text-color": `var(
-                          --token-9d71338f-ad18-4cc1-bc5c-f9bc50ef706d,
-                          rgb(0, 0, 0)
+                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                          rgb(46, 46, 46)
                         )`,
                         }}
                         className="framer-text"
@@ -3267,8 +2956,8 @@ export default function HomePage() {
                       style={{
                         "--framer-text-alignment": "center",
                         "--framer-text-color": `var(
-                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                        rgba(0, 0, 0, 0.6)
+                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                        rgba(0, 0, 0, 0.82)
                       )`,
                       }}
                     >
@@ -3290,8 +2979,8 @@ export default function HomePage() {
                       style={{
                         "--framer-text-alignment": "left",
                         "--framer-text-color": `var(
-                        --token-59ee3882-0ca2-4e7b-853b-72745443032c,
-                        rgba(0, 0, 0, 0.6)
+                        --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                        rgba(1, 1, 1, 0.82)
                       )`,
                       }}
                     >
@@ -4000,8 +3689,288 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+            <div
+              className="framer-1lmko6w why-voice-card"
+              data-framer-name="Image animation"
+              id="carousel-5"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              <div
+                className="framer-1oy8iyl hidden-12tyhur"
+                data-framer-name="Animated-Gradient-Background 2x-min"
+                style={{ transform: "translateX(-50%)" }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    borderRadius: "inherit",
+                    cornerShape: "inherit",
+                    top: "0",
+                    right: "0",
+                    bottom: "0",
+                    left: "0",
+                  }}
+                  data-framer-background-image-wrapper="true"
+                >
+                  <img
+                    decoding="async"
+                    loading="lazy"
+                    width="2560"
+                    height="1800"
+                    sizes="(min-width: 1024px) 1280px, (min-width: 810px) and (max-width: 1023.98px) 1280px, (max-width: 809.98px) 1280px"
+                    srcSet="
+                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=512&width=2560&height=1800   512w,
+                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=1024&width=2560&height=1800 1024w,
+                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?scale-down-to=2048&width=2560&height=1800 2048w,
+                    https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?width=2560&height=1800                        2560w
+                  "
+                    src="https://framerusercontent.com/images/aDUIYWmWyCgQXo5WooirYuuago.webp?width=2560&height=1800"
+                    alt
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "inherit",
+                      cornerShape: "inherit",
+                      objectPosition: "center",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="framer-aq3exa why-card-content">
+                <div className="why-card-top">
+                  <h2 className="framer-text framer-styles-preset-42vc6k why-card-title">
+                    We Are The Best Voice Over Talent
+                  </h2>
+                  <p className="framer-text framer-styles-preset-1wcqtva why-intro-copy">
+                    We pay attention to all the minute instructions given by you
+                    to deliver our best in every single project. Our voice
+                    reflects authoritativeness with Clarity in pronunciation.
+                  </p>
+                  <div className="framer-911yfn-container why-read-more-wrap">
+                    <a
+                      className="framer-qjxTS framer-QHInc framer-hdcsk3 framer-v-1xvy9ni framer-1u73uxi"
+                      data-framer-name="Primary Large"
+                      style={{
+                        backdropFilter: "none",
+                        backgroundColor: "#000",
+                        filter: "blur(0px)",
+                        WebkitBackdropFilter: "none",
+                        WebkitFilter: "blur(0px)",
+                        borderBottomLeftRadius: "28px",
+                        borderBottomRightRadius: "28px",
+                        borderTopLeftRadius: "28px",
+                        borderTopRightRadius: "28px",
+                        boxShadow: "none",
+                      }}
+                      href="/contact"
+                    >
+                      <div
+                        className="framer-1swh0y3"
+                        style={{
+                          "--extracted-r6o4lv": `var(
+                          --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                          rgb(255, 255, 255)
+                        )`,
+                          "--framer-link-text-color": "rgb(0, 153, 255)",
+                          "--framer-link-text-decoration": "underline",
+                          transform: "none",
+                        }}
+                        data-framer-component-type="RichTextContainer"
+                      >
+                        <p
+                          style={{
+                            "--font-selector": "SW50ZXItTWVkaXVt",
+                            "--framer-font-family": `\"Inter\", \"Inter Placeholder\", sans-serif`,
+                            "--framer-font-size": "14px",
+                            "--framer-font-weight": "500",
+                            "--framer-letter-spacing": "-0.02em",
+                            "--framer-line-height": "1.4em",
+                            "--framer-text-color": `var(
+                            --extracted-r6o4lv,
+                            var(
+                              --token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60,
+                              rgb(255, 255, 255)
+                            )
+                          )`,
+                          }}
+                          className="framer-text"
+                        >
+                          Read more
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  className="why-feature-grid"
+                  role="list"
+                  aria-label="Why Tasadezy strengths"
+                >
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 7v5l3 2"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      Delivery of work on Time.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                        <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      Professional work.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="9" y="3" width="6" height="10" rx="3"></rect>
+                        <path d="M5 11a7 7 0 0 0 14 0"></path>
+                        <path d="M12 18v3"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      Studio Quality recording.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 3l2.2 4.5L19 9l-4 3.7.9 5.1L12 15.6l-3.9 2.2.9-5.1L5 9l4.8-1.5L12 3z"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      Dedicated to every single project.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                        <path d="M14 12h4"></path>
+                        <circle cx="17" cy="12" r="1"></circle>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      In your Budget.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                        <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      Trust &amp; Project Privacy maintained.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M12 3l7 4v5c0 5-3.4 8.8-7 10-3.6-1.2-7-5-7-10V7l7-4z"></path>
+                        <path d="M9 12l2 2 4-4"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      100% Customer Satisfaction.
+                    </p>
+                  </article>
+
+                  <article className="why-feature-item" role="listitem">
+                    <span className="why-feature-icon" aria-hidden="true">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M4 5h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path>
+                        <path d="M7 10h10"></path>
+                        <path d="M7 14h7"></path>
+                      </svg>
+                    </span>
+                    <p className="framer-text framer-styles-preset-1wcqtva">
+                      Queries answered within 24 to 48 hours
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="framer-1o1u5z0" data-framer-name="Section" id="about">
+          <div
+            className="framer-1o1u5z0"
+            data-framer-name="Section"
+            id="about-legacy"
+          >
             <div className="ssr-variant hidden-12tyhur">
               <div className="framer-8lhyzg-container" id="dark-section">
                 <div className="ssr-variant hidden-ck7hjr">
@@ -4141,7 +4110,17 @@ export default function HomePage() {
                           </div>
                           {/* /$ */}
                         </div>
-                        <div className="framer-uf134s" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
+                        <div
+                          className="framer-uf134s"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            zIndex: 0,
+                          }}
+                        >
                           <div
                             className="framer-1yo9pd4"
                             data-framer-name="Product-analytics-min"
@@ -4171,9 +4150,7 @@ export default function HomePage() {
                                 left: "0",
                               }}
                               data-framer-background-image-wrapper="true"
-                            >
-
-                            </div>
+                            ></div>
                           </div>
                         </div>
                         <div className="framer-8b9xts">
@@ -4694,7 +4671,17 @@ export default function HomePage() {
                           </div>
                           {/* /$ */}
                         </div>
-                        <div className="framer-uf134s" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
+                        <div
+                          className="framer-uf134s"
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            zIndex: 0,
+                          }}
+                        >
                           <div
                             className="framer-1yo9pd4"
                             data-framer-name="Product-analytics-min"
@@ -4725,8 +4712,7 @@ export default function HomePage() {
                                 left: "0",
                               }}
                               data-framer-background-image-wrapper="true"
-                            >
-                            </div>
+                            ></div>
                           </div>
                         </div>
                         <div className="framer-8b9xts">
@@ -5248,7 +5234,17 @@ export default function HomePage() {
                         </div>
                         {/* /$ */}
                       </div>
-                      <div className="framer-uf134s" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 0 }}>
+                      <div
+                        className="framer-uf134s"
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          zIndex: 0,
+                        }}
+                      >
                         <div
                           className="framer-1yo9pd4"
                           data-framer-name="Product-analytics-min"
@@ -5279,9 +5275,7 @@ export default function HomePage() {
                               left: "0",
                             }}
                             data-framer-background-image-wrapper="true"
-                          >
-
-                          </div>
+                          ></div>
                         </div>
                       </div>
                       <div className="framer-8b9xts">
@@ -5664,6 +5658,70 @@ export default function HomePage() {
             </div>
           </div>
 
+          <section
+            id="about"
+            ref={workflowSectionRef}
+            className="workflow-section"
+            aria-labelledby="workflow-title"
+          >
+            <div className="workflow-shell">
+              <div className="workflow-shell-layout">
+                <div className="workflow-hero-grid">
+                  <div className="workflow-header">
+                    <h2 id="workflow-title" className="workflow-title">
+                      Easy Steps for Your Project
+                    </h2>
+                    <p className="workflow-flow">
+                      Consultation ... Casting ... Recording ... Editing ...
+                      Delivery
+                    </p>
+                    <a
+                      className="mt-[22px] bg-white text-black text-base inline-flex items-center justify-center min-w-[156px] px-[22px] py-[13px] rounded-full"
+                      href="/contact"
+                    >
+                      Learn more
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  className="workflow-steps"
+                  role="list"
+                  aria-label="How we work steps"
+                >
+                  <article className="workflow-step-card" role="listitem">
+                    <p className="workflow-step-index">01</p>
+                    <h3>Planning</h3>
+                    <p>
+                      The journey begins with a conversation. We take the time
+                      to listen to your project requirements, goals, and
+                      preferences.
+                    </p>
+                  </article>
+
+                  <article className="workflow-step-card" role="listitem">
+                    <p className="workflow-step-index">02</p>
+                    <h3>Recording</h3>
+                    <p>
+                      During the recording session, our focus is on capturing
+                      clear, dynamic, and compelling voice performances.
+                    </p>
+                  </article>
+
+                  <article className="workflow-step-card" role="listitem">
+                    <p className="workflow-step-index">03</p>
+                    <h3>Result</h3>
+                    <p>
+                      We&apos;ve had the privilege of working on a variety of
+                      projects, each one showcasing our commitment to quality
+                      and excellence.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Footer */}
           <Footer />
         </div>
@@ -5736,49 +5794,6 @@ export default function HomePage() {
     `,
         }}
       />
-      <script
-        data-preserve-internal-params
-        dangerouslySetInnerHTML={{
-          __html: `
-      !(function () {
-        var l = "framer_variant";
-        function u(a, r) {
-          let n = r.indexOf("#"),
-            e = n === -1 ? r : r.substring(0, n),
-            o = n === -1 ? "" : r.substring(n),
-            t = e.indexOf("?"),
-            m = t === -1 ? e : e.substring(0, t),
-            d = t === -1 ? "" : e.substring(t),
-            s = new URLSearchParams(d),
-            h = new URLSearchParams(a);
-          for (let [i, g] of h) s.has(i) || (i !== l && s.append(i, g));
-          let c = s.toString();
-          return c === "" ? e + o : m + "?" + c + o;
-        }
-        var w =
-            'div#main a[href^="#"],div#main a[href^="/"],div#main a[href^="."]',
-          f = "div#main a[data-framer-preserve-params]",
-          p = document.currentScript?.hasAttribute(
-            "data-preserve-internal-params",
-          );
-        if (
-          window.location.search &&
-          !navigator.webdriver &&
-          !/bot|-google|google-|yandex|ia_archiver|crawl|spider/iu.test(
-            navigator.userAgent,
-          )
-        ) {
-          let a = document.querySelectorAll(p ? \`\${w},\${f}\` : f);
-          for (let r of a) {
-            let n = u(window.location.search, r.href);
-            r.setAttribute("href", n);
-          }
-        }
-      })();
-    `,
-        }}
-      />
-
       <div
         id="svg-templates"
         style={{
@@ -6198,9 +6213,9 @@ export default function HomePage() {
           const low = href.toLowerCase().trim();
           if (
             low.startsWith("#") ||
-            low.startsWith("mailto: \`) ||
-            low.startsWith(\`tel: \`) ||
-            low.startsWith(\`javascript: \`)
+            low.startsWith("mailto:") ||
+            low.startsWith("tel:") ||
+            low.startsWith("javascript:")
           )
             return href;
 
@@ -6229,7 +6244,7 @@ export default function HomePage() {
 
         /** 5) Traite un <a> (si data-no-utm, on saute) **/
         function processAnchor(a) {
-          if (!a || a.dataset.noUtm === \`true") return;
+          if (!a || a.dataset.noUtm === "true") return;
           const newHref = appendUTMToHref(a.getAttribute("href"));
           if (newHref && newHref !== a.getAttribute("href")) {
             a.setAttribute("href", newHref);

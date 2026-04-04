@@ -25,14 +25,11 @@ export default function Header() {
               <a
                 className="framer-1sklhbk framer-e8o0q"
                 style={{
-                  backdropFilter: "blur(0px)",
-                  backgroundColor: "#1A1A1A",
-                  WebkitBackdropFilter: "blur(0px)",
                   borderRadius: "99px",
-                  boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
                   display: "inline-flex",
                   alignItems: "center",
-                  gap: "8px",
+                  justifyContent: "center",
+                  gap: "4px",
                   padding: "6px 16px 6px 8px",
                   textDecoration: "none",
                   width: "fit-content",
@@ -44,8 +41,8 @@ export default function Header() {
                   src="/logo.png"
                   alt="Tasadezy Voices"
                   style={{
-                    width: "24px",
-                    height: "24px",
+                    width: "30px",
+                    height: "30px",
                     objectFit: "contain",
                     flexShrink: 0,
                   }}
@@ -56,7 +53,7 @@ export default function Header() {
                     fontFamily: "Inter, sans-serif",
                     fontSize: "15px",
                     lineHeight: "1",
-                    color: "#FFFFFF",
+                    color: "#000000",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -375,14 +372,10 @@ export default function Header() {
               <a
                 className="framer-1sklhbk framer-e8o0q"
                 style={{
-                  backdropFilter: "blur(0px)",
-                  backgroundColor: "#1A1A1A",
-                  WebkitBackdropFilter: "blur(0px)",
                   borderRadius: "99px",
-                  boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
                   display: "inline-flex",
                   alignItems: "center",
-                  gap: "8px",
+                  gap: "2px",
                   padding: "6px 14px 6px 6px",
                   textDecoration: "none",
                 }}
@@ -393,8 +386,8 @@ export default function Header() {
                   src="/logo.png"
                   alt="Tasadezy Voices"
                   style={{
-                    width: "22px",
-                    height: "22px",
+                    width: "30px",
+                    height: "30px",
                     objectFit: "contain",
                     flexShrink: 0,
                   }}
@@ -405,7 +398,7 @@ export default function Header() {
                     fontFamily: "Inter, sans-serif",
                     fontSize: "14px",
                     lineHeight: "1",
-                    color: "#FFFFFF",
+                    color: "#000000",
                     whiteSpace: "nowrap",
                   }}
                 >

@@ -2229,7 +2229,8 @@ body {
   width: 100%;
   max-width: 1280px;
   height: 580px;
-  position: relative;
+  position: sticky;
+  top: 140px;
 }
 .framer-5OHkW .framer-1lmko6w {
   will-change: var(--framer-will-change-override, transform);
@@ -2247,7 +2248,7 @@ body {
   padding: 128px 16px;
   display: flex;
   position: sticky;
-  top: 100px;
+  top: 150px;
   overflow: hidden;
   box-shadow: 0 32px 64px #0000000a;
 }
@@ -2297,6 +2298,41 @@ body {
   height: 192px;
   position: relative;
   overflow: visible;
+}
+.framer-translation-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 10, 14, 0.22) 0%,
+      rgba(8, 10, 14, 0.58) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8, 10, 14, 0.48) 0%,
+      rgba(8, 10, 14, 0.2) 50%,
+      rgba(8, 10, 14, 0.48) 100%
+    );
+  pointer-events: none;
+}
+
+.framer-5OHkW #carousel-4 .framer-1oy8iyl {
+  opacity: 1;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  left: auto;
+  bottom: auto;
+  transform: none;
+}
+.framer-5OHkW #carousel-4 .framer-aq3exa,
+.framer-5OHkW #carousel-4 .framer-1areu97 {
+  z-index: 2;
+}
+.framer-5OHkW #carousel-4 #ui-elements {
+  display: none;
 }
 .framer-5OHkW .framer-1qvc89e {
   background-color: var(--token-bdea4d42-ca6a-410b-9c9a-7deb888e9d60, #fff);
@@ -3018,6 +3054,9 @@ body {
     gap: 0;
     padding: 0;
   }
+  .framer-5OHkW #carousel-4 .framer-1oy8iyl {
+    height: 100%;
+  }
   .framer-5OHkW .framer-aq3exa {
     order: 1;
     align-content: flex-start;
@@ -3090,8 +3129,8 @@ body {
   place-content: center flex-start;
   align-items: center;
   gap: 48px;
-  width: min-content;
-  height: 48px;
+  width: max-content;
+  height: 90%;
   padding: 8px 20px;
   text-decoration: none;
   display: flex;
@@ -9803,115 +9842,489 @@ html body {
   background: rgb(247, 247, 247);
 }
 /* ========================================= */
-/* Why Tasadezy Voices Section Redesign      */
+/* How We Work Section + Button Overrides    */
 /* ========================================= */
 
-#dark-section .framer-1ft9pzj {
-  background: #000000 !important;
-  min-height: 800px !important;
-  position: relative !important;
-  overflow: hidden !important;
-  display: flex !important;
-  flex-direction: column !important;
+#about-legacy {
+  display: none !important;
 }
 
-#dark-section .framer-1flv9fa {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
-  align-items: flex-start !important;
-  height: 100% !important;
-  min-height: 800px !important;
-  width: 100% !important;
-  position: relative !important;
-  padding: 80px 40px !important;
-  box-sizing: border-box !important;
-  z-index: 10 !important;
+.workflow-section {
+  --workflow-expand: 0;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 0 calc(16px * (1 - var(--workflow-expand)));
+  margin: 16px auto clamp(28px, 5vw, 72px);
 }
 
-/* Force black text for Learn more buttons across ALL variants in why section */
-/* We use the classes provided by the user + common framer button classes */
+.workflow-shell {
+  position: relative;
+  width: min(calc(1280px + (100vw - 1280px) * var(--workflow-expand)), 100%);
+  max-width: none;
+  height: 580px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: calc(clamp(24px, 4vw, 40px) * (1 - var(--workflow-expand)));
+  background: #0b0b0b;
+  color: #ffffff;
+  padding: clamp(24px, 3.6vw, 42px);
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: stretch;
+  will-change: border-radius;
+}
+
+.workflow-shell-layout {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: clamp(24px, 3vw, 40px);
+  align-items: center;
+}
+
+.workflow-shell::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0) 18%,
+    rgba(255, 255, 255, 0) 82%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+}
+
+.workflow-hero-grid,
+.workflow-header,
+.workflow-steps {
+  position: relative;
+  z-index: 1;
+}
+
+.workflow-hero-grid {
+  display: block;
+  align-self: center;
+}
+
+.workflow-header {
+  max-width: 340px;
+}
+
+.workflow-kicker {
+  margin: 0 0 10px;
+  font-family: "Fragment Mono", monospace;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.workflow-title {
+  margin: 0;
+  max-width: 100%;
+  font-size: clamp(2rem, 3vw, 2.85rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+.workflow-flow {
+  margin: 14px 0 0;
+  max-width: 100%;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.95rem, 1.1vw, 1.06rem);
+  line-height: 1.55;
+}
+
+.workflow-button {
+  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 156px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.workflow-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.34);
+}
+
+.workflow-steps {
+  margin-top: 0;
+  display: grid;
+  gap: clamp(12px, 1.6vw, 18px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: center;
+}
+
+.workflow-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 182px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.085),
+    rgba(255, 255, 255, 0.035)
+  );
+  padding: clamp(16px, 1.9vw, 22px);
+}
+
+.workflow-step-card:nth-child(2) {
+  transform: translateY(10px);
+}
+
+.workflow-step-card:nth-child(3) {
+  transform: translateY(20px);
+}
+
+.workflow-step-index {
+  margin: 0 0 2px;
+  font-family: "Fragment Mono", monospace;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.64);
+  letter-spacing: 0.1em;
+}
+
+.workflow-step-card h3 {
+  margin: 0;
+  font-size: clamp(1.08rem, 1.65vw, 1.26rem);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.workflow-step-card p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+  font-size: 0.94rem;
+}
+
+/* Force requested button colors for Try samples + Learn more variants */
 .framer-qjxTS.framer-QHInc.framer-hdcsk3,
 .framer-qjxTS.framer-QHInc.framer-hdcsk3 *,
-[data-framer-name="Secondary Large"],
-[data-framer-name="Secondary Large"] * {
-  color: #000000 !important;
-  --framer-text-color: #000000 !important;
-}
-
-.framer-qjxTS.framer-QHInc.framer-hdcsk3,
-[data-framer-name="Secondary Large"] {
-  background-color: #ffffff !important;
-}
-
-#dark-section .framer-mhnzhs {
-  max-width: 550px !important;
-  width: 100% !important;
-  margin: 0 !important;
-  text-align: left !important;
-}
-
-#dark-section .framer-mhnzhs * {
-  text-align: left !important;
-}
-
-#dark-section h3.framer-text {
-  font-size: 3.5rem !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.04em !important;
-  margin-bottom: 20px !important;
+.workflow-button,
+.workflow-button * {
+  background-color: #000000 !important;
   color: #ffffff !important;
+  --framer-text-color: #ffffff !important;
 }
 
-#dark-section p.framer-text {
-  font-size: 1.15rem !important;
-  line-height: 1.5 !important;
+.framer-qjxTS.framer-QHInc.framer-hdcsk3 {
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
 }
 
-/* Decreased font size for the bottom icon row */
-#dark-section .framer-8b9xts p.framer-styles-preset-1wcqtva {
-  font-size: 1.05rem !important; /* Slightly smaller Title */
-  font-weight: 600 !important;
-  color: #ffffff !important;
+/* Why Voice Card polish */
+#carousel-5.why-voice-card {
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 40px;
+  box-sizing: border-box;
 }
 
-#dark-section .framer-8b9xts p.framer-styles-preset-18a68lg {
-  font-size: 0.9rem !important; /* Slightly smaller Description */
-  line-height: 1.4 !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-\n#dark-section .framer-8b9xts {
-  width: 100% !important;
-  padding-bottom: 0 !important;
-  margin-top: auto !important;
-}
-
-#dark-section [data-framer-name="Product-analytics-min"],
-#dark-section .framer-uf134s {
-  display: block !important;
-  position: absolute !important;
-  height: 80% !important;
-  width: 80% !important;
-  bottom: 0 !important;
-  right: 0 !important;
-  z-index: 0 !important;
-  pointer-events: none !important;
+#carousel-5 .why-card-content {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 64px;
+  z-index: 1;
 }
 
-#dark-section [data-framer-name="Product-analytics-min"] img {
-  object-fit: contain !important;
-  object-position: bottom right !important;
-  width: 100% !important;
-  height: 100% !important;
-  opacity: 0.85 !important;
-  mask-image: linear-gradient(
-    to top left,
-    rgba(0, 0, 0, 1) 40%,
-    rgba(0, 0, 0, 0) 100%
-  ) !important;
-  -webkit-mask-image: linear-gradient(
-    to top left,
-    rgba(0, 0, 0, 1) 40%,
-    rgba(0, 0, 0, 0) 100%
-  ) !important;
+#carousel-5 .why-card-top {
+  flex: 0 0 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+
+#carousel-5 .why-card-title {
+  margin: 0;
+  text-align: left;
+  font-family:
+    "PP Radio Grotesk Light", "PP Radio Grotesk Light Placeholder", sans-serif;
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+#carousel-5 .why-intro-copy {
+  margin: 0;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: 400;
+}
+
+#carousel-5 .why-read-more-wrap {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#carousel-5 .why-feature-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#carousel-5 .why-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+}
+
+#carousel-5 .why-feature-icon {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #111111;
+  color: #ffffff;
+}
+
+#carousel-5 .why-feature-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+#carousel-5 .why-feature-item p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.82) !important;
+}
+
+@media (min-width: 810px) {
+  .framer-5OHkW .framer-1jm3p5u-container {
+    z-index: 2;
+  }
+
+  .framer-5OHkW #carousel-4 {
+    position: sticky;
+    top: 150px;
+    z-index: 3;
+    height: 580px;
+  }
+
+  .framer-5OHkW #carousel-5.why-voice-card {
+    position: sticky;
+    top: 160px;
+    z-index: 4;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 810px) {
+  .workflow-section {
+    --workflow-expand: 0;
+    padding: 0 16px;
+  }
+
+  .workflow-shell {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: clamp(24px, 4vw, 34px);
+  }
+
+  .workflow-shell-layout {
+    max-width: 100%;
+    display: block;
+  }
+
+  .workflow-header {
+    max-width: 100%;
+  }
+
+  .workflow-steps {
+    margin-top: clamp(24px, 3vw, 32px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workflow-step-card:nth-child(2),
+  .workflow-step-card:nth-child(3) {
+    transform: none;
+  }
+
+  #carousel-5.why-voice-card {
+    box-shadow: unset;
+    padding-inline: 24px;
+  }
+
+  #carousel-5 .why-card-content {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  #carousel-5 .why-card-top {
+    flex: none;
+    max-width: 100%;
+  }
+
+  #carousel-5 .why-card-title {
+    font-size: 31px;
+  }
+}
+
+@media (max-width: 809px) {
+  .workflow-section {
+    --workflow-expand: 0;
+    padding: 0 8px;
+  }
+
+  .workflow-shell {
+    width: 100%;
+    display: block;
+    height: auto;
+    padding: 24px 18px;
+    border-radius: 28px;
+  }
+
+  .workflow-shell-layout {
+    max-width: 100%;
+    display: block;
+  }
+
+  .workflow-header {
+    max-width: 100%;
+  }
+
+  .workflow-steps {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-step-card {
+    min-height: unset;
+  }
+
+  .workflow-step-card:nth-child(2),
+  .workflow-step-card:nth-child(3) {
+    transform: none;
+  }
+
+  .workflow-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #carousel-5.why-voice-card {
+    border-radius: 32px;
+    height: auto;
+    top: 0;
+    gap: 16px;
+    padding: 34px 20px 40px;
+  }
+
+  .framer-5OHkW .framer-1jm3p5u-container,
+  .framer-5OHkW #carousel-2-1,
+  .framer-5OHkW #carousel-4 {
+    position: relative;
+    top: 0;
+  }
+
+  #carousel-5 .why-card-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 0;
+  }
+
+  #carousel-5 .why-card-top {
+    flex: none;
+    max-width: 100%;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+  }
+
+  #carousel-5 .why-card-title {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  #carousel-5 .why-intro-copy {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  #carousel-5 .why-read-more-wrap {
+    margin: 4px 0 0;
+    align-self: flex-start;
+  }
+
+  #carousel-5 .why-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  #carousel-5 .why-feature-item {
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+
+  #carousel-5 .why-feature-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+  }
+
+  #carousel-5 .why-feature-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Ensure marquee works correctly */
+@keyframes scrollHorizontal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused !important;
 }
